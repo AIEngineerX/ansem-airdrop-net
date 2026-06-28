@@ -1,36 +1,95 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ansem-airdrop-net
 
-## Getting Started
+Read-only Solana transfer ledger for a tracked Pump.fun profile wallet.
 
-First, run the development server:
+## Boundary
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- No wallet connect.
+- No signing.
+- No swaps.
+- No claim flow.
+- No trading or execution.
+- Current-value only until stored price snapshots exist.
+
+## Source wallet
+
+```text
+GV6UUmNxz2RpKxmNAPadYKb7uQpszwqQAu3qLJxVdC52
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+UI attribution copy is intentionally careful:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+Public tracker and Pump.fun profile context link this wallet to ansemconzimp / @blknoiz06.
+Not exhaustive; not a wallet-ownership claim.
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Main ANSEM mint
 
-## Learn More
+```text
+9cRCn9rGT8V2imeM2BaKs13yhMEais3ruM3rPvTGpump
+```
 
-To learn more about Next.js, take a look at the following resources:
+## What exists now
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Next.js 16 + TypeScript + Tailwind scaffold.
+- Clean dark ledger UI.
+- API route shells:
+  - `/api/summary`
+  - `/api/token/ansem`
+  - `/api/transfers`
+  - `/api/recipients`
+- Transfer parser for:
+  - native SOL
+  - SPL / Token-2022
+  - failed transaction exclusion
+  - batched same-amount transfer distinction via `eventIndex`
+- Collector script:
+  - `scripts/collect_airdrop_transfers.ts`
+  - fixture mode works without credentials
+  - live Helius mode requires `HELIUS_API_KEY`
+- Handoff docs:
+  - `docs/chaos-handoff.md`
+  - `docs/codex-review.md`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Commands
 
-## Deploy on Vercel
+```bash
+pnpm install
+pnpm dev
+pnpm verify
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Run collector against a fixture:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+pnpm tsx scripts/collect_airdrop_transfers.ts --fixture path/to/helius-transactions.json
+```
+
+Run collector against Helius:
+
+```bash
+HELIUS_API_KEY=... pnpm tsx scripts/collect_airdrop_transfers.ts --limit 100
+```
+
+## Verification snapshot
+
+Last local verification before handoff:
+
+```text
+pnpm verify
+lint OK
+typecheck OK
+3 parser tests passed
+next build OK
+```
+
+## Deferred on purpose
+
+- X reply matching.
+- Network graph.
+- Candidate wallet clustering.
+- Helius webhook endpoint.
+- At-transfer valuation without stored price snapshots.
+
+Those stay out until the primary transfer ledger is correct.
