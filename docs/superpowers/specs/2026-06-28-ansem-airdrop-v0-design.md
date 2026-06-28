@@ -253,8 +253,16 @@ implies official endorsement.
   wallet ownership is not identity and recipients are listed neutrally (not implied
   insiders/farmers); no wallet connect/claim/sign/swap/trade exists; **not financial
   advice and not a trading signal**; plus the non-affiliation line.
+- **Mobile (first-class, not an afterthought):** the whole UI must look and work
+  well on phones — especially **iOS Safari**. Mobile-first responsive layout: hero
+  scales/crops cleanly, the wide transfers/recipients tables become horizontally
+  scrollable or stack into cards on narrow widths (no overflow, no clipped data),
+  tap targets ≥44px, `viewport` + `theme-color` + safe-area insets set, no fixed
+  layouts that break <400px. Use the `mobile-responsive-audit` skill during the UI
+  step. Long base58 addresses must truncate gracefully (mono + middle ellipsis).
 - **Process:** render + screenshot + eyeball at every UI step (this section, plus
-  every later tweak), per the standing instruction.
+  every later tweak) at **both desktop and a mobile viewport (~390px, iPhone
+  Safari)**, per the standing instruction.
 
 ## 11. Verification Gate / Tests (real, no mocks)
 
@@ -300,6 +308,14 @@ balance + supply panel rows (optional later); the heavy Postgres schema
 (`x_wallet_mentions`, `recipient_matches`, etc.). Out until the primary ledger is
 correct and deployed.
 
+**v0.1 fast-follow (first thing after v0 deploys):** a **recipient lookup** — paste
+a wallet → "did the ANSEM treasury airdrop you, how much, when" (an index/filter
+over the Recipients snapshot). Highest-pull consumer feature; deferred only so the
+core outgoing ledger ships and is verified first. (Competitor ocula.fun surfaces
+incoming airdrops to ~302 curated wallets via its Fomo Wallet Tracker "Transfers"
+feed — recipient-centric/alpha lens; our differentiation is the source-centric
+treasury ledger, so the per-wallet "did *I* get it" lookup is ours to own.)
+
 ## 13. Anti-Drift Guardrail (done FIRST, Step 0)
 
 Replace the 12-byte `CLAUDE.md` (`@AGENTS.md`) with an inked-style anti-drift spec
@@ -325,8 +341,10 @@ guardrail is active during the whole build (its entire purpose).
 5. **`price`** (DexScreener, pinned canonical pair, `revalidate`) + token panel +
    totals. *Evidence: page renders live price + computed `totalCurrentUsd`; screenshot.*
 6. **UI restyle** — display font, hero token art (+ `remotePatterns` if remote),
-   purge emerald, disclaimers/headline/Methodology copy. *Evidence: screenshots, mono
-   addresses, single oxblood accent, disclaimers present.*
+   purge emerald, disclaimers/headline/Methodology copy, **mobile-responsive pass
+   (iOS Safari) via the mobile-responsive-audit skill**. *Evidence: **desktop AND
+   ~390px mobile screenshots**, mono addresses, single oxblood accent, disclaimers
+   present, tables usable on phone (scroll/stack, no overflow).*
 7. **Deploy** — `netlify.toml` + `netlify/functions/collect.ts`; `netlify dev` Blobs
    smoke test; set Netlify env; deploy; run backfill to Blobs; invoke schedule;
    confirm the §11 first-deploy gate. *Evidence: the objective gate checklist.*
