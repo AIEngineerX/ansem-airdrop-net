@@ -2,35 +2,40 @@
 
 # ansem-airdrop-net — locked scope (do not drift)
 
-**Product (v0, shipped):** an unofficial, read-only dashboard tracking **Ansem's
-pump.fun creator rewards** + the **$ANSEM token**. Wallet
-GV6UUmNxz2RpKxmNAPadYKb7uQpszwqQAu3qLJxVdC52 = Ansem's pump.fun creator profile
-`ansemconzimp` (X @blknoiz06). Full design + the pivot story:
-docs/superpowers/specs/2026-06-28-ansem-airdrop-v0-design.md (read the PIVOT banner first).
+**Product (v1):** an unofficial, read-only dashboard whose hero is the **live web of
+wallets airdropped $ANSEM by GV6UUmNxz2RpKxmNAPadYKb7uQpszwqQAu3qLJxVdC52** (Ansem's
+pump.fun creator wallet, profile @ansemconzimp / X @blknoiz06). The creator-rewards /
+$ANSEM-market dashboard is KEPT as a secondary tab. Full design + plan:
+docs/superpowers/specs/2026-06-29-ansem-airdrop-web-design.md.
 
-> Why not "airdrop tracker": real chain data showed GV6U is a passive holder that
-> never sends — outgoing airdrops come from a separate dust-spray relay. The valuable,
-> trackable metric is his pump.fun creator rewards. Pivoted 2026-06-29.
+> CORRECTION: the earlier "GV6U is a passive holder that never sends" claim is FALSE
+> (it was a false negative from a rate-limited RPC). Re-verified 2026-06-29: GV6U is the
+> live ANSEM airdrop source. No relay wallet.
 
 ## Hard boundary (CI-enforced by `pnpm verify`)
-No wallet connect / signing / swaps / claim / trading / execution. No wallet
-adapters. Read-only public APIs only (pump.fun swap-api, DexScreener). No Helius key needed.
+No wallet connect / signing / swaps / claim / trading / execution. No wallet adapters.
+Read-only public data only. Recipient lookup is a client-side filter over the public
+snapshot. Forbidden in src/: @solana/wallet-adapter, @jup-ag, phantom, signTransaction,
+sendTransaction.
 
-## v0 scope — ONLY this
-Hero (Black Bull) · on-chain PumpSwap creator fees (SOL + live USD + daily chart +
-trades) · pump.fun lifetime headline (referenced/linked) · $ANSEM token panel
-(price/24h/mcap/liq/vol) · Methodology + disclaimers. Mobile-first.
+## v1 scope — ONLY this
+Airdrop Web (2D canvas force-graph GV6U→recipients) · live feed · lifetime stat cards
+(wallets airdropped / total ANSEM / total airdrops) · recipient lookup (paste wallet →
+amount + dates + tx) · Creator Rewards tab (existing). Data = periodic snapshot built by
+a CI-cron collector, committed to the `data` branch, served via jsDelivr; site is static.
 
 ## Data truth (do not fabricate)
-- swap-api = PumpSwap (AMM) creator fees only (~95.82 SOL). Feature this live + sourced.
-- pump.fun profile "$547.96K" = includes bonding-curve-era fees, NOT exposed by any
-  public API. Reference + link it; never hardcode it as a computed live figure.
-- Match by mint (9cRCn9…pump), never symbol.
+- Match ANSEM by mint (9cRCn9…pump), never symbol.
+- The 0.002074 SOL dust legs are ATA-funding overhead, not airdrops; they are not graph
+  edges. Recipients/graph/stats are built from ANSEM transfers only.
+- USD is never stored in the snapshot; if shown, multiply totals by the live price.
 
-## Deferred / shelved
-Outgoing-transfer ledger, distributions/relay-cluster view, X-match, the standard-RPC
-collector pipeline (rpc-source/aggregate — committed but unused). Recipient lookup.
+## v1 exit condition
+Done when graph + feed + stats + lookup + creator-rewards tab are live on the deployed
+URL, `pnpm verify` green, gate artifacts captured. Everything in spec §10 Deferred is out.
+No new feature without editing the spec first.
 
 ## Rules
-`pnpm verify` green before every commit. Review UI on desktop AND ~390px mobile at
-every UI step. AIEngineerX git identity (local config).
+`pnpm verify` green before every commit. Review UI on desktop AND ~390px mobile (iOS
+Safari) at every UI step. AIEngineerX git identity (local config). Never `git push`
+(user hook); hand the push command to the user.
