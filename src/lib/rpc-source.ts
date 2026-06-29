@@ -10,24 +10,40 @@ export function rpcUrl(): string {
   return url;
 }
 
+export function backoffDelayMs(attempt: number): number {
+  return Math.min(500 * 2 ** attempt, 8000);
+}
+
+const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
+
 type RpcCall = { method: string; params: unknown[] };
 
 async function rpcBatch(url: string, calls: RpcCall[]): Promise<unknown[]> {
   const body = calls.map((c, i) => ({ jsonrpc: "2.0", id: i, method: c.method, params: c.params }));
-  const res = await fetch(url, {
-    method: "POST",
-    headers: { "content-type": "application/json" },
-    body: JSON.stringify(body),
-  });
-  if (!res.ok) throw new Error(`RPC ${res.status} ${res.statusText}`);
-  const json = (await res.json()) as Array<{ id: number; result?: unknown; error?: unknown }>;
-  const arr = Array.isArray(json) ? json : [json];
-  return arr
-    .sort((a, b) => a.id - b.id)
-    .map((r) => {
-      if (r.error) throw new Error(`RPC error: ${JSON.stringify(r.error)}`);
-      return r.result;
+  for (let attempt = 0; ; attempt++) {
+    const res = await fetch(url, {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(body),
     });
+    if (res.status === 429) {
+      if (attempt >= 5) throw new Error("RPC 429 after 5 retries");
+      await sleep(backoffDelayMs(attempt));
+      continue;
+    }
+    if (!res.ok) throw new Error(`RPC ${res.status} ${res.statusText}`);
+    const json = (await res.json()) as Array<{ id: number; result?: unknown; error?: unknown }>;
+    const arr = Array.isArray(json) ? json : [json];
+    const rateLimited = arr.find((r) => r.error && JSON.stringify(r.error).includes("rate"));
+    if (rateLimited) {
+      if (attempt >= 5) throw new Error("RPC rate-limited after 5 retries");
+      await sleep(backoffDelayMs(attempt));
+      continue;
+    }
+    return arr
+      .sort((a, b) => a.id - b.id)
+      .map((r) => { if (r.error) throw new Error(`RPC error: ${JSON.stringify(r.error)}`); return r.result; });
+  }
 }
 
 type SignatureInfo = { signature: string; blockTime: number | null };
@@ -83,6 +99,7 @@ export async function getOutgoingTransactions(opts: {
       })),
     );
     for (const r of results) if (r) txs.push(r as RpcGetTransaction);
+    await sleep(250);
   }
   return { txs, newestSignature: newest };
 }
