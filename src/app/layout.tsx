@@ -16,6 +16,21 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: TITLE,
   description: DESCRIPTION,
+  applicationName: "did ansem airdrop me?",
+  alternates: { canonical: "/" },
+  keywords: [
+    "did ansem airdrop me",
+    "ansem airdrop",
+    "ansem airdrop checker",
+    "$ANSEM",
+    "ANSEM token",
+    "Ansem",
+    "blknoiz06",
+    "The Black Bull",
+    "Solana airdrop",
+    "creator rewards",
+    "on-chain airdrop tracker",
+  ],
   openGraph: {
     title: TITLE,
     description: DESCRIPTION,
@@ -39,13 +54,29 @@ export const viewport: Viewport = {
   viewportFit: "cover",
 };
 
+// JSON-LD structured data — honest, unofficial, read-only. Helps search engines
+// understand the site name, URL and purpose for a richer result entry.
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "did ansem airdrop me?",
+  url: SITE_URL,
+  description: DESCRIPTION,
+};
+
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${display.variable} h-full antialiased`}
     >
-      <body className="grain min-h-full flex flex-col">{children}</body>
+      <body className="grain min-h-full flex flex-col">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        {children}
+      </body>
     </html>
   );
 }
