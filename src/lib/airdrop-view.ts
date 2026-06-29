@@ -32,7 +32,9 @@ export function lookupRecipient(snap: AirdropSnapshot, wallet: string): AirdropR
 }
 
 export function timeAgo(iso: string, nowMs: number): string {
-  const s = Math.max(0, Math.round((nowMs - Date.parse(iso)) / 1000));
+  const ms = Date.parse(iso);
+  if (Number.isNaN(ms)) return "";
+  const s = Math.max(0, Math.round((nowMs - ms) / 1000));
   if (s < 60) return `${s}s ago`;
   const m = Math.round(s / 60);
   if (m < 60) return `${m}m ago`;

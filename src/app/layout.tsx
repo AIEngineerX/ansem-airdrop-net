@@ -6,7 +6,7 @@ const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 const display = Anton({ weight: "400", variable: "--font-display", subsets: ["latin"] });
 
-const TITLE = "ANSEM Airdrop Web — live map of wallets Ansem airdropped";
+const TITLE = "ANSEM Airdrop Web — live map of wallets airdropped by Ansem";
 const DESCRIPTION =
   "Unofficial, read-only on-chain map of the wallets airdropped $ANSEM by Ansem's pump.fun creator wallet, plus his creator rewards. Not affiliated with Ansem.";
 // Set NEXT_PUBLIC_SITE_URL to the deployed origin so share-card image URLs resolve absolutely.
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     description: DESCRIPTION,
     type: "website",
     siteName: "ANSEM Airdrop Web",
-    images: [{ url: "/og.png", width: 1456, height: 816, alt: "The live ANSEM airdrop web" }],
+    images: [{ url: "/og.png", width: 1440, height: 900, alt: "The live ANSEM airdrop web" }],
   },
   twitter: {
     card: "summary_large_image",

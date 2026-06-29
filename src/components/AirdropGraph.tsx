@@ -194,14 +194,20 @@ export function AirdropGraph({ snap, loading }: { snap: AirdropSnapshot; loading
   const recipientCount = snap.totals.uniqueRecipients;
 
   return (
-    <div ref={wrap} className="graph-stage w-full border border-white/[0.07]" style={{ height: size.h }}>
+    <div
+      ref={wrap}
+      className="graph-stage w-full border border-white/[0.07]"
+      style={{ height: size.h }}
+      role="img"
+      aria-label={`Network graph: GV6U airdropped $ANSEM to ${snap.totals.uniqueRecipients} wallets`}
+    >
       {/* Black Bull brand atmosphere — sits behind the canvas (see .graph-bull in globals.css) */}
       <div className="graph-bull" aria-hidden="true" />
 
       {/* corner captions */}
       <div className="graph-overlay left-4 top-4 sm:left-5 sm:top-5">
-        <p className="text-[10px] font-medium uppercase tracking-[0.22em] text-zinc-500">Live airdrop web</p>
-        <p className="mt-0.5 font-mono text-[11px] text-zinc-600">
+        <p className="text-[10px] font-medium uppercase tracking-[0.22em] text-zinc-500">Airdrop web</p>
+        <p className="mt-0.5 font-mono text-[11px] text-zinc-500">
           GV6U → {fmt(recipientCount)} wallet{recipientCount === 1 ? "" : "s"}
         </p>
       </div>
@@ -212,16 +218,16 @@ export function AirdropGraph({ snap, loading }: { snap: AirdropSnapshot; loading
         </span>
         <span className="flex items-center gap-1.5 text-[10px] text-zinc-500">
           <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#b11226]" />
-          recipient · size = ANSEM
+          recipient · size = ANSEM received
         </span>
       </div>
 
       {!hasData && (
         <div className="graph-overlay inset-0 flex items-center justify-center">
           {loading === false && snap.totals.totalAirdrops === 0 ? (
-            <p className="text-sm text-zinc-500">Airdrop data is temporarily unavailable — check back shortly.</p>
+            <p role="status" aria-live="polite" className="text-sm text-zinc-500">Airdrop data is temporarily unavailable — check back shortly.</p>
           ) : (
-            <p className="animate-pulse text-sm text-zinc-600">Summoning the airdrop web…</p>
+            <p role="status" aria-live="polite" className="animate-pulse text-sm text-zinc-500">Summoning the airdrop web…</p>
           )}
         </div>
       )}

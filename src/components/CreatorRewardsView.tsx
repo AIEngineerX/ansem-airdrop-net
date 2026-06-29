@@ -3,8 +3,6 @@ import {
   ANSEM_MINT,
   ANSEM_PUMP_PROFILE_URL,
   ANSEM_PUMP_USERNAME,
-  ANSEM_X_URL,
-  BLACK_BULL_SITE,
   PRIMARY_SOURCE_WALLET,
   type CreatorRewards,
   type FeePoint,
@@ -163,7 +161,7 @@ export function CreatorRewardsView({
             <a href={ANSEM_PUMP_PROFILE_URL} target="_blank" rel="noreferrer" className="text-zinc-200 underline decoration-white/20 underline-offset-2">
               @{ANSEM_PUMP_USERNAME}
             </a>{" "}
-            (Ansem / @blknoiz06) from The Black Bull / $ANSEM. Read-only. Attribution per pump.fun profile.
+            (Ansem / @blknoiz06) from The Black Bull / $ANSEM. Read-only. Wallet linked to Ansem (@blknoiz06) via his pump.fun creator profile.
           </p>
           <div className="mt-6 flex flex-wrap gap-2">
             <a
@@ -263,19 +261,16 @@ export function CreatorRewardsView({
         </ul>
       </section>
 
-      <footer className="mt-8 flex flex-col items-center gap-2 border-t border-white/[0.07] pt-6 text-center text-xs text-zinc-600">
+      <footer className="mt-8 flex flex-col items-center gap-2 border-t border-white/[0.07] pt-6 text-center text-xs text-zinc-500">
         <Unofficial />
+        <p>Data: pump.fun swap-api · DexScreener</p>
         <p>
-          Data: pump.fun swap-api · DexScreener ·{" "}
-          <a href={ANSEM_X_URL} target="_blank" rel="noreferrer" className="underline underline-offset-2">
-            @blknoiz06
-          </a>{" "}
-          ·{" "}
-          <a href={BLACK_BULL_SITE} target="_blank" rel="noreferrer" className="underline underline-offset-2">
-            blackbullsol.com
+          Built by{" "}
+          <a href="https://x.com/DaddyGhost" target="_blank" rel="noreferrer" className="text-[var(--accent-soft)] underline underline-offset-2">
+            @DaddyGhost
           </a>
         </p>
-        <p className="text-zinc-700">Updated {updated}</p>
+        <p className="text-zinc-600">Updated {updated}</p>
       </footer>
     </>
   );

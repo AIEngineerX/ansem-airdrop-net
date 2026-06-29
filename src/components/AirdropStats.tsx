@@ -18,9 +18,9 @@ export function AirdropStats({
     {
       label: "Total ANSEM airdropped",
       value: fmt(snap.totals.totalAnsemUi),
-      sub: totalUsd != null ? `≈ ${fmtUsdCompact(totalUsd)} at live price` : undefined,
+      sub: totalUsd != null ? `≈ ${fmtUsdCompact(totalUsd)}` : undefined,
     },
-    { label: "Total airdrops", value: fmt(snap.totals.totalAirdrops) },
+    { label: "Total airdrops", value: fmt(snap.totals.totalAirdrops), sub: "individual sends" },
   ];
   return (
     <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
