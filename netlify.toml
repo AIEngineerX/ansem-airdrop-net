@@ -5,14 +5,10 @@
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
-# Same-origin snapshot proxy: the client fetches /api/snapshot; Netlify rewrites it to the
-# jsDelivr CDN server-side, so the GitHub owner/repo never appears in client JS or network
-# traces. status=200 + force makes it a transparent rewrite (no redirect hop).
-[[redirects]]
-  from = "/api/snapshot"
-  to = "https://cdn.jsdelivr.net/gh/AIEngineerX/ansem-airdrop-net@data/snapshot.json"
-  status = 200
-  force = true
+# (The old /api/snapshot same-origin proxy was removed: the repo is public, so there's
+# nothing to hide, and Netlify's edge cached the proxied branch-ref response — serving a
+# stale snapshot. The client now fetches jsDelivr directly with a per-minute cache buster,
+# which is the only way to reliably defeat stale branch-ref CDN caching. See snapshot-client.ts.)
 
 # Security headers / CSP. Next inlines styles/scripts, so 'unsafe-inline' is required for the
 # app to run. img-src https: covers DexScreener token images; connect-src keeps the DexScreener

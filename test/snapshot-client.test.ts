@@ -7,7 +7,7 @@ import { PRIMARY_SOURCE_WALLET, ANSEM_MINT } from "../src/lib/domain";
 // Test A: CDN throws, seed fallback URL succeeds → returns the fallback's snapshot
 test("CDN failure falls back to seed URL and returns its snapshot (FIX 5)", async () => {
   const mockFetch = async (url: string) => {
-    if (url === SNAPSHOT_CDN_URL) throw new Error("cdn down");
+    if (url.startsWith(SNAPSHOT_CDN_URL)) throw new Error("cdn down");
     if (url !== SEED_FALLBACK_URL) throw new Error(`unexpected url: ${url}`);
     return {
       ok: true,
