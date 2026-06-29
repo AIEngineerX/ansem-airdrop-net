@@ -1,5 +1,6 @@
 "use client";
 import { useState, type ReactNode } from "react";
+import { AirdropWebView } from "./AirdropWebView";
 
 export function Tabs({ creatorRewards }: { creatorRewards: ReactNode }) {
   const [tab, setTab] = useState<"web" | "rewards">("web");
@@ -9,11 +10,7 @@ export function Tabs({ creatorRewards }: { creatorRewards: ReactNode }) {
         <button onClick={() => setTab("web")} className={`rounded-full px-4 py-1.5 transition ${tab === "web" ? "bg-[var(--accent)] text-white" : "text-zinc-400 hover:text-zinc-200"}`}>Airdrop Web</button>
         <button onClick={() => setTab("rewards")} className={`rounded-full px-4 py-1.5 transition ${tab === "rewards" ? "bg-[var(--accent)] text-white" : "text-zinc-400 hover:text-zinc-200"}`}>Creator Rewards</button>
       </div>
-      {tab === "web" ? <AirdropWebPlaceholder /> : <div className="mt-4">{creatorRewards}</div>}
+      {tab === "web" ? <AirdropWebView /> : <div className="mt-4">{creatorRewards}</div>}
     </div>
   );
-}
-
-function AirdropWebPlaceholder() {
-  return <div className="mt-6 text-zinc-500">Airdrop web loading…</div>;
 }
