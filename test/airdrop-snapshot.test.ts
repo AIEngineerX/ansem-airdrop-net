@@ -59,3 +59,23 @@ test("merge accumulates across calls and feed is newest-first, capped", () => {
   assert.equal(snap.feed[0].signature, "b"); // newest first
   assert.equal(snap.feed[0].blockTime, "2026-06-29T12:10:00.000Z");
 });
+
+test("latestSignature is set to the newest blockTime row's signature (FIX 3)", () => {
+  const snap = foldTransfers(EMPTY_SNAPSHOT, [
+    row({ id: "id-older", recipientWallet: "R1", signature: "older-sig", blockTime: "2026-06-29T10:00:00.000Z" }),
+    row({ id: "id-newer", recipientWallet: "R1", signature: "newer-sig", blockTime: "2026-06-29T12:00:00.000Z" }),
+  ], opts("newer-sig"));
+  const r1 = snap.recipients.find((r) => r.wallet === "R1")!;
+  assert.equal(r1.latestSignature, "newer-sig");
+});
+
+test("folding the same rows twice does NOT double totalAirdrops or totalAnsemUi (top dedup by id, FIX 3)", () => {
+  const rows = [
+    row({ id: "dedup-id-1", recipientWallet: "R1", amountUi: 100, signature: "sig1" }),
+    row({ id: "dedup-id-2", recipientWallet: "R2", amountUi: 50,  signature: "sig2" }),
+  ];
+  // Pass duplicate rows in the same call — top dedup must collapse them
+  const snap = foldTransfers(EMPTY_SNAPSHOT, [...rows, ...rows], opts("sig1"));
+  assert.equal(snap.totals.totalAirdrops, 2);
+  assert.equal(snap.totals.totalAnsemUi, 150);
+});

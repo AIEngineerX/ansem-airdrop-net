@@ -37,7 +37,7 @@ export type ParseResult = {
 };
 
 function isoFromUnix(timestamp?: number): string {
-  if (!timestamp) return new Date(0).toISOString();
+  if (timestamp == null || timestamp === 0) return new Date(0).toISOString();
   return new Date(timestamp * 1000).toISOString();
 }
 

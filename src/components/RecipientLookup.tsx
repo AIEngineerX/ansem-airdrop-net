@@ -24,7 +24,7 @@ export function RecipientLookup({ snap }: { snap: AirdropSnapshot }) {
         <div className="mt-3 rounded-xl border border-[var(--accent)]/30 bg-[var(--accent)]/[0.06] p-3 text-sm">
           <p className="text-zinc-200">Airdropped <span className="tabular font-mono font-semibold">{fmt(hit.totalAnsemUi)} ANSEM</span> across {hit.transferCount} transfer{hit.transferCount === 1 ? "" : "s"}.</p>
           <p className="mt-1 text-zinc-500">First {day(hit.firstSeen)} · last {day(hit.latestSeen)}</p>
-          <a href={`https://solscan.io/tx/${hit.signatures[0]}`} target="_blank" rel="noreferrer" className="mt-1 inline-block font-mono text-xs text-zinc-400 underline underline-offset-2">latest tx →</a>
+          <a href={`https://solscan.io/tx/${hit.latestSignature ?? hit.signatures[0]}`} target="_blank" rel="noreferrer" className="mt-1 inline-block font-mono text-xs text-zinc-400 underline underline-offset-2">latest tx →</a>
         </div>
       )}
     </div>

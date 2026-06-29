@@ -2,6 +2,7 @@ import { ANSEM_MINT, NATIVE_SOL_MINT, type TransferRow } from "./domain";
 
 export const FEED_MAX = 100;
 export const SIG_CAP = 10;
+const EPOCH_ISO = new Date(0).toISOString();
 
 export type AirdropRecipient = {
   wallet: string;
@@ -9,6 +10,7 @@ export type AirdropRecipient = {
   transferCount: number;
   firstSeen: string;
   latestSeen: string;
+  latestSignature: string;
   signatures: string[];
 };
 export type AirdropFeedItem = {
@@ -58,29 +60,47 @@ export function foldTransfers(
   rows: TransferRow[],
   opts: { newestSignature: string | null; oldestScanned: string | null; backfillComplete: boolean; collectedAt: string },
 ): AirdropSnapshot {
+  // Belt-and-suspenders: dedup incoming rows by TransferRow.id before folding.
+  // Upstream parseOutgoingTransfers already dedups by id; the cursor prevents cross-run
+  // overlap; this guard protects against accidental duplicate rows in the same call.
+  const fresh: TransferRow[] = [];
+  const seenIds = new Set<string>();
+  for (const r of rows) {
+    if (!seenIds.has(r.id)) { seenIds.add(r.id); fresh.push(r); }
+  }
+
   const recipients = new Map(prev.recipients.map((r) => [r.wallet, { ...r, signatures: [...r.signatures] }]));
   const others = new Map(prev.otherMintsSent.map((o) => [o.mint, { ...o }]));
   let { totalAnsemUi, totalAirdrops, solOverheadUi, windowFrom, windowThrough } = prev.totals;
   const newFeed: AirdropFeedItem[] = [];
 
-  for (const r of rows) {
+  for (const r of fresh) {
     if (r.mint === ANSEM_MINT) {
       totalAirdrops += 1;
       totalAnsemUi += r.amountUi;
-      windowFrom = minIso(windowFrom, r.blockTime);
-      windowThrough = maxIso(windowThrough, r.blockTime);
+      // Skip epoch blockTime (timestamp==null/0 → "1970…") so it never corrupts the window.
+      if (r.blockTime !== EPOCH_ISO) {
+        windowFrom = minIso(windowFrom, r.blockTime);
+        windowThrough = maxIso(windowThrough, r.blockTime);
+      }
       const cur = recipients.get(r.recipientWallet);
       if (!cur) {
         recipients.set(r.recipientWallet, {
           wallet: r.recipientWallet, totalAnsemUi: r.amountUi, transferCount: 1,
-          firstSeen: r.blockTime, latestSeen: r.blockTime, signatures: [r.signature],
+          firstSeen: r.blockTime, latestSeen: r.blockTime,
+          latestSignature: r.signature,
+          signatures: [r.signature],
         });
       } else {
         cur.totalAnsemUi += r.amountUi;
         cur.transferCount += 1;
         cur.firstSeen = minIso(cur.firstSeen, r.blockTime);
-        cur.latestSeen = maxIso(cur.latestSeen, r.blockTime);
-        if (!cur.signatures.includes(r.signature)) cur.signatures = [r.signature, ...cur.signatures].slice(0, SIG_CAP);
+        if (r.blockTime >= cur.latestSeen) {
+          cur.latestSeen = r.blockTime;
+          cur.latestSignature = r.signature;
+        }
+        // Prepend and cap signatures; all increments are now unconditional (dedup above).
+        cur.signatures = [r.signature, ...cur.signatures].slice(0, SIG_CAP);
       }
       newFeed.push({ wallet: r.recipientWallet, amountUi: r.amountUi, blockTime: r.blockTime, signature: r.signature, txUrl: r.txUrl });
     } else if (r.mint === NATIVE_SOL_MINT) {
