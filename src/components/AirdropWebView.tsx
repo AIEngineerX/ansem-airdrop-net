@@ -6,10 +6,18 @@ import { AirdropFeed } from "./AirdropFeed";
 import { RecipientLookup } from "./RecipientLookup";
 import { DataStamp } from "./DataStamp";
 
-export function AirdropWebView({ snap, loading }: { snap: AirdropSnapshot; loading: boolean }) {
+export function AirdropWebView({
+  snap,
+  loading,
+  ansemPriceUsd,
+}: {
+  snap: AirdropSnapshot;
+  loading: boolean;
+  ansemPriceUsd: number | null;
+}) {
   return (
     <div className="mt-5 space-y-5">
-      <AirdropStats snap={snap} />
+      <AirdropStats snap={snap} ansemPriceUsd={ansemPriceUsd} />
       <AirdropGraph snap={snap} loading={loading} />
       <div className="grid gap-5 lg:grid-cols-[1.4fr_1fr]">
         <AirdropFeed snap={snap} />

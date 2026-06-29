@@ -5,7 +5,13 @@ import { fetchSnapshot } from "@/lib/snapshot-client";
 import { AirdropWebView } from "./AirdropWebView";
 import { Unofficial } from "./Unofficial";
 
-export function Tabs({ creatorRewards }: { creatorRewards: ReactNode }) {
+export function Tabs({
+  creatorRewards,
+  ansemPriceUsd,
+}: {
+  creatorRewards: ReactNode;
+  ansemPriceUsd: number | null;
+}) {
   const [tab, setTab] = useState<"web" | "rewards">("web");
   const [snap, setSnap] = useState(EMPTY_SNAPSHOT);
   const [loading, setLoading] = useState(true);
@@ -25,7 +31,7 @@ export function Tabs({ creatorRewards }: { creatorRewards: ReactNode }) {
       </div>
       {/* Both panels stay mounted; CSS toggle avoids re-fetch on tab switch */}
       <div className={tab === "web" ? "" : "hidden"}>
-        <AirdropWebView snap={snap} loading={loading} />
+        <AirdropWebView snap={snap} loading={loading} ansemPriceUsd={ansemPriceUsd} />
       </div>
       <div className={tab === "rewards" ? "mt-4" : "hidden"}>
         {creatorRewards}

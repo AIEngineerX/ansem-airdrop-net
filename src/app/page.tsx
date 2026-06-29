@@ -10,7 +10,10 @@ export default async function Home() {
   const rewards = await getCreatorRewards(solPriceUsd);
   return (
     <main className="flex min-h-screen flex-col">
-      <Tabs creatorRewards={<CreatorRewardsView rewards={rewards} ansem={ansem} solPriceUsd={solPriceUsd} />} />
+      <Tabs
+        ansemPriceUsd={ansem.priceUsd}
+        creatorRewards={<CreatorRewardsView rewards={rewards} ansem={ansem} solPriceUsd={solPriceUsd} />}
+      />
     </main>
   );
 }
