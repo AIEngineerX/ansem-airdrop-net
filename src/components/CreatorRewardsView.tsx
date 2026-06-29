@@ -256,7 +256,7 @@ export function CreatorRewardsView({
             </a>{" "}
             pump.fun creator wallet (linked to Ansem / @blknoiz06 via the profile).
           </li>
-          <li>This is an independent, read-only tracker. Not affiliated with or endorsed by Ansem.</li>
+          <li>This is an independent, read-only tracker.</li>
           <li>This is not financial advice and not a trading signal. No wallet connect, signing, or trading exists here.</li>
         </ul>
       </section>

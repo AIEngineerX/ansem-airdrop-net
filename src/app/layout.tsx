@@ -8,7 +8,7 @@ const display = Anton({ weight: "400", variable: "--font-display", subsets: ["la
 
 const TITLE = "ANSEM Airdrop Web — live map of wallets airdropped by Ansem";
 const DESCRIPTION =
-  "Unofficial, read-only on-chain map of the wallets airdropped $ANSEM by Ansem's pump.fun creator wallet, plus his creator rewards. Not affiliated with Ansem.";
+  "Unofficial, read-only on-chain map of the wallets airdropped $ANSEM by Ansem's pump.fun creator wallet, plus his creator rewards. Paste your wallet to see if you got the drop.";
 // Set NEXT_PUBLIC_SITE_URL to the deployed origin so share-card image URLs resolve absolutely.
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 

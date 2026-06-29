@@ -28,7 +28,7 @@ export function AirdropWebView({
       </div>
       <div className="grid gap-5 lg:grid-cols-[1.4fr_1fr]">
         <AirdropFeed snap={snap} loading={loading} />
-        <RecipientLookup snap={snap} />
+        <RecipientLookup snap={snap} ansemPriceUsd={ansemPriceUsd} />
       </div>
       <DataStamp snap={snap} loading={loading} />
 
@@ -55,7 +55,7 @@ export function AirdropWebView({
             <strong className="text-zinc-300">Nothing is stored.</strong> The &ldquo;Did Ansem airdrop you?&rdquo; check runs entirely in your browser — the wallet you type is never sent to a server, logged, or saved.
           </li>
           <li className="text-zinc-500">
-            Not financial advice. Not affiliated with or endorsed by Ansem.
+            Independent tracker · not financial advice.
           </li>
         </ul>
         <p className="mt-4 text-xs text-zinc-500">
