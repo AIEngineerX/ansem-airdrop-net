@@ -50,3 +50,6 @@ next-env.d.ts
 # shelved transfer-investigation raw fixtures
 test/fixtures/raw-*.json
 test/fixtures/_index.json
+
+# Claude Code local tooling + agent worktrees
+.claude/
