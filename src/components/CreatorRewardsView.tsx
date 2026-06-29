@@ -22,8 +22,9 @@ const fmtUsd = (n: number | null, max = 0) =>
 const fmtCompact = (n: number | null) =>
   n == null ? "—" : `$${Intl.NumberFormat("en-US", { notation: "compact", maximumFractionDigits: 2 }).format(n)}`;
 const fmtNum = (n: number) => n.toLocaleString("en-US");
+// Buckets are UTC-midnight ISO strings — format in UTC so they don't shift a day back.
 const fmtDay = (iso: string) =>
-  new Date(iso).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
+  new Date(iso).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric", timeZone: "UTC" });
 
 function RewardsChart({ points }: { points: FeePoint[] }) {
   if (points.length < 2) return null;
@@ -226,7 +227,10 @@ export function CreatorRewardsView({
 
         <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-4">
           <Stat label="Total trades" value={fmtNum(rewards.totalTrades)} />
-          <Stat label="Fee days tracked" value={fmtNum(rewards.series.length)} />
+          <Stat
+            label="Active fee days"
+            value={fmtNum(rewards.series.filter((p) => p.trades > 0 || p.dailySol > 0).length)}
+          />
           <Stat label="First fee" value={rewards.firstActive ? fmtDay(rewards.firstActive) : "—"} />
           <Stat label="Last fee" value={rewards.lastActive ? fmtDay(rewards.lastActive) : "—"} />
         </div>
