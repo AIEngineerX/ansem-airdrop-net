@@ -61,3 +61,23 @@ export const PRIMARY_SOURCE: SourceWallet = {
   confidence: "pump-profile-associated",
   evidence: SOURCE_ATTRIBUTION,
 };
+
+export type RecipientRow = {
+  wallet: string;
+  transferCount: number;
+  firstSeen: string;
+  latestSeen: string;
+};
+
+export type Snapshot = {
+  collectedAt: string;
+  coveredFrom: string | null;
+  coveredThrough: string | null;
+  lastSignature: string | null;
+  sourceWallet: string;
+  transfers: TransferRow[];
+  recipients: RecipientRow[];
+  counts: { transfers: number; uniqueRecipients: number; unparsed: number };
+  ansemSentUi: number;
+  solSentUi: number;
+};
