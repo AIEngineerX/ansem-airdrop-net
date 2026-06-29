@@ -42,14 +42,41 @@ export function parseCreatorRewards(
   };
 }
 
-/** Fetch Ansem's live pump.fun creator fees (PumpSwap) and shape them. */
+/** Safe-empty rewards used when pump.fun's swap-api is down/non-OK/non-JSON. */
+function emptyCreatorRewards(): CreatorRewards {
+  return {
+    wallet: PRIMARY_SOURCE_WALLET,
+    username: ANSEM_PUMP_USERNAME,
+    totalSol: 0,
+    totalUsd: null,
+    totalTrades: 0,
+    series: [],
+    firstActive: null,
+    lastActive: null,
+  };
+}
+
+async function fetchJson<T>(url: string): Promise<T> {
+  const r = await fetch(url, { next: { revalidate: 60 } });
+  if (!r.ok) throw new Error(`pump.fun ${r.status} ${r.statusText} for ${url}`);
+  return (await r.json()) as T;
+}
+
+/**
+ * Fetch Ansem's live pump.fun creator fees (PumpSwap) and shape them.
+ * Never throws: an upstream 429/5xx/non-JSON returns safe-empty rewards so the
+ * server-rendered page (and `next build`) can't be taken down by a secondary-tab
+ * API hiccup. `parseCreatorRewards` stays pure.
+ */
 export async function getCreatorRewards(solPriceUsd: number | null): Promise<CreatorRewards> {
-  const base = pumpCreatorFeesUrl(PRIMARY_SOURCE_WALLET);
-  const [total, series] = await Promise.all([
-    fetch(`${base}/total`, { next: { revalidate: 60 } }).then((r) => r.json() as Promise<RawFeeTotal>),
-    fetch(`${base}?interval=1d`, { next: { revalidate: 60 } }).then(
-      (r) => r.json() as Promise<RawFeeBucket[]>,
-    ),
-  ]);
-  return parseCreatorRewards(total, series, solPriceUsd);
+  try {
+    const base = pumpCreatorFeesUrl(PRIMARY_SOURCE_WALLET);
+    const [total, series] = await Promise.all([
+      fetchJson<RawFeeTotal>(`${base}/total`),
+      fetchJson<RawFeeBucket[]>(`${base}?interval=1d`),
+    ]);
+    return parseCreatorRewards(total, Array.isArray(series) ? series : [], solPriceUsd);
+  } catch {
+    return emptyCreatorRewards();
+  }
 }

@@ -52,13 +52,44 @@ async function fetchPairs(mint: string): Promise<DexPair[]> {
     next: { revalidate: 60 },
   });
   if (!res.ok) return [];
-  return (await res.json()) as DexPair[];
+  try {
+    return (await res.json()) as DexPair[];
+  } catch {
+    return [];
+  }
 }
 
-/** Fetch ANSEM market + derive the live SOL price from the same canonical pair (one request). */
+/** Safe-empty market used when DexScreener is down/non-OK/non-JSON. */
+function emptyMarket(): { ansem: TokenPanel; solPriceUsd: number | null } {
+  return {
+    ansem: {
+      mint: ANSEM_MINT,
+      symbol: "ANSEM",
+      name: "The Black Bull",
+      priceUsd: null,
+      liquidityUsd: null,
+      marketCapUsd: null,
+      volume24hUsd: null,
+      priceChange24h: null,
+      imageUrl: null,
+      updatedAt: new Date().toISOString(),
+    },
+    solPriceUsd: null,
+  };
+}
+
+/**
+ * Fetch ANSEM market + derive the live SOL price from the same canonical pair (one request).
+ * Never throws: on any failure it returns a safe-empty market so the server-rendered page
+ * (and `next build`) survive a DexScreener outage.
+ */
 export async function getMarket(): Promise<{ ansem: TokenPanel; solPriceUsd: number | null }> {
-  const pairs = await fetchPairs(ANSEM_MINT);
-  const ansem = parseAnsemMarket(pairs, new Date().toISOString());
-  const solPriceUsd = solPriceFromPair(pickTopPair(pairs));
-  return { ansem, solPriceUsd };
+  try {
+    const pairs = await fetchPairs(ANSEM_MINT);
+    const ansem = parseAnsemMarket(pairs, new Date().toISOString());
+    const solPriceUsd = solPriceFromPair(pickTopPair(pairs));
+    return { ansem, solPriceUsd };
+  } catch {
+    return emptyMarket();
+  }
 }
