@@ -15,6 +15,7 @@ const eslintConfig = defineConfig([
     // Generated/scratch output that must not be linted:
     ".netlify/**",
     ".playwright-mcp/**",
+    ".claude/**",
     "test/fixtures/**",
   ]),
 ]);
