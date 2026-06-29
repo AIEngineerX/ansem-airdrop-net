@@ -13,6 +13,7 @@ import { getOutgoingTransactions } from "../src/lib/rpc-source";
 import { rawTxToHelius } from "../src/lib/rpc-adapter";
 import { parseOutgoingTransfers } from "../src/lib/transfer-parser";
 import { EMPTY_SNAPSHOT, foldTransfers, type AirdropSnapshot } from "../src/lib/airdrop-snapshot";
+import { computeNextCursors } from "../src/lib/collector-cursors";
 import { PRIMARY_SOURCE_WALLET } from "../src/lib/domain";
 
 function arg(name: string, fallback?: string): string | undefined {
@@ -56,24 +57,27 @@ async function main() {
     const allHelius = [...incResult.txs, ...bfResult.txs].map(rawTxToHelius);
     const { transfers } = parseOutgoingTransfers(allHelius, PRIMARY_SOURCE_WALLET);
 
-    // Cursor updates:
-    // newest: only set on first run (prev.newest == null); kept stable afterward
-    const newestSig = prev.cursors.newest == null
-      ? (incResult.newestSignature ?? null)
-      : prev.cursors.newest;
-    // oldestScanned: advance to the oldest sig returned by the backfill pass
+    // Oldest sig seen in the backfill chunk (null when backfill returned nothing).
     const bfOldest = bfResult.txs.length
       ? bfResult.txs[bfResult.txs.length - 1].transaction.signatures[0]
       : null;
-    const oldestScanned = bfOldest ?? prev.cursors.oldestScanned;
-    // backfillComplete: backfill returned fewer than max → no more history
-    const backfillComplete = prev.backfillComplete ||
-      (!prev.backfillComplete && bfResult.txs.length < max);
+
+    // Compute next cursors via pure function (FIX A: newest advances each run).
+    const nextCursors = computeNextCursors(
+      { ...prev.cursors, backfillComplete: prev.backfillComplete },
+      {
+        mode: "sync",
+        incNewestSignature: incResult.newestSignature ?? null,
+        backfillOldest: bfOldest,
+        backfillCount: bfResult.txs.length,
+        max,
+      },
+    );
 
     const next = foldTransfers(prev, transfers, {
-      newestSignature: newestSig,
-      oldestScanned,
-      backfillComplete,
+      newestSignature: nextCursors.newest,
+      oldestScanned: nextCursors.oldestScanned,
+      backfillComplete: nextCursors.backfillComplete,
       collectedAt: nowIso,
     });
 
@@ -102,17 +106,26 @@ async function main() {
 
   const helius = txs.map(rawTxToHelius);
   const { transfers } = parseOutgoingTransfers(helius, PRIMARY_SOURCE_WALLET);
-  const oldest = txs.length ? txs[txs.length - 1].transaction.signatures[0] : prev.cursors.oldestScanned;
-  const backfillComplete = mode === "backfill" ? txs.length < max : prev.backfillComplete;
-  // For backfill, do not overwrite cursors.newest with the (older) backfill newestSignature.
-  const newestSigToStore = mode === "backfill"
-    ? prev.cursors.newest
-    : (newestSignature ?? prev.cursors.newest);
+  const txOldest = txs.length ? txs[txs.length - 1].transaction.signatures[0] : null;
+
+  // For backfill: the single scan IS the backfill scan, so pass its newestSignature as
+  // incNewestSignature to seed cursors.newest on bootstrap (FIX A: no bootstrap double-count).
+  // For incremental: incNewestSignature is the fresh scan's newestSignature; no backfill ran.
+  const nextCursors = computeNextCursors(
+    { ...prev.cursors, backfillComplete: prev.backfillComplete },
+    {
+      mode: mode as "incremental" | "backfill",
+      incNewestSignature: newestSignature ?? null,
+      backfillOldest: mode === "backfill" ? txOldest : null,
+      backfillCount: mode === "backfill" ? txs.length : 0,
+      max,
+    },
+  );
 
   const next = foldTransfers(prev, transfers, {
-    newestSignature: newestSigToStore,
-    oldestScanned: oldest ?? null,
-    backfillComplete,
+    newestSignature: nextCursors.newest,
+    oldestScanned: nextCursors.oldestScanned,
+    backfillComplete: nextCursors.backfillComplete,
     collectedAt: nowIso,
   });
 
