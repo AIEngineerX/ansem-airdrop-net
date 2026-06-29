@@ -39,5 +39,21 @@ jobs:
           git add -f snapshot.json
           git commit -m "data: snapshot $(date -u +%FT%TZ) [skip ci]" || echo "no change"
           git push -f origin data
-      - name: Purge jsDelivr CDN cache so the site sees the new snapshot promptly
-        run: curl -sf "https://purge.jsdelivr.net/gh/AIEngineerX/ansem-airdrop-net@data/snapshot.json" || true
+      - name: Purge jsDelivr until it serves the new snapshot (verify + retry)
+        # jsDelivr caches the @data branch ref by path and ignores query strings, so a
+        # client cache-buster can't defeat it — only a purge does. A bare purge fired right
+        # after the push re-caches the OLD content because GitHub hasn't propagated yet.
+        # So: wait for propagation, then purge and VERIFY jsDelivr now serves the new
+        # collectedAt, retrying until it does.
+        run: |
+          want=$(node -e "process.stdout.write(require('./snapshot.json').collectedAt)")
+          echo "want collectedAt: $want"
+          sleep 10
+          for i in 1 2 3 4 5 6; do
+            curl -sf "https://purge.jsdelivr.net/gh/AIEngineerX/ansem-airdrop-net@data/snapshot.json" > /dev/null || true
+            sleep 5
+            got=$(curl -s "https://cdn.jsdelivr.net/gh/AIEngineerX/ansem-airdrop-net@data/snapshot.json" | node -e "let d='';process.stdin.on('data',c=>d+=c).on('end',()=>{try{process.stdout.write(JSON.parse(d).collectedAt)}catch(e){process.stdout.write('')}})")
+            if [ "$got" = "$want" ]; then echo "jsDelivr fresh after purge #$i"; exit 0; fi
+            echo "purge #$i: jsDelivr still '$got', retrying"
+          done
+          echo "jsDelivr still stale after 6 attempts (best-effort; client falls back to seed)"
