@@ -362,7 +362,6 @@ function allInstructions(tx: RpcGetTransaction): RpcInstruction[] {
 
 export function rawTxToHelius(tx: RpcGetTransaction): HeliusTransaction {
   const signature = tx.transaction.signatures[0] ?? "";
-  const feePayer = tx.transaction.message.accountKeys[0]?.pubkey;
   const nativeTransfers: HeliusNativeTransfer[] = [];
   const tokenTransfers: HeliusTokenTransfer[] = [];
 
@@ -425,8 +424,6 @@ export function rawTxToHelius(tx: RpcGetTransaction): HeliusTransaction {
     transactionError: tx.meta?.err ?? null,
     nativeTransfers,
     tokenTransfers,
-    // feePayer retained for debugging; not part of the parser contract
-    ...(feePayer ? {} : {}),
   };
 }
 ```
