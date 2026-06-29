@@ -104,18 +104,18 @@ body {
   background-repeat: no-repeat;
   background-position: center 44%;
   background-size: auto 124%;
-  opacity: 0.26;
-  filter: grayscale(1) brightness(1.18) contrast(1.02);
+  opacity: 0.38;
+  filter: grayscale(1) brightness(1.22) contrast(1.06);
   mix-blend-mode: screen;
-  -webkit-mask-image: radial-gradient(closest-side at 50% 44%, #000 30%, transparent 80%);
-  mask-image: radial-gradient(closest-side at 50% 44%, #000 30%, transparent 80%);
+  -webkit-mask-image: radial-gradient(closest-side at 50% 44%, #000 38%, transparent 82%);
+  mask-image: radial-gradient(closest-side at 50% 44%, #000 38%, transparent 82%);
 }
 @media (max-width: 639px) {
   /* Narrow stage is taller-than-square-friendly; shrink the bull so the horns
      aren't cropped to slivers and the face stays the centred anchor. */
   .graph-stage .graph-bull {
     background-size: auto 96%;
-    opacity: 0.2;
+    opacity: 0.36;
   }
 }
 /* Captions / legend ride above everything. */

@@ -83,6 +83,12 @@ export function AirdropGraph({ snap, loading }: { snap: AirdropSnapshot; loading
     () => data.nodes.reduce((m, n) => (n.kind === "recipient" ? Math.max(m, n.ansemUi) : m), 1),
     [data],
   );
+  // Smallest gift in the model — the log floor for the perceptual size/colour
+  // scale below. (Math.min over recipients; falls back to 1 if none.)
+  const minUi = useMemo(
+    () => data.nodes.reduce((m, n) => (n.kind === "recipient" ? Math.min(m, n.ansemUi) : m), Infinity),
+    [data],
+  );
 
   // Single source of truth for the galaxy's outer radius. Every non-source node
   // is hard-clamped to this radius by a custom force (below), and the camera
@@ -94,20 +100,34 @@ export function AirdropGraph({ snap, loading }: { snap: AirdropSnapshot; loading
   const frameTarget = ((isMobile ? size.w : size.h) * 0.5 * 0.8) / galaxyR;
 
   // Per-node visual style (radius, ember colour, glow flag) — computed once per model.
+  // The gift distribution is extreme (7 whales at 3.7M–10M vs ~695 community
+  // wallets at ~1.7K–10K), so a linear/sqrt map on amount/max collapses the
+  // whole community into one minimum-size dot. We size on a LOG scale instead:
+  // `u` is each gift's position within [log(min) … log(max)], so every order of
+  // magnitude gets equal visual room. That keeps the whales clearly dominant
+  // while spreading real, perceptible variation across the long tail. Radius is
+  // hard-capped at rMax so a 10M node can't blow out the frame.
   const style = useMemo(() => {
     const recips = data.nodes.filter((n) => n.kind === "recipient");
     const hotCount = isMobile ? 6 : 14;
+    const lo = Math.log(Math.max(Number.isFinite(minUi) ? minUi : 1, 1));
+    const hi = Math.log(Math.max(maxUi, Math.exp(lo) + 1));
+    const span = hi - lo || 1;
+    const rMin = isMobile ? 1.4 : 1.6;
+    const rMax = isMobile ? 7.5 : 9.5;
     const m = new Map<string, { r: number; fill: string; hot: boolean }>();
     recips.forEach((n, i) => {
-      const t = Math.min(1, n.ansemUi / maxUi);
+      const u = Math.min(1, Math.max(0, (Math.log(Math.max(n.ansemUi, 1)) - lo) / span));
       m.set(n.id, {
-        r: 1.7 + 6.6 * Math.sqrt(t),
-        fill: emberColor(Math.pow(t, 0.42)),
+        r: rMin + (rMax - rMin) * u,
+        // Colour on the same log axis (gently lifted) so the tail isn't a flat
+        // oxblood wash: community embers warm through the ramp, whales go white-hot.
+        fill: emberColor(Math.pow(u, 0.7)),
         hot: i < hotCount,
       });
     });
     return m;
-  }, [data, isMobile, maxUi]);
+  }, [data, isMobile, maxUi, minUi]);
 
   // Layout forces: a compact, layered halo around GV6U. The bull is pinned at
   // the origin (the gravitational anchor — and a stable frame centre). Spoke
