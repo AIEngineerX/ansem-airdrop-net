@@ -1,174 +1,284 @@
+import Image from "next/image";
 import {
   ANSEM_MINT,
+  ANSEM_PUMP_PROFILE_URL,
+  ANSEM_PUMP_USERNAME,
+  ANSEM_X_URL,
+  BLACK_BULL_SITE,
   PRIMARY_SOURCE_WALLET,
-  SOURCE_ATTRIBUTION,
+  type FeePoint,
+  type TokenPanel,
 } from "@/lib/domain";
-import { summary, tokenPanel, transfers, recipientsFromTransfers } from "@/lib/dashboard-state";
+import { getCreatorRewards } from "@/lib/pump";
+import { getMarket } from "@/lib/price";
 
-const short = (value: string) => `${value.slice(0, 6)}…${value.slice(-4)}`;
+export const revalidate = 60;
 
-function StatCard({ label, value, detail }: { label: string; value: string; detail: string }) {
+// pump.fun's profile "Total fees earned" headline (incl. bonding-curve-era fees,
+// which the public swap-api does not expose). Referenced + linked, not computed here.
+const PUMP_LIFETIME_HEADLINE = "≈ $548K";
+
+const short = (v: string) => `${v.slice(0, 4)}…${v.slice(-4)}`;
+const fmtSol = (n: number) => `${n.toLocaleString("en-US", { maximumFractionDigits: 2 })} SOL`;
+const fmtUsd = (n: number | null, max = 0) =>
+  n == null ? "—" : `$${n.toLocaleString("en-US", { maximumFractionDigits: max })}`;
+const fmtCompact = (n: number | null) =>
+  n == null ? "—" : `$${Intl.NumberFormat("en-US", { notation: "compact", maximumFractionDigits: 2 }).format(n)}`;
+const fmtNum = (n: number) => n.toLocaleString("en-US");
+const fmtDay = (iso: string) =>
+  new Date(iso).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
+
+function RewardsChart({ points }: { points: FeePoint[] }) {
+  if (points.length < 2) return null;
+  const w = 800;
+  const h = 200;
+  const pad = 6;
+  const max = Math.max(...points.map((p) => p.cumulativeSol), 1);
+  const n = points.length;
+  const x = (i: number) => (i / (n - 1)) * (w - 2 * pad) + pad;
+  const y = (v: number) => h - pad - (v / max) * (h - 2 * pad);
+  const line = points.map((p, i) => `${i === 0 ? "M" : "L"}${x(i).toFixed(1)},${y(p.cumulativeSol).toFixed(1)}`).join(" ");
+  const area = `${line} L${x(n - 1).toFixed(1)},${h} L${x(0).toFixed(1)},${h} Z`;
   return (
-    <section className="rounded-2xl border border-white/[0.08] bg-white/[0.035] p-5 shadow-[0_1px_0_rgba(255,255,255,0.06)_inset]">
-      <p className="text-xs font-medium uppercase tracking-[0.18em] text-zinc-500">{label}</p>
-      <p className="mt-4 text-2xl font-semibold tracking-tight text-zinc-50">{value}</p>
-      <p className="mt-2 text-sm leading-6 text-zinc-500">{detail}</p>
-    </section>
+    <svg viewBox={`0 0 ${w} ${h}`} preserveAspectRatio="none" className="h-40 w-full sm:h-48" aria-hidden>
+      <defs>
+        <linearGradient id="fill" x1="0" x2="0" y1="0" y2="1">
+          <stop offset="0%" stopColor="#b11226" stopOpacity="0.35" />
+          <stop offset="100%" stopColor="#b11226" stopOpacity="0" />
+        </linearGradient>
+      </defs>
+      <path d={area} fill="url(#fill)" />
+      <path d={line} fill="none" stroke="#e0455a" strokeWidth="2" vectorEffect="non-scaling-stroke" />
+    </svg>
   );
 }
 
-function EmptyRow({ columns, label }: { columns: number; label: string }) {
+function Stat({ label, value, sub }: { label: string; value: string; sub?: string }) {
   return (
-    <tr>
-      <td colSpan={columns} className="px-4 py-8 text-center text-sm text-zinc-500">
-        {label}
-      </td>
-    </tr>
+    <div className="rounded-2xl border border-white/[0.08] bg-white/[0.025] p-4 sm:p-5">
+      <p className="text-[11px] font-medium uppercase tracking-[0.16em] text-zinc-500">{label}</p>
+      <p className="tabular mt-2 font-mono text-lg font-semibold text-zinc-50 sm:text-xl">{value}</p>
+      {sub ? <p className="mt-1 text-xs text-zinc-500">{sub}</p> : null}
+    </div>
   );
 }
 
-export default function Home() {
-  const recipients = recipientsFromTransfers(transfers);
+function Unofficial() {
+  return (
+    <span className="inline-flex items-center gap-1.5 rounded-full border border-white/[0.12] px-2.5 py-1 text-[11px] font-medium text-zinc-400">
+      <span className="h-1.5 w-1.5 rounded-full bg-[var(--accent)]" />
+      Unofficial · not affiliated with Ansem
+    </span>
+  );
+}
+
+export default async function Home() {
+  const { ansem, solPriceUsd } = await getMarket();
+  const rewards = await getCreatorRewards(solPriceUsd);
+  const updated = new Date(ansem.updatedAt ?? new Date().toISOString()).toLocaleString("en-US", {
+    dateStyle: "medium",
+    timeStyle: "short",
+  });
 
   return (
-    <main className="min-h-screen bg-[#050506] text-zinc-100">
-      <div className="mx-auto flex w-full max-w-7xl flex-col gap-8 px-5 py-6 sm:px-8 lg:px-10">
-        <header className="flex flex-col gap-5 border-b border-white/[0.08] pb-8 lg:flex-row lg:items-end lg:justify-between">
-          <div className="max-w-3xl">
-            <div className="mb-4 flex items-center gap-3 text-xs uppercase tracking-[0.22em] text-zinc-500">
-              <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
-              Read-only Solana ledger
-            </div>
-            <h1 className="text-balance text-4xl font-semibold tracking-[-0.045em] text-white sm:text-6xl">
-              Ansem airdrop flow, tracked cleanly.
-            </h1>
-            <p className="mt-5 max-w-2xl text-base leading-7 text-zinc-400">
-              {SOURCE_ATTRIBUTION}
+    <main className="mx-auto w-full max-w-6xl flex-1 px-4 pb-16 pt-4 sm:px-6 lg:px-8">
+      {/* top bar */}
+      <header className="flex flex-wrap items-center justify-between gap-3 border-b border-white/[0.07] py-3">
+        <div className="flex items-center gap-2.5">
+          <span
+            className="font-display text-xl tracking-wide text-white"
+            style={{ fontFamily: "var(--font-display)" }}
+          >
+            BLACK BULL
+          </span>
+          <span className="hidden text-xs text-zinc-600 sm:inline">creator rewards</span>
+        </div>
+        <Unofficial />
+      </header>
+
+      {/* hero */}
+      <section className="relative overflow-hidden rounded-3xl border border-white/[0.08] bg-black">
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-[62%] sm:w-[48%]">
+          <Image
+            src="/black-bull.png"
+            alt="The Black Bull — ANSEM token art"
+            fill
+            priority
+            sizes="(max-width: 640px) 62vw, 48vw"
+            className="object-cover object-center opacity-70"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/60 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+        </div>
+        <div className="relative max-w-xl px-5 py-10 sm:px-8 sm:py-14">
+          <h1
+            className="font-display text-4xl leading-[0.95] tracking-tight text-white sm:text-6xl"
+            style={{ fontFamily: "var(--font-display)" }}
+          >
+            ANSEM&apos;S CREATOR REWARDS, ON-CHAIN.
+          </h1>
+          <p className="mt-4 max-w-md text-sm leading-6 text-zinc-400">
+            Live pump.fun creator fees earned by{" "}
+            <a href={ANSEM_PUMP_PROFILE_URL} target="_blank" rel="noreferrer" className="text-zinc-200 underline decoration-white/20 underline-offset-2">
+              @{ANSEM_PUMP_USERNAME}
+            </a>{" "}
+            (Ansem / @blknoiz06) from The Black Bull / $ANSEM. Read-only. Attribution per pump.fun profile.
+          </p>
+          <div className="mt-6 flex flex-wrap gap-2">
+            <a
+              href={`https://solscan.io/account/${PRIMARY_SOURCE_WALLET}`}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex h-9 items-center rounded-full border border-white/[0.14] px-3 font-mono text-xs text-zinc-200 transition hover:border-white/30 hover:bg-white/[0.04]"
+            >
+              {short(PRIMARY_SOURCE_WALLET)}
+            </a>
+            <a
+              href={ANSEM_PUMP_PROFILE_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex h-9 items-center rounded-full border border-white/[0.14] px-3 text-xs text-zinc-200 transition hover:border-white/30 hover:bg-white/[0.04]"
+            >
+              pump.fun profile
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* creator rewards */}
+      <section className="mt-5 rounded-3xl border border-white/[0.08] bg-[#0a0a0b] p-5 sm:p-7">
+        <div className="flex flex-wrap items-end justify-between gap-3">
+          <div>
+            <p className="text-[11px] font-medium uppercase tracking-[0.16em] text-zinc-500">
+              On-chain creator fees · PumpSwap
+            </p>
+            <p
+              className="tabular mt-2 font-mono text-4xl font-semibold tracking-tight text-white sm:text-5xl"
+            >
+              {fmtSol(rewards.totalSol)}
+            </p>
+            <p className="tabular mt-1 font-mono text-lg text-[var(--accent-soft)]">
+              {fmtUsd(rewards.totalUsd)}{" "}
+              <span className="text-sm text-zinc-500">
+                @ {solPriceUsd ? fmtUsd(solPriceUsd, 2) : "—"}/SOL
+              </span>
             </p>
           </div>
           <a
-            className="inline-flex h-11 items-center justify-center rounded-full border border-white/[0.12] px-4 text-sm font-medium text-zinc-200 transition hover:border-white/25 hover:bg-white/[0.04]"
-            href={`https://solscan.io/account/${PRIMARY_SOURCE_WALLET}`}
-            rel="noreferrer"
+            href={ANSEM_PUMP_PROFILE_URL}
             target="_blank"
+            rel="noreferrer"
+            className="rounded-xl border border-white/[0.1] bg-white/[0.02] px-3 py-2 text-right transition hover:border-white/25"
           >
-            View wallet {short(PRIMARY_SOURCE_WALLET)}
+            <span className="block text-[11px] uppercase tracking-[0.14em] text-zinc-500">
+              pump.fun lifetime
+            </span>
+            <span className="tabular font-mono text-base text-zinc-200">{PUMP_LIFETIME_HEADLINE}</span>
+            <span className="mt-0.5 block text-[10px] text-zinc-600">incl. bonding-curve · view →</span>
           </a>
-        </header>
+        </div>
 
-        <section className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-          <StatCard
-            label="Tracked wallet"
-            value={short(summary.trackedWallet.walletAddress)}
-            detail="Pump profile association; not an exhaustive identity claim."
-          />
-          <StatCard
-            label="Transfers"
-            value={String(summary.transferCount)}
-            detail="Collector has not written a live ledger yet."
-          />
-          <StatCard
-            label="Recipients"
-            value={String(summary.uniqueRecipients)}
-            detail="Unique destination wallets parsed from outgoing sends."
-          />
-          <StatCard
-            label="Unparsed txs"
-            value={String(summary.unparsedTransactionCount)}
-            detail="Parser failures stay visible instead of disappearing."
-          />
-        </section>
+        <div className="mt-5 rounded-2xl border border-white/[0.06] bg-black/40 p-3">
+          <RewardsChart points={rewards.series} />
+          <p className="mt-1 px-1 text-[10px] text-zinc-600">
+            Cumulative PumpSwap creator fees (SOL){rewards.firstActive ? ` · since ${fmtDay(rewards.firstActive)}` : ""}
+          </p>
+        </div>
 
-        <section className="grid gap-4 lg:grid-cols-[0.9fr_1.1fr]">
-          <div className="rounded-3xl border border-white/[0.08] bg-[#0a0a0b] p-6">
-            <p className="text-xs font-medium uppercase tracking-[0.18em] text-zinc-500">ANSEM token</p>
-            <div className="mt-5 flex items-start justify-between gap-4">
-              <div>
-                <h2 className="text-2xl font-semibold tracking-tight text-white">{tokenPanel.name}</h2>
-                <p className="mt-2 font-mono text-xs text-zinc-500">{ANSEM_MINT}</p>
-              </div>
-              <span className="rounded-full border border-emerald-400/20 bg-emerald-400/10 px-3 py-1 text-xs font-medium text-emerald-300">
-                {tokenPanel.symbol}
-              </span>
-            </div>
-            <dl className="mt-8 grid grid-cols-2 gap-4 text-sm">
-              {[
-                ["Price", tokenPanel.priceUsd ? `$${tokenPanel.priceUsd}` : "—"],
-                ["Liquidity", tokenPanel.liquidityUsd ? `$${tokenPanel.liquidityUsd}` : "—"],
-                ["Market cap", tokenPanel.marketCapUsd ? `$${tokenPanel.marketCapUsd}` : "—"],
-                ["24h volume", tokenPanel.volume24hUsd ? `$${tokenPanel.volume24hUsd}` : "—"],
-              ].map(([label, value]) => (
-                <div key={label} className="rounded-2xl border border-white/[0.06] bg-white/[0.025] p-4">
-                  <dt className="text-zinc-500">{label}</dt>
-                  <dd className="mt-2 font-mono text-base text-zinc-100">{value}</dd>
-                </div>
-              ))}
-            </dl>
-          </div>
+        <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-4">
+          <Stat label="Total trades" value={fmtNum(rewards.totalTrades)} />
+          <Stat label="Fee days tracked" value={fmtNum(rewards.series.length)} />
+          <Stat label="First fee" value={rewards.firstActive ? fmtDay(rewards.firstActive) : "—"} />
+          <Stat label="Last fee" value={rewards.lastActive ? fmtDay(rewards.lastActive) : "—"} />
+        </div>
+      </section>
 
-          <div className="rounded-3xl border border-white/[0.08] bg-[#0a0a0b] p-6">
-            <p className="text-xs font-medium uppercase tracking-[0.18em] text-zinc-500">Method</p>
-            <div className="mt-5 space-y-4 text-sm leading-6 text-zinc-400">
-              <p>Only outgoing transfers from the tracked source wallet are counted.</p>
-              <p>Main ANSEM is identified by mint, never by symbol.</p>
-              <p>Current value is allowed. Exact at-transfer value requires stored price snapshots.</p>
-              <p>No wallet connection, claim flow, signing, swaps, or trading exists here.</p>
-            </div>
-          </div>
-        </section>
+      {/* ANSEM token panel */}
+      <TokenSection ansem={ansem} />
 
-        <section className="overflow-hidden rounded-3xl border border-white/[0.08] bg-[#0a0a0b]">
-          <div className="flex items-center justify-between border-b border-white/[0.08] px-5 py-4">
-            <div>
-              <h2 className="text-base font-semibold text-white">Transfers</h2>
-              <p className="mt-1 text-sm text-zinc-500">One row per parsed recipient transfer.</p>
-            </div>
-          </div>
-          <div className="overflow-x-auto">
-            <table className="w-full min-w-[860px] text-left text-sm">
-              <thead className="border-b border-white/[0.08] text-xs uppercase tracking-[0.14em] text-zinc-500">
-                <tr>
-                  <th className="px-4 py-3 font-medium">Time</th>
-                  <th className="px-4 py-3 font-medium">Asset</th>
-                  <th className="px-4 py-3 font-medium">Amount</th>
-                  <th className="px-4 py-3 font-medium">Recipient</th>
-                  <th className="px-4 py-3 font-medium">Confidence</th>
-                  <th className="px-4 py-3 font-medium">Tx</th>
-                </tr>
-              </thead>
-              <tbody>
-                {transfers.length === 0 ? (
-                  <EmptyRow columns={6} label="No transfer ledger loaded. Run the collector to populate this table." />
-                ) : null}
-              </tbody>
-            </table>
-          </div>
-        </section>
+      {/* methodology */}
+      <section className="mt-5 rounded-3xl border border-white/[0.08] bg-[#0a0a0b] p-5 text-sm leading-6 text-zinc-400 sm:p-7">
+        <h2 className="text-base font-semibold text-white">Methodology &amp; caveats</h2>
+        <ul className="mt-3 space-y-2">
+          <li>
+            <strong className="text-zinc-300">On-chain fees</strong> are PumpSwap (post-bonding-curve AMM)
+            creator fees from pump.fun&apos;s public <code className="text-zinc-400">swap-api</code>, in SOL,
+            valued at the live SOL price. pump.fun&apos;s profile &quot;total fees&quot; headline ({PUMP_LIFETIME_HEADLINE})
+            is larger because it includes bonding-curve-era fees that no public API exposes.
+          </li>
+          <li>The $ANSEM panel uses the highest-liquidity DexScreener pair; current value drifts with price.</li>
+          <li>
+            Wallet {short(PRIMARY_SOURCE_WALLET)} is the{" "}
+            <a href={ANSEM_PUMP_PROFILE_URL} target="_blank" rel="noreferrer" className="underline underline-offset-2">
+              @{ANSEM_PUMP_USERNAME}
+            </a>{" "}
+            pump.fun creator wallet (linked to Ansem / @blknoiz06 via the profile).
+          </li>
+          <li>This is an independent, read-only tracker. Not affiliated with or endorsed by Ansem.</li>
+          <li>This is not financial advice and not a trading signal. No wallet connect, signing, or trading exists here.</li>
+        </ul>
+      </section>
 
-        <section className="overflow-hidden rounded-3xl border border-white/[0.08] bg-[#0a0a0b]">
-          <div className="border-b border-white/[0.08] px-5 py-4">
-            <h2 className="text-base font-semibold text-white">Recipients</h2>
-            <p className="mt-1 text-sm text-zinc-500">Wallets that received parsed outgoing transfers.</p>
-          </div>
-          <div className="overflow-x-auto">
-            <table className="w-full min-w-[680px] text-left text-sm">
-              <thead className="border-b border-white/[0.08] text-xs uppercase tracking-[0.14em] text-zinc-500">
-                <tr>
-                  <th className="px-4 py-3 font-medium">Wallet</th>
-                  <th className="px-4 py-3 font-medium">Transfers</th>
-                  <th className="px-4 py-3 font-medium">First seen</th>
-                  <th className="px-4 py-3 font-medium">Latest seen</th>
-                </tr>
-              </thead>
-              <tbody>
-                {recipients.length === 0 ? (
-                  <EmptyRow columns={4} label="No recipients loaded." />
-                ) : null}
-              </tbody>
-            </table>
-          </div>
-        </section>
-      </div>
+      <footer className="mt-8 flex flex-col items-center gap-2 border-t border-white/[0.07] pt-6 text-center text-xs text-zinc-600">
+        <Unofficial />
+        <p>
+          Data: pump.fun swap-api · DexScreener ·{" "}
+          <a href={ANSEM_X_URL} target="_blank" rel="noreferrer" className="underline underline-offset-2">
+            @blknoiz06
+          </a>{" "}
+          ·{" "}
+          <a href={BLACK_BULL_SITE} target="_blank" rel="noreferrer" className="underline underline-offset-2">
+            blackbullsol.com
+          </a>
+        </p>
+        <p className="text-zinc-700">Updated {updated}</p>
+      </footer>
     </main>
+  );
+}
+
+function TokenSection({ ansem }: { ansem: TokenPanel }) {
+  const change = ansem.priceChange24h;
+  const up = (change ?? 0) >= 0;
+  return (
+    <section className="mt-5 rounded-3xl border border-white/[0.08] bg-[#0a0a0b] p-5 sm:p-7">
+      <div className="flex items-center justify-between gap-4">
+        <div className="flex items-center gap-3">
+          {ansem.imageUrl ? (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              src={ansem.imageUrl}
+              alt="$ANSEM"
+              width={44}
+              height={44}
+              className="h-11 w-11 rounded-full border border-white/10 object-cover"
+            />
+          ) : null}
+          <div>
+            <h2 className="text-lg font-semibold text-white">$ANSEM · The Black Bull</h2>
+            <p className="font-mono text-[11px] text-zinc-500">{short(ANSEM_MINT)}</p>
+          </div>
+        </div>
+        <a
+          href={`https://dexscreener.com/solana/${ANSEM_MINT}`}
+          target="_blank"
+          rel="noreferrer"
+          className="rounded-full border border-white/[0.12] px-3 py-1.5 text-xs text-zinc-300 transition hover:border-white/30"
+        >
+          chart →
+        </a>
+      </div>
+
+      <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
+        <Stat label="Price" value={ansem.priceUsd != null ? `$${ansem.priceUsd.toPrecision(4)}` : "—"} />
+        <Stat
+          label="24h"
+          value={change != null ? `${up ? "+" : ""}${change.toLocaleString("en-US", { maximumFractionDigits: 1 })}%` : "—"}
+        />
+        <Stat label="Market cap" value={fmtCompact(ansem.marketCapUsd)} />
+        <Stat label="Liquidity" value={fmtCompact(ansem.liquidityUsd)} />
+        <Stat label="24h volume" value={fmtCompact(ansem.volume24hUsd)} />
+      </div>
+    </section>
   );
 }

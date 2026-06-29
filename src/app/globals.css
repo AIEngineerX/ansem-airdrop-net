@@ -3,13 +3,18 @@
 :root {
   --background: #050506;
   --foreground: #ededed;
+  --accent: #b11226; /* oxblood — Ansem's 🐂🀄️ red */
+  --accent-soft: #e0455a;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-display);
 }
 
 * {
@@ -18,6 +23,7 @@
 
 html {
   background: var(--background);
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -25,9 +31,27 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  /* iOS Safari safe-area insets */
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom)
+    env(safe-area-inset-left);
 }
 
 ::selection {
-  background: rgba(52, 211, 153, 0.24);
+  background: rgba(177, 18, 38, 0.32);
   color: #ffffff;
+}
+
+/* "Black noise" film-grain overlay — very low opacity, fixed, non-interactive */
+.grain::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  pointer-events: none;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
 }
