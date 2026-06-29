@@ -9,14 +9,16 @@
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
     "test": "tsx --test test/*.test.ts",
-    "verify": "pnpm lint && pnpm typecheck && pnpm test && pnpm build"
+    "verify": "node scripts/check-boundary.mjs && pnpm lint && pnpm typecheck && pnpm test && pnpm build"
   },
   "dependencies": {
+    "@netlify/blobs": "^10.7.9",
     "next": "16.2.9",
     "react": "19.2.4",
     "react-dom": "19.2.4"
   },
   "devDependencies": {
+    "@netlify/functions": "^5.3.0",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",

@@ -36,6 +36,10 @@ yarn-error.log*
 # vercel
 .vercel
 
+# netlify + local collector snapshot
+.netlify/
+.data/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
