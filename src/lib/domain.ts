@@ -2,20 +2,11 @@ export const PRIMARY_SOURCE_WALLET = "GV6UUmNxz2RpKxmNAPadYKb7uQpszwqQAu3qLJxVdC
 export const ANSEM_MINT = "9cRCn9rGT8V2imeM2BaKs13yhMEais3ruM3rPvTGpump";
 export const NATIVE_SOL_MINT = "So11111111111111111111111111111111111111112";
 
-export const SOURCE_ATTRIBUTION =
-  "Public tracker and Pump.fun profile context link this wallet to ansemconzimp / @blknoiz06. Not exhaustive; not a wallet-ownership claim.";
-
-export type SourceConfidence = "pump-profile-associated" | "candidate" | "rejected";
 export type TransferType = "native_sol" | "spl_token" | "token_2022";
 export type ParserConfidence = "high" | "medium" | "low";
 
-export type SourceWallet = {
-  walletAddress: string;
-  label: string;
-  confidence: SourceConfidence;
-  evidence: string;
-};
-
+// One outgoing transfer parsed from a GV6U transaction (the unit the collector folds
+// into the AirdropSnapshot). See src/lib/airdrop-snapshot.ts.
 export type TransferRow = {
   id: string;
   signature: string;
@@ -34,6 +25,7 @@ export type TransferRow = {
   txUrl: string;
 };
 
+// $ANSEM market panel (Creator Rewards tab), from DexScreener.
 export type TokenPanel = {
   mint: string;
   symbol: "ANSEM";
@@ -47,44 +39,7 @@ export type TokenPanel = {
   updatedAt: string | null;
 };
 
-export type Summary = {
-  trackedWallet: SourceWallet;
-  transferCount: number;
-  uniqueRecipients: number;
-  totalCurrentUsd: number | null;
-  totalAnsemSentUi: number | null;
-  unparsedTransactionCount: number;
-  lastCollectedAt: string | null;
-};
-
-export const PRIMARY_SOURCE: SourceWallet = {
-  walletAddress: PRIMARY_SOURCE_WALLET,
-  label: "Primary tracked Pump profile wallet",
-  confidence: "pump-profile-associated",
-  evidence: SOURCE_ATTRIBUTION,
-};
-
-export type RecipientRow = {
-  wallet: string;
-  transferCount: number;
-  firstSeen: string;
-  latestSeen: string;
-};
-
-export type Snapshot = {
-  collectedAt: string;
-  coveredFrom: string | null;
-  coveredThrough: string | null;
-  lastSignature: string | null;
-  sourceWallet: string;
-  transfers: TransferRow[];
-  recipients: RecipientRow[];
-  counts: { transfers: number; uniqueRecipients: number; unparsed: number };
-  ansemSentUi: number;
-  solSentUi: number;
-};
-
-// --- Creator rewards (the v0 product) ---------------------------------------
+// --- Creator rewards (the secondary tab) ------------------------------------
 // GV6U... is Ansem's pump.fun creator wallet (profile @ansemconzimp / X @blknoiz06).
 // He launched The Black Bull / $ANSEM; this tracks his on-chain pump.fun creator fees.
 
