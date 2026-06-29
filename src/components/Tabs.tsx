@@ -4,6 +4,7 @@ import { useState, useEffect, type ReactNode } from "react";
 import { EMPTY_SNAPSHOT, type AirdropSnapshot } from "@/lib/airdrop-snapshot";
 import { fetchSnapshot, LIVE_SNAPSHOT_ENABLED } from "@/lib/snapshot-client";
 import { AirdropWebView } from "./AirdropWebView";
+import { AnsemArmyView } from "./AnsemArmyView";
 import { Unofficial } from "./Unofficial";
 
 // How often an open tab re-checks for a fresher snapshot (live mode only).
@@ -16,7 +17,7 @@ export function Tabs({
   creatorRewards: ReactNode;
   ansemPriceUsd: number | null;
 }) {
-  const [tab, setTab] = useState<"web" | "rewards">("web");
+  const [tab, setTab] = useState<"web" | "army" | "rewards">("web");
   const [snap, setSnap] = useState(EMPTY_SNAPSHOT);
   const [loading, setLoading] = useState(true);
 
@@ -61,6 +62,16 @@ export function Tabs({
           Airdrop Web
         </button>
         <button
+          id="tab-army"
+          role="tab"
+          aria-selected={tab === "army"}
+          aria-controls="panel-army"
+          onClick={() => setTab("army")}
+          className={`rounded-full px-4 py-1.5 transition ${tab === "army" ? "bg-[var(--accent)] text-white" : "text-zinc-400 hover:text-zinc-200"}`}
+        >
+          Ansem Army
+        </button>
+        <button
           id="tab-rewards"
           role="tab"
           aria-selected={tab === "rewards"}
@@ -80,6 +91,15 @@ export function Tabs({
         className={tab === "web" ? "" : "hidden"}
       >
         <AirdropWebView snap={snap} loading={loading} ansemPriceUsd={ansemPriceUsd} />
+      </div>
+      <div
+        id="panel-army"
+        role="tabpanel"
+        aria-labelledby="tab-army"
+        tabIndex={0}
+        className={tab === "army" ? "" : "hidden"}
+      >
+        <AnsemArmyView snap={snap} loading={loading} ansemPriceUsd={ansemPriceUsd} />
       </div>
       <div
         id="panel-rewards"
