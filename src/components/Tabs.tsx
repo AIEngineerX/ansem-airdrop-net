@@ -1,9 +1,12 @@
 "use client";
 import { useState, useEffect, type ReactNode } from "react";
-import { EMPTY_SNAPSHOT } from "@/lib/airdrop-snapshot";
-import { fetchSnapshot } from "@/lib/snapshot-client";
+import { EMPTY_SNAPSHOT, type AirdropSnapshot } from "@/lib/airdrop-snapshot";
+import { fetchSnapshot, LIVE_SNAPSHOT_ENABLED } from "@/lib/snapshot-client";
 import { AirdropWebView } from "./AirdropWebView";
 import { Unofficial } from "./Unofficial";
+
+// How often an open tab re-checks for a fresher snapshot (live mode only).
+const POLL_MS = 120_000;
 
 export function Tabs({
   creatorRewards,
@@ -17,7 +20,19 @@ export function Tabs({
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetchSnapshot().then((s) => { setSnap(s); setLoading(false); });
+    let alive = true;
+    const apply = (s: AirdropSnapshot) => {
+      if (!alive) return;
+      // Only swap state when the data actually changed, so polling never
+      // re-lays-out the graph for an identical snapshot.
+      setSnap((prev) => (s.collectedAt !== prev.collectedAt ? s : prev));
+      setLoading(false);
+    };
+    fetchSnapshot().then(apply);
+    // Seed-only mode is static — no point polling a file that never changes.
+    if (!LIVE_SNAPSHOT_ENABLED) return () => { alive = false; };
+    const id = setInterval(() => fetchSnapshot().then(apply), POLL_MS);
+    return () => { alive = false; clearInterval(id); };
   }, []);
 
   return (

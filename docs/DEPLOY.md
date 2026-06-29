@@ -1,99 +1,75 @@
-# ansem-airdrop-net — Deploy Guide
+# Deploy Guide — public + live
 
-The site ships in two phases. **Phase 1 (now)** gets a working live URL serving the
-real, committed seed snapshot (692 wallets) — static, no moving parts. **Phase 2
-(later, optional)** turns on auto-updating live data.
+The site is configured for **live data** (`LIVE_SNAPSHOT_ENABLED = true`): it fetches
+the snapshot from jsDelivr (served off the public repo's `data` branch, refreshed by the
+collector cron), and falls back to the committed seed (`public/snapshot.seed.json`) if
+the CDN is ever unavailable. So even mid-setup, the site always renders real data.
 
----
+Do the steps **in order** — seeding the `data` branch before Netlify goes live means the
+CDN already has a snapshot when the site first loads (no 404 flash).
 
-## Phase 1 — Ship seed-only (do this now)
+## Steps (yours to run)
 
-The app reads its snapshot from the committed `public/snapshot.seed.json` (served at
-`/snapshot.seed.json`). `src/lib/snapshot-client.ts` has `LIVE_SNAPSHOT_ENABLED = false`,
-so it serves the seed directly and makes no external data call. Real data, static until
-you do Phase 2.
-
-### 1. Push the branch and merge
-
+### 1. Merge to `main`
+Already staged locally on `main`. Push it:
 ```bash
-git push -u origin feat/airdrop-web
+git push origin main
+```
+(Optional cleanup: `git push origin --delete feat/airdrop-web` once you're happy.)
+
+### 2. Make the repo public
+GitHub → repo **Settings → General → Danger Zone → Change visibility → Public**.
+This is what lets jsDelivr serve the snapshot, and gives unlimited Actions minutes (so
+the cron runs every 15 min). Nothing sensitive is in the repo — `.env` is gitignored,
+no keys are committed, the snapshot is public on-chain data.
+
+### 3. Add the Helius key as an Actions secret
+```bash
+gh secret set HELIUS_API_KEY --repo AIEngineerX/ansem-airdrop-net
+```
+Paste the key (same one in your local `.env`). Used only by the collector in CI.
+
+### 4. Seed the `data` branch (once)
+Gives jsDelivr a `snapshot.json` immediately:
+```bash
+git checkout --orphan data
+git rm -rf .
+cp public/snapshot.seed.json snapshot.json
+git add snapshot.json
+git commit -m "data: seed"
+git push -u origin data
+git checkout main
 ```
 
-Open a PR on GitHub and merge to `main` (or fast-forward `main` to the branch).
+### 5. Trigger the collector + confirm CDN
+```bash
+gh workflow run collect-snapshot
+gh run watch
+```
+Then confirm the CDN serves it (give jsDelivr a minute):
+```bash
+curl -sI "https://cdn.jsdelivr.net/gh/AIEngineerX/ansem-airdrop-net@data/snapshot.json" | head -1
+```
+The cron then keeps it fresh every 15 min (and purges the jsDelivr cache each run).
 
-### 2. Connect to Netlify
+### 6. Connect Netlify (deploy from `main`)
+- Build command: `pnpm build` · publish per `@netlify/plugin-nextjs` (or the committed `netlify.toml`)
+- The Linux build sidesteps the Windows `@netlify/plugin-nextjs` EPERM blocker.
+- **Set an env var** so social-share images resolve: `NEXT_PUBLIC_SITE_URL = https://<your-netlify-domain>` (and redeploy). Without it, the OG/Twitter card image points at localhost.
+- No `HELIUS_API_KEY` needed on Netlify (the site never calls Helius — only the CI collector does).
 
-- Build command: `pnpm build`
-- Publish: per `@netlify/plugin-nextjs` (add via Netlify UI or the committed `netlify.toml`)
+## Go-live checklist
 
-The Linux Netlify build avoids the Windows `@netlify/plugin-nextjs` EPERM symlink blocker
-that prevents a local `pnpm build` from completing on Windows.
+- [ ] `main` deployed; Airdrop Web tab is default; graph renders 702 nodes with the Black Bull behind it.
+- [ ] Stats show 702 wallets / 67.36M ANSEM / live USD; "Total airdrops" 702.
+- [ ] Recent-airdrops feed populated; recipient lookup returns a hit for a known wallet, miss for a random one.
+- [ ] **X timeline** renders Ansem's posts in the rail (check in a real browser; it's the one third-party piece).
+- [ ] Creator Rewards tab: ~$548K lifetime leads, on-chain PumpSwap below, $ANSEM market panel live.
+- [ ] Share the URL in a DM/test channel → confirm the **graph preview card** shows (needs `NEXT_PUBLIC_SITE_URL` set).
+- [ ] After two cron runs, the `data` branch `snapshot.json` `collectedAt` advances and the site reflects it (open tabs re-poll every 2 min).
 
-No environment variables or secrets are required for Phase 1 (the seed is committed).
+## Notes
 
-### 3. First-deploy gate (spec §9)
-
-Confirm on the live URL before calling v1 done:
-
-- [ ] Airdrop Web tab is the default; graph renders real nodes with oxblood particles.
-- [ ] Stat cards show non-zero wallets + ANSEM total + airdrops.
-- [ ] Feed shows real airdrop rows with time-ago.
-- [ ] Recipient lookup: a known wallet → hit (amount + dates + tx); random wallet → miss.
-- [ ] Creator Rewards tab renders the existing dashboard unchanged.
-- [ ] Persistent "Unofficial · not affiliated with Ansem" disclaimer visible on both tabs.
-- [ ] `pnpm verify` green locally (boundary OK + lint + typecheck + all tests + build).
-- [ ] Desktop + ~390px (iOS Safari) screenshots captured.
-
----
-
-## Phase 2 — Enable live auto-updating data (optional, later)
-
-The live pipeline = a GitHub Actions cron runs the collector → commits `snapshot.json` to
-a `data` branch → the site fetches it. The fetch URL (`SNAPSHOT_CDN_URL`) uses jsDelivr's
-`/gh/` endpoint, which **only serves public repos**. So pick a serving path first:
-
-### Choose a serving path
-
-**Path A — make the repo public (simplest).** jsDelivr works as-built, and GitHub Actions
-becomes unlimited so the cron can run `*/15`. No secrets live in the repo (the Helius key
-is a GitHub Actions secret, not committed). Then:
-- In `src/lib/snapshot-client.ts`, set `LIVE_SNAPSHOT_ENABLED = true`.
-- In `.github/workflows/collect.yml`, change the cron from `*/30` to `*/15`.
-
-**Path B — keep the repo private (more ops).** Add a Netlify function that reads the
-`data`-branch `snapshot.json` via a GitHub token and serves it; repoint `SNAPSHOT_CDN_URL`
-at that function and set `LIVE_SNAPSHOT_ENABLED = true`. Keep the cron at `*/30` (private
-repos have the 2,000 Actions-min/month cap).
-
-### Then wire the pipeline
-
-1. Set the Helius key secret:
-   ```bash
-   gh secret set HELIUS_API_KEY --repo AIEngineerX/ansem-airdrop-net
-   ```
-2. Seed the `data` branch once locally:
-   ```bash
-   git checkout --orphan data
-   git rm -rf .
-   cp public/snapshot.seed.json snapshot.json
-   git add snapshot.json
-   git commit -m "data: seed"
-   git push -u origin data
-   git checkout main
-   ```
-3. Trigger the first collector run and watch it:
-   ```bash
-   gh workflow run collect-snapshot
-   gh run watch
-   ```
-
-The workflow runs the collector in **`sync` mode** each cron tick: an incremental pass
-(new airdrops since `cursors.newest`) plus a backfill chunk (older history via
-`cursors.oldestScanned`) until `backfillComplete: true`. The cursor logic advances
-`newest` every run, so windows never overlap and stats never double-count.
-
-### Live gate (after Phase 2)
-
-- [ ] After two collector runs, the `data` branch `snapshot.json` `collectedAt` advances and new recipients merge (no inflation).
-- [ ] The deployed site reflects the `data` branch (not just the build-time seed).
-- [ ] `otherMintsSent` stays empty/near-empty (confirms the ANSEM-only finding over real backfill).
+- **The airdrop is complete** (`backfillComplete: true`), so the live pipeline mostly matters for *future* airdrops — the committed seed is already the full, accurate dataset. Live mode + polling means any new Ansem airdrop would appear automatically.
+- **The ~$548K lifetime fee** is the one figure that isn't live (no public API exposes it). Refresh `PUMP_LIFETIME_USD` / `PUMP_LIFETIME_AS_OF` in `src/components/CreatorRewardsView.tsx` when you re-check his pump.fun profile.
+- **jsDelivr branch cache** is ~12h; the cron purges it each run so updates land promptly.

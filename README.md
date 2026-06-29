@@ -136,14 +136,13 @@ node --env-file=.env --import tsx scripts/collect-snapshot.ts \
 
 ## Deploy
 
-Two phases — see **[docs/DEPLOY.md](docs/DEPLOY.md)**:
-
-- **Phase 1 (now):** connect to Netlify; the site serves the committed
-  `snapshot.seed.json` (real 702-wallet data). No secrets needed. The Linux build
-  sidesteps the Windows `@netlify/plugin-nextjs` symlink blocker.
-- **Phase 2 (later):** turn on auto-updating live data — make the repo public
-  (jsDelivr serves the `data` branch) or add a serving function, then flip
-  `LIVE_SNAPSHOT_ENABLED` in `snapshot-client.ts`.
+Configured for **public + live data**: the site fetches the snapshot from jsDelivr
+(served off the public repo's `data` branch, refreshed every 15 min by the collector
+cron) and falls back to the committed seed if the CDN is ever down. Open tabs re-poll
+every 2 min. Full ordered checklist in **[docs/DEPLOY.md](docs/DEPLOY.md)** — make the
+repo public, set the `HELIUS_API_KEY` Actions secret, seed the `data` branch, and
+connect Netlify (deploy from `main`; the Linux build sidesteps the Windows EPERM
+blocker). The site never calls Helius directly — only the CI collector does.
 
 ## Data integrity
 

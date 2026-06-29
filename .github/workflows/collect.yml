@@ -1,7 +1,7 @@
 name: collect-snapshot
 on:
   schedule:
-    - cron: "*/30 * * * *"
+    - cron: "*/15 * * * *"
   workflow_dispatch: {}
 concurrency:
   group: collect-snapshot
@@ -39,3 +39,5 @@ jobs:
           git add -f snapshot.json
           git commit -m "data: snapshot $(date -u +%FT%TZ) [skip ci]" || echo "no change"
           git push -f origin data
+      - name: Purge jsDelivr CDN cache so the site sees the new snapshot promptly
+        run: curl -sf "https://purge.jsdelivr.net/gh/AIEngineerX/ansem-airdrop-net@data/snapshot.json" || true
