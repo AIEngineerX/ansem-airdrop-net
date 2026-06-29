@@ -175,6 +175,9 @@ export function AirdropGraph({ snap, loading }: { snap: AirdropSnapshot; loading
 
   return (
     <div ref={wrap} className="graph-stage w-full border border-white/[0.07]" style={{ height: size.h }}>
+      {/* Black Bull brand atmosphere — sits behind the canvas (see .graph-bull in globals.css) */}
+      <div className="graph-bull" aria-hidden="true" />
+
       {/* corner captions */}
       <div className="graph-overlay left-4 top-4 sm:left-5 sm:top-5">
         <p className="text-[10px] font-medium uppercase tracking-[0.22em] text-zinc-500">Live airdrop web</p>

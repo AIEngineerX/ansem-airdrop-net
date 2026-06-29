@@ -88,6 +88,36 @@ body {
   position: relative;
   z-index: 1;
 }
+/* Brand atmosphere: the Black Bull rests on the lit floor BELOW the canvas
+   (z-index 0, beneath the .graph-stage > * children) so the airdrop web seems
+   to emanate from it. Desaturated and screen-blended so the art's pure-black
+   ground dissolves into the stage, and radially masked so the bull melts into
+   the edge vignette — present as texture, never competing with the GV6U core,
+   recipient embers, or oxblood flow on the canvas above. Two classes beat the
+   `.graph-stage > *` rule, so this z-index/position wins regardless of order. */
+.graph-stage .graph-bull {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: url("/black-bull.png");
+  background-repeat: no-repeat;
+  background-position: center 44%;
+  background-size: auto 124%;
+  opacity: 0.26;
+  filter: grayscale(1) brightness(1.18) contrast(1.02);
+  mix-blend-mode: screen;
+  -webkit-mask-image: radial-gradient(closest-side at 50% 44%, #000 30%, transparent 80%);
+  mask-image: radial-gradient(closest-side at 50% 44%, #000 30%, transparent 80%);
+}
+@media (max-width: 639px) {
+  /* Narrow stage is taller-than-square-friendly; shrink the bull so the horns
+     aren't cropped to slivers and the face stays the centred anchor. */
+  .graph-stage .graph-bull {
+    background-size: auto 96%;
+    opacity: 0.2;
+  }
+}
 /* Captions / legend ride above everything. */
 .graph-stage .graph-overlay {
   position: absolute;
