@@ -18,7 +18,7 @@ const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
 type RpcCall = { method: string; params: unknown[] };
 
-async function rpcBatch(url: string, calls: RpcCall[]): Promise<unknown[]> {
+export async function rpcBatch(url: string, calls: RpcCall[]): Promise<unknown[]> {
   const body = calls.map((c, i) => ({ jsonrpc: "2.0", id: i, method: c.method, params: c.params }));
   for (let attempt = 0; ; attempt++) {
     const res = await fetch(url, {

@@ -12,6 +12,8 @@ export type AirdropRecipient = {
   latestSeen: string;
   latestSignature: string;
   signatures: string[];
+  /** Current on-chain ANSEM balance — set by the collector for the top 50 only. */
+  heldAnsemUi?: number;
 };
 export type AirdropFeedItem = {
   wallet: string;
