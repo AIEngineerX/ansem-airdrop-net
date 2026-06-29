@@ -5,6 +5,40 @@
 - **Repo:** AIEngineerX/ansem-airdrop-net
 - **Supersedes UI taste gate in:** `docs/chaos-handoff.md` (see §10)
 
+> ## ⚠️ v0 PIVOT (2026-06-29) — read this first
+>
+> The "outgoing-airdrop ledger" premise below was **invalidated by real chain data**
+> and the product was pivoted. What actually shipped:
+>
+> **Finding:** `GV6UUm…dC52` is Ansem's pump.fun creator wallet (profile
+> `ansemconzimp`), but it is a **passive holder** — it never signs a tx and never
+> sends (0 outgoing transfers across its recent history; the ANSEM "airdrops" are
+> tiny dust sprays by a *different* relay wallet `Dtw3GCTN…`). So an
+> outgoing-transfer ledger would render empty.
+>
+> **Pivot (user-directed):** track Ansem's **pump.fun creator rewards** + the
+> **$ANSEM token** instead. Shipped product = a creator-rewards dashboard:
+> - `src/lib/pump.ts` → pump.fun `swap-api` creator fees (`/v1/creators/{wallet}/fees/total`
+>   + `?interval=1d`): total SOL, live USD (× SOL price), daily cumulative series, trades.
+> - `src/lib/price.ts` → DexScreener ANSEM market (highest-liq pair) + SOL price.
+> - `src/app/page.tsx` → "Black Noise" mobile-first dashboard (Black Bull hero, oxblood
+>   accent, SVG fee chart, $ANSEM panel, disclaimers). Routes `/`,
+>   `/api/creator-rewards`, `/api/token/ansem` (ISR 60s). No Helius key / no collector / no Blobs.
+>
+> **Known limitations:**
+> - swap-api exposes **PumpSwap (AMM) creator fees only** (~95.82 SOL). pump.fun's
+>   profile **$547.96K** headline includes **bonding-curve-era** fees that **no public
+>   API exposes** and that pump renders server-side — so the dashboard features the
+>   live, verifiable swap-api figure and *references/links* the pump.fun lifetime headline.
+> - **Deploy blocked on Windows:** `@netlify/plugin-nextjs` needs symlinks Windows
+>   refuses (`EPERM`). Fix = Netlify cloud (Linux) build via GitHub connect, enabling
+>   Windows Developer Mode, or building on Linux. Site created + linked:
+>   `black-bull-creator-rewards.netlify.app`.
+>
+> The standard-RPC collector pipeline (rpc-source/aggregate/transfer-parser, Tasks
+> 2–5) is **shelved** (committed, unused by v0) for a possible future distributions view.
+> Everything below this banner is the original (pre-pivot) design, kept for history.
+
 ## 1. Purpose & Definition of Done
 
 A read-only, on-chain dashboard for **outgoing** transfers from one public Pump.fun
