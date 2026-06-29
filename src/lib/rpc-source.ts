@@ -52,6 +52,7 @@ export async function getOutgoingTransactions(opts: {
   wallet: string;
   sinceDays?: number;
   untilSignature?: string | null;
+  beforeSignature?: string | null;
   maxSignatures?: number;
 }): Promise<{ txs: RpcGetTransaction[]; newestSignature: string | null }> {
   const url = rpcUrl();
@@ -59,8 +60,9 @@ export async function getOutgoingTransactions(opts: {
   const cap = opts.maxSignatures ?? 10_000;
 
   // 1) paginate signatures (newest -> older)
+  // Seed `before` from opts.beforeSignature so backfill continues from oldestScanned.
   const signatures: string[] = [];
-  let before: string | undefined;
+  let before: string | undefined = opts.beforeSignature ?? undefined;
   let newest: string | null = null;
   outer: while (signatures.length < cap) {
     const [page] = (await rpcBatch(url, [

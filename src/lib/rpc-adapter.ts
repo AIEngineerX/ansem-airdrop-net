@@ -64,7 +64,9 @@ export function rawTxToHelius(tx: RpcGetTransaction): HeliusTransaction {
         const dstOwner = map.get(dstAcct)?.owner;
         const mint = (info.mint as string | undefined) ?? map.get(srcAcct)?.mint ?? map.get(dstAcct)?.mint;
         if (!mint) continue;
-        if (dstOwner && srcOwner && dstOwner === srcOwner) continue; // self-move guard
+        // Both owners must be resolved; skip if either is missing (avoids malformed transfer row).
+        if (!srcOwner || !dstOwner) continue;
+        if (dstOwner === srcOwner) continue; // self-move guard
         const decimals = map.get(srcAcct)?.decimals ?? map.get(dstAcct)?.decimals;
         const tokenAmountObj = info.tokenAmount as { amount?: string; uiAmount?: number } | undefined;
         const rawAmount = (info.amount as string | undefined) ?? tokenAmountObj?.amount ?? "0";
@@ -79,9 +81,12 @@ export function rawTxToHelius(tx: RpcGetTransaction): HeliusTransaction {
           mint,
           tokenAmount: uiAmount,
           rawTokenAmount: { tokenAmount: String(rawAmount), decimals },
-          tokenStandard: ins.program === "spl-token-2022" || map.get(srcAcct)?.programId === TOKEN_2022_PROGRAM
-            ? "FungibleToken2022"
-            : "FungibleToken",
+          tokenStandard:
+            ins.program === "spl-token-2022" ||
+            map.get(srcAcct)?.programId === TOKEN_2022_PROGRAM ||
+            map.get(dstAcct)?.programId === TOKEN_2022_PROGRAM
+              ? "FungibleToken2022"
+              : "FungibleToken",
         });
       }
     }
