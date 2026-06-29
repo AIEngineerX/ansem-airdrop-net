@@ -1,4 +1,6 @@
-# ansem-airdrop-net — Live $ANSEM Airdrop Web
+# did ansem drop? — Live $ANSEM Airdrop Map
+
+> **[didansemdrop.me](https://didansemdrop.me)** — paste your wallet, see if you caught the drop.
 
 An unofficial, **read-only** dashboard that maps every wallet Ansem
 ([@blknoiz06](https://x.com/blknoiz06)) airdropped **$ANSEM** to — straight from

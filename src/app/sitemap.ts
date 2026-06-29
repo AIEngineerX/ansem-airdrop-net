@@ -3,7 +3,7 @@ import type { MetadataRoute } from "next";
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://ansem-airdrop.netlify.app",
+      url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://didansemdrop.me",
       lastModified: new Date(),
     },
   ];

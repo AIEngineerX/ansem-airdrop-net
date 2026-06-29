@@ -6,11 +6,11 @@ const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 const display = Anton({ weight: "400", variable: "--font-display", subsets: ["latin"] });
 
-const TITLE = "ANSEM Airdrop Web — live map of wallets airdropped by Ansem";
+const TITLE = "did ansem drop? — live map of Ansem's $ANSEM airdrop";
 const DESCRIPTION =
-  "Unofficial, read-only on-chain map of the wallets airdropped $ANSEM by Ansem's pump.fun creator wallet, plus his creator rewards. Paste your wallet to see if you got the drop.";
+  "Paste your wallet to see if you caught Ansem's $ANSEM airdrop. A live, read-only on-chain map of every wallet The Black Bull dropped to — plus his creator rewards.";
 // Set NEXT_PUBLIC_SITE_URL to the deployed origin so share-card image URLs resolve absolutely.
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://didansemdrop.me";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -20,8 +20,8 @@ export const metadata: Metadata = {
     title: TITLE,
     description: DESCRIPTION,
     type: "website",
-    siteName: "ANSEM Airdrop Web",
-    images: [{ url: "/og.png", width: 1440, height: 900, alt: "The live ANSEM airdrop web" }],
+    siteName: "did ansem drop?",
+    images: [{ url: "/og.png", width: 1440, height: 900, alt: "did ansem drop? — the live $ANSEM airdrop map" }],
   },
   twitter: {
     card: "summary_large_image",
