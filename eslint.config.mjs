@@ -12,6 +12,10 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Generated/scratch output that must not be linted:
+    ".netlify/**",
+    ".playwright-mcp/**",
+    "test/fixtures/**",
   ]),
 ]);
 
