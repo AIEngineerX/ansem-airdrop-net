@@ -13,9 +13,11 @@ import {
 import { short } from "@/lib/airdrop-view";
 import { Unofficial } from "./Unofficial";
 
-// pump.fun's profile "Total fees earned" headline (incl. bonding-curve-era fees,
-// which the public swap-api does not expose). Referenced + linked, not computed here.
-const PUMP_LIFETIME_HEADLINE = "≈ $548K";
+// pump.fun's profile "Total fees earned" (bonding-curve + AMM). It is rendered
+// server-side on pump.fun and exposed by NO public API, so it can't be fetched live —
+// this is a sourced, manually-captured reference. Update both when re-checking the profile.
+const PUMP_LIFETIME_USD = "≈ $548K";
+const PUMP_LIFETIME_AS_OF = "Jun 29, 2026";
 const fmtSol = (n: number) => `${n.toLocaleString("en-US", { maximumFractionDigits: 2 })} SOL`;
 const fmtUsd = (n: number | null, max = 0) =>
   n == null ? "—" : `$${n.toLocaleString("en-US", { maximumFractionDigits: max })}`;
@@ -186,35 +188,35 @@ export function CreatorRewardsView({
 
       {/* creator rewards */}
       <section className="mt-5 rounded-3xl border border-white/[0.08] bg-[#0a0a0b] p-5 sm:p-7">
-        <div className="flex flex-wrap items-end justify-between gap-3">
+        <div className="flex flex-wrap items-end justify-between gap-4">
           <div>
             <p className="text-[11px] font-medium uppercase tracking-[0.16em] text-zinc-500">
-              On-chain creator fees · PumpSwap
+              Creator fees earned · pump.fun lifetime
             </p>
-            <p
-              className="tabular mt-2 font-mono text-4xl font-semibold tracking-tight text-white sm:text-5xl"
+            <p className="tabular mt-2 font-mono text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+              {PUMP_LIFETIME_USD}
+            </p>
+            <a
+              href={ANSEM_PUMP_PROFILE_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-1 inline-block text-sm text-zinc-500 underline decoration-white/15 underline-offset-2 transition hover:text-zinc-300"
             >
-              {fmtSol(rewards.totalSol)}
-            </p>
-            <p className="tabular mt-1 font-mono text-lg text-[var(--accent-soft)]">
-              {fmtUsd(rewards.totalUsd)}{" "}
-              <span className="text-sm text-zinc-500">
-                @ {solPriceUsd ? fmtUsd(solPriceUsd, 2) : "—"}/SOL
-              </span>
-            </p>
+              as reported by pump.fun · {PUMP_LIFETIME_AS_OF} · view profile →
+            </a>
           </div>
-          <a
-            href={ANSEM_PUMP_PROFILE_URL}
-            target="_blank"
-            rel="noreferrer"
-            className="rounded-xl border border-white/[0.1] bg-white/[0.02] px-3 py-2 text-right transition hover:border-white/25"
-          >
+          <div className="rounded-xl border border-white/[0.1] bg-white/[0.02] px-3.5 py-2.5 text-right">
             <span className="block text-[11px] uppercase tracking-[0.14em] text-zinc-500">
-              pump.fun lifetime
+              Verifiable on-chain · PumpSwap
             </span>
-            <span className="tabular font-mono text-base text-zinc-200">{PUMP_LIFETIME_HEADLINE}</span>
-            <span className="mt-0.5 block text-[10px] text-zinc-600">incl. bonding-curve · view →</span>
-          </a>
+            <span className="tabular mt-1 block font-mono text-base font-semibold text-[var(--accent-soft)]">
+              {fmtSol(rewards.totalSol)}
+            </span>
+            <span className="tabular mt-0.5 block font-mono text-xs text-zinc-400">
+              {fmtUsd(rewards.totalUsd)}{" "}
+              <span className="text-zinc-600">@ {solPriceUsd ? fmtUsd(solPriceUsd, 2) : "—"}/SOL · live</span>
+            </span>
+          </div>
         </div>
 
         <div className="mt-5 rounded-2xl border border-white/[0.06] bg-black/40 p-3">
@@ -240,10 +242,13 @@ export function CreatorRewardsView({
         <h2 className="text-base font-semibold text-white">Methodology &amp; caveats</h2>
         <ul className="mt-3 space-y-2">
           <li>
-            <strong className="text-zinc-300">On-chain fees</strong> are PumpSwap (post-bonding-curve AMM)
-            creator fees from pump.fun&apos;s public <code className="text-zinc-400">swap-api</code>, in SOL,
-            valued at the live SOL price. pump.fun&apos;s profile &quot;total fees&quot; headline ({PUMP_LIFETIME_HEADLINE})
-            is larger because it includes bonding-curve-era fees that no public API exposes.
+            The <strong className="text-zinc-300">pump.fun lifetime</strong> figure ({PUMP_LIFETIME_USD}, as of{" "}
+            {PUMP_LIFETIME_AS_OF}) is pump.fun&apos;s own &quot;total fees earned&quot; (bonding-curve + AMM). It is
+            rendered on their profile and exposed by no public API, so it is a sourced, manually-captured
+            reference — not live. The <strong className="text-zinc-300">verifiable on-chain</strong> figure is the
+            PumpSwap (post-bonding-curve AMM) portion from pump.fun&apos;s public{" "}
+            <code className="text-zinc-400">swap-api</code>, in SOL at the live SOL price — the slice we can confirm
+            on-chain.
           </li>
           <li>The $ANSEM panel uses the highest-liquidity DexScreener pair; current value drifts with price.</li>
           <li>
