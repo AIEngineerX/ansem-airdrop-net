@@ -15,6 +15,26 @@ import { parseOutgoingTransfers } from "../src/lib/transfer-parser";
 import { EMPTY_SNAPSHOT, foldTransfers, type AirdropSnapshot } from "../src/lib/airdrop-snapshot";
 import { computeNextCursors } from "../src/lib/collector-cursors";
 import { PRIMARY_SOURCE_WALLET } from "../src/lib/domain";
+import { getAnsemBalances } from "../src/lib/holdings";
+
+// Enrich the top-50 recipients with their current on-chain ANSEM balance.
+// Fail-soft: holdings are enrichment, not core truth — never fail the run over them.
+async function withHoldings(snap: AirdropSnapshot): Promise<AirdropSnapshot> {
+  try {
+    const top = snap.recipients.slice(0, 50).map((r) => r.wallet);
+    if (top.length === 0) return snap;
+    const held = await getAnsemBalances(top);
+    return {
+      ...snap,
+      recipients: snap.recipients.map((r) =>
+        held.has(r.wallet) ? { ...r, heldAnsemUi: held.get(r.wallet) } : r,
+      ),
+    };
+  } catch (e) {
+    console.warn("holdings: fetch failed, writing snapshot without holdings:", (e as Error).message);
+    return snap;
+  }
+}
 
 function arg(name: string, fallback?: string): string | undefined {
   const i = process.argv.indexOf(name);
@@ -83,7 +103,8 @@ async function main() {
 
     if (next.totals.totalAirdrops < prev.totals.totalAirdrops)
       throw new Error("refusing to write a regressed snapshot");
-    writeFileSync(outPath, JSON.stringify(next, null, 2));
+    const enriched = await withHoldings(next);
+    writeFileSync(outPath, JSON.stringify(enriched, null, 2));
     console.log(
       `sync: wrote ${outPath}: ${next.totals.uniqueRecipients} recipients, ` +
       `${next.totals.totalAirdrops} airdrops, ` +
@@ -131,7 +152,8 @@ async function main() {
 
   if (next.totals.totalAirdrops < prev.totals.totalAirdrops)
     throw new Error("refusing to write a regressed snapshot");
-  writeFileSync(outPath, JSON.stringify(next, null, 2));
+  const enriched = await withHoldings(next);
+  writeFileSync(outPath, JSON.stringify(enriched, null, 2));
   console.log(
     `${mode}: wrote ${outPath}: ${next.totals.uniqueRecipients} recipients, ` +
     `${next.totals.totalAirdrops} airdrops, ` +
