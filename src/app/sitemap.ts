@@ -5,6 +5,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://didansemdrop.me",
       lastModified: new Date(),
+      changeFrequency: "hourly",
+      priority: 1,
     },
   ];
 }
