@@ -70,10 +70,11 @@ export async function getOutgoingTransactions(opts: {
     if (page.length < 1000) break;
   }
 
-  // 2) fetch transactions in batches of 100
+  // 2) fetch transactions in batches (kept small — Helius returns 413 on large batches)
+  const BATCH = 25;
   const txs: RpcGetTransaction[] = [];
-  for (let i = 0; i < signatures.length; i += 100) {
-    const chunk = signatures.slice(i, i + 100);
+  for (let i = 0; i < signatures.length; i += BATCH) {
+    const chunk = signatures.slice(i, i + BATCH);
     const results = await rpcBatch(
       url,
       chunk.map((sig) => ({

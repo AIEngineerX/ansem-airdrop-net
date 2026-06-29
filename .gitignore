@@ -46,3 +46,7 @@ next-env.d.ts
 
 # playwright mcp scratch
 .playwright-mcp/
+
+# shelved transfer-investigation raw fixtures
+test/fixtures/raw-*.json
+test/fixtures/_index.json
