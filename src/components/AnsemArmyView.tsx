@@ -8,11 +8,17 @@ const compactUsd = (n: number) =>
   "$" + new Intl.NumberFormat("en-US", { notation: "compact", maximumFractionDigits: 1 }).format(n);
 const solscan = (w: string) => `https://solscan.io/account/${w}`;
 
+// Holding = the wallet's current on-chain $ANSEM balance vs what it was airdropped.
+// < 100% = sold some of the drop; ≥ 100% = kept it all (and bought more), shown as a
+// multiple so the label never reads the nonsensical "kept >100%".
 function holdingLabel(held: number | undefined, airdropped: number): { text: string; flair: string } {
   if (held === undefined) return { text: "—", flair: "" };
-  const kept = airdropped > 0 ? held / airdropped : 0;
-  const flair = kept >= 0.8 ? "💎" : kept <= 0.2 ? "📉" : "";
-  return { text: `${fmt(held)} · kept ${Math.round(kept * 100)}%`, flair };
+  if (held === 0) return { text: "0 · sold all", flair: "📉" };
+  const ratio = airdropped > 0 ? held / airdropped : 0;
+  if (ratio >= 1.15) return { text: `${fmt(held)} · ${ratio.toFixed(1)}× drop`, flair: "💎" };
+  if (ratio >= 1) return { text: `${fmt(held)} · kept all`, flair: "💎" };
+  const flair = ratio <= 0.2 ? "📉" : "";
+  return { text: `${fmt(held)} · kept ${Math.round(ratio * 100)}%`, flair };
 }
 
 export function AnsemArmyView({
@@ -110,7 +116,9 @@ export function AnsemArmyView({
       </div>
 
       <p className="text-xs text-zinc-600">
-        Holdings shown for the top 50 by airdrop size, as of the last refresh. “—” = not tracked.
+        Holding = the wallet&rsquo;s current on-chain $ANSEM balance (top 50 by airdrop size, as of the last
+        refresh). “kept %” = how much of the airdrop they still hold; “N× drop” = they hold more than they
+        were airdropped (bought more on top). “—” = not tracked.
       </p>
     </div>
   );
