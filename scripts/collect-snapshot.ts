@@ -41,9 +41,11 @@ async function main() {
     });
 
     // 2. Backfill chunk: fetch sigs older than prev.oldestScanned (extends history)
-    let bfResult: { txs: typeof incResult.txs; newestSignature: string | null } = {
+    let bfResult: Awaited<ReturnType<typeof getOutgoingTransactions>> = {
       txs: [],
       newestSignature: null,
+      oldestSignature: null,
+      signatureCount: 0,
     };
     if (!prev.backfillComplete) {
       bfResult = await getOutgoingTransactions({
@@ -57,19 +59,17 @@ async function main() {
     const allHelius = [...incResult.txs, ...bfResult.txs].map(rawTxToHelius);
     const { transfers } = parseOutgoingTransfers(allHelius, PRIMARY_SOURCE_WALLET);
 
-    // Oldest sig seen in the backfill chunk (null when backfill returned nothing).
-    const bfOldest = bfResult.txs.length
-      ? bfResult.txs[bfResult.txs.length - 1].transaction.signatures[0]
-      : null;
-
-    // Compute next cursors via pure function (FIX A: newest advances each run).
+    // Compute next cursors via pure function. FIX A: newest advances each run.
+    // FIX B1: judge backfill on SIGNATURES fetched (signatureCount) and advance oldestScanned
+    // from the oldest SIGNATURE seen — never from txs[last], which omits null/pruned txs and
+    // would prematurely mark backfillComplete (dropping older history).
     const nextCursors = computeNextCursors(
       { ...prev.cursors, backfillComplete: prev.backfillComplete },
       {
         mode: "sync",
         incNewestSignature: incResult.newestSignature ?? null,
-        backfillOldest: bfOldest,
-        backfillCount: bfResult.txs.length,
+        backfillOldest: bfResult.oldestSignature,
+        backfillCount: bfResult.signatureCount,
         max,
       },
     );
@@ -97,7 +97,7 @@ async function main() {
   const untilSignature = mode === "incremental" ? prev.cursors.newest : undefined;
   const beforeSignature = mode === "backfill" ? (prev.cursors.oldestScanned ?? undefined) : undefined;
 
-  const { txs, newestSignature } = await getOutgoingTransactions({
+  const { txs, newestSignature, oldestSignature, signatureCount } = await getOutgoingTransactions({
     wallet: PRIMARY_SOURCE_WALLET,
     untilSignature,
     beforeSignature,
@@ -106,18 +106,18 @@ async function main() {
 
   const helius = txs.map(rawTxToHelius);
   const { transfers } = parseOutgoingTransfers(helius, PRIMARY_SOURCE_WALLET);
-  const txOldest = txs.length ? txs[txs.length - 1].transaction.signatures[0] : null;
 
   // For backfill: the single scan IS the backfill scan, so pass its newestSignature as
   // incNewestSignature to seed cursors.newest on bootstrap (FIX A: no bootstrap double-count).
   // For incremental: incNewestSignature is the fresh scan's newestSignature; no backfill ran.
+  // FIX B1: backfill judged on signatureCount + oldestSignature, not parsed-tx values.
   const nextCursors = computeNextCursors(
     { ...prev.cursors, backfillComplete: prev.backfillComplete },
     {
       mode: mode as "incremental" | "backfill",
       incNewestSignature: newestSignature ?? null,
-      backfillOldest: mode === "backfill" ? txOldest : null,
-      backfillCount: mode === "backfill" ? txs.length : 0,
+      backfillOldest: mode === "backfill" ? oldestSignature : null,
+      backfillCount: mode === "backfill" ? signatureCount : 0,
       max,
     },
   );

@@ -55,6 +55,44 @@ test("backfill: marks complete when scan returns fewer than max (reached genesis
   assert.equal(result.backfillComplete, true, "partial page → reached genesis");
 });
 
+// ─── FIX B1: backfillComplete judged on SIGNATURES fetched, not parsed txs ──
+// rpc-source's getTransaction drops null results (pruned/not-found), so the
+// parsed-tx count can be < the signature count. backfillComplete must compare the
+// SIGNATURE count against max, or one pruned tx in a full chunk wrongly ends the
+// backfill forever and drops older history.
+
+test("B1: full signature chunk with a pruned (null) tx does NOT complete backfill", () => {
+  // 1000 signatures fetched this run; one getTransaction returned null → 999 parsed txs.
+  // The caller must feed signatureCount (1000), not txs.length (999), as backfillCount.
+  const prev: CursorState = { newest: "SIG_TOP", oldestScanned: "SIG_MID", backfillComplete: false };
+  const signatureCount = 1000;
+  const result = computeNextCursors(prev, {
+    mode: "backfill",
+    incNewestSignature: null,
+    backfillOldest: "SIG_OLDER",
+    backfillCount: signatureCount, // SIGNATURES fetched, not the 999 parsed txs
+    max: 1000,
+  });
+  assert.equal(
+    result.backfillComplete,
+    false,
+    "a full (==max) signature chunk means more history may remain — must not complete",
+  );
+  assert.equal(result.oldestScanned, "SIG_OLDER", "oldestScanned advances from the oldest signature");
+});
+
+test("B1: short signature chunk completes backfill (reached genesis)", () => {
+  const prev: CursorState = { newest: "SIG_TOP", oldestScanned: "SIG_MID", backfillComplete: false };
+  const result = computeNextCursors(prev, {
+    mode: "backfill",
+    incNewestSignature: null,
+    backfillOldest: "SIG_GENESIS",
+    backfillCount: 640, // fewer signatures than max → no older page exists
+    max: 1000,
+  });
+  assert.equal(result.backfillComplete, true, "fewer signatures than max → reached genesis");
+});
+
 test("double-count prevention: two consecutive sync runs produce non-overlapping windows", () => {
   // Run 1: incremental scan sees SIG_NEW as the newest sig.
   const prev1: CursorState = { newest: "SIG_ORIG", oldestScanned: null, backfillComplete: false };
