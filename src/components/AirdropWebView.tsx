@@ -18,8 +18,9 @@ export function AirdropWebView({
 }) {
   return (
     <div className="mt-5 space-y-5">
+      <h1 className="sr-only">Did Ansem airdrop me? — live $ANSEM airdrop tracker</h1>
       <p className="text-sm text-zinc-500">
-        Unofficial, read-only tracker of every wallet Ansem&rsquo;s creator wallet airdropped $ANSEM to — read straight from Solana on-chain data via Helius.
+        An unofficial, read-only tracker of every wallet Ansem&rsquo;s creator wallet has airdropped $ANSEM to — read straight from Solana, on-chain, via Helius.
       </p>
       <AirdropStats snap={snap} ansemPriceUsd={ansemPriceUsd} />
       <div className="grid gap-5 lg:grid-cols-[1fr_340px]">
@@ -32,10 +33,14 @@ export function AirdropWebView({
       </div>
       <DataStamp snap={snap} loading={loading} />
 
-      {/* How this works */}
-      <section className="rounded-2xl border border-white/[0.08] bg-[#0a0a0b] p-5 text-sm leading-6 text-zinc-400 sm:p-6">
-        <h2 className="text-sm font-semibold text-zinc-300">How this works</h2>
-        <ul className="mt-3 space-y-2">
+      {/* How this works — collapsible, collapsed by default */}
+      <details className="group rounded-2xl border border-white/[0.08] bg-[#0a0a0b] text-sm leading-6 text-zinc-400">
+        <summary className="flex cursor-pointer list-none items-center justify-between gap-3 p-5 font-semibold text-zinc-300 sm:p-6 [&::-webkit-details-marker]:hidden">
+          <span>How this works</span>
+          <span aria-hidden="true" className="text-zinc-500 transition-transform group-open:rotate-90">▸</span>
+        </summary>
+        <div className="px-5 pb-5 sm:px-6 sm:pb-6">
+        <ul className="space-y-2">
           <li>
             <strong className="text-zinc-300">On-chain data.</strong> Every airdrop is read directly from the Solana blockchain via Helius RPC — no third-party databases, no estimates.
           </li>
@@ -69,7 +74,8 @@ export function AirdropWebView({
             @DaddyGhost
           </a>
         </p>
-      </section>
+        </div>
+      </details>
     </div>
   );
 }

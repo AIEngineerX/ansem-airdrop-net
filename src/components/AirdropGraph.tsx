@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { ForceGraphMethods, NodeObject, LinkObject } from "react-force-graph-2d";
 import { buildGraphModel, short, type GraphNode } from "@/lib/airdrop-view";
 import type { AirdropSnapshot } from "@/lib/airdrop-snapshot";
@@ -193,6 +193,38 @@ export function AirdropGraph({ snap, loading }: { snap: AirdropSnapshot; loading
 
   const recipientCount = snap.totals.uniqueRecipients;
 
+  // Particle COUNT must keep a stable identity across hover re-renders. The
+  // underlying force-graph re-emits every particle from the start whenever this
+  // accessor is re-applied, so an inline function (new identity each render)
+  // makes the flow animation visibly restart on hover. Memoise it; the
+  // hover-dependent colour/width accessors below can stay inline (they only
+  // affect drawing, not particle emission). Mobile emits none (battery).
+  const linkParticles = useCallback(
+    (link: LinkObject) => {
+      if (isMobile) return 0;
+      const tgt = link.target;
+      const node = typeof tgt === "object" && tgt !== null ? (tgt as FGNode) : null;
+      if (!node) return 2;
+      if (node.kind === "cluster") return 4;
+      const t = Math.min(1, (node.ansemUi ?? 0) / maxUi);
+      return 1 + Math.round(3 * Math.sqrt(t));
+    },
+    [isMobile, maxUi],
+  );
+
+  // Particle COLOUR is likewise kept hover-independent and stable, so no
+  // particle-system prop is ever re-applied on hover (which would restart the
+  // flow). Hovered links still stand out via linkColor/linkWidth below.
+  const particleColor = useCallback(
+    (link: LinkObject) => {
+      const tgt = link.target;
+      const node = typeof tgt === "object" && tgt !== null ? (tgt as FGNode) : null;
+      const t = node ? Math.min(1, (node.ansemUi ?? 0) / maxUi) : 0;
+      return t > 0.55 ? "#ff8088" : "rgba(224,69,90,0.92)";
+    },
+    [maxUi],
+  );
+
   return (
     <div
       ref={wrap}
@@ -227,7 +259,7 @@ export function AirdropGraph({ snap, loading }: { snap: AirdropSnapshot; loading
           {loading === false && snap.totals.totalAirdrops === 0 ? (
             <p role="status" aria-live="polite" className="text-sm text-zinc-500">Airdrop data is temporarily unavailable — check back shortly.</p>
           ) : (
-            <p role="status" aria-live="polite" className="animate-pulse text-sm text-zinc-500">Summoning the airdrop web…</p>
+            <p role="status" aria-live="polite" className="animate-pulse text-sm text-zinc-500">Loading the airdrop map…</p>
           )}
         </div>
       )}
@@ -239,13 +271,18 @@ export function AirdropGraph({ snap, loading }: { snap: AirdropSnapshot; loading
           width={size.w}
           height={size.h}
           backgroundColor="rgba(0,0,0,0)"
-          autoPauseRedraw={false}
+          // Desktop keeps the always-on redraw for the pulse + flow particles.
+          // Mobile lets the canvas park once the layout settles (battery/heat),
+          // which is safe because particles are disabled on mobile below.
+          autoPauseRedraw={isMobile}
           warmupTicks={isMobile ? 20 : 30}
           cooldownTicks={140}
           d3AlphaDecay={0.025}
           d3VelocityDecay={0.42}
-          minZoom={0.35}
-          maxZoom={9}
+          // Clamp the camera to the framed scale: can't shrink the web to a dot
+          // (minZoom sat far below the framing zoom before) or zoom past readable.
+          minZoom={frameTarget * 0.7}
+          maxZoom={frameTarget * 4}
           enableNodeDrag={false}
           onEngineStop={() => {
             const fg = fgRef.current; if (!fg) return;
@@ -260,32 +297,21 @@ export function AirdropGraph({ snap, loading }: { snap: AirdropSnapshot; loading
           linkWidth={(link: LinkObject) =>
             hover && !hover.src && (idOf(link.source) === hover.id || idOf(link.target) === hover.id) ? 1.7 : 0.5
           }
-          linkDirectionalParticles={(link: LinkObject) => {
-            const tgt = link.target;
-            const node = typeof tgt === "object" && tgt !== null ? (tgt as FGNode) : null;
-            if (!node) return isMobile ? 1 : 2;
-            if (node.kind === "cluster") return isMobile ? 2 : 4;
-            const t = Math.min(1, (node.ansemUi ?? 0) / maxUi);
-            return isMobile ? 1 + Math.round(Math.sqrt(t)) : 1 + Math.round(3 * Math.sqrt(t));
-          }}
+          linkDirectionalParticles={linkParticles}
           linkDirectionalParticleWidth={2.2}
           linkDirectionalParticleSpeed={0.0045}
-          linkDirectionalParticleColor={(link: LinkObject) => {
-            if (hover && !hover.src && (idOf(link.source) === hover.id || idOf(link.target) === hover.id)) return "#ffd2cb";
-            const tgt = link.target;
-            const node = typeof tgt === "object" && tgt !== null ? (tgt as FGNode) : null;
-            const t = node ? Math.min(1, (node.ansemUi ?? 0) / maxUi) : 0;
-            return t > 0.55 ? "#ff8088" : "rgba(224,69,90,0.92)";
-          }}
+          linkDirectionalParticleColor={particleColor}
           onNodeHover={(node: NodeObject | null) => {
             const n = node as FGNode | null;
             setHover(n ? { id: String(n.id), src: n.kind === "source" } : null);
           }}
           onNodeClick={(node: NodeObject) => {
+            // Select/highlight only — never move the camera. Panning + zooming
+            // the canvas under a stationary cursor was disorienting ("centers,
+            // then the mouse is off it") and shoved the web off-frame. Setting
+            // hover also gives touch devices a tap-to-reveal label.
             const n = node as FGNode;
-            fgRef.current?.centerAt?.(n.x, n.y, 600);
-            const z = fgRef.current?.zoom?.() ?? 1;
-            fgRef.current?.zoom?.(Math.max(z, 2.4), 600);
+            setHover({ id: String(n.id), src: n.kind === "source" });
           }}
           nodeLabel={(node: NodeObject) => {
             const n = node as FGNode;

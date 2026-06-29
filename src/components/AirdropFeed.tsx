@@ -8,13 +8,14 @@ const fmt = (n: number) => n.toLocaleString("en-US", { maximumFractionDigits: 0 
 export function AirdropFeed({ snap, loading }: { snap: AirdropSnapshot; loading?: boolean }) {
   const [now, setNow] = useState(() => Date.now());
   useEffect(() => { const id = setInterval(() => setNow(Date.now()), 30000); return () => clearInterval(id); }, []);
-  const isEmpty = snap.feed.length === 0;
   return (
     <div className="rounded-2xl border border-white/[0.08] bg-[#0a0a0b]">
       <p className="border-b border-white/[0.06] px-4 py-3 text-[11px] font-medium uppercase tracking-[0.16em] text-zinc-500">Recent airdrops</p>
-      <ul aria-busy={isEmpty || loading} className="max-h-[420px] divide-y divide-white/[0.05] overflow-y-auto">
-        {isEmpty ? (
+      <ul aria-busy={loading} className="max-h-[420px] divide-y divide-white/[0.05] overflow-y-auto">
+        {loading ? (
           <li className="px-4 py-3 text-sm text-zinc-500">Loading recent airdrops…</li>
+        ) : snap.feed.length === 0 ? (
+          <li className="px-4 py-3 text-sm text-zinc-500">No airdrops to show yet — check back soon.</li>
         ) : (
           snap.feed.map((f) => (
             <li key={f.signature + f.wallet} className="flex items-center justify-between gap-3 px-4 py-2.5">

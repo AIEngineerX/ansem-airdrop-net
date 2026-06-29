@@ -6,7 +6,7 @@ const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 const display = Anton({ weight: "400", variable: "--font-display", subsets: ["latin"] });
 
-const TITLE = "did ansem drop? — live map of Ansem's $ANSEM airdrop";
+const TITLE = "did ansem airdrop me? — live map of Ansem's $ANSEM airdrop";
 const DESCRIPTION =
   "Paste your wallet to see if you caught Ansem's $ANSEM airdrop. A live, read-only on-chain map of every wallet The Black Bull dropped to — plus his creator rewards.";
 // Set NEXT_PUBLIC_SITE_URL to the deployed origin so share-card image URLs resolve absolutely.
@@ -20,14 +20,15 @@ export const metadata: Metadata = {
     title: TITLE,
     description: DESCRIPTION,
     type: "website",
-    siteName: "did ansem drop?",
-    images: [{ url: "/og.png", width: 1440, height: 900, alt: "did ansem drop? — the live $ANSEM airdrop map" }],
+    siteName: "did ansem airdrop me?",
+    // Share image is provided by the app/opengraph-image.tsx file convention
+    // (a generated 1200×630 branded card), so no manual images array here.
   },
   twitter: {
     card: "summary_large_image",
     title: TITLE,
     description: DESCRIPTION,
-    images: ["/og.png"],
+    // twitter image likewise comes from app/twitter-image.tsx (re-exports the OG card).
   },
 };
 

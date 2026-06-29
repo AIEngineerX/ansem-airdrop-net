@@ -37,15 +37,15 @@ export function Tabs({
   }, []);
 
   return (
-    <div className="grain mx-auto w-full max-w-6xl flex-1 px-4 pb-16 pt-4 sm:px-6 lg:px-8">
+    <div className="mx-auto w-full max-w-6xl flex-1 px-4 pb-16 pt-4 sm:px-6 lg:px-8">
       <div className="mt-2 flex items-center justify-between gap-3">
         <Link
           href="/"
-          aria-label="did ansem drop — home"
+          aria-label="did ansem airdrop me — home"
           className="font-display text-xl tracking-wide text-white sm:text-2xl"
           style={{ fontFamily: "var(--font-display)" }}
         >
-          did ansem drop<span className="text-[var(--accent)]">?</span>
+          did ansem airdrop me<span className="text-[var(--accent)]">?</span>
         </Link>
         <Unofficial />
       </div>
