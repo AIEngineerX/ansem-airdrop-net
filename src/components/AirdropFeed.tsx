@@ -7,8 +7,8 @@ const short = (w: string) => `${w.slice(0, 4)}…${w.slice(-4)}`;
 const fmt = (n: number) => n.toLocaleString("en-US", { maximumFractionDigits: 0 });
 
 export function AirdropFeed({ snap }: { snap: AirdropSnapshot }) {
-  const [now, setNow] = useState(0);
-  useEffect(() => { setNow(Date.now()); const id = setInterval(() => setNow(Date.now()), 30000); return () => clearInterval(id); }, []);
+  const [now, setNow] = useState(() => Date.now());
+  useEffect(() => { const id = setInterval(() => setNow(Date.now()), 30000); return () => clearInterval(id); }, []);
   return (
     <div className="rounded-2xl border border-white/[0.08] bg-[#0a0a0b]">
       <p className="border-b border-white/[0.06] px-4 py-3 text-[11px] font-medium uppercase tracking-[0.16em] text-zinc-500">Recent airdrops</p>
