@@ -43,6 +43,25 @@ test("backfill bootstrap: seeds newest from the scan newestSignature (fixes boot
   assert.equal(result.backfillComplete, false, "full page → backfill not complete yet");
 });
 
+test("backfill: must NOT regress newest once it is already set (subsequent older chunk)", () => {
+  // Root-cause regression test. After bootstrap, newest = SIG_TOP (the global newest).
+  // A later backfill chunk paginates OLDER (before: oldestScanned), so getOutgoingTransactions
+  // reports that chunk's scan-local newestSignature — an OLDER signature. computeNextCursors
+  // must IGNORE it; newest must stay at SIG_TOP. Adopting the older value drags the cursor
+  // backward in time, which makes the next `until: newest` incremental scan re-fetch the whole
+  // window between the (now-stale) cursor and head — and the additive fold double-counts it.
+  const prev: CursorState = { newest: "SIG_TOP", oldestScanned: "SIG_MID", backfillComplete: false };
+  const result = computeNextCursors(prev, {
+    mode: "backfill",
+    incNewestSignature: "SIG_OLDER_CHUNK_TOP", // newest of an OLDER chunk — must be ignored
+    backfillOldest: "SIG_OLDEST",
+    backfillCount: 1000,
+    max: 1000,
+  });
+  assert.equal(result.newest, "SIG_TOP", "backfill must never drag newest backward once it is set");
+  assert.equal(result.oldestScanned, "SIG_OLDEST", "oldestScanned still extends older");
+});
+
 test("backfill: marks complete when scan returns fewer than max (reached genesis)", () => {
   const prev: CursorState = { newest: "SIG_TOP", oldestScanned: "SIG_MID", backfillComplete: false };
   const result = computeNextCursors(prev, {

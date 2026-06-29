@@ -18,19 +18,19 @@ jobs:
       - uses: actions/setup-node@v4
         with: { node-version: 22, cache: pnpm }
       - run: pnpm install --frozen-lockfile
-      - name: Fetch current snapshot from data branch
+      - name: Seed prev.json from the data branch, else bootstrap from the committed seed
         run: |
           git fetch origin data || true
-          if git show origin/data:snapshot.json > prev.json 2>/dev/null; then echo "have prev"; else echo "{}" > prev.json; rm prev.json; fi
-      - name: Collect (sync if prev exists — incremental + backfill chunk; else initial backfill)
+          if git show origin/data:snapshot.json > prev.json 2>/dev/null; then
+            echo "prev = live data-branch snapshot"
+          else
+            cp public/snapshot.seed.json prev.json
+            echo "prev = committed seed (first-run bootstrap: full 702-wallet backfill)"
+          fi
+      - name: Collect (incremental + backfill chunk via sync over prev)
         env:
           HELIUS_API_KEY: ${{ secrets.HELIUS_API_KEY }}
-        run: |
-          if [ -f prev.json ]; then
-            node --import tsx scripts/collect-snapshot.ts --in prev.json --out snapshot.json --mode sync --max 1000
-          else
-            node --import tsx scripts/collect-snapshot.ts --out snapshot.json --mode backfill --max 1000
-          fi
+        run: node --import tsx scripts/collect-snapshot.ts --in prev.json --out snapshot.json --mode sync --max 1000
       - name: Commit to data branch
         run: |
           git config user.name "AIEngineerX"
