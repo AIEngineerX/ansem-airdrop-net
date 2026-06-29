@@ -153,3 +153,15 @@ body {
   z-index: 3;
   pointer-events: none;
 }
+/* Lookup result reveal — the "did Ansem airdrop me?" answer should land, not
+   whisper. A quick ease-out pop on each check; gated for reduced-motion. */
+.lookup-reveal {
+  animation: reveal-pop 360ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@keyframes reveal-pop {
+  from { opacity: 0; transform: translateY(7px) scale(0.985); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .lookup-reveal { animation: none; }
+}

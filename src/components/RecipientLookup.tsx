@@ -19,7 +19,11 @@ export function RecipientLookup({
 }) {
   const [q, setQ] = useState("");
   const [hit, setHit] = useState<ReturnType<typeof lookupRecipient> | "miss" | null>(null);
-  const run = () => setHit(lookupRecipient(snap, q) ?? "miss");
+  const [reveal, setReveal] = useState(0); // bumps each check so the result re-animates
+  const run = () => {
+    setHit(lookupRecipient(snap, q) ?? "miss");
+    setReveal((n) => n + 1);
+  };
 
   return (
     <div className="rounded-2xl border border-white/[0.08] bg-[#0a0a0b] p-4 sm:p-5">
@@ -45,10 +49,18 @@ export function RecipientLookup({
       <p className="mt-1.5 text-[11px] text-zinc-500">Runs in your browser · nothing you enter is stored.</p>
 
       {hit === "miss" && (
-        <div className="mt-3 rounded-xl border border-white/[0.08] bg-white/[0.02] p-3 text-sm">
-          <p className="text-zinc-200">👀 No $ANSEM airdrop on that wallet — yet.</p>
-          <p className="mt-1 text-zinc-500">
-            Drops can land anytime. Check back later, or join the{" "}
+        <div
+          key={`miss-${reveal}`}
+          className="lookup-reveal mt-3 rounded-xl border border-white/[0.1] bg-white/[0.02] p-4"
+        >
+          <p
+            className="font-display text-2xl leading-none text-zinc-300 sm:text-3xl"
+            style={{ fontFamily: "var(--font-display)" }}
+          >
+            Not this drop
+          </p>
+          <p className="mt-2 text-sm text-zinc-500">
+            No $ANSEM from Ansem on that wallet yet. Drops can land anytime. Keep an eye on the{" "}
             <a
               href={COMMUNITY_URL}
               target="_blank"
@@ -56,26 +68,39 @@ export function RecipientLookup({
               className="text-[var(--accent-soft)] underline underline-offset-2"
             >
               $ANSEM community
-            </a>{" "}
-            to stay in the loop. 🀄
+            </a>
+            . 🀄
           </p>
         </div>
       )}
 
       {hit && hit !== "miss" && (
-        <div className="mt-3 rounded-xl border border-[var(--accent)]/30 bg-[var(--accent)]/[0.06] p-3 text-sm">
-          <p className="text-zinc-100">
-            🀄 Yes! Ansem airdropped you{" "}
-            <span className="tabular font-mono font-semibold text-white">{fmt(hit.totalAnsemUi)} ANSEM</span>
+        <div
+          key={`hit-${reveal}`}
+          className="lookup-reveal mt-3 rounded-xl border border-[var(--accent)]/40 bg-[var(--accent)]/[0.07] p-4"
+        >
+          <p
+            className="font-display text-3xl leading-none text-white sm:text-4xl"
+            style={{ fontFamily: "var(--font-display)" }}
+          >
+            YES <span className="text-[var(--accent-soft)]">🀄</span>
+          </p>
+          <p className="mt-2 text-sm text-zinc-400">Ansem airdropped you</p>
+          <p className="mt-0.5 flex flex-wrap items-baseline gap-x-2">
+            <span className="tabular font-mono text-2xl font-bold text-white sm:text-3xl">
+              {fmt(hit.totalAnsemUi)} $ANSEM
+            </span>
             {ansemPriceUsd != null ? (
-              <span className="text-[var(--accent-soft)]"> ≈ {usdCompact(hit.totalAnsemUi * ansemPriceUsd)}</span>
+              <span className="text-base font-semibold text-[var(--accent-soft)]">
+                ≈ {usdCompact(hit.totalAnsemUi * ansemPriceUsd)}
+              </span>
             ) : null}
           </p>
-          <p className="mt-1 text-zinc-500">
-            {hit.transferCount} drop{hit.transferCount === 1 ? "" : "s"} · first {day(hit.firstSeen)} · last{" "}
-            {day(hit.latestSeen)}
+          <p className="mt-2 text-xs text-zinc-500">
+            {hit.transferCount} drop{hit.transferCount === 1 ? "" : "s"} · {day(hit.firstSeen)}
+            {hit.firstSeen !== hit.latestSeen ? ` → ${day(hit.latestSeen)}` : ""}
           </p>
-          <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1 font-mono text-xs">
+          <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1 font-mono text-xs">
             <a
               href={`https://solscan.io/account/${hit.wallet}`}
               target="_blank"
