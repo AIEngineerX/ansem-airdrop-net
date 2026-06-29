@@ -1,12 +1,14 @@
 import { EMPTY_SNAPSHOT, type AirdropSnapshot } from "./airdrop-snapshot";
 
-export const SNAPSHOT_CDN_URL =
-  "https://cdn.jsdelivr.net/gh/AIEngineerX/ansem-airdrop-net@data/snapshot.json";
+// Same-origin proxy. Netlify rewrites `/api/snapshot` → the jsDelivr CDN server-side
+// (see the `[[redirects]]` block in netlify.toml), so the GitHub owner/repo lives only in
+// server config — never in the client bundle or a DevTools network trace. The CDN serves
+// the public repo's `data` branch (refreshed by the collector cron).
+export const SNAPSHOT_CDN_URL = "/api/snapshot";
 export const SEED_FALLBACK_URL = "/snapshot.seed.json";
 
-// Ship mode. Live: fetch the CDN snapshot (jsDelivr over the public repo's `data`
-// branch, refreshed by the collector cron), falling back to the committed seed if
-// the CDN is unavailable. Requires the repo to be PUBLIC and the `data` branch
+// Ship mode. Live: fetch the proxied CDN snapshot, falling back to the committed seed if
+// the proxy/CDN is unavailable. Requires the repo to be PUBLIC and the `data` branch
 // seeded (see docs/DEPLOY.md) — until then the CDN 404s and the seed is served.
 export const LIVE_SNAPSHOT_ENABLED = true;
 

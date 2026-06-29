@@ -1,9 +1,12 @@
 # Deploy Guide — public + live
 
-The site is configured for **live data** (`LIVE_SNAPSHOT_ENABLED = true`): it fetches
-the snapshot from jsDelivr (served off the public repo's `data` branch, refreshed by the
-collector cron), and falls back to the committed seed (`public/snapshot.seed.json`) if
-the CDN is ever unavailable. So even mid-setup, the site always renders real data.
+The site is configured for **live data** (`LIVE_SNAPSHOT_ENABLED = true`): the client fetches
+the snapshot from the same-origin path `/api/snapshot`, which `netlify.toml` rewrites
+server-side to jsDelivr (served off the public repo's `data` branch, refreshed by the collector
+cron). This proxy keeps the GitHub owner/repo out of the client bundle and network traces — only
+Netlify's config knows the CDN URL. It falls back to the committed seed
+(`public/snapshot.seed.json`) if the proxy/CDN is ever unavailable, so even mid-setup the site
+always renders real data.
 
 Do the steps **in order** — seeding the `data` branch before Netlify goes live means the
 CDN already has a snapshot when the site first loads (no 404 flash).

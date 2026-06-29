@@ -136,9 +136,11 @@ node --env-file=.env --import tsx scripts/collect-snapshot.ts \
 
 ## Deploy
 
-Configured for **public + live data**: the site fetches the snapshot from jsDelivr
-(served off the public repo's `data` branch, refreshed every 15 min by the collector
-cron) and falls back to the committed seed if the CDN is ever down. Open tabs re-poll
+Configured for **public + live data**: the site fetches the snapshot from the same-origin
+path `/api/snapshot`, which `netlify.toml` rewrites server-side to jsDelivr (served off the
+public repo's `data` branch, refreshed every 15 min by the collector cron) — so the GitHub
+owner/repo stays out of the client bundle and network traces. It falls back to the committed
+seed if the proxy/CDN is ever down. Open tabs re-poll
 every 2 min. Full ordered checklist in **[docs/DEPLOY.md](docs/DEPLOY.md)** — make the
 repo public, set the `HELIUS_API_KEY` Actions secret, seed the `data` branch, and
 connect Netlify (deploy from `main`; the Linux build sidesteps the Windows EPERM

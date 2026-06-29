@@ -4,3 +4,23 @@
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
+
+# Same-origin snapshot proxy: the client fetches /api/snapshot; Netlify rewrites it to the
+# jsDelivr CDN server-side, so the GitHub owner/repo never appears in client JS or network
+# traces. status=200 + force makes it a transparent rewrite (no redirect hop).
+[[redirects]]
+  from = "/api/snapshot"
+  to = "https://cdn.jsdelivr.net/gh/AIEngineerX/ansem-airdrop-net@data/snapshot.json"
+  status = 200
+  force = true
+
+# Security headers / CSP. Next inlines styles/scripts, so 'unsafe-inline' is required for the
+# app to run. img-src https: covers DexScreener/twimg images; the X embed needs platform/
+# syndication.twitter.com; connect-src keeps the DexScreener + pump.fun + jsDelivr origins.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' platform.twitter.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https: ; font-src 'self' data:; connect-src 'self' https://api.dexscreener.com https://cdn.jsdelivr.net https://swap-api.pump.fun; frame-src https://platform.twitter.com https://twitter.com https://syndication.twitter.com; frame-ancestors 'none'"
