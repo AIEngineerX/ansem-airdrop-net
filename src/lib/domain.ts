@@ -42,6 +42,8 @@ export type TokenPanel = {
   liquidityUsd: number | null;
   marketCapUsd: number | null;
   volume24hUsd: number | null;
+  priceChange24h: number | null;
+  imageUrl: string | null;
   updatedAt: string | null;
 };
 
@@ -80,4 +82,36 @@ export type Snapshot = {
   counts: { transfers: number; uniqueRecipients: number; unparsed: number };
   ansemSentUi: number;
   solSentUi: number;
+};
+
+// --- Creator rewards (the v0 product) ---------------------------------------
+// GV6U... is Ansem's pump.fun creator wallet (profile @ansemconzimp / X @blknoiz06).
+// He launched The Black Bull / $ANSEM; this tracks his on-chain pump.fun creator fees.
+
+export const ANSEM_PUMP_USERNAME = "ansemconzimp";
+export const ANSEM_PUMP_PROFILE_URL = "https://pump.fun/profile/ansemconzimp";
+export const ANSEM_X_URL = "https://x.com/blknoiz06";
+export const BLACK_BULL_SITE = "https://www.blackbullsol.com/";
+
+export function pumpCreatorFeesUrl(wallet: string): string {
+  return `https://swap-api.pump.fun/v1/creators/${wallet}/fees`;
+}
+
+export type FeePoint = {
+  date: string; // ISO bucket
+  cumulativeSol: number;
+  dailySol: number;
+  trades: number;
+};
+
+export type CreatorRewards = {
+  wallet: string;
+  username: string;
+  // PumpSwap (post-bonding-curve AMM) creator fees — the on-chain, verifiable figure.
+  totalSol: number;
+  totalUsd: number | null; // totalSol * live SOL price
+  totalTrades: number;
+  series: FeePoint[];
+  firstActive: string | null;
+  lastActive: string | null;
 };
