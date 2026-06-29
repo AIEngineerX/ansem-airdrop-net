@@ -1,95 +1,162 @@
-# ansem-airdrop-net
+# ansem-airdrop-net — Live $ANSEM Airdrop Web
 
-Read-only Solana transfer ledger for a tracked Pump.fun profile wallet.
+An unofficial, **read-only** dashboard that maps every wallet Ansem
+([@blknoiz06](https://x.com/blknoiz06)) airdropped **$ANSEM** to — straight from
+on-chain data — plus a secondary view of his pump.fun creator rewards.
 
-## Boundary
+The hero is a cinematic force-graph of the airdrop: the source wallet
+(`GV6U…dC52`) at the centre, every recipient radiating out, node size by amount
+received. As of the committed snapshot that's **702 wallets · ~67.36M ANSEM ·
+≈ $6.3M** at the live price (the full on-chain backfill — which corroborates
+Ansem's stated ~$7M).
 
-- No wallet connect.
-- No signing.
-- No swaps.
-- No claim flow.
-- No trading or execution.
-- Current-value only until stored price snapshots exist.
+> **Unofficial.** Independent, read-only on-chain tracker. Not operated by,
+> affiliated with, or endorsed by Ansem. Names/ticker/art identify the token only.
 
-## Source wallet
+![Preview](docs/preview.png)
 
-```text
-GV6UUmNxz2RpKxmNAPadYKb7uQpszwqQAu3qLJxVdC52
+## Features
+
+- **Airdrop web** — a 2D canvas force-graph (`react-force-graph-2d`): glowing GV6U
+  core, oxblood flow particles streaming to recipient "embers" sized by ANSEM
+  received, a "+N more" cluster for the long tail, and the Black Bull as brand
+  atmosphere behind it.
+- **Live feed** — the most recent airdrops (amount, recipient, time-ago, tx link).
+- **Lifetime stats** — wallets airdropped · total ANSEM · total airdrops, with the
+  USD value derived from the **live** price (never stored).
+- **Recipient lookup** — paste any wallet → "did Ansem airdrop you?", with amount,
+  dates, and tx link, or a clean miss.
+- **Creator Rewards tab** — Ansem's pump.fun PumpSwap creator fees + the $ANSEM
+  market panel (price / 24h / mcap / liquidity / volume).
+- **Read-only by design** — no wallet connect, signing, swaps, or trading; the
+  boundary is enforced in CI.
+
+## Architecture (how it's built)
+
+```mermaid
+flowchart TD
+    subgraph chain["Solana data sources"]
+        RPC["Helius RPC<br/>getSignaturesForAddress · getTransaction"]
+        DEX["DexScreener<br/>$ANSEM live price"]
+        PUMP["pump.fun swap-api<br/>creator fees"]
+    end
+
+    subgraph collector["Collector — GitHub Actions cron (Node + tsx)"]
+        SRC["rpc-source.ts<br/>paginate signatures + batch txs<br/>throttle + 429 backoff"]
+        ADP["rpc-adapter.ts<br/>raw jsonParsed tx → transfer shape"]
+        PRS["transfer-parser.ts<br/>→ TransferRow[]"]
+        CUR["collector-cursors.ts<br/>incremental + backfill cursors"]
+        FOLD["airdrop-snapshot.ts<br/>foldTransfers — mint-exact rollup"]
+        SNAP[("snapshot.json<br/>702 wallets · 67.36M ANSEM")]
+    end
+
+    subgraph site["Website — Next.js 16 (static)"]
+        FETCH["snapshot-client.ts<br/>fetchSnapshot()"]
+        TABS["Tabs.tsx<br/>fetch once · hold state"]
+        GRAPH["AirdropGraph<br/>react-force-graph-2d"]
+        STATS["AirdropStats · Feed · Lookup · DataStamp"]
+        REWARDS["CreatorRewardsView"]
+    end
+
+    RPC --> SRC --> ADP --> PRS --> FOLD
+    CUR --> FOLD
+    FOLD --> SNAP
+    SNAP -->|"data branch → jsDelivr (live)<br/>· or committed seed (current)"| FETCH
+    FETCH --> TABS
+    TABS --> GRAPH
+    TABS --> STATS
+    DEX --> STATS
+    TABS --> REWARDS
+    PUMP --> REWARDS
+    DEX --> REWARDS
 ```
 
-UI attribution copy is intentionally careful:
+**Data flow in one line:** a scheduled Node collector reads GV6U's outgoing
+transfers from Helius, parses the ANSEM ones (matched by *mint*, never symbol),
+folds them into a compact `snapshot.json`, and a static Next.js site fetches that
+snapshot and renders the graph, feed, stats, and lookup.
 
-```text
-Public tracker and Pump.fun profile context link this wallet to ansemconzimp / @blknoiz06.
-Not exhaustive; not a wallet-ownership claim.
+For a plain-language walkthrough, see **[docs/HOW-IT-WORKS.md](docs/HOW-IT-WORKS.md)**.
+
+## Tech stack
+
+| Layer | Choice |
+|---|---|
+| Framework | Next.js 16 (App Router, static) · React 19 · TypeScript |
+| Styling | Tailwind v4 ("Black Noise" dark theme, oxblood `#B11226`) |
+| Graph | `react-force-graph-2d` (HTML canvas) |
+| Data | Helius RPC (standard `getSignaturesForAddress` / `getTransaction`) |
+| Market | DexScreener ($ANSEM) · pump.fun swap-api (creator fees) |
+| Collector | Node + `tsx`, run by GitHub Actions cron |
+| Tests | `node:test` via `tsx` (real fixtures, no mocks) |
+| Package manager | pnpm |
+
+## Project structure
+
+```
+src/
+  app/            page.tsx (server fetch) · layout · globals.css (theme + graph stage)
+  components/     Tabs · AirdropWebView · AirdropGraph · AirdropStats · AirdropFeed
+                  RecipientLookup · DataStamp · CreatorRewardsView · Unofficial
+  lib/
+    rpc-source.ts        Helius RPC: signature pagination + batched txs + backoff
+    rpc-adapter.ts       raw jsonParsed tx → Helius transfer shape (pure)
+    transfer-parser.ts   → TransferRow[] (pure)
+    airdrop-snapshot.ts  AirdropSnapshot type + foldTransfers (mint-exact, pure)
+    collector-cursors.ts incremental/backfill cursor math (pure)
+    airdrop-view.ts      buildGraphModel · lookupRecipient · timeAgo (pure)
+    snapshot-client.ts   fetchSnapshot() — CDN/seed read path
+    price.ts · pump.ts   DexScreener + pump.fun (Creator Rewards tab)
+    domain.ts            shared constants + types
+scripts/
+  collect-snapshot.ts    the collector (incremental + backfill + sync modes)
+  capture-fixtures.ts    one-off: fetch real txs for tests
+.github/workflows/
+  collect.yml            scheduled collector → commits snapshot.json to `data` branch
+public/snapshot.seed.json  committed snapshot served in seed-only mode
+test/                    pure-function tests against real fixtures
+docs/                    DEPLOY.md · HOW-IT-WORKS.md · design spec + plan
 ```
 
-## Main ANSEM mint
-
-```text
-9cRCn9rGT8V2imeM2BaKs13yhMEais3ruM3rPvTGpump
-```
-
-## What exists now
-
-- Next.js 16 + TypeScript + Tailwind scaffold.
-- Clean dark ledger UI.
-- API route shells:
-  - `/api/summary`
-  - `/api/token/ansem`
-  - `/api/transfers`
-  - `/api/recipients`
-- Transfer parser for:
-  - native SOL
-  - SPL / Token-2022
-  - failed transaction exclusion
-  - batched same-amount transfer distinction via `eventIndex`
-- Collector script:
-  - `scripts/collect_airdrop_transfers.ts`
-  - fixture mode works without credentials
-  - live Helius mode requires `HELIUS_API_KEY`
-- Handoff docs:
-  - `docs/chaos-handoff.md`
-  - `docs/codex-review.md`
-
-## Commands
+## Develop
 
 ```bash
 pnpm install
-pnpm dev
-pnpm verify
+pnpm dev            # http://localhost:3000
+pnpm verify         # boundary check + lint + typecheck + tests + build (the gate)
 ```
 
-Run collector against a fixture:
+Run the collector locally (needs a Helius key in `.env` as `HELIUS_API_KEY`):
 
 ```bash
-pnpm tsx scripts/collect_airdrop_transfers.ts --fixture path/to/helius-transactions.json
+# one bounded pass to a temp file (incremental new + backfill older)
+node --env-file=.env --import tsx scripts/collect-snapshot.ts \
+  --in public/snapshot.seed.json --out ./snap.tmp.json --mode sync --max 5000
 ```
 
-Run collector against Helius:
+## Deploy
 
-```bash
-HELIUS_API_KEY=... pnpm tsx scripts/collect_airdrop_transfers.ts --limit 100
-```
+Two phases — see **[docs/DEPLOY.md](docs/DEPLOY.md)**:
 
-## Verification snapshot
+- **Phase 1 (now):** connect to Netlify; the site serves the committed
+  `snapshot.seed.json` (real 702-wallet data). No secrets needed. The Linux build
+  sidesteps the Windows `@netlify/plugin-nextjs` symlink blocker.
+- **Phase 2 (later):** turn on auto-updating live data — make the repo public
+  (jsDelivr serves the `data` branch) or add a serving function, then flip
+  `LIVE_SNAPSHOT_ENABLED` in `snapshot-client.ts`.
 
-Last local verification before handoff:
+## Data integrity
 
-```text
-pnpm verify
-lint OK
-typecheck OK
-3 parser tests passed
-next build OK
-```
+- **Mint-exact:** a transfer counts only when `mint === 9cRCn9…pump`. ~12 decoy
+  tokens are named "ANSEM"; symbol is never used.
+- **Airdrops only:** the 0.002-SOL ATA-funding dust legs are overhead, not airdrops,
+  and are excluded from the graph/stats/feed.
+- **USD is live, never stored:** dollar figures = ANSEM amount × current price, shown
+  with an "at live price" qualifier; they drift with the market.
+- **Full backfill:** the committed snapshot has `backfillComplete: true` — it's the
+  complete on-chain history of GV6U's ANSEM distributions, not a sample.
 
-## Deferred on purpose
+## Credits
 
-- X reply matching.
-- Network graph.
-- Candidate wallet clustering.
-- Helius webhook endpoint.
-- At-transfer valuation without stored price snapshots.
-
-Those stay out until the primary transfer ledger is correct.
+On-chain data via [Helius](https://helius.dev). Market data via DexScreener and the
+pump.fun swap-api. Not affiliated with Ansem, Helius, DexScreener, or pump.fun.
