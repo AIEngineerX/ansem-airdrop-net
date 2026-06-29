@@ -10,7 +10,7 @@ import type { AirdropSnapshot } from "@/lib/airdrop-snapshot";
    component on the client ourselves. The module touches `window`, so it must
    never be imported at module top (it would break SSR of this client comp). */
 type GraphComponent = (typeof import("react-force-graph-2d"))["default"];
-type FGNode = GraphNode & { x?: number; y?: number; fx?: number; fy?: number };
+type FGNode = GraphNode & { x?: number; y?: number; vx?: number; vy?: number; fx?: number; fy?: number };
 type Hover = { id: string; src: boolean } | null;
 
 const fmt = (n: number) => n.toLocaleString("en-US", { maximumFractionDigits: 0 });
@@ -84,6 +84,15 @@ export function AirdropGraph({ snap, loading }: { snap: AirdropSnapshot; loading
     [data],
   );
 
+  // Single source of truth for the galaxy's outer radius. Every non-source node
+  // is hard-clamped to this radius by a custom force (below), and the camera
+  // frames exactly this circle — so nothing can drift past the frame and streak
+  // off the bottom edge. `frameTarget` is the zoom that maps the radius to ~80%
+  // of the limiting half-dimension (height on the wide desktop stage, width on
+  // the narrow mobile one), leaving ~20% breathing room for node glow + labels.
+  const galaxyR = isMobile ? 126 : 158;
+  const frameTarget = ((isMobile ? size.w : size.h) * 0.5 * 0.8) / galaxyR;
+
   // Per-node visual style (radius, ember colour, glow flag) — computed once per model.
   const style = useMemo(() => {
     const recips = data.nodes.filter((n) => n.kind === "recipient");
@@ -123,27 +132,44 @@ export function AirdropGraph({ snap, loading }: { snap: AirdropSnapshot; loading
         return (isMobile ? 48 : 62) + (isMobile ? 46 : 58) * (1 - Math.sqrt(t));
       });
     }
+    // Hard radial clamp: keep every recipient/cluster node inside the galaxy
+    // radius so long-tail stragglers (which charge repulsion would otherwise
+    // fling past distanceMax) can't settle below the frame and render as the
+    // vertical flow-particle streaks that bled off the bottom edge. The source
+    // stays pinned at the origin; anything crossing the boundary is pulled back
+    // onto the circle and its outward velocity is damped to avoid jitter.
+    const R = galaxyR;
+    fg.d3Force("bound", () => {
+      for (const node of data.nodes) {
+        const n = node as FGNode;
+        if (n.kind === "source") continue;
+        const x = n.x ?? 0, y = n.y ?? 0;
+        const d = Math.hypot(x, y);
+        if (d > R) {
+          const s = R / d;
+          n.x = x * s; n.y = y * s;
+          if (typeof n.vx === "number") n.vx *= 0.25;
+          if (typeof n.vy === "number") n.vy *= 0.25;
+        }
+      }
+    });
     fg.d3ReheatSimulation?.();
-  }, [Graph, data, isMobile, maxUi]);
+  }, [Graph, data, isMobile, maxUi, galaxyR]);
 
   // Deterministic framing: GV6U is pinned at the origin, so centre on it and
-  // zoom so the galaxy's known radius fills ~92% of the stage height. This is
-  // immune to the long-tail stragglers that throw off auto zoom-to-fit; any
-  // faint outliers simply bleed into the vignette edges.
+  // zoom so the clamped galaxy radius fills ~80% of the limiting half-dimension.
+  // Because every node is hard-clamped within `galaxyR`, this frames the whole
+  // web with breathing room — no stragglers bleeding off the edges.
   useEffect(() => {
     if (!Graph || size.w === 0) return;
     const frame = () => {
       const fg = fgRef.current; if (!fg) return;
-      // Desktop: a wide stage, so fill to height. Mobile: a narrow portrait
-      // stage, so fill to width — this also keeps the "+N more" cluster node
-      // (which sits at the galaxy's edge) inside the frame.
-      const target = isMobile ? (size.w * 0.44) / 124 : (size.h * 0.46) / 150;
       fg.centerAt?.(0, 0, 500);
-      fg.zoom?.(target, 500);
+      fg.zoom?.(frameTarget, 500);
     };
     const id = setTimeout(frame, 120);
     return () => clearTimeout(id);
-  }, [Graph, size.w, size.h, isMobile]);
+  }, [Graph, size.w, size.h, isMobile, frameTarget]);
 
   const recipientCount = snap.totals.uniqueRecipients;
 
@@ -195,7 +221,7 @@ export function AirdropGraph({ snap, loading }: { snap: AirdropSnapshot; loading
           onEngineStop={() => {
             const fg = fgRef.current; if (!fg) return;
             fg.centerAt?.(0, 0, 600);
-            fg.zoom?.(isMobile ? (size.w * 0.44) / 124 : (size.h * 0.46) / 150, 600);
+            fg.zoom?.(frameTarget, 600);
           }}
           linkColor={(link: LinkObject) => {
             if (!hover || hover.src) return "rgba(177,18,38,0.14)";
