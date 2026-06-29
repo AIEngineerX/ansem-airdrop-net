@@ -31,6 +31,32 @@ export function lookupRecipient(snap: AirdropSnapshot, wallet: string): AirdropR
   return snap.recipients.find((r) => r.wallet === q) ?? null;
 }
 
+export type ArmyRow = {
+  rank: number;
+  wallet: string;
+  totalAnsemUi: number;
+  transferCount: number;
+  latestSeen: string;
+  heldAnsemUi?: number;
+};
+export type ArmyView = { rows: ArmyRow[]; shown: number; total: number; hasMore: boolean };
+
+/** Ranked, searchable leaderboard rows. `recipients` MUST be sorted by totalAnsemUi desc. */
+export function armyRows(recipients: AirdropRecipient[], query: string, limit: number): ArmyView {
+  const q = query.trim().toLowerCase();
+  const ranked: ArmyRow[] = recipients.map((r, i) => ({
+    rank: i + 1,
+    wallet: r.wallet,
+    totalAnsemUi: r.totalAnsemUi,
+    transferCount: r.transferCount,
+    latestSeen: r.latestSeen,
+    heldAnsemUi: r.heldAnsemUi,
+  }));
+  const filtered = q ? ranked.filter((r) => r.wallet.toLowerCase().includes(q)) : ranked;
+  const rows = filtered.slice(0, limit);
+  return { rows, shown: rows.length, total: filtered.length, hasMore: filtered.length > limit };
+}
+
 export function timeAgo(iso: string, nowMs: number): string {
   const ms = Date.parse(iso);
   if (Number.isNaN(ms)) return "";

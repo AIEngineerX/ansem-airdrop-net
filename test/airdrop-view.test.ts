@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { buildGraphModel, lookupRecipient, timeAgo } from "../src/lib/airdrop-view";
+import { armyRows, buildGraphModel, lookupRecipient, timeAgo } from "../src/lib/airdrop-view";
 import { EMPTY_SNAPSHOT, type AirdropSnapshot } from "../src/lib/airdrop-snapshot";
 
 function snapWith(n: number): AirdropSnapshot {
@@ -41,4 +41,57 @@ test("timeAgo renders coarse buckets", () => {
   assert.equal(timeAgo("2026-06-29T11:59:30.000Z", now), "30s ago");
   assert.equal(timeAgo("2026-06-29T11:30:00.000Z", now), "30m ago");
   assert.equal(timeAgo("2026-06-29T09:00:00.000Z", now), "3h ago");
+});
+
+const rec = (wallet: string, totalAnsemUi: number, heldAnsemUi?: number) => ({
+  wallet,
+  totalAnsemUi,
+  transferCount: 1,
+  firstSeen: "2026-06-28T00:00:00.000Z",
+  latestSeen: "2026-06-28T00:00:00.000Z",
+  latestSignature: "sig" + wallet,
+  signatures: ["sig" + wallet],
+  ...(heldAnsemUi === undefined ? {} : { heldAnsemUi }),
+});
+// already sorted desc by totalAnsemUi
+const RECIPS = [rec("AAA1", 100, 90), rec("BBB2", 50, 0), rec("AAA3", 10)];
+
+test("armyRows: empty query returns top `limit`, ranks from 1, hasMore set", () => {
+  const v = armyRows(RECIPS, "", 2);
+  assert.equal(v.total, 3);
+  assert.equal(v.shown, 2);
+  assert.deepEqual(
+    v.rows.map((r) => r.rank),
+    [1, 2],
+  );
+  assert.equal(v.rows[0].wallet, "AAA1");
+  assert.equal(v.rows[0].heldAnsemUi, 90);
+  assert.equal(v.hasMore, true);
+});
+
+test("armyRows: query filters by wallet substring (case-insensitive) and preserves global rank", () => {
+  const v = armyRows(RECIPS, "aaa", 50);
+  assert.deepEqual(
+    v.rows.map((r) => r.wallet),
+    ["AAA1", "AAA3"],
+  );
+  assert.deepEqual(
+    v.rows.map((r) => r.rank),
+    [1, 3],
+  ); // global ranks, not 1,2
+  assert.equal(v.total, 2);
+  assert.equal(v.hasMore, false);
+});
+
+test("armyRows: no match -> empty", () => {
+  const v = armyRows(RECIPS, "zzz", 50);
+  assert.deepEqual(v.rows, []);
+  assert.equal(v.total, 0);
+  assert.equal(v.hasMore, false);
+});
+
+test("armyRows: limit >= total -> all rows, no more", () => {
+  const v = armyRows(RECIPS, "", 50);
+  assert.equal(v.shown, 3);
+  assert.equal(v.hasMore, false);
 });
