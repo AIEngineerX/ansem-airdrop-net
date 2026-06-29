@@ -15,12 +15,14 @@
   force = true
 
 # Security headers / CSP. Next inlines styles/scripts, so 'unsafe-inline' is required for the
-# app to run. img-src https: covers DexScreener/twimg images; the X embed needs platform/
-# syndication.twitter.com; connect-src keeps the DexScreener + pump.fun + jsDelivr origins.
+# app to run. img-src https: covers DexScreener token images; connect-src keeps the DexScreener
+# + pump.fun + jsDelivr origins. No third-party scripts or frames (the X timeline embed was
+# removed — X restricts profile-timeline embeds — so twitter hosts are dropped and frame-src is
+# locked to 'none').
 [[headers]]
   for = "/*"
   [headers.values]
     X-Frame-Options = "DENY"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://platform.twitter.com https://cdn.syndication.twimg.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://api.dexscreener.com https://cdn.jsdelivr.net https://swap-api.pump.fun https://syndication.twitter.com https://cdn.syndication.twimg.com; frame-src https://platform.twitter.com https://twitter.com https://x.com https://syndication.twitter.com; frame-ancestors 'none'"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://api.dexscreener.com https://cdn.jsdelivr.net https://swap-api.pump.fun; frame-src 'none'; frame-ancestors 'none'"

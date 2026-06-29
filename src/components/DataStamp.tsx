@@ -6,7 +6,7 @@ export function DataStamp({ snap, loading }: { snap: AirdropSnapshot; loading?: 
   if (loading) return <p className="text-xs text-zinc-500">Loading the latest airdrop data…</p>;
   return (
     <p className="text-xs text-zinc-500">
-      Live · last updated {t(snap.collectedAt)} · refreshes automatically about every 15 minutes. Covers{" "}
+      Live · last updated {t(snap.collectedAt)} · refreshes automatically in the background. Covers{" "}
       {t(snap.totals.windowFrom)} → {t(snap.totals.windowThrough)}
       {snap.backfillComplete ? "." : " · still scanning older history."}
     </p>
