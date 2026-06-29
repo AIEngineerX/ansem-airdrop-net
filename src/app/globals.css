@@ -118,6 +118,35 @@ body {
     opacity: 0.36;
   }
 }
+/* Breathing oxblood pulse behind the GV6U core. The source node pulses on the
+   canvas itself on desktop; on mobile the canvas parks to save battery, so this
+   DOM glow (zero repaint cost) keeps the heart of the web alive. Sits at z-0
+   behind the transparent canvas, haloing up around the source node. Only
+   transform + opacity animate, so it's GPU-composited, never layout. */
+.graph-stage .graph-pulse {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 0;
+  width: clamp(120px, 42%, 220px);
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  border-radius: 9999px;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(224, 69, 90, 0.32), rgba(177, 18, 38, 0.08) 42%, transparent 68%);
+  animation: graph-breathe 3.4s ease-in-out infinite;
+}
+@keyframes graph-breathe {
+  0%, 100% { opacity: 0.5; transform: translate(-50%, -50%) scale(0.9); }
+  50% { opacity: 0.85; transform: translate(-50%, -50%) scale(1.12); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .graph-stage .graph-pulse {
+    animation: none;
+    opacity: 0.55;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
 /* Captions / legend ride above everything. */
 .graph-stage .graph-overlay {
   position: absolute;

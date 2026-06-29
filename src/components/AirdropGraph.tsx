@@ -54,6 +54,9 @@ export function AirdropGraph({ snap, loading }: { snap: AirdropSnapshot; loading
   const [size, setSize] = useState({ w: 0, h: 520 });
   const [hover, setHover] = useState<Hover>(null);
   const [Graph, setGraph] = useState<GraphComponent | null>(null);
+  // Mobile "ignite": run the cinematic (pulse + flow particles) briefly on entry,
+  // then park the canvas to save battery. Desktop animates continuously.
+  const [ignite, setIgnite] = useState(true);
 
   // Load the canvas library on the client only.
   useEffect(() => {
@@ -77,6 +80,19 @@ export function AirdropGraph({ snap, loading }: { snap: AirdropSnapshot; loading
   }, []);
 
   const isMobile = size.w > 0 && size.w < 640;
+
+  // On mobile, let the cinematic run for a few seconds on entry, then settle
+  // (the canvas parks below). Skipped entirely for reduced-motion.
+  useEffect(() => {
+    if (!isMobile) return;
+    const reduce =
+      typeof window !== "undefined" && window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
+    // Park immediately for reduced-motion; otherwise run the cinematic ~4.2s, then park.
+    // Both go through setTimeout so no state is set synchronously in the effect.
+    const id = setTimeout(() => setIgnite(false), reduce ? 0 : 4200);
+    return () => clearTimeout(id);
+  }, [isMobile]);
+
   const data = useMemo(() => buildGraphModel(snap, isMobile ? 120 : 300), [snap, isMobile]);
   const hasData = useMemo(() => data.nodes.some((n) => n.kind === "recipient"), [data]);
   const maxUi = useMemo(
@@ -201,7 +217,7 @@ export function AirdropGraph({ snap, loading }: { snap: AirdropSnapshot; loading
   // affect drawing, not particle emission). Mobile emits none (battery).
   const linkParticles = useCallback(
     (link: LinkObject) => {
-      if (isMobile) return 0;
+      if (isMobile && !ignite) return 0;
       const tgt = link.target;
       const node = typeof tgt === "object" && tgt !== null ? (tgt as FGNode) : null;
       if (!node) return 2;
@@ -209,7 +225,7 @@ export function AirdropGraph({ snap, loading }: { snap: AirdropSnapshot; loading
       const t = Math.min(1, (node.ansemUi ?? 0) / maxUi);
       return 1 + Math.round(3 * Math.sqrt(t));
     },
-    [isMobile, maxUi],
+    [isMobile, maxUi, ignite],
   );
 
   // Particle COLOUR is likewise kept hover-independent and stable, so no
@@ -235,6 +251,10 @@ export function AirdropGraph({ snap, loading }: { snap: AirdropSnapshot; loading
     >
       {/* Black Bull brand atmosphere — sits behind the canvas (see .graph-bull in globals.css) */}
       <div className="graph-bull" aria-hidden="true" />
+
+      {/* Breathing oxblood core — keeps the web alive on mobile, where the canvas
+          parks to save battery (desktop's source node pulses on the canvas itself). */}
+      {isMobile && <div className="graph-pulse" aria-hidden="true" />}
 
       {/* corner captions */}
       <div className="graph-overlay left-4 top-4 sm:left-5 sm:top-5">
@@ -272,9 +292,9 @@ export function AirdropGraph({ snap, loading }: { snap: AirdropSnapshot; loading
           height={size.h}
           backgroundColor="rgba(0,0,0,0)"
           // Desktop keeps the always-on redraw for the pulse + flow particles.
-          // Mobile lets the canvas park once the layout settles (battery/heat),
-          // which is safe because particles are disabled on mobile below.
-          autoPauseRedraw={isMobile}
+          // Mobile runs the cinematic briefly on entry (ignite), then parks the
+          // canvas (battery/heat); a CSS glow keeps the core breathing at rest.
+          autoPauseRedraw={isMobile && !ignite}
           warmupTicks={isMobile ? 20 : 30}
           cooldownTicks={140}
           d3AlphaDecay={0.025}
