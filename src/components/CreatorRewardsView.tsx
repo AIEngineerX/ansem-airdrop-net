@@ -133,7 +133,6 @@ export function CreatorRewardsView({
           </span>
           <span className="hidden text-xs text-zinc-600 sm:inline">creator rewards</span>
         </div>
-        <Unofficial />
       </header>
 
       {/* hero */}
