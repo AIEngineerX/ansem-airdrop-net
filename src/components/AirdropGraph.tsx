@@ -48,7 +48,7 @@ function tip(kind: string, line: string, sub: string): string {
   );
 }
 
-export function AirdropGraph({ snap }: { snap: AirdropSnapshot }) {
+export function AirdropGraph({ snap, loading }: { snap: AirdropSnapshot; loading?: boolean }) {
   const wrap = useRef<HTMLDivElement>(null);
   const fgRef = useRef<ForceGraphMethods | undefined>(undefined);
   const [size, setSize] = useState({ w: 0, h: 520 });
@@ -87,7 +87,6 @@ export function AirdropGraph({ snap }: { snap: AirdropSnapshot }) {
   // Per-node visual style (radius, ember colour, glow flag) — computed once per model.
   const style = useMemo(() => {
     const recips = data.nodes.filter((n) => n.kind === "recipient");
-    const maxUi = recips.reduce((m, n) => Math.max(m, n.ansemUi), 1);
     const hotCount = isMobile ? 6 : 14;
     const m = new Map<string, { r: number; fill: string; hot: boolean }>();
     recips.forEach((n, i) => {
@@ -99,7 +98,7 @@ export function AirdropGraph({ snap }: { snap: AirdropSnapshot }) {
       });
     });
     return m;
-  }, [data, isMobile]);
+  }, [data, isMobile, maxUi]);
 
   // Layout forces: a compact, layered halo around GV6U. The bull is pinned at
   // the origin (the gravitational anchor — and a stable frame centre). Spoke
@@ -170,7 +169,11 @@ export function AirdropGraph({ snap }: { snap: AirdropSnapshot }) {
 
       {!hasData && (
         <div className="graph-overlay inset-0 flex items-center justify-center">
-          <p className="animate-pulse text-sm text-zinc-600">Summoning the airdrop web…</p>
+          {loading === false && snap.totals.totalAirdrops === 0 ? (
+            <p className="text-sm text-zinc-500">Airdrop data is temporarily unavailable — check back shortly.</p>
+          ) : (
+            <p className="animate-pulse text-sm text-zinc-600">Summoning the airdrop web…</p>
+          )}
         </div>
       )}
 

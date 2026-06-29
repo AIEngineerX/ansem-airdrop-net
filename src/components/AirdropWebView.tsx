@@ -10,7 +10,7 @@ export function AirdropWebView({ snap, loading }: { snap: AirdropSnapshot; loadi
   return (
     <div className="mt-5 space-y-5">
       <AirdropStats snap={snap} />
-      <AirdropGraph snap={snap} />
+      <AirdropGraph snap={snap} loading={loading} />
       <div className="grid gap-5 lg:grid-cols-[1.4fr_1fr]">
         <AirdropFeed snap={snap} />
         <RecipientLookup snap={snap} />

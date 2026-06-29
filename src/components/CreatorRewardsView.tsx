@@ -11,6 +11,7 @@ import {
   type TokenPanel,
 } from "@/lib/domain";
 import { short } from "@/lib/airdrop-view";
+import { Unofficial } from "./Unofficial";
 
 // pump.fun's profile "Total fees earned" headline (incl. bonding-curve-era fees,
 // which the public swap-api does not expose). Referenced + linked, not computed here.
@@ -56,15 +57,6 @@ function Stat({ label, value, sub }: { label: string; value: string; sub?: strin
       <p className="tabular mt-2 font-mono text-lg font-semibold text-zinc-50 sm:text-xl">{value}</p>
       {sub ? <p className="mt-1 text-xs text-zinc-500">{sub}</p> : null}
     </div>
-  );
-}
-
-function Unofficial() {
-  return (
-    <span className="inline-flex items-center gap-1.5 rounded-full border border-white/[0.12] px-2.5 py-1 text-[11px] font-medium text-zinc-400">
-      <span className="h-1.5 w-1.5 rounded-full bg-[var(--accent)]" />
-      Unofficial · not affiliated with Ansem
-    </span>
   );
 }
 

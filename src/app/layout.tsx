@@ -7,9 +7,9 @@ const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"]
 const display = Anton({ weight: "400", variable: "--font-display", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Ansem Creator Rewards — The Black Bull",
+  title: "ANSEM Airdrop Web — live map of wallets Ansem airdropped",
   description:
-    "Unofficial, read-only dashboard tracking Ansem's (ansemconzimp) on-chain pump.fun creator rewards and the $ANSEM token.",
+    "Unofficial, read-only on-chain map of the wallets airdropped $ANSEM by Ansem's pump.fun creator wallet, plus his creator rewards. Not affiliated with Ansem.",
 };
 
 export const viewport: Viewport = {
