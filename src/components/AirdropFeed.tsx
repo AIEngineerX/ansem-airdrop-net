@@ -1,9 +1,8 @@
 "use client";
 import { useEffect, useState } from "react";
 import type { AirdropSnapshot } from "@/lib/airdrop-snapshot";
-import { timeAgo } from "@/lib/airdrop-view";
+import { short, timeAgo } from "@/lib/airdrop-view";
 
-const short = (w: string) => `${w.slice(0, 4)}…${w.slice(-4)}`;
 const fmt = (n: number) => n.toLocaleString("en-US", { maximumFractionDigits: 0 });
 
 export function AirdropFeed({ snap }: { snap: AirdropSnapshot }) {
@@ -21,7 +20,7 @@ export function AirdropFeed({ snap }: { snap: AirdropSnapshot }) {
               <span className="text-zinc-600">→</span>
               <a href={f.txUrl} target="_blank" rel="noreferrer" className="font-mono text-xs text-zinc-400 underline decoration-white/15 underline-offset-2">{short(f.wallet)}</a>
             </span>
-            <span className="shrink-0 text-xs text-zinc-600">{now ? timeAgo(f.blockTime, now) : ""}</span>
+            <span className="shrink-0 text-xs text-zinc-600">{timeAgo(f.blockTime, now)}</span>
           </li>
         ))}
       </ul>

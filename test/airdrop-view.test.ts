@@ -6,7 +6,8 @@ import { EMPTY_SNAPSHOT, type AirdropSnapshot } from "../src/lib/airdrop-snapsho
 function snapWith(n: number): AirdropSnapshot {
   const recipients = Array.from({ length: n }, (_, i) => ({
     wallet: `R${i}`, totalAnsemUi: n - i, transferCount: 1,
-    firstSeen: "2026-06-29T12:00:00.000Z", latestSeen: "2026-06-29T12:00:00.000Z", signatures: [`s${i}`],
+    firstSeen: "2026-06-29T12:00:00.000Z", latestSeen: "2026-06-29T12:00:00.000Z",
+    latestSignature: `s${i}`, signatures: [`s${i}`],
   }));
   return { ...EMPTY_SNAPSHOT, source: "GV6U", recipients, totals: { ...EMPTY_SNAPSHOT.totals, uniqueRecipients: n } };
 }
@@ -27,11 +28,12 @@ test("no cluster node when under cap", () => {
   assert.equal(g.nodes.filter((nd) => nd.kind === "recipient").length, 10);
 });
 
-test("lookup is case-insensitive-exact on wallet and returns null on miss", () => {
+test("lookup is whitespace-trim exact and returns null on miss", () => {
   const snap = snapWith(3);
   assert.equal(lookupRecipient(snap, "R1")!.wallet, "R1");
   assert.equal(lookupRecipient(snap, "  R1  ")!.wallet, "R1");
   assert.equal(lookupRecipient(snap, "nope"), null);
+  assert.equal(lookupRecipient(snap, "r1"), null); // case-sensitive base58 — lowercase must not match
 });
 
 test("timeAgo renders coarse buckets", () => {

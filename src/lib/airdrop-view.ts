@@ -6,7 +6,7 @@ export type GraphModel = { nodes: GraphNode[]; links: GraphLink[] };
 
 const SOURCE_ID = "__source__";
 const CLUSTER_ID = "__cluster__";
-const short = (w: string) => `${w.slice(0, 4)}…${w.slice(-4)}`;
+export const short = (w: string) => `${w.slice(0, 4)}…${w.slice(-4)}`;
 
 export function buildGraphModel(snap: AirdropSnapshot, cap = 300): GraphModel {
   const sorted = [...snap.recipients].sort((a, b) => b.totalAnsemUi - a.totalAnsemUi);

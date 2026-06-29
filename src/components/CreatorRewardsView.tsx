@@ -10,12 +10,11 @@ import {
   type FeePoint,
   type TokenPanel,
 } from "@/lib/domain";
+import { short } from "@/lib/airdrop-view";
 
 // pump.fun's profile "Total fees earned" headline (incl. bonding-curve-era fees,
 // which the public swap-api does not expose). Referenced + linked, not computed here.
 const PUMP_LIFETIME_HEADLINE = "≈ $548K";
-
-const short = (v: string) => `${v.slice(0, 4)}…${v.slice(-4)}`;
 const fmtSol = (n: number) => `${n.toLocaleString("en-US", { maximumFractionDigits: 2 })} SOL`;
 const fmtUsd = (n: number | null, max = 0) =>
   n == null ? "—" : `$${n.toLocaleString("en-US", { maximumFractionDigits: max })}`;
