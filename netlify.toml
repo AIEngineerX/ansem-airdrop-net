@@ -23,4 +23,4 @@
     X-Frame-Options = "DENY"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' platform.twitter.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https: ; font-src 'self' data:; connect-src 'self' https://api.dexscreener.com https://cdn.jsdelivr.net https://swap-api.pump.fun; frame-src https://platform.twitter.com https://twitter.com https://syndication.twitter.com; frame-ancestors 'none'"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://platform.twitter.com https://cdn.syndication.twimg.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://api.dexscreener.com https://cdn.jsdelivr.net https://swap-api.pump.fun https://syndication.twitter.com https://cdn.syndication.twimg.com; frame-src https://platform.twitter.com https://twitter.com https://x.com https://syndication.twitter.com; frame-ancestors 'none'"
