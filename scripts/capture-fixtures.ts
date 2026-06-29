@@ -1,81 +1,38 @@
 #!/usr/bin/env tsx
-import { writeFile, mkdir } from "node:fs/promises";
-import { PRIMARY_SOURCE_WALLET, ANSEM_MINT } from "../src/lib/domain";
-import type { RpcGetTransaction } from "../src/lib/rpc-types";
+// Fetch specific real txs as raw RpcGetTransaction JSON for fixtures.
+// Usage: node --env-file=.env --import tsx scripts/capture-fixtures.ts
+import { writeFileSync, mkdirSync } from "node:fs";
+import { rpcUrl } from "../src/lib/rpc-source";
 
-const RPC =
-  process.env.HELIUS_RPC_URL ??
-  `https://mainnet.helius-rpc.com/?api-key=${process.env.HELIUS_API_KEY}`;
+const SIGS: Record<string, string> = {
+  "airdrop-multi": "5jM5PDMXQ136TuBWkjQ6WkFfizvAySzpoDsENT1yuvKqBzpDUh5h637yxLgq8RBZQrwGjDqSEbXGMz3Uih5TuMR9",
+  "airdrop-single": "5URkAZ8oSa8BZLYcGCJ1TGw6mENYVuYS3XPoeaUjJhJF7kRLiusGh2U4Ei3En5LRB7xYWSmazSz9q6PtTzVdUNNW",
+  "incoming-other": "GYrLxwrhFRc5EDNut2LWRKKD7USESW26eUDXMcK3jpSMLeaq2x1oUjMwo4MGbqMWGgwbxfpyr34So1t3KwtpjQZ",
+};
 
-async function rpc(method: string, params: unknown[]) {
-  const res = await fetch(RPC, {
+async function getTx(url: string, sig: string): Promise<unknown> {
+  const res = await fetch(url, {
     method: "POST",
     headers: { "content-type": "application/json" },
-    body: JSON.stringify({ jsonrpc: "2.0", id: 1, method, params }),
+    body: JSON.stringify({
+      jsonrpc: "2.0", id: 1, method: "getTransaction",
+      params: [sig, { encoding: "jsonParsed", maxSupportedTransactionVersion: 0 }],
+    }),
   });
-  const json = await res.json();
-  if (json.error) throw new Error(`${method}: ${JSON.stringify(json.error)}`);
+  if (!res.ok) throw new Error(`RPC ${res.status}`);
+  const json = (await res.json()) as { result?: unknown; error?: unknown };
+  if (json.error) throw new Error(JSON.stringify(json.error));
   return json.result;
 }
 
-function classify(tx: RpcGetTransaction, wallet: string) {
-  const ix = [
-    ...(tx.transaction.message.instructions ?? []),
-    ...(tx.meta?.innerInstructions ?? []).flatMap((g) => g.instructions),
-  ];
-  const isFailed = Boolean(tx.meta?.err);
-  const hasALT = (tx.transaction.message.accountKeys ?? []).some((k) => k.source === "lookupTable");
-  const hasInner = (tx.meta?.innerInstructions?.length ?? 0) > 0;
-  const ansem2022 = ix.some(
-    (i) =>
-      (i.program === "spl-token-2022" || i.program === "spl-token") &&
-      (i.parsed?.type === "transfer" || i.parsed?.type === "transferChecked") &&
-      ((i.parsed?.info as Record<string, unknown>)?.mint === ANSEM_MINT),
-  );
-  const nativeOut = ix.some(
-    (i) =>
-      i.program === "system" &&
-      i.parsed?.type === "transfer" &&
-      (i.parsed?.info as Record<string, unknown>)?.source === wallet,
-  );
-  const createsAcct = ix.some((i) =>
-    /create|initializeAccount|createIdempotent/i.test(i.parsed?.type ?? ""),
-  );
-  const tokenTransfers = ix.filter(
-    (i) =>
-      (i.program === "spl-token" || i.program === "spl-token-2022") &&
-      (i.parsed?.type === "transfer" || i.parsed?.type === "transferChecked"),
-  ).length;
-  return { isFailed, hasALT, hasInner, ansem2022, nativeOut, createsAcct, tokenTransfers };
-}
-
 async function main() {
-  if (!process.env.HELIUS_API_KEY && !process.env.HELIUS_RPC_URL) {
-    throw new Error("Set HELIUS_API_KEY (or HELIUS_RPC_URL) — put it in .env and run with node --env-file=.env");
+  const url = rpcUrl();
+  mkdirSync("test/fixtures", { recursive: true });
+  for (const [name, sig] of Object.entries(SIGS)) {
+    const result = await getTx(url, sig);
+    writeFileSync(`test/fixtures/${name}.json`, JSON.stringify(result, null, 2));
+    console.log(`wrote test/fixtures/${name}.json`);
+    await new Promise((r) => setTimeout(r, 1500)); // throttle: avoid free-tier 429
   }
-  await mkdir("test/fixtures", { recursive: true });
-  const sigs: Array<{ signature: string }> = await rpc("getSignaturesForAddress", [
-    PRIMARY_SOURCE_WALLET,
-    { limit: 100 },
-  ]);
-
-  const index: Record<string, ReturnType<typeof classify>> = {};
-  let saved = 0;
-  for (const { signature } of sigs) {
-    const tx = (await rpc("getTransaction", [
-      signature,
-      { encoding: "jsonParsed", maxSupportedTransactionVersion: 0 },
-    ])) as RpcGetTransaction | null;
-    if (!tx) continue;
-    const name = `raw-${signature.slice(0, 16)}.json`;
-    await writeFile(`test/fixtures/${name}`, JSON.stringify(tx, null, 2));
-    index[name] = classify(tx, PRIMARY_SOURCE_WALLET);
-    saved++;
-  }
-  await writeFile("test/fixtures/_index.json", JSON.stringify(index, null, 2));
-  console.log(`Saved ${saved} raw transactions + _index.json to test/fixtures/`);
 }
-main().catch((e) => {
-  console.error(e instanceof Error ? e.message : e);
-  process.exitCode = 1;
-});
+main().catch((e) => { console.error(e instanceof Error ? e.message : e); process.exitCode = 1; });
