@@ -42,6 +42,9 @@ jobs:
           git config user.name "AIEngineerX"
           git config user.email "195990077+AIEngineerX@users.noreply.github.com"
           cp snapshot.json "$RUNNER_TEMP/snapshot.json"
+          # snapshot.json is gitignored/untracked on main; remove it so switching to the data
+          # branch (which tracks snapshot.json) isn't blocked, then restore the fresh copy.
+          rm -f snapshot.json
           git fetch origin data --depth=1
           git checkout -B data origin/data
           cp "$RUNNER_TEMP/snapshot.json" snapshot.json
