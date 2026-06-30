@@ -1,10 +1,10 @@
 {
-  "collectedAt": "2026-06-30T01:52:46.929Z",
+  "collectedAt": "2026-06-30T02:17:48.981Z",
   "source": "GV6UUmNxz2RpKxmNAPadYKb7uQpszwqQAu3qLJxVdC52",
   "mint": "9cRCn9rGT8V2imeM2BaKs13yhMEais3ruM3rPvTGpump",
   "backfillComplete": true,
   "cursors": {
-    "newest": "2mUuvGzgcFixKsuLBnGUbKK8GVCrKNjkC4FQwXpf11jiB3pgcDvqSh2P6hSM1SSdfjVpBHsNuj9PhDNFjWcMagEP",
+    "newest": "3T397JgX537VNzwCumjLK1PfDoXSXWdgRnZbGHtRj7xhZHt96xcBdFNkN58WWX5srMtTDeCsz8LSYfQMCbD7VzpZ",
     "oldestScanned": "evVqcN5GFnkvc4t2FdUaQUtqGcgkKUResfoSRouv7ohvfqNXREc7RsdU7hm14ZwNMvXvV6WsH7NoCX8GUfh3dhL"
   },
   "totals": {
@@ -362,7 +362,7 @@
       "signatures": [
         "2qM4so4S23WNZJLiQC7MD3kPeWKxN1z6WW59HxJ6KFZzwJUL9RwPFaHeo8gznPHoSmWiFz6GX9iXx4hLw3QRyBiw"
       ],
-      "heldAnsemUi": 833676.330768
+      "heldAnsemUi": 861185.826227
     },
     {
       "wallet": "A94gKwZE46N4aamnQsGtC6P4tHot2YyaVDbEfZQgLvgz",
@@ -483,7 +483,7 @@
       "signatures": [
         "5ekRi3UZiDVqkvU9VS23mHCu8a6AbB79zqTtqa7Ht8fBNSoVZ2XLURu7QyguvZLFmiK4Z7mc84ztvcuZbSiYWPWD"
       ],
-      "heldAnsemUi": 75488.501173
+      "heldAnsemUi": 72586.797434
     },
     {
       "wallet": "EjJuiNoeup2r3NJzikE5gwYuh6y6Hi4jiD85Md6oFggk",
@@ -549,7 +549,7 @@
       "signatures": [
         "3aYBJFZpnH4KpxR7iY9T39VjDnFiEoPkr2cYLA1kZ7Jphz3WEEmXHmWgceyYZ7NSDjk2dKAzCr867GNkLHiGgvLR"
       ],
-      "heldAnsemUi": 103825.093901
+      "heldAnsemUi": 100000
     },
     {
       "wallet": "94h294g6cDPFmZXHabV1UKmenZpc2b41zpUXAqAhqG1j",
