@@ -74,6 +74,11 @@ export function AnsemArmyView({
               const top3 = r.rank <= 3;
               const usd = ansemPriceUsd != null ? r.totalAnsemUi * ansemPriceUsd : null;
               const hold = holdingLabel(r.heldAnsemUi, r.totalAnsemUi);
+              const tracked = r.heldAnsemUi !== undefined;
+              const keptPct =
+                tracked && r.totalAnsemUi > 0
+                  ? Math.min(100, Math.round((r.heldAnsemUi! / r.totalAnsemUi) * 100))
+                  : 0;
               return (
                 <li key={r.wallet}>
                   <a
@@ -94,8 +99,21 @@ export function AnsemArmyView({
                     <span className="hidden w-16 shrink-0 text-right text-xs text-zinc-500 sm:block">
                       {r.transferCount} drop{r.transferCount === 1 ? "" : "s"}
                     </span>
-                    <span className="w-36 shrink-0 text-right text-xs text-zinc-400">
-                      {hold.text} {hold.flair}
+                    <span className="w-36 shrink-0">
+                      <span className="block text-right text-xs text-zinc-400">
+                        {hold.text} {hold.flair}
+                      </span>
+                      {tracked && (
+                        <span
+                          className="mt-1 block h-1 w-full overflow-hidden rounded-full bg-white/[0.06]"
+                          title={`kept ${keptPct}% · sold ${100 - keptPct}%`}
+                        >
+                          <span
+                            className="block h-full rounded-full bg-gradient-to-r from-[var(--accent)] to-[var(--accent-soft)]"
+                            style={{ width: `${keptPct}%` }}
+                          />
+                        </span>
+                      )}
                     </span>
                     <span className="shrink-0 text-zinc-600">↗</span>
                   </a>
@@ -117,8 +135,9 @@ export function AnsemArmyView({
 
       <p className="text-xs text-zinc-600">
         Holding = the wallet&rsquo;s current on-chain $ANSEM balance (top 50 by airdrop size, as of the last
-        refresh). “kept %” = how much of the airdrop they still hold; “N× drop” = they hold more than they
-        were airdropped (bought more on top). “—” = not tracked.
+        refresh). The bar fills with how much of the drop they still hold — full = diamond hands, empty =
+        sold it all. “kept %” = how much they still hold; “N× drop” = they hold more than they were
+        airdropped (bought more on top). “—” = not tracked.
       </p>
     </div>
   );
