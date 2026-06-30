@@ -1,10 +1,10 @@
 {
-  "collectedAt": "2026-06-30T04:32:29.202Z",
+  "collectedAt": "2026-06-30T05:12:28.756Z",
   "source": "GV6UUmNxz2RpKxmNAPadYKb7uQpszwqQAu3qLJxVdC52",
   "mint": "9cRCn9rGT8V2imeM2BaKs13yhMEais3ruM3rPvTGpump",
   "backfillComplete": true,
   "cursors": {
-    "newest": "2fYq9TqdrGGXR2sfiMUwaTtHbgEQVY2cYokiCpEThBCe2gJV6BzSL8HJwz8da1kqgdzo4CRuYsDBqDG5KRdD2buM",
+    "newest": "4e6utnzKfE49bVm8FfG2kwN3LabyWMoWqxViLvkdWCN5Af13UMuXTVTbDPZnab741qtmBrTyKH8zscBg3kG53baU",
     "oldestScanned": "evVqcN5GFnkvc4t2FdUaQUtqGcgkKUResfoSRouv7ohvfqNXREc7RsdU7hm14ZwNMvXvV6WsH7NoCX8GUfh3dhL"
   },
   "totals": {
@@ -109,7 +109,7 @@
       "signatures": [
         "39yF5tAWUjWWMYuu8XAHaiXZcE6FAgNp5vqco1pDqkQRtcqND4eRUVpjrjK56GNajZUtTQFFbvCaG9NPUcS3Tr1E"
       ],
-      "heldAnsemUi": 120348.997195
+      "heldAnsemUi": 0
     },
     {
       "wallet": "4nGsPb51p7wFEbQf4mnwyKKdW8ziBk2UKZZBxAKTTXaK",
@@ -131,7 +131,7 @@
       "signatures": [
         "5v4oa68beHmdbDyQJkTDMSy44Y7mzBUAdmUwXa8KzRzqz9FBh93DAQY4pWdsacs5XuvW17GcT8PobrCKVQLFxCBU"
       ],
-      "heldAnsemUi": 1360453.776923
+      "heldAnsemUi": 1349194.001565
     },
     {
       "wallet": "HHvGDMZZ6s16wMGwUAR5RTzojxLcTRP1euLrexk1FNmH",
@@ -263,7 +263,7 @@
       "signatures": [
         "55Au7PYFdZZZUfhGF1s7Cp5bqMJYZtnmiUYL8WJLXZMmTGEppLtC4hK32CERzzCzU2dnH9SE6NXjjEta9TmdZqTj"
       ],
-      "heldAnsemUi": 0
+      "heldAnsemUi": 37.463947
     },
     {
       "wallet": "DrJc1Kz1yrThXvHvGdwBZMQVf8DNQje3yFaW3wEMPydU",
@@ -428,7 +428,7 @@
       "signatures": [
         "HU1bFjiQzTYQF5sMufdm5GdvQ5Z5hTG4oHg27Rcbj6ajSm5uCfzSVq8vA6TATWmSiFh3cdbTuGMoMf6rA92VFNT"
       ],
-      "heldAnsemUi": 114245.070866
+      "heldAnsemUi": 111620.920396
     },
     {
       "wallet": "9UNbP4DDwXiXB8p1TtEh5qxdRAqYboAnRZc8W6XGo3xp",
@@ -549,7 +549,7 @@
       "signatures": [
         "3aYBJFZpnH4KpxR7iY9T39VjDnFiEoPkr2cYLA1kZ7Jphz3WEEmXHmWgceyYZ7NSDjk2dKAzCr867GNkLHiGgvLR"
       ],
-      "heldAnsemUi": 100000
+      "heldAnsemUi": 97000
     },
     {
       "wallet": "94h294g6cDPFmZXHabV1UKmenZpc2b41zpUXAqAhqG1j",
