@@ -1,10 +1,10 @@
 {
-  "collectedAt": "2026-06-30T15:08:36.134Z",
+  "collectedAt": "2026-06-30T15:52:27.734Z",
   "source": "GV6UUmNxz2RpKxmNAPadYKb7uQpszwqQAu3qLJxVdC52",
   "mint": "9cRCn9rGT8V2imeM2BaKs13yhMEais3ruM3rPvTGpump",
   "backfillComplete": true,
   "cursors": {
-    "newest": "3LSeJmUE2gBuEYKiTinjqBNkku59U7rXo6EEUTygwRBA4jieL1cw5UvtgSnezaMr8C2rHBrFFjfYjF5QXLFvjeGB",
+    "newest": "4B7ZoLSECn6iPckvx2xk5MvfDsrZJA4AdgECw5q5HvuMd2juajD6r38rJhHQyy6gkZW4FYapKkZ4zGBn6prwvXUj",
     "oldestScanned": "evVqcN5GFnkvc4t2FdUaQUtqGcgkKUResfoSRouv7ohvfqNXREc7RsdU7hm14ZwNMvXvV6WsH7NoCX8GUfh3dhL"
   },
   "totals": {
@@ -86,7 +86,7 @@
       "signatures": [
         "2pFiXBXQn6pJT6gNd7wVVjmzHzhjRbTiQ2toGc4ddJ3v23GyuPPxZEPwvvkn9tyvjtzRV7QZQecPP8cebpNUmEbH"
       ],
-      "heldAnsemUi": 3800077.341198
+      "heldAnsemUi": 3800078.341198
     },
     {
       "wallet": "6F5x9fKqXCfPf8Rufs6ZvLjzPfCicytUgWexzx6LxoDi",
@@ -98,7 +98,7 @@
       "signatures": [
         "4XZU8dyfpt4f3JEDzbMH4n9agyhyH1Yo3j365pAWyLLXDDLKQ4h5sxKzkpAJ9dsqhEZoUVMpQarxbafsEkg7b5Aa"
       ],
-      "heldAnsemUi": 776881.044781
+      "heldAnsemUi": 773778.70502
     },
     {
       "wallet": "8qdRkqTY5ceQsZLRzGytwE2sW3qLGGJmVrgooWor4TiH",
@@ -120,7 +120,7 @@
       "signatures": [
         "2La7mrKpNGodF9AzLqtDFaLDGBGo6aM6Tg4fThWCHq6pEXXiJxeod6pPM4LLGUHd4arngPun9drGmgnQsm6XKQNy"
       ],
-      "heldAnsemUi": 204351.545254
+      "heldAnsemUi": 235860.79976
     },
     {
       "wallet": "9dJKzPJQVoSLQ3ujdzUpUw3o2Ef2kTJLTgbLWnCMMD3i",
@@ -483,7 +483,7 @@
       "signatures": [
         "5ekRi3UZiDVqkvU9VS23mHCu8a6AbB79zqTtqa7Ht8fBNSoVZ2XLURu7QyguvZLFmiK4Z7mc84ztvcuZbSiYWPWD"
       ],
-      "heldAnsemUi": 55205.408004
+      "heldAnsemUi": 52039.823479
     },
     {
       "wallet": "EjJuiNoeup2r3NJzikE5gwYuh6y6Hi4jiD85Md6oFggk",
@@ -7828,6 +7828,6 @@
       "totalUi": 251.897711
     }
   ],
-  "tokenHolders": 67412,
-  "tokenHoldersAsOf": "2026-06-30T14:11:54.887Z"
+  "tokenHolders": 70043,
+  "tokenHoldersAsOf": "2026-06-30T15:52:45.602Z"
 }
