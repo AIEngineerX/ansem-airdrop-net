@@ -1,10 +1,10 @@
 {
-  "collectedAt": "2026-06-30T17:13:33.415Z",
+  "collectedAt": "2026-06-30T19:05:47.830Z",
   "source": "GV6UUmNxz2RpKxmNAPadYKb7uQpszwqQAu3qLJxVdC52",
   "mint": "9cRCn9rGT8V2imeM2BaKs13yhMEais3ruM3rPvTGpump",
   "backfillComplete": true,
   "cursors": {
-    "newest": "5s9FGkjz61ex1S3NzivPoCrQ1GFa4RYGafZ62sCLeeeBMuyUEb6tkYxQevbkeM7Mqjh2hxWLn3epZioEWCVWjNc1",
+    "newest": "5P49cLRg7eoJSY47A4Dx7tfW6RJg4UhYNNcBH4C3AC6E7QsikDBPrXptcez3B24T242shpWkbUYydK68vMSbr6Zh",
     "oldestScanned": "evVqcN5GFnkvc4t2FdUaQUtqGcgkKUResfoSRouv7ohvfqNXREc7RsdU7hm14ZwNMvXvV6WsH7NoCX8GUfh3dhL"
   },
   "totals": {
@@ -26,7 +26,7 @@
       "signatures": [
         "5cn8EKLLtE1VZRw49BnY54po5YBqGGdHhKUcVJNxr3Wt7n3ybcsK6an9p7d6ZuAsAUX4wb7D742nZV4qXuftPwmR"
       ],
-      "heldAnsemUi": 1726544.706727
+      "heldAnsemUi": 1745576.300346
     },
     {
       "wallet": "DAEdBmTPEKM6xkwfzC3d411QUe6coKpkND6UURa4CvHC",
@@ -120,7 +120,7 @@
       "signatures": [
         "2La7mrKpNGodF9AzLqtDFaLDGBGo6aM6Tg4fThWCHq6pEXXiJxeod6pPM4LLGUHd4arngPun9drGmgnQsm6XKQNy"
       ],
-      "heldAnsemUi": 235860.79976
+      "heldAnsemUi": 200860.79976
     },
     {
       "wallet": "9dJKzPJQVoSLQ3ujdzUpUw3o2Ef2kTJLTgbLWnCMMD3i",
@@ -131,7 +131,7 @@
       "signatures": [
         "5v4oa68beHmdbDyQJkTDMSy44Y7mzBUAdmUwXa8KzRzqz9FBh93DAQY4pWdsacs5XuvW17GcT8PobrCKVQLFxCBU"
       ],
-      "heldAnsemUi": 1335959.285549
+      "heldAnsemUi": 1323383.155851
     },
     {
       "wallet": "HHvGDMZZ6s16wMGwUAR5RTzojxLcTRP1euLrexk1FNmH",
@@ -329,7 +329,7 @@
       "signatures": [
         "3a8mkhgawL69k311Zi8NTQkFPoFQ8nNZDUufcFnJbPnSuvHNqgZ4QuG8zqhvySRnTSADZA2z1kmgtiXXaTupRYeS"
       ],
-      "heldAnsemUi": 72670.89495
+      "heldAnsemUi": 72720.513203
     },
     {
       "wallet": "7NYibQDrSEMAXdFz2P3wnxuM46axCP6jbaH786wrwq2C",
@@ -439,7 +439,7 @@
       "signatures": [
         "tkdSVkezfMJUQrUgBcUZgHdjTeXhNCikbqRMm3Cs1juaK4qXPjayFpG2k6rmcYTLgG2Dfh21LqRaHrjjAtDCqMm"
       ],
-      "heldAnsemUi": 16871.250902
+      "heldAnsemUi": 0
     },
     {
       "wallet": "BhYkn3vN23wuNG8sdi8TyxqvW9r51RaHMGF36bawn9GG",
@@ -571,7 +571,7 @@
       "signatures": [
         "3jrCA55zwMMLbC613p1EvqsfE5TceHc7jtDCgS2DTpAGSCJES1PASv2Eaqs9EJ4iwRDJNo6FcGU2SfiThfeaTr74"
       ],
-      "heldAnsemUi": 102623.527801
+      "heldAnsemUi": 92623.527801
     },
     {
       "wallet": "GmPrGXsEbB4mwhT1xWDxHirLWAi648EvvYt3udux6icD",
@@ -7828,6 +7828,6 @@
       "totalUi": 251.897711
     }
   ],
-  "tokenHolders": 71956,
-  "tokenHoldersAsOf": "2026-06-30T17:12:47.116Z"
+  "tokenHolders": 72577,
+  "tokenHoldersAsOf": "2026-06-30T19:06:02.251Z"
 }
