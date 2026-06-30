@@ -31,15 +31,22 @@ jobs:
         env:
           HELIUS_API_KEY: ${{ secrets.HELIUS_API_KEY }}
         run: node --import tsx scripts/collect-snapshot.ts --in prev.json --out snapshot.json --mode sync --max 1000
-      - name: Commit to data branch
+      - name: Commit to data branch (append — never force-push)
+        # Force-pushing the data branch rewrites its history every run. A non-fast-forward
+        # ref update breaks raw.githubusercontent / CDN caching: the branch-ref→content
+        # mapping does not re-resolve cleanly, so the CDN serves an old commit for a long time
+        # (observed a ~40-min serve lag, and earlier the same class of bug on jsDelivr). A
+        # normal fast-forward commit onto origin/data avoids that AND preserves every file
+        # already on the branch (snapshot.json, the seed, pump-lifetime.json).
         run: |
           git config user.name "AIEngineerX"
           git config user.email "195990077+AIEngineerX@users.noreply.github.com"
-          git checkout -B data
+          cp snapshot.json "$RUNNER_TEMP/snapshot.json"
+          git fetch origin data --depth=1
+          git checkout -B data origin/data
+          cp "$RUNNER_TEMP/snapshot.json" snapshot.json
           git add -f snapshot.json
-          git commit -m "data: snapshot $(date -u +%FT%TZ) [skip ci]" || echo "no change"
-          git push -f origin data
-        # No CDN purge step: the site reads the data branch from raw.githubusercontent.com
-        # (Fastly, full-URL cache key), so a fresh push is visible within ~1 min via the
-        # client's per-minute buster. jsDelivr was dropped — its @branch-ref purge proved
-        # unreliable (served 108-min-stale content while reporting purge success).
+          git commit -m "data: snapshot $(date -u +%FT%TZ) [skip ci]" || { echo "no change"; exit 0; }
+          git push origin data
+        # No CDN purge step: with fast-forward commits the site reads the data branch fresh
+        # from raw.githubusercontent.com within its normal cache window (~1-5 min).

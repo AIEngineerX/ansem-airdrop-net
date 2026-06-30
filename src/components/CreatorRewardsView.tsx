@@ -8,14 +8,15 @@ import {
   type FeePoint,
   type TokenPanel,
 } from "@/lib/domain";
+import type { PumpLifetime } from "@/lib/pump";
 import { short } from "@/lib/airdrop-view";
 import { Unofficial } from "./Unofficial";
 
-// pump.fun's profile "Total fees earned" (bonding-curve + AMM). It is rendered
-// server-side on pump.fun and exposed by NO public API, so it can't be fetched live —
-// this is a sourced, manually-captured reference. Update both when re-checking the profile.
-const PUMP_LIFETIME_USD = "≈ $548K";
-const PUMP_LIFETIME_AS_OF = "Jun 29, 2026";
+// pump.fun's profile "Total fees earned" (bonding-curve + AMM) is rendered server-side on
+// pump.fun and exposed by NO public API, so it can't be fetched live — it's a sourced,
+// manually-captured reference. It comes in via the `lifetime` prop, sourced from
+// pump-lifetime.json on the `data` branch (update that file to change it — no code change).
+const LIFETIME_FALLBACK: PumpLifetime = { usd: "≈ $548K", asOf: "Jun 29, 2026" };
 const fmtSol = (n: number) => `${n.toLocaleString("en-US", { maximumFractionDigits: 2 })} SOL`;
 const fmtUsd = (n: number | null, max = 0) =>
   n == null ? "—" : `$${n.toLocaleString("en-US", { maximumFractionDigits: max })}`;
@@ -111,11 +112,15 @@ export function CreatorRewardsView({
   rewards,
   ansem,
   solPriceUsd,
+  lifetime = LIFETIME_FALLBACK,
 }: {
   rewards: CreatorRewards;
   ansem: TokenPanel;
   solPriceUsd: number | null;
+  lifetime?: PumpLifetime;
 }) {
+  const PUMP_LIFETIME_USD = lifetime.usd;
+  const PUMP_LIFETIME_AS_OF = lifetime.asOf;
   const updated = new Date(ansem.updatedAt ?? new Date().toISOString()).toLocaleString("en-US", {
     dateStyle: "medium",
     timeStyle: "short",

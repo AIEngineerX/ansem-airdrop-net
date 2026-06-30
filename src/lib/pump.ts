@@ -6,6 +6,31 @@ import {
   type FeePoint,
 } from "./domain";
 
+/**
+ * pump.fun's profile "Total fees earned" (bonding-curve + AMM) is rendered server-side on
+ * pump.fun and exposed by NO public API, so it can't be fetched live — it's a manually-captured
+ * reference. It lives in `pump-lifetime.json` on the repo's `data` branch so it can be updated
+ * in seconds (edit one file, no code change, no site rebuild) instead of editing source. The
+ * hardcoded fallback below is used if that file is missing or unreadable, so the page never breaks.
+ */
+export type PumpLifetime = { usd: string; asOf: string };
+const PUMP_LIFETIME_FALLBACK: PumpLifetime = { usd: "≈ $548K", asOf: "Jun 29, 2026" };
+const PUMP_LIFETIME_URL =
+  "https://raw.githubusercontent.com/AIEngineerX/ansem-airdrop-net/data/pump-lifetime.json";
+
+export async function getPumpLifetime(): Promise<PumpLifetime> {
+  try {
+    const r = await fetch(PUMP_LIFETIME_URL, { next: { revalidate: 60 } });
+    if (!r.ok) return PUMP_LIFETIME_FALLBACK;
+    const j = (await r.json()) as Partial<PumpLifetime>;
+    return typeof j.usd === "string" && typeof j.asOf === "string"
+      ? { usd: j.usd, asOf: j.asOf }
+      : PUMP_LIFETIME_FALLBACK;
+  } catch {
+    return PUMP_LIFETIME_FALLBACK;
+  }
+}
+
 export type RawFeeTotal = { totalFees: string; totalFeesSOL: string };
 export type RawFeeBucket = {
   bucket: string;
