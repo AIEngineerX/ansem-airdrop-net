@@ -2,14 +2,17 @@
 
 The site is configured for **live data** (`LIVE_SNAPSHOT_ENABLED = true`): the client fetches
 the snapshot directly from `raw.githubusercontent.com/AIEngineerX/ansem-airdrop-net/data/snapshot.json`
-(the public repo's `data` branch, refreshed by the collector cron) with a per-minute cache buster.
-raw.githubusercontent sends `Access-Control-Allow-Origin: *` and is fronted by Fastly, which keys
-its cache on the full URL including the query string, so each minute's buster is a fresh key and the
-latest push is visible within ~1 minute. It falls back to the committed seed
-(`public/snapshot.seed.json`) if the CDN is ever unavailable, so even mid-setup the site always
-renders real data. (jsDelivr was used originally but dropped: its `@branch`-ref cache is purge-proof
-in practice — verified 2026-06-30 it served 108-min-stale content while five purge calls all reported
-success.)
+(the public repo's `data` branch, refreshed by the collector cron). raw.githubusercontent sends
+`Access-Control-Allow-Origin: *`, so the browser fetch works. Freshness is bounded by raw github's
+CDN cache (`Cache-Control: max-age=300` → **up to ~5 min**) — fine here, since new airdrops are rare.
+Note: a query cache-buster is useless (raw github's Fastly ignores the query string for its cache
+key), and the collector must use fast-forward commits, never force-push (a history rewrite leaves
+raw github serving an old commit for ~40 min — far past the 5-min cache). It falls back to the
+committed seed (`public/snapshot.seed.json`) if the CDN is ever unavailable, so even mid-setup the
+site always renders real data. (jsDelivr was used originally but dropped: its `@branch`-ref cache is
+purge-proof in practice — verified 2026-06-30 it served 108-min-stale content while five purge calls
+all reported success. For sub-minute freshness, front the snapshot with a server proxy over the
+GitHub contents API.)
 
 Do the steps **in order** — seeding the `data` branch before Netlify goes live means the
 CDN already has a snapshot when the site first loads (no 404 flash).
@@ -52,11 +55,11 @@ git checkout main
 gh workflow run collect-snapshot
 gh run watch
 ```
-Then confirm the snapshot is served (fresh within ~1 min of the push):
+Then confirm the snapshot is served (raw github's cache refreshes within ~5 min of the push):
 ```bash
-curl -s "https://raw.githubusercontent.com/AIEngineerX/ansem-airdrop-net/data/snapshot.json?t=$(date +%s)" | head -c 120
+curl -s "https://raw.githubusercontent.com/AIEngineerX/ansem-airdrop-net/data/snapshot.json" | head -c 120
 ```
-The cron then keeps it fresh every 15 min (and purges the jsDelivr cache each run).
+The cron then keeps the `data` branch fresh every 15 min, committing with fast-forward pushes.
 
 ### 6. Connect Netlify (deploy from `main`)
 - Build command: `pnpm build` · publish per `@netlify/plugin-nextjs` (or the committed `netlify.toml`)
@@ -77,7 +80,5 @@ The cron then keeps it fresh every 15 min (and purges the jsDelivr cache each ru
 ## Notes
 
 - **The airdrop is complete** (`backfillComplete: true`), so the live pipeline mostly matters for *future* airdrops — the committed seed is already the full, accurate dataset. Live mode + polling means any new Ansem airdrop would appear automatically.
-- **The ~$548K lifetime fee** is the one figure that isn't live (no public API exposes it). Refresh `PUMP_LIFETIME_USD` / `PUMP_LIFETIME_AS_OF` in `src/components/CreatorRewardsView.tsx` when you re-check his pump.fun profile.
-- **Snapshot freshness:** the client reads the `data` branch from raw.githubusercontent.com with a
-  per-minute buster (fresh ≤1 min). jsDelivr was dropped — its `@branch`-ref cache is purge-proof in
-  practice (served 108-min-stale content while purge calls reported success).
+- **The ~$548K lifetime fee** is the one figure that isn't live (no public API exposes it). Update it by editing `pump-lifetime.json` on the `data` branch (`{"usd":"≈ $548K","asOf":"Jun 29, 2026"}`) — no code change, no rebuild; `page.tsx` reads it server-side (ISR) with the in-source value as a fallback. Re-check his pump.fun profile periodically.
+- **Snapshot freshness:** the client reads the `data` branch from raw.githubusercontent.com. Freshness is bounded by raw github's CDN cache (`max-age=300` → ~5 min); a query buster is inert (Fastly ignores it) and the collector uses fast-forward commits (force-push leaves it ~40 min stale). jsDelivr was dropped — its `@branch`-ref cache is purge-proof in practice (served 108-min-stale content while purge calls reported success). Sub-minute freshness would need a server proxy over the GitHub contents API.
