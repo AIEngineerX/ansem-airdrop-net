@@ -1,12 +1,15 @@
 # Deploy Guide — public + live
 
 The site is configured for **live data** (`LIVE_SNAPSHOT_ENABLED = true`): the client fetches
-the snapshot from the same-origin path `/api/snapshot`, which `netlify.toml` rewrites
-server-side to jsDelivr (served off the public repo's `data` branch, refreshed by the collector
-cron). This proxy keeps the GitHub owner/repo out of the client bundle and network traces — only
-Netlify's config knows the CDN URL. It falls back to the committed seed
-(`public/snapshot.seed.json`) if the proxy/CDN is ever unavailable, so even mid-setup the site
-always renders real data.
+the snapshot directly from `raw.githubusercontent.com/AIEngineerX/ansem-airdrop-net/data/snapshot.json`
+(the public repo's `data` branch, refreshed by the collector cron) with a per-minute cache buster.
+raw.githubusercontent sends `Access-Control-Allow-Origin: *` and is fronted by Fastly, which keys
+its cache on the full URL including the query string, so each minute's buster is a fresh key and the
+latest push is visible within ~1 minute. It falls back to the committed seed
+(`public/snapshot.seed.json`) if the CDN is ever unavailable, so even mid-setup the site always
+renders real data. (jsDelivr was used originally but dropped: its `@branch`-ref cache is purge-proof
+in practice — verified 2026-06-30 it served 108-min-stale content while five purge calls all reported
+success.)
 
 Do the steps **in order** — seeding the `data` branch before Netlify goes live means the
 CDN already has a snapshot when the site first loads (no 404 flash).
@@ -22,9 +25,9 @@ git push origin main
 
 ### 2. Make the repo public
 GitHub → repo **Settings → General → Danger Zone → Change visibility → Public**.
-This is what lets jsDelivr serve the snapshot, and gives unlimited Actions minutes (so
-the cron runs every 15 min). Nothing sensitive is in the repo — `.env` is gitignored,
-no keys are committed, the snapshot is public on-chain data.
+This is what lets raw.githubusercontent.com serve the snapshot to browsers, and gives
+unlimited Actions minutes (so the cron runs every 15 min). Nothing sensitive is in the repo —
+`.env` is gitignored, no keys are committed, the snapshot is public on-chain data.
 
 ### 3. Add the Helius key as an Actions secret
 ```bash
@@ -33,7 +36,7 @@ gh secret set HELIUS_API_KEY --repo AIEngineerX/ansem-airdrop-net
 Paste the key (same one in your local `.env`). Used only by the collector in CI.
 
 ### 4. Seed the `data` branch (once)
-Gives jsDelivr a `snapshot.json` immediately:
+Gives the site a `snapshot.json` to read immediately:
 ```bash
 git checkout --orphan data
 git rm -rf .
@@ -49,9 +52,9 @@ git checkout main
 gh workflow run collect-snapshot
 gh run watch
 ```
-Then confirm the CDN serves it (give jsDelivr a minute):
+Then confirm the snapshot is served (fresh within ~1 min of the push):
 ```bash
-curl -sI "https://cdn.jsdelivr.net/gh/AIEngineerX/ansem-airdrop-net@data/snapshot.json" | head -1
+curl -s "https://raw.githubusercontent.com/AIEngineerX/ansem-airdrop-net/data/snapshot.json?t=$(date +%s)" | head -c 120
 ```
 The cron then keeps it fresh every 15 min (and purges the jsDelivr cache each run).
 
@@ -75,4 +78,6 @@ The cron then keeps it fresh every 15 min (and purges the jsDelivr cache each ru
 
 - **The airdrop is complete** (`backfillComplete: true`), so the live pipeline mostly matters for *future* airdrops — the committed seed is already the full, accurate dataset. Live mode + polling means any new Ansem airdrop would appear automatically.
 - **The ~$548K lifetime fee** is the one figure that isn't live (no public API exposes it). Refresh `PUMP_LIFETIME_USD` / `PUMP_LIFETIME_AS_OF` in `src/components/CreatorRewardsView.tsx` when you re-check his pump.fun profile.
-- **jsDelivr branch cache** is ~12h; the cron purges it each run so updates land promptly.
+- **Snapshot freshness:** the client reads the `data` branch from raw.githubusercontent.com with a
+  per-minute buster (fresh ≤1 min). jsDelivr was dropped — its `@branch`-ref cache is purge-proof in
+  practice (served 108-min-stale content while purge calls reported success).

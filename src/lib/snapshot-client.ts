@@ -1,14 +1,16 @@
 import { EMPTY_SNAPSHOT, type AirdropSnapshot } from "./airdrop-snapshot";
 
-// The collector publishes snapshot.json to the public repo's `data` branch; jsDelivr
-// serves it. We fetch jsDelivr DIRECTLY (the repo is public, so there is nothing to hide
-// behind a same-origin proxy) with a per-minute cache buster. Branch-ref CDN caches —
-// Netlify's edge proxy AND jsDelivr's own edges — otherwise serve a stale copy for a long
-// time even after the collector pushes and purges. A buster that changes each minute makes
-// the URL unique, so the client always pulls the latest within ~1 minute regardless of how
-// slowly a purge propagates.
+// The collector publishes snapshot.json to the public repo's `data` branch. We read it from
+// raw.githubusercontent.com (sends Access-Control-Allow-Origin: *, so a browser fetch works)
+// with a per-minute cache buster. We do NOT use jsDelivr: its @branch-ref cache is purge-proof
+// in practice — verified 2026-06-30, jsDelivr served a 108-min-stale copy while the data branch
+// was current, and five purge.jsdelivr.net calls all returned status=finished yet the CDN kept
+// serving the old file. raw.githubusercontent.com is fronted by Fastly which keys on the FULL
+// URL including query, so a buster that changes each minute is a fresh cache key — the origin
+// (Source-Age: 0) is re-read at most once per minute, shared across all clients in that minute,
+// and every visitor sees the latest snapshot within ~1 minute.
 export const SNAPSHOT_CDN_URL =
-  "https://cdn.jsdelivr.net/gh/AIEngineerX/ansem-airdrop-net@data/snapshot.json";
+  "https://raw.githubusercontent.com/AIEngineerX/ansem-airdrop-net/data/snapshot.json";
 export const SEED_FALLBACK_URL = "/snapshot.seed.json";
 
 // Live: fetch the CDN snapshot, falling back to the committed seed if the CDN is

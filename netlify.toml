@@ -5,20 +5,22 @@
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
-# (The old /api/snapshot same-origin proxy was removed: the repo is public, so there's
-# nothing to hide, and Netlify's edge cached the proxied branch-ref response — serving a
-# stale snapshot. The client now fetches jsDelivr directly with a per-minute cache buster,
-# which is the only way to reliably defeat stale branch-ref CDN caching. See snapshot-client.ts.)
+# (The old /api/snapshot same-origin proxy was removed: the repo is public, so there's nothing
+# to hide, and Netlify's edge cached the proxied branch-ref response. The client now reads the
+# data-branch snapshot from raw.githubusercontent.com directly with a per-minute cache buster.
+# jsDelivr was dropped: its @branch-ref cache is purge-proof in practice — verified 2026-06-30 it
+# served a 108-min-stale copy while five purge.jsdelivr.net calls all reported success. See
+# snapshot-client.ts.)
 
 # Security headers / CSP. Next inlines styles/scripts, so 'unsafe-inline' is required for the
 # app to run. img-src https: covers DexScreener token images; connect-src keeps the DexScreener
-# + pump.fun + jsDelivr origins. No third-party scripts or frames (the X timeline embed was
-# removed — X restricts profile-timeline embeds — so twitter hosts are dropped and frame-src is
-# locked to 'none').
+# + pump.fun + raw.githubusercontent.com (snapshot data) origins. No third-party scripts or
+# frames (the X timeline embed was removed — X restricts profile-timeline embeds — so twitter
+# hosts are dropped and frame-src is locked to 'none').
 [[headers]]
   for = "/*"
   [headers.values]
     X-Frame-Options = "DENY"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://api.dexscreener.com https://cdn.jsdelivr.net https://swap-api.pump.fun; frame-src 'none'; frame-ancestors 'none'"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://api.dexscreener.com https://raw.githubusercontent.com https://swap-api.pump.fun; frame-src 'none'; frame-ancestors 'none'"
