@@ -40,6 +40,10 @@ export type AirdropSnapshot = {
   recipients: AirdropRecipient[];
   feed: AirdropFeedItem[];
   otherMintsSent: OtherMintSent[];
+  /** Total unique wallets currently holding $ANSEM (ALL holders, not just airdrop
+   *  recipients). Recomputed at most hourly by the collector — see tokenHoldersAsOf. */
+  tokenHolders?: number;
+  tokenHoldersAsOf?: string;
 };
 
 export const EMPTY_SNAPSHOT: AirdropSnapshot = {

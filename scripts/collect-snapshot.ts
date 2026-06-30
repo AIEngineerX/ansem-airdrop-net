@@ -14,8 +14,9 @@ import { rawTxToHelius } from "../src/lib/rpc-adapter";
 import { parseOutgoingTransfers } from "../src/lib/transfer-parser";
 import { EMPTY_SNAPSHOT, foldTransfers, type AirdropSnapshot } from "../src/lib/airdrop-snapshot";
 import { computeNextCursors } from "../src/lib/collector-cursors";
-import { PRIMARY_SOURCE_WALLET } from "../src/lib/domain";
+import { PRIMARY_SOURCE_WALLET, ANSEM_MINT } from "../src/lib/domain";
 import { getAnsemBalances } from "../src/lib/holdings";
+import { countTokenHolders } from "../src/lib/token-holders";
 
 // Enrich the top-50 recipients with their current on-chain ANSEM balance.
 // Fail-soft: holdings are enrichment, not core truth — never fail the run over them.
@@ -33,6 +34,27 @@ async function withHoldings(snap: AirdropSnapshot): Promise<AirdropSnapshot> {
   } catch (e) {
     console.warn("holdings: fetch failed, writing snapshot without holdings:", (e as Error).message);
     return snap;
+  }
+}
+
+// Total $ANSEM holder count. This is the collector's most expensive call (~68 paginated RPCs),
+// so it is gated behind an hourly TTL: recompute only when the previous value is missing or
+// older than HOLDER_COUNT_TTL_MS, otherwise carry the previous count forward. Fail-soft —
+// a count failure never fails the run, it just reuses the previous value.
+const HOLDER_COUNT_TTL_MS = 60 * 60 * 1000; // 1h
+async function withTokenHolders(snap: AirdropSnapshot, prev: AirdropSnapshot): Promise<AirdropSnapshot> {
+  const prevAsOf = prev.tokenHoldersAsOf ? Date.parse(prev.tokenHoldersAsOf) : 0;
+  const stillFresh = prev.tokenHolders != null && Date.now() - prevAsOf < HOLDER_COUNT_TTL_MS;
+  if (stillFresh) {
+    return { ...snap, tokenHolders: prev.tokenHolders, tokenHoldersAsOf: prev.tokenHoldersAsOf };
+  }
+  try {
+    const count = await countTokenHolders(ANSEM_MINT);
+    console.log(`token holders: counted ${count}`);
+    return { ...snap, tokenHolders: count, tokenHoldersAsOf: new Date().toISOString() };
+  } catch (e) {
+    console.warn("token holders: count failed, carrying previous value:", (e as Error).message);
+    return { ...snap, tokenHolders: prev.tokenHolders, tokenHoldersAsOf: prev.tokenHoldersAsOf };
   }
 }
 
@@ -103,7 +125,7 @@ async function main() {
 
     if (next.totals.totalAirdrops < prev.totals.totalAirdrops)
       throw new Error("refusing to write a regressed snapshot");
-    const enriched = await withHoldings(next);
+    const enriched = await withTokenHolders(await withHoldings(next), prev);
     writeFileSync(outPath, JSON.stringify(enriched, null, 2));
     console.log(
       `sync: wrote ${outPath}: ${next.totals.uniqueRecipients} recipients, ` +

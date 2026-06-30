@@ -43,9 +43,32 @@ export function AnsemArmyView({
         >
           The Ansem Army <span className="align-middle">🐂🀄</span>
         </h2>
-        <p className="mt-1 text-sm text-zinc-500">
-          Every wallet The Black Bull dropped $ANSEM to — {fmt(snap.totals.uniqueRecipients)} strong and counting.
-        </p>
+        <p className="mt-1 text-sm text-zinc-500">Every wallet The Black Bull dropped $ANSEM to.</p>
+
+        <div className="mt-3 flex flex-wrap items-end gap-x-7 gap-y-2">
+          <div>
+            <span className="tabular font-mono text-xl font-semibold text-white sm:text-2xl">
+              {fmt(snap.totals.uniqueRecipients)}
+            </span>
+            <span className="ml-1.5 text-[11px] uppercase tracking-[0.14em] text-zinc-500">airdropped</span>
+          </div>
+          {snap.tokenHolders != null && (
+            <div
+              title={
+                snap.tokenHoldersAsOf
+                  ? `Total $ANSEM holders, as of ${new Date(snap.tokenHoldersAsOf).toLocaleString()}`
+                  : undefined
+              }
+            >
+              <span className="tabular font-mono text-xl font-semibold text-[var(--accent-soft)] sm:text-2xl">
+                {fmt(snap.tokenHolders)}
+              </span>
+              <span className="ml-1.5 text-[11px] uppercase tracking-[0.14em] text-zinc-500">
+                $ANSEM holders
+              </span>
+            </div>
+          )}
+        </div>
       </div>
 
       <input
@@ -137,7 +160,8 @@ export function AnsemArmyView({
         Holding = the wallet&rsquo;s current on-chain $ANSEM balance (top 50 by airdrop size, as of the last
         refresh). The bar fills with how much of the drop they still hold — full = diamond hands, empty =
         sold it all. “kept %” = how much they still hold; “N× drop” = they hold more than they were
-        airdropped (bought more on top). “—” = not tracked.
+        airdropped (bought more on top). “—” = not tracked. “$ANSEM holders” counts every wallet
+        currently holding any $ANSEM (all holders, not just airdrop recipients) — refreshed hourly.
       </p>
     </div>
   );
