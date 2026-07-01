@@ -1,10 +1,10 @@
 {
-  "collectedAt": "2026-07-01T02:14:56.956Z",
+  "collectedAt": "2026-07-01T06:45:10.618Z",
   "source": "GV6UUmNxz2RpKxmNAPadYKb7uQpszwqQAu3qLJxVdC52",
   "mint": "9cRCn9rGT8V2imeM2BaKs13yhMEais3ruM3rPvTGpump",
   "backfillComplete": true,
   "cursors": {
-    "newest": "5sFv63nEaH9DgvwLMzUSLwUUThTrS6jL88SvuApz8s8HShEwXDnwbGZ8aWti12BBRUjjPH3A9rUSCwWsG3vzzEMD",
+    "newest": "2Wj6btafcPaMwdWVPKpHMVLq1JTW71XfXPL5W4hAV6kuy6E6HdnRiaxtxWd7VgfH4Ep9AmDAw5BTBvc57ZQWYyr3",
     "oldestScanned": "evVqcN5GFnkvc4t2FdUaQUtqGcgkKUResfoSRouv7ohvfqNXREc7RsdU7hm14ZwNMvXvV6WsH7NoCX8GUfh3dhL"
   },
   "totals": {
@@ -26,7 +26,7 @@
       "signatures": [
         "5cn8EKLLtE1VZRw49BnY54po5YBqGGdHhKUcVJNxr3Wt7n3ybcsK6an9p7d6ZuAsAUX4wb7D742nZV4qXuftPwmR"
       ],
-      "heldAnsemUi": 1745576.300346
+      "heldAnsemUi": 1771481.430911
     },
     {
       "wallet": "DAEdBmTPEKM6xkwfzC3d411QUe6coKpkND6UURa4CvHC",
@@ -131,7 +131,7 @@
       "signatures": [
         "5v4oa68beHmdbDyQJkTDMSy44Y7mzBUAdmUwXa8KzRzqz9FBh93DAQY4pWdsacs5XuvW17GcT8PobrCKVQLFxCBU"
       ],
-      "heldAnsemUi": 1122428.035781
+      "heldAnsemUi": 1101148.802568
     },
     {
       "wallet": "HHvGDMZZ6s16wMGwUAR5RTzojxLcTRP1euLrexk1FNmH",
@@ -274,7 +274,7 @@
       "signatures": [
         "2BgcuUspHt6BDm3hXPYi9cxtvbB28XitgSgi2iF4p5poToMQQVPU8xF62PctcwWRjxEc5s8QjZQ4yz9wKZwc5vTe"
       ],
-      "heldAnsemUi": 0
+      "heldAnsemUi": 125.281574
     },
     {
       "wallet": "21vaYvUUE4ND1bVt1tcGiXUXHe41w53unQd5DmCDeLZ1",
@@ -494,7 +494,7 @@
       "signatures": [
         "5Uwdoje4wWG6ieC1nrsnTquod78kpF42uoPEpDHqTpQQpCJggL6DYAw8m91WHkzZhCqE3QDfcuqGAv2NfhjH3snx"
       ],
-      "heldAnsemUi": 28395.527073
+      "heldAnsemUi": 37860.702764
     },
     {
       "wallet": "AT6bwAeV1CWmSsiAwcyyfqstnxdWzKboFsggxkubVEzx",
@@ -549,7 +549,7 @@
       "signatures": [
         "3aYBJFZpnH4KpxR7iY9T39VjDnFiEoPkr2cYLA1kZ7Jphz3WEEmXHmWgceyYZ7NSDjk2dKAzCr867GNkLHiGgvLR"
       ],
-      "heldAnsemUi": 99391.737602
+      "heldAnsemUi": 99944.880392
     },
     {
       "wallet": "94h294g6cDPFmZXHabV1UKmenZpc2b41zpUXAqAhqG1j",
@@ -7839,6 +7839,6 @@
       "totalUi": 251.897711
     }
   ],
-  "tokenHolders": 74473,
-  "tokenHoldersAsOf": "2026-07-01T02:15:12.148Z"
+  "tokenHolders": 77107,
+  "tokenHoldersAsOf": "2026-07-01T06:45:44.615Z"
 }
