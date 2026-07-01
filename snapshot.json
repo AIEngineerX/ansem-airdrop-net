@@ -1,10 +1,10 @@
 {
-  "collectedAt": "2026-07-01T20:15:34.195Z",
+  "collectedAt": "2026-07-01T21:56:16.082Z",
   "source": "GV6UUmNxz2RpKxmNAPadYKb7uQpszwqQAu3qLJxVdC52",
   "mint": "9cRCn9rGT8V2imeM2BaKs13yhMEais3ruM3rPvTGpump",
   "backfillComplete": true,
   "cursors": {
-    "newest": "4RUYCQwov92gdjZYNjHcErM16sU7ckg1hafnKGN64TpktwtQXayWkbeZnhpoW46U5aJy2nvKLgXrmeqNaTPH9dks",
+    "newest": "4W8dwWW4vPtt9zgG7z3DJ1WDuydJUYkHk5wErctJJPMLUYHGukrWDNrvMDarkeAJ6DWkZ34Zj9XJdCgUvXKJEqbx",
     "oldestScanned": "evVqcN5GFnkvc4t2FdUaQUtqGcgkKUResfoSRouv7ohvfqNXREc7RsdU7hm14ZwNMvXvV6WsH7NoCX8GUfh3dhL"
   },
   "totals": {
@@ -50,7 +50,7 @@
       "signatures": [
         "MN8an7NAJnmC1AuaHjCsUtAuKcCo2coaZcppfbtXKmXuKmUxZkGazEP8JLFioQib3VXKUQN6VaxXDKH7Nzzor7p"
       ],
-      "heldAnsemUi": 3033120.74523
+      "heldAnsemUi": 3033144.950076
     },
     {
       "wallet": "49foKJpRnZUaPKsDgnQhUFRMk7NX4zD5KgtVpxgvctLa",
@@ -74,7 +74,7 @@
       "signatures": [
         "22nzWCnHXRPC3X9agGpcn9ASS1CndHLctRpYwNz3RG91Wu7eD3AghSsR6aYXsEptJBoXC5GCexoaThG1gvquAkjP"
       ],
-      "heldAnsemUi": 1168072.3998
+      "heldAnsemUi": 290972.3998
     },
     {
       "wallet": "HDixbrzwwLXczhDBk1JVrurPQsuLE8FUKnW2pucSXN3o",
@@ -131,7 +131,7 @@
       "signatures": [
         "5v4oa68beHmdbDyQJkTDMSy44Y7mzBUAdmUwXa8KzRzqz9FBh93DAQY4pWdsacs5XuvW17GcT8PobrCKVQLFxCBU"
       ],
-      "heldAnsemUi": 1054965.558255
+      "heldAnsemUi": 1054966.101089
     },
     {
       "wallet": "HHvGDMZZ6s16wMGwUAR5RTzojxLcTRP1euLrexk1FNmH",
@@ -472,7 +472,7 @@
       "signatures": [
         "3tCA25dfKgLTppuNieXVTyJ5pA6knAeBhbb6JcWQW4zvstb3FDAChYZYsCFzD3h6uVhyR7Fc1TtwuBWkahNXYDJX"
       ],
-      "heldAnsemUi": 48215.160571
+      "heldAnsemUi": 45464.307035
     },
     {
       "wallet": "9DXhSifXXBTwPJmQS5o9YmE5vtyva9uGRPTpiXWw2K5L",
@@ -10756,6 +10756,6 @@
       "totalUi": 251.897711
     }
   ],
-  "tokenHolders": 78815,
-  "tokenHoldersAsOf": "2026-07-01T20:15:49.845Z"
+  "tokenHolders": 80829,
+  "tokenHoldersAsOf": "2026-07-01T21:56:31.099Z"
 }
