@@ -1,10 +1,10 @@
 {
-  "collectedAt": "2026-07-01T21:56:16.082Z",
+  "collectedAt": "2026-07-01T23:04:35.143Z",
   "source": "GV6UUmNxz2RpKxmNAPadYKb7uQpszwqQAu3qLJxVdC52",
   "mint": "9cRCn9rGT8V2imeM2BaKs13yhMEais3ruM3rPvTGpump",
   "backfillComplete": true,
   "cursors": {
-    "newest": "4W8dwWW4vPtt9zgG7z3DJ1WDuydJUYkHk5wErctJJPMLUYHGukrWDNrvMDarkeAJ6DWkZ34Zj9XJdCgUvXKJEqbx",
+    "newest": "ekPpU2CjnWrvEN2gVuaWgkZWW3YpyCz8MsRVTFyMs7wuWL6CdYZZvUtuN5aWmN8Pxcg2Z8mwGjHjHq1Ste6nQck",
     "oldestScanned": "evVqcN5GFnkvc4t2FdUaQUtqGcgkKUResfoSRouv7ohvfqNXREc7RsdU7hm14ZwNMvXvV6WsH7NoCX8GUfh3dhL"
   },
   "totals": {
@@ -131,7 +131,7 @@
       "signatures": [
         "5v4oa68beHmdbDyQJkTDMSy44Y7mzBUAdmUwXa8KzRzqz9FBh93DAQY4pWdsacs5XuvW17GcT8PobrCKVQLFxCBU"
       ],
-      "heldAnsemUi": 1054966.101089
+      "heldAnsemUi": 1031886.337334
     },
     {
       "wallet": "HHvGDMZZ6s16wMGwUAR5RTzojxLcTRP1euLrexk1FNmH",
@@ -164,7 +164,7 @@
       "signatures": [
         "3FHNcxRi7V96jywWbvx59Kn1mLXuRgfi1MQoLvowun2c7nnZG7umeb8ym76sPaByrGZUPbLMNXed25MRhtJDkKCd"
       ],
-      "heldAnsemUi": 0
+      "heldAnsemUi": 25805.754154
     },
     {
       "wallet": "AbtkEobQpeAcsNKMh9oAaMi38DgmiZrzaU8bXHvbxbRp",
@@ -362,7 +362,7 @@
       "signatures": [
         "2qM4so4S23WNZJLiQC7MD3kPeWKxN1z6WW59HxJ6KFZzwJUL9RwPFaHeo8gznPHoSmWiFz6GX9iXx4hLw3QRyBiw"
       ],
-      "heldAnsemUi": 887991.512586
+      "heldAnsemUi": 642768.890244
     },
     {
       "wallet": "A94gKwZE46N4aamnQsGtC6P4tHot2YyaVDbEfZQgLvgz",
@@ -560,7 +560,7 @@
       "signatures": [
         "2Vy6ec2SXcyQ49s1Y17VVTUS419PvvCLwJJTxKtfWi8gdPd36u9JQTLTJqjFXha633MQ7AFGNyhxR3ReYwC7UTyy"
       ],
-      "heldAnsemUi": 93550.852952
+      "heldAnsemUi": 83550.852952
     },
     {
       "wallet": "9mSw4M6WDNkYuSShE9CpV5KUj3PZf9X38LSudZgd6Aj1",
@@ -10756,6 +10756,6 @@
       "totalUi": 251.897711
     }
   ],
-  "tokenHolders": 80829,
-  "tokenHoldersAsOf": "2026-07-01T21:56:31.099Z"
+  "tokenHolders": 81267,
+  "tokenHoldersAsOf": "2026-07-01T23:05:09.571Z"
 }
