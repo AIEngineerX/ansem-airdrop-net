@@ -1,10 +1,10 @@
 {
-  "collectedAt": "2026-07-06T20:19:36.175Z",
+  "collectedAt": "2026-07-06T21:52:26.505Z",
   "source": "GV6UUmNxz2RpKxmNAPadYKb7uQpszwqQAu3qLJxVdC52",
   "mint": "9cRCn9rGT8V2imeM2BaKs13yhMEais3ruM3rPvTGpump",
   "backfillComplete": true,
   "cursors": {
-    "newest": "3rDvyEckwb8zNn9nB3p5WXgUMiRNGzKRhVFK5ijWvk2YioUDZt66FxL9CcG2wdFYJBafLNCUD7ZWtHbXyBMK74Gk",
+    "newest": "hLDTQ6DEhRtHohztghHLeg66HnxMYTMdERfrcwnk5jHZZBXXz6SAXyirvaGQ84hjBKVmZnuif2ELWWNcCmZGQtj",
     "oldestScanned": "evVqcN5GFnkvc4t2FdUaQUtqGcgkKUResfoSRouv7ohvfqNXREc7RsdU7hm14ZwNMvXvV6WsH7NoCX8GUfh3dhL"
   },
   "totals": {
@@ -50,7 +50,7 @@
       "signatures": [
         "MN8an7NAJnmC1AuaHjCsUtAuKcCo2coaZcppfbtXKmXuKmUxZkGazEP8JLFioQib3VXKUQN6VaxXDKH7Nzzor7p"
       ],
-      "heldAnsemUi": 3004537.108026
+      "heldAnsemUi": 2979683.773442
     },
     {
       "wallet": "49foKJpRnZUaPKsDgnQhUFRMk7NX4zD5KgtVpxgvctLa",
@@ -122,7 +122,7 @@
       "signatures": [
         "ubdNkYq4rQUHKVFf7WLsfzDRVJTeWyVB6tZapowpcAr7g7zhVhFhKxe4M2jKo6EvWSQShFDa7whhHvTUZs9juyw"
       ],
-      "heldAnsemUi": 287002.838694
+      "heldAnsemUi": 282002.838694
     },
     {
       "wallet": "8qdRkqTY5ceQsZLRzGytwE2sW3qLGGJmVrgooWor4TiH",
@@ -258,7 +258,7 @@
       "signatures": [
         "3h5oXwNwwxR3LXWX9xSKhgnhccb647W9wW8oNPe1TMAXkL4QNAWdUaFwJGgEFHqrhgSFraXBdBBYJ25Z5y7VMm1z"
       ],
-      "heldAnsemUi": 168257.355447
+      "heldAnsemUi": 160007.355447
     },
     {
       "wallet": "DBox5zDbL9WXBBXX3qzBTTx3Tw9F1VDUU31bZdSNFJCB",
@@ -303,7 +303,7 @@
       "signatures": [
         "3SkMCCX4KD2nC6znMheYw95ZvPXBtTTiAh2FQQ6zoQCzxNFERED3X9oVZPhd1q4kZt3i5zYQVdb7TzvhTqUXCRPt"
       ],
-      "heldAnsemUi": 234894.748542
+      "heldAnsemUi": 217714.399826
     },
     {
       "wallet": "GaPCg8J5DEEAyeyMnVWpyAWWGqx5AzcZeJgipWwnfsWZ",
@@ -10840,6 +10840,6 @@
       "totalUi": 251.897711
     }
   ],
-  "tokenHolders": 116784,
-  "tokenHoldersAsOf": "2026-07-06T20:20:31.441Z"
+  "tokenHolders": 117724,
+  "tokenHoldersAsOf": "2026-07-06T21:52:55.647Z"
 }
