@@ -1,10 +1,10 @@
 {
-  "collectedAt": "2026-07-08T16:50:00.628Z",
+  "collectedAt": "2026-07-08T18:12:33.739Z",
   "source": "GV6UUmNxz2RpKxmNAPadYKb7uQpszwqQAu3qLJxVdC52",
   "mint": "9cRCn9rGT8V2imeM2BaKs13yhMEais3ruM3rPvTGpump",
   "backfillComplete": true,
   "cursors": {
-    "newest": "5PLrD3hn1AScJEkaGkoMGmqD3EYJ1RjCn3XecP61SNFxHRx96csURCRyujDyVARgtD6pnFgn11i1BVdMYt9QrTgv",
+    "newest": "5fFHkDWFcAiUUVqrw5zYgkZgT28fuFsRJojLqrCxcca5MJWPCZdqWHHrxX2MxcwqHt6PvSN8PkvVNnBgarNiNH5p",
     "oldestScanned": "evVqcN5GFnkvc4t2FdUaQUtqGcgkKUResfoSRouv7ohvfqNXREc7RsdU7hm14ZwNMvXvV6WsH7NoCX8GUfh3dhL"
   },
   "totals": {
@@ -10840,6 +10840,6 @@
       "totalUi": 251.897711
     }
   ],
-  "tokenHolders": 127482,
-  "tokenHoldersAsOf": "2026-07-08T16:50:53.518Z"
+  "tokenHolders": 127357,
+  "tokenHoldersAsOf": "2026-07-08T18:13:05.741Z"
 }
