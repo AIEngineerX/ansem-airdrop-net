@@ -1,10 +1,10 @@
 {
-  "collectedAt": "2026-07-10T23:30:07.031Z",
+  "collectedAt": "2026-07-11T00:57:24.446Z",
   "source": "GV6UUmNxz2RpKxmNAPadYKb7uQpszwqQAu3qLJxVdC52",
   "mint": "9cRCn9rGT8V2imeM2BaKs13yhMEais3ruM3rPvTGpump",
   "backfillComplete": true,
   "cursors": {
-    "newest": "4y8c6UA23nqeg9QTwUMvihPnmSZ1uwUV5PP4iTc4em1ejJLhzah8A2eXgatWb3iJnsZ1jYcnZ5yQ2XoVgdVza8wM",
+    "newest": "33AaVxj9WU28vdBpZ85epGFGxfAJTCfqNVZBE525vw3UTLd4WpUPCt8xFZzVNam4qfRTTm7ncLq1Kum2YDLFHdAf",
     "oldestScanned": "evVqcN5GFnkvc4t2FdUaQUtqGcgkKUResfoSRouv7ohvfqNXREc7RsdU7hm14ZwNMvXvV6WsH7NoCX8GUfh3dhL"
   },
   "totals": {
@@ -26,7 +26,7 @@
       "signatures": [
         "5cn8EKLLtE1VZRw49BnY54po5YBqGGdHhKUcVJNxr3Wt7n3ybcsK6an9p7d6ZuAsAUX4wb7D742nZV4qXuftPwmR"
       ],
-      "heldAnsemUi": 1943450.944116
+      "heldAnsemUi": 1943450.972201
     },
     {
       "wallet": "DAEdBmTPEKM6xkwfzC3d411QUe6coKpkND6UURa4CvHC",
@@ -38,7 +38,7 @@
       "signatures": [
         "3SSxX8bqae3RP6gxC6q7sfYac4h9duYr6Qd2rzSzRtSW6DbLjUU9FpkrSJuKCg4psQCmUdQ3M5fi1kUApQ63gFoL"
       ],
-      "heldAnsemUi": 1000002.133894
+      "heldAnsemUi": 1000002.148769
     },
     {
       "wallet": "5FGoPPj1nL8LCnfVnpTmreqQtqLuMXXAwuS1uahMrp8V",
@@ -50,7 +50,7 @@
       "signatures": [
         "MN8an7NAJnmC1AuaHjCsUtAuKcCo2coaZcppfbtXKmXuKmUxZkGazEP8JLFioQib3VXKUQN6VaxXDKH7Nzzor7p"
       ],
-      "heldAnsemUi": 2979687.314573
+      "heldAnsemUi": 2979687.359768
     },
     {
       "wallet": "49foKJpRnZUaPKsDgnQhUFRMk7NX4zD5KgtVpxgvctLa",
@@ -556,7 +556,7 @@
       "signatures": [
         "5Uwdoje4wWG6ieC1nrsnTquod78kpF42uoPEpDHqTpQQpCJggL6DYAw8m91WHkzZhCqE3QDfcuqGAv2NfhjH3snx"
       ],
-      "heldAnsemUi": 11.982693
+      "heldAnsemUi": 12.147245
     },
     {
       "wallet": "AT6bwAeV1CWmSsiAwcyyfqstnxdWzKboFsggxkubVEzx",
@@ -10840,6 +10840,6 @@
       "totalUi": 251.897711
     }
   ],
-  "tokenHolders": 129049,
-  "tokenHoldersAsOf": "2026-07-10T22:31:08.396Z"
+  "tokenHolders": 128938,
+  "tokenHoldersAsOf": "2026-07-11T00:57:58.147Z"
 }
