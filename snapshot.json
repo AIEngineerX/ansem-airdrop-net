@@ -1,10 +1,10 @@
 {
-  "collectedAt": "2026-07-13T22:33:52.833Z",
+  "collectedAt": "2026-07-13T23:32:26.825Z",
   "source": "GV6UUmNxz2RpKxmNAPadYKb7uQpszwqQAu3qLJxVdC52",
   "mint": "9cRCn9rGT8V2imeM2BaKs13yhMEais3ruM3rPvTGpump",
   "backfillComplete": true,
   "cursors": {
-    "newest": "56h7RF3gyaK5Vne5jVL73dAZ6nNVYrXXtSmN1ahSAAeCEYPNNcouvsYDbkZRYLH4JEvFXxVoMCEiEfDRaMfQw33o",
+    "newest": "v5qCq16bsrGeYmHaLnmCiUEkdVpv1Ra5bxnbnyNPthp4SH5jspKYTsXccrHP3MFEJSQicKLxnCnN8HwR1maBZeE",
     "oldestScanned": "evVqcN5GFnkvc4t2FdUaQUtqGcgkKUResfoSRouv7ohvfqNXREc7RsdU7hm14ZwNMvXvV6WsH7NoCX8GUfh3dhL"
   },
   "totals": {
