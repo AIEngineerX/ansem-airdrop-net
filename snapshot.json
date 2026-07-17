@@ -1,10 +1,10 @@
 {
-  "collectedAt": "2026-07-17T17:46:11.504Z",
+  "collectedAt": "2026-07-17T18:51:27.535Z",
   "source": "GV6UUmNxz2RpKxmNAPadYKb7uQpszwqQAu3qLJxVdC52",
   "mint": "9cRCn9rGT8V2imeM2BaKs13yhMEais3ruM3rPvTGpump",
   "backfillComplete": true,
   "cursors": {
-    "newest": "YV3phmkB7fCNAGMMYNa1zfMyFYjqCGfV5TDuupFZqKikTVoxUD98QVKtHzZ4uyH2fTuKyaFUKG33gyJ5RVt1ExD",
+    "newest": "3mgm8ptwNEnBKYvp6FQTMyYE1RAwjmzE6TCP6vixSKYE2AS9gWiYRYHSr3mSmLY8g8H4RwMAZLm9t8SDz42o3fMV",
     "oldestScanned": "evVqcN5GFnkvc4t2FdUaQUtqGcgkKUResfoSRouv7ohvfqNXREc7RsdU7hm14ZwNMvXvV6WsH7NoCX8GUfh3dhL"
   },
   "totals": {
@@ -26,7 +26,7 @@
       "signatures": [
         "5cn8EKLLtE1VZRw49BnY54po5YBqGGdHhKUcVJNxr3Wt7n3ybcsK6an9p7d6ZuAsAUX4wb7D742nZV4qXuftPwmR"
       ],
-      "heldAnsemUi": 2172406.126646
+      "heldAnsemUi": 2172785.562705
     },
     {
       "wallet": "DAEdBmTPEKM6xkwfzC3d411QUe6coKpkND6UURa4CvHC",
@@ -10862,6 +10862,6 @@
       "totalUi": 251.897711
     }
   ],
-  "tokenHolders": 131894,
-  "tokenHoldersAsOf": "2026-07-17T17:47:09.074Z"
+  "tokenHolders": 131903,
+  "tokenHoldersAsOf": "2026-07-17T18:52:03.025Z"
 }
