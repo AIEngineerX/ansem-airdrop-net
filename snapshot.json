@@ -1,17 +1,17 @@
 {
-  "collectedAt": "2026-07-17T21:40:33.425Z",
+  "collectedAt": "2026-07-17T22:29:04.545Z",
   "source": "GV6UUmNxz2RpKxmNAPadYKb7uQpszwqQAu3qLJxVdC52",
   "mint": "9cRCn9rGT8V2imeM2BaKs13yhMEais3ruM3rPvTGpump",
   "backfillComplete": true,
   "cursors": {
-    "newest": "3PxSEuicBDJSp6t9kaVFqEZzMmB8cGAt58FEiKWXEE5muABpSFVVwJgjuLxGS998Wk1GnPmgjTMRYXahRdtvt98n",
+    "newest": "64kdPUNPB5nHMpESzRQgRP9QNJ9LPKHf6S1ZproTcLrArXxDWLjMaYiMWDEENRgcpxpkAwuZha6VzJsEoknRnE4S",
     "oldestScanned": "evVqcN5GFnkvc4t2FdUaQUtqGcgkKUResfoSRouv7ohvfqNXREc7RsdU7hm14ZwNMvXvV6WsH7NoCX8GUfh3dhL"
   },
   "totals": {
     "uniqueRecipients": 979,
     "totalAnsemUi": 69798413.69595799,
     "totalAirdrops": 982,
-    "solOverheadUi": 11666.041576605014,
+    "solOverheadUi": 12998.911723700014,
     "windowFrom": "2026-06-28T02:07:53.000Z",
     "windowThrough": "2026-07-16T19:36:57.000Z"
   },
