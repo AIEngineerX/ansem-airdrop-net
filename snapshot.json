@@ -1,19 +1,19 @@
 {
-  "collectedAt": "2026-07-18T14:06:04.391Z",
+  "collectedAt": "2026-07-18T15:11:35.266Z",
   "source": "GV6UUmNxz2RpKxmNAPadYKb7uQpszwqQAu3qLJxVdC52",
   "mint": "9cRCn9rGT8V2imeM2BaKs13yhMEais3ruM3rPvTGpump",
   "backfillComplete": true,
   "cursors": {
-    "newest": "2Ry44ioyWFreQMbYnSUYspVSN43AZNsafvdmJuidvvkdwuy8a9ctGiJFQS7HPBkXD5drNRcJYFHKdSZ8CDyd3wiT",
+    "newest": "4mHMH3WL1L7qcYoxy2uuN4sXahQLgDav4V7SixiE8bCk4t7wQU7ajTeanFwpGEw4FrSo7U3dEF2knxcRVtU5HjU",
     "oldestScanned": "evVqcN5GFnkvc4t2FdUaQUtqGcgkKUResfoSRouv7ohvfqNXREc7RsdU7hm14ZwNMvXvV6WsH7NoCX8GUfh3dhL"
   },
   "totals": {
-    "uniqueRecipients": 1065,
-    "totalAnsemUi": 69967504.2606274,
-    "totalAirdrops": 1068,
-    "solOverheadUi": 13194.269979259008,
+    "uniqueRecipients": 1262,
+    "totalAnsemUi": 71006688.42089355,
+    "totalAirdrops": 1273,
+    "solOverheadUi": 13194.276201499006,
     "windowFrom": "2026-06-28T02:07:53.000Z",
-    "windowThrough": "2026-07-18T14:02:44.000Z"
+    "windowThrough": "2026-07-18T15:05:27.000Z"
   },
   "recipients": [
     {
@@ -657,6 +657,18 @@
       ]
     },
     {
+      "wallet": "GSgcSp4u5DdGCykRXgJdyrJPTwZAPzmjjyWDCaMniVWa",
+      "totalAnsemUi": 91711.798482,
+      "transferCount": 2,
+      "firstSeen": "2026-07-01T13:53:39.000Z",
+      "latestSeen": "2026-07-18T14:29:43.000Z",
+      "latestSignature": "5Wa33REyCs6nhq3KsVDHuRXZpse2DZriyqZsVBKjnwPRYS2Zvk9bySnAQZ542B7XyNNUwoCSnSeAMwqtfGhrbe4A",
+      "signatures": [
+        "5Wa33REyCs6nhq3KsVDHuRXZpse2DZriyqZsVBKjnwPRYS2Zvk9bySnAQZ542B7XyNNUwoCSnSeAMwqtfGhrbe4A",
+        "5PRVg8iSyhcPqeQ7BMaGj24qz4BSKuexXAZqFehwcjsLNDe3TqndB6p92C4NVqtMFNFk84y1iYN2rAfxBrgaSfch"
+      ]
+    },
+    {
       "wallet": "BvfBzvANqz2g92yrdHRSucpmk3bTsn4C9bepeoo7wo18",
       "totalAnsemUi": 89994.02167,
       "transferCount": 1,
@@ -734,17 +746,6 @@
       "latestSeen": "2026-06-29T10:09:53.000Z",
       "signatures": [
         "5gsDLjTfnPa448mbEwHVBjkf3kxBC2tcqDHm6kd9r1Z6coAd3kBbbuJyTBNdm3vSqZJDf9ebqV6yikGfzqeamswp"
-      ]
-    },
-    {
-      "wallet": "GSgcSp4u5DdGCykRXgJdyrJPTwZAPzmjjyWDCaMniVWa",
-      "totalAnsemUi": 80000,
-      "transferCount": 1,
-      "firstSeen": "2026-07-01T13:53:39.000Z",
-      "latestSeen": "2026-07-01T13:53:39.000Z",
-      "latestSignature": "5PRVg8iSyhcPqeQ7BMaGj24qz4BSKuexXAZqFehwcjsLNDe3TqndB6p92C4NVqtMFNFk84y1iYN2rAfxBrgaSfch",
-      "signatures": [
-        "5PRVg8iSyhcPqeQ7BMaGj24qz4BSKuexXAZqFehwcjsLNDe3TqndB6p92C4NVqtMFNFk84y1iYN2rAfxBrgaSfch"
       ]
     },
     {
@@ -1411,6 +1412,18 @@
       ]
     },
     {
+      "wallet": "4aArEDkqkPBwFiSCShd6GJ8dTFHzZboGf3GD7qwxxTu3",
+      "totalAnsemUi": 41151.805419,
+      "transferCount": 2,
+      "firstSeen": "2026-07-18T14:30:10.000Z",
+      "latestSeen": "2026-07-18T14:33:20.000Z",
+      "latestSignature": "5yCxswq78aJs7Bk9a1yoLYSmZE8SPbpD5ZkELpZr2xW8sracTZCeJzeXFBPAHBdyQZMh5VC1mJqmEqHfKznDSG9D",
+      "signatures": [
+        "mYna96M4VGpoTS2u3tFp9qkZJbrE6fxTGumfxTEKc6BauF1w1ybPQJuJGawzKUowWGz2CyPqYvKiBVtCPfvFjNW",
+        "5yCxswq78aJs7Bk9a1yoLYSmZE8SPbpD5ZkELpZr2xW8sracTZCeJzeXFBPAHBdyQZMh5VC1mJqmEqHfKznDSG9D"
+      ]
+    },
+    {
       "wallet": "AvrGYc8174FKo5hbAWRs8Lt9JLorjNWJPsiHN5G78Knb",
       "totalAnsemUi": 40007.82779,
       "transferCount": 1,
@@ -1418,6 +1431,17 @@
       "latestSeen": "2026-06-29T10:24:25.000Z",
       "signatures": [
         "4p5D3i9nj6kb3LiVxCm1Mon2v3NZkNfLDL1VJDWqS9mHYTHAWUrfq1rJcUTTqGkWDegG8pGVLt3rzisa2W9t1jt"
+      ]
+    },
+    {
+      "wallet": "4j9GKKHTwXmat6YbpfPth27aegyRKubT43Mdqeoq7ZSV",
+      "totalAnsemUi": 39384.176168,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:32:11.000Z",
+      "latestSeen": "2026-07-18T14:32:11.000Z",
+      "latestSignature": "3mY8FE14P2r3VLkybALKQG9Uu2SSiZDNce17xQPcG2rDKrdXeweaQspUYV4E3XwmqmSge2fnWrw6GqSRnBF9D5ng",
+      "signatures": [
+        "3mY8FE14P2r3VLkybALKQG9Uu2SSiZDNce17xQPcG2rDKrdXeweaQspUYV4E3XwmqmSge2fnWrw6GqSRnBF9D5ng"
       ]
     },
     {
@@ -1478,6 +1502,19 @@
       "latestSeen": "2026-06-29T10:25:35.000Z",
       "signatures": [
         "5BfPDj1X8bQg6ZDWPj1PyVnLxjJFXLAGKbwnaWUwfT9aFT8WQhstDUmWTrK4S7sLzMquqkmYTZMsRWqY8PLSQ4on"
+      ]
+    },
+    {
+      "wallet": "AjjeuYsDSLigbTQqsWmUZXPKas3dAJU4ikdJrbMGxe5A",
+      "totalAnsemUi": 35591.96368,
+      "transferCount": 3,
+      "firstSeen": "2026-07-18T13:53:16.000Z",
+      "latestSeen": "2026-07-18T14:59:21.000Z",
+      "latestSignature": "HPw3kFZmjmUidM9AvnbYdH5nVGFhPw5VFVe7KMPMCVyGYT22Svbym6ajcYES1Ac2GuFCM6wJWMTZKDPfnn4565v",
+      "signatures": [
+        "4QeeqKWUTeZiGJRxqRRU1Ffyyo9gdph5HQmcuEEJQhj2QXeLHT349duzdgFL2bsYPXRfDWk5bPtSYFUUB4D1hUDB",
+        "HPw3kFZmjmUidM9AvnbYdH5nVGFhPw5VFVe7KMPMCVyGYT22Svbym6ajcYES1Ac2GuFCM6wJWMTZKDPfnn4565v",
+        "5sKoTZ2VzvfGPSkQTdwHaa4oizPvj5DxL7vLePQED3yRZvTzUK7RoJzrFcB9EUWnAuvvovL5sMosJP4zAgPQxKVY"
       ]
     },
     {
@@ -1588,6 +1625,17 @@
       "latestSeen": "2026-06-29T10:27:55.000Z",
       "signatures": [
         "T9YAZLf2YkzxmyZpsDsfjg5hm6yzH5GcJSQ8Gnrc7HK2Mwb2Mm9TZA4zCGTCeSvvLAsiuUf4qZmJZsGN7orK6jn"
+      ]
+    },
+    {
+      "wallet": "5bQGG7C9CPSxA5ruX2fYYGq4RAoUBFixtiCpU45CPc9a",
+      "totalAnsemUi": 31708.644379,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:23:20.000Z",
+      "latestSeen": "2026-07-18T14:23:20.000Z",
+      "latestSignature": "3UXXkmynUvz3nRitk6Tv9xQBKCCtzEj6R4QoEFefKm6yBZ58BG8zwkBRrDRvoPUWVGwoEE2CSYVP3cc3NeS17c4X",
+      "signatures": [
+        "3UXXkmynUvz3nRitk6Tv9xQBKCCtzEj6R4QoEFefKm6yBZ58BG8zwkBRrDRvoPUWVGwoEE2CSYVP3cc3NeS17c4X"
       ]
     },
     {
@@ -2527,6 +2575,17 @@
       ]
     },
     {
+      "wallet": "BpCcp1feUzugyeF55PkVsiLmvcNKjfUeetP9Kd8LBHZK",
+      "totalAnsemUi": 18685.997704,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:21:53.000Z",
+      "latestSeen": "2026-07-18T14:21:53.000Z",
+      "latestSignature": "2foJD2ixyntN1uruuZY2ZuD9QcYkxj8UAm7kXdHs6tewwQTRREUcj5JMeN5tbKibwCKo88S1bLxGdQYwmWXnSSu5",
+      "signatures": [
+        "2foJD2ixyntN1uruuZY2ZuD9QcYkxj8UAm7kXdHs6tewwQTRREUcj5JMeN5tbKibwCKo88S1bLxGdQYwmWXnSSu5"
+      ]
+    },
+    {
       "wallet": "EYvwg12vXcUN7pF1fASQZZgQ9RbVUMLjKqqCfi961ptw",
       "totalAnsemUi": 18566.05912,
       "transferCount": 1,
@@ -2554,6 +2613,17 @@
       "latestSeen": "2026-06-29T10:45:01.000Z",
       "signatures": [
         "3fauXzPU9Mc1ueDRnDF7zqTCCKKar7enW4zHpByJeh9uhSZZXtSZQv7dpmdyH8sdVFo1jyDkSEjLx57PN1QNayNJ"
+      ]
+    },
+    {
+      "wallet": "EfsBFNZC7qbktXmAxiPwZ8de6o6tpvMXfvPphin5MUTS",
+      "totalAnsemUi": 18256.392549,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:34:57.000Z",
+      "latestSeen": "2026-07-18T14:34:57.000Z",
+      "latestSignature": "5N1SGuuwSADyDgDoeL2SQdge8DT1majYXtTfvam9FM3vASB3QvKrGYNPXZYsy8jbymazwrBk3mpBizMZM3eREve7",
+      "signatures": [
+        "5N1SGuuwSADyDgDoeL2SQdge8DT1majYXtTfvam9FM3vASB3QvKrGYNPXZYsy8jbymazwrBk3mpBizMZM3eREve7"
       ]
     },
     {
@@ -2787,6 +2857,18 @@
       ]
     },
     {
+      "wallet": "5hh7UE6i2BtyCvaMMadS71wFwK88JRmtRTfXkjZ3CHvF",
+      "totalAnsemUi": 16156.436516,
+      "transferCount": 2,
+      "firstSeen": "2026-07-01T11:19:54.000Z",
+      "latestSeen": "2026-07-18T14:42:45.000Z",
+      "latestSignature": "2SmZcZSb82KhPvRoKYkr6FtVTLgVSSWg8wiWfNe2XLv7Wduh7z7xmzJbHzxJcYaBFbkkSsX1MebpsvvHGUnUxQ1g",
+      "signatures": [
+        "2SmZcZSb82KhPvRoKYkr6FtVTLgVSSWg8wiWfNe2XLv7Wduh7z7xmzJbHzxJcYaBFbkkSsX1MebpsvvHGUnUxQ1g",
+        "UXhiKBS7aFFNG6a22bdYBc1Vc1Hjc9tjDNwrxGgHYhMMwc2fEL1M3pPWHq8sZcdATmNGC7wKHRJcS9uVSDjxLBc"
+      ]
+    },
+    {
       "wallet": "4wdhhVWYpzYTCC1FH7m1f9SjT5iDh2o7VvLrZmmYAsUS",
       "totalAnsemUi": 16139.93245,
       "transferCount": 1,
@@ -2877,6 +2959,17 @@
       ]
     },
     {
+      "wallet": "HajZzGQ1h43EQM9bZP9X1b2KLNYGUqE6nixFvbAoXZLH",
+      "totalAnsemUi": 15119.63182,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T15:04:23.000Z",
+      "latestSeen": "2026-07-18T15:04:23.000Z",
+      "latestSignature": "37NBnQdSATgGnQD7v1jaqxtPf6cyEVu4eecGh8chz6iT4jSH5m25UtUFUwq9KneJ9LbLAtLyEGbLTh5qcKTNzQds",
+      "signatures": [
+        "37NBnQdSATgGnQD7v1jaqxtPf6cyEVu4eecGh8chz6iT4jSH5m25UtUFUwq9KneJ9LbLAtLyEGbLTh5qcKTNzQds"
+      ]
+    },
+    {
       "wallet": "AoBtRYnpZCX5uwB46hzeGYfJFbMrReGm8D1P8rVttYyZ",
       "totalAnsemUi": 15119.36138,
       "transferCount": 1,
@@ -2937,6 +3030,39 @@
       "latestSeen": "2026-06-29T10:51:11.000Z",
       "signatures": [
         "235CfSJvayfB6piaRcCi8JCaubyvUJvdxhc5hbJW2x9hQACFTu5uhEfX8GgpesBDy3W1gGc11xMBPTfFyMu7szLC"
+      ]
+    },
+    {
+      "wallet": "2oFwuuRoLNUvNm24xJ1yFhiwzjxkFLvvGW4S35PG76vA",
+      "totalAnsemUi": 14724.640146,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:31:27.000Z",
+      "latestSeen": "2026-07-18T14:31:27.000Z",
+      "latestSignature": "57DcRVw2ykvgEe3qruFtRZanFAQdRXSvFXf8qVSSGaaCxRuJuvf3zrKbXxVXujiKTNMyV4esJVBTfvfADnGyhmR1",
+      "signatures": [
+        "57DcRVw2ykvgEe3qruFtRZanFAQdRXSvFXf8qVSSGaaCxRuJuvf3zrKbXxVXujiKTNMyV4esJVBTfvfADnGyhmR1"
+      ]
+    },
+    {
+      "wallet": "aWKmpJ3LarK92TXyELeaWgrR2tHcZQzvSBxFhs8crvN",
+      "totalAnsemUi": 14724.640146,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:31:26.000Z",
+      "latestSeen": "2026-07-18T14:31:26.000Z",
+      "latestSignature": "5dtfVuUhSbNzX7EtiZ1L4Tafcc5PpJK1KawXy5r6ZALitzsZqr17xUwFYbWnQozRUkagt6pu7AL1SmQDY7KqYhwH",
+      "signatures": [
+        "5dtfVuUhSbNzX7EtiZ1L4Tafcc5PpJK1KawXy5r6ZALitzsZqr17xUwFYbWnQozRUkagt6pu7AL1SmQDY7KqYhwH"
+      ]
+    },
+    {
+      "wallet": "FNe44b9ksv1SeixFcnumjfSCmz2wqGVNH9MnoPvbXti6",
+      "totalAnsemUi": 14724.640146,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:31:24.000Z",
+      "latestSeen": "2026-07-18T14:31:24.000Z",
+      "latestSignature": "375246VWSEU3NFEpYUARPTfx5RFmdfLo7yBfNsmyCKKnzht8NJqKiRF2FBFaoLMt7VoT1wWFmXWTkiRbamdqMcm9",
+      "signatures": [
+        "375246VWSEU3NFEpYUARPTfx5RFmdfLo7yBfNsmyCKKnzht8NJqKiRF2FBFaoLMt7VoT1wWFmXWTkiRbamdqMcm9"
       ]
     },
     {
@@ -3057,6 +3183,18 @@
       "latestSeen": "2026-06-29T10:53:43.000Z",
       "signatures": [
         "4Ric1MKK6mwqK47EUeRJahnvYxqQS44HkqEpFnTyfZ3cx5tEyipMKy6kp9rKbWsxTKwnGH7hm1GJ1C3XJs57kbCr"
+      ]
+    },
+    {
+      "wallet": "4LniH7FjExwjoBC6TqKxfWVMF9bCNqNnaBpBMZ51fmU8",
+      "totalAnsemUi": 13996.274436,
+      "transferCount": 2,
+      "firstSeen": "2026-07-18T03:46:05.000Z",
+      "latestSeen": "2026-07-18T14:29:56.000Z",
+      "latestSignature": "5Lp78QwGbuLJU3QEENAYpNuqv8GrCG836eFhDbosHmKMeVZUQbmnDCdEEn268xMe13xmfYuiumY91zMkUr1VuvcA",
+      "signatures": [
+        "5Lp78QwGbuLJU3QEENAYpNuqv8GrCG836eFhDbosHmKMeVZUQbmnDCdEEn268xMe13xmfYuiumY91zMkUr1VuvcA",
+        "5NEYdbx74EqkHhTZxJyAVsbP4pUqUyorLASwzXNiMbANpH6zQWqKCucDzYbFD3c3gRUKQCHssJgkHcGEcLCyne6E"
       ]
     },
     {
@@ -3360,6 +3498,138 @@
       ]
     },
     {
+      "wallet": "2GY1U42CVxihaQvmr6N7DoCQ3SWpoVDWxDsXa4a4E6kz",
+      "totalAnsemUi": 11711.798482,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:30:32.000Z",
+      "latestSeen": "2026-07-18T14:30:32.000Z",
+      "latestSignature": "4M72iD83cSgJTDP3A8JRg1gPByDmHSYKTywQqShd78USLJYMVbxttAhHkvXmxo9wYUZYcPw7sKsTWFe7V4meHbAf",
+      "signatures": [
+        "4M72iD83cSgJTDP3A8JRg1gPByDmHSYKTywQqShd78USLJYMVbxttAhHkvXmxo9wYUZYcPw7sKsTWFe7V4meHbAf"
+      ]
+    },
+    {
+      "wallet": "8bFHAgpjfpxomu8ujpJ9vXboA7oTKGA4jURFKiXh654i",
+      "totalAnsemUi": 11711.798482,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:30:24.000Z",
+      "latestSeen": "2026-07-18T14:30:24.000Z",
+      "latestSignature": "4S6jnTBPsPnaxCUV97pi5xssks9PpuimtfbEe8xRw7Ku46vQytbMZbDCJVmYFY4g1GEsJYUKqugCpitXcKH267wc",
+      "signatures": [
+        "4S6jnTBPsPnaxCUV97pi5xssks9PpuimtfbEe8xRw7Ku46vQytbMZbDCJVmYFY4g1GEsJYUKqugCpitXcKH267wc"
+      ]
+    },
+    {
+      "wallet": "GtavVoDqvmKd3Z3ky2KZ3tdEmApL3kwsxEVhZVogavFo",
+      "totalAnsemUi": 11711.798482,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:30:19.000Z",
+      "latestSeen": "2026-07-18T14:30:19.000Z",
+      "latestSignature": "4yW8uJsJ4LTswU7VCqDe6JG7wpeTarBXV8W659tcAhPesT6zbb8Rx8kCqJUzMe2S41eMRBayV29N2gx3TGGnDwf7",
+      "signatures": [
+        "4yW8uJsJ4LTswU7VCqDe6JG7wpeTarBXV8W659tcAhPesT6zbb8Rx8kCqJUzMe2S41eMRBayV29N2gx3TGGnDwf7"
+      ]
+    },
+    {
+      "wallet": "7ctsjC1wRJKquBhBiniMuSESz6N83XjvcDnXP8K2skRr",
+      "totalAnsemUi": 11711.798482,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:30:15.000Z",
+      "latestSeen": "2026-07-18T14:30:15.000Z",
+      "latestSignature": "5idayg7hhaQRZQEYiMntS2zskC47oESrsMPLghJGMfetgHPCqtVyQV4vqwVTJ4Vo4fCaTHkRmLK4YsM4kLeb2nPF",
+      "signatures": [
+        "5idayg7hhaQRZQEYiMntS2zskC47oESrsMPLghJGMfetgHPCqtVyQV4vqwVTJ4Vo4fCaTHkRmLK4YsM4kLeb2nPF"
+      ]
+    },
+    {
+      "wallet": "7yg6dP15j832oCXkJNTUR6exCjL256JeHH4hFuHZxVQP",
+      "totalAnsemUi": 11711.798482,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:30:07.000Z",
+      "latestSeen": "2026-07-18T14:30:07.000Z",
+      "latestSignature": "5zRehEhAMqSCyCep8bGbzESpFsxQNrVp2JPv3RSmjNVPF7XDbHGxBmrsgYm23TdxpmvbqcNJX2cPiNFFiMfckhUX",
+      "signatures": [
+        "5zRehEhAMqSCyCep8bGbzESpFsxQNrVp2JPv3RSmjNVPF7XDbHGxBmrsgYm23TdxpmvbqcNJX2cPiNFFiMfckhUX"
+      ]
+    },
+    {
+      "wallet": "FTao9bTDRdZ1eyuZ9nSrhHuD1tQhMWD2Jcixe8DKaudZ",
+      "totalAnsemUi": 11711.798482,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:30:01.000Z",
+      "latestSeen": "2026-07-18T14:30:01.000Z",
+      "latestSignature": "rzNy1wy7JA5AwQF5J8UArhYmAB1AWa7vdxuyPXt4cCaqMR7uqvEZ4oNbMxrSf9u1eQ4FZosM849GNrfxveVEgbi",
+      "signatures": [
+        "rzNy1wy7JA5AwQF5J8UArhYmAB1AWa7vdxuyPXt4cCaqMR7uqvEZ4oNbMxrSf9u1eQ4FZosM849GNrfxveVEgbi"
+      ]
+    },
+    {
+      "wallet": "8sUF1HAtdxF9uYAqRPhExHfmhKFyq2D6rDBHrvp6AVSW",
+      "totalAnsemUi": 11711.798482,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:29:57.000Z",
+      "latestSeen": "2026-07-18T14:29:57.000Z",
+      "latestSignature": "3Ta7rRYTukk1oWqyeyMs6D9k5PTgAoqxSHQ8qC866Kkbtc6kbHiSVMYR1SitUdrBa1Qu9qtFRXSbmB14MLgvv4J4",
+      "signatures": [
+        "3Ta7rRYTukk1oWqyeyMs6D9k5PTgAoqxSHQ8qC866Kkbtc6kbHiSVMYR1SitUdrBa1Qu9qtFRXSbmB14MLgvv4J4"
+      ]
+    },
+    {
+      "wallet": "ERENAWrEQjVMXfv6WBit5p1XdDEnjUezn8KfM5BsJrBX",
+      "totalAnsemUi": 11711.798482,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:29:51.000Z",
+      "latestSeen": "2026-07-18T14:29:51.000Z",
+      "latestSignature": "2yZdJKzP2uYMCxnMsCvLim1sGM8RccErvKUAYy5vUnHhJDH3UjJSHLEXgQay9CHtNXc26aE92xFAvYMvxMVewkUb",
+      "signatures": [
+        "2yZdJKzP2uYMCxnMsCvLim1sGM8RccErvKUAYy5vUnHhJDH3UjJSHLEXgQay9CHtNXc26aE92xFAvYMvxMVewkUb"
+      ]
+    },
+    {
+      "wallet": "HUoym3vpykXF5n1KQNCd7H2nSYjAUTZuvGSicHAgg3oy",
+      "totalAnsemUi": 11711.798482,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:29:50.000Z",
+      "latestSeen": "2026-07-18T14:29:50.000Z",
+      "latestSignature": "3s4zXzA9B3BFL7uS4NPMXd9VW2NV73fzhRYVaJyFW8aE1aiCGd9dR4VUPCvNjHTErq5qEX1SnB8soGo5HrGy6Jk3",
+      "signatures": [
+        "3s4zXzA9B3BFL7uS4NPMXd9VW2NV73fzhRYVaJyFW8aE1aiCGd9dR4VUPCvNjHTErq5qEX1SnB8soGo5HrGy6Jk3"
+      ]
+    },
+    {
+      "wallet": "HeDNuNwVTTbQF7f1MYGgoM5QD6a1qUvof5CDS2BwkCsM",
+      "totalAnsemUi": 11711.798482,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:29:47.000Z",
+      "latestSeen": "2026-07-18T14:29:47.000Z",
+      "latestSignature": "SoWC2wQcCrtYvjxqvkufP27tELM8WiWt6qnoeH7iHK12LgY5mV8XdP6AeirnwZYS8fxn4DsfFt3xSoB9tezbAXt",
+      "signatures": [
+        "SoWC2wQcCrtYvjxqvkufP27tELM8WiWt6qnoeH7iHK12LgY5mV8XdP6AeirnwZYS8fxn4DsfFt3xSoB9tezbAXt"
+      ]
+    },
+    {
+      "wallet": "9eW21o7T5EXrZYBCcnnZTHoFWW4Z1ChhWMAD5Rbzf894",
+      "totalAnsemUi": 11711.798482,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:29:45.000Z",
+      "latestSeen": "2026-07-18T14:29:45.000Z",
+      "latestSignature": "5Hjqbx3UQZMiutxxm3mABFkgdR5ZUpAJD9wDRNnkeGGw53BAaxJLBFzjfmw253Phs6GJw5dqQtQp8UqquHUmS6Se",
+      "signatures": [
+        "5Hjqbx3UQZMiutxxm3mABFkgdR5ZUpAJD9wDRNnkeGGw53BAaxJLBFzjfmw253Phs6GJw5dqQtQp8UqquHUmS6Se"
+      ]
+    },
+    {
+      "wallet": "EUy9fAT1bEd2FhZmRVWip73ooBm8JwPyMLeDGecb7rw8",
+      "totalAnsemUi": 11711.798482,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:29:44.000Z",
+      "latestSeen": "2026-07-18T14:29:44.000Z",
+      "latestSignature": "3tiBrudAboibo78g4yjD1i7N81T8zPKDaiptX1NxjskJGietSj3Mmypw4msKQ2Gt9WtEHghQCpymxCGEP8fb7dVD",
+      "signatures": [
+        "3tiBrudAboibo78g4yjD1i7N81T8zPKDaiptX1NxjskJGietSj3Mmypw4msKQ2Gt9WtEHghQCpymxCGEP8fb7dVD"
+      ]
+    },
+    {
       "wallet": "9dAkfsRVedrZSGCAB9FdfC8mohb238ar5Zc4xhtrCQ3V",
       "totalAnsemUi": 11641.86089,
       "transferCount": 1,
@@ -3527,6 +3797,61 @@
       "latestSeen": "2026-06-29T11:02:11.000Z",
       "signatures": [
         "3Y3wmXKRp9Ymjncupeiyu4oC9tUejgkSDdAjpxBzKHvHxkTd95tgYnYHaE94gZKJvdB7HS4wJ4qDg14iHhK3fgre"
+      ]
+    },
+    {
+      "wallet": "3cqjvVCssTfBBvNnosAvHuyA1RBG67TBdsG5WEU8oKyx",
+      "totalAnsemUi": 10311.928648,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:41:49.000Z",
+      "latestSeen": "2026-07-18T14:41:49.000Z",
+      "latestSignature": "Sfvean8fuCi51C2RqHCpYuAsYjDrBGskdE3hRzFRT1voJUg4LYmv4NLUXsXJ1HjAYc3J6mDHeYEoRoqumPMoRLr",
+      "signatures": [
+        "Sfvean8fuCi51C2RqHCpYuAsYjDrBGskdE3hRzFRT1voJUg4LYmv4NLUXsXJ1HjAYc3J6mDHeYEoRoqumPMoRLr"
+      ]
+    },
+    {
+      "wallet": "8Dd4LABjYkZusf5Xen2LbPR9ENRWBSS6igdmfJcaVZmR",
+      "totalAnsemUi": 10311.928648,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:41:47.000Z",
+      "latestSeen": "2026-07-18T14:41:47.000Z",
+      "latestSignature": "4mWWqHBDZy5FpytFQbr991tbmYf7aa3rdJKZDy1XM2C26pjKsJ7Wim2ycMB7ciaoR9gxKH4RQWirk9fPQDGppNJC",
+      "signatures": [
+        "4mWWqHBDZy5FpytFQbr991tbmYf7aa3rdJKZDy1XM2C26pjKsJ7Wim2ycMB7ciaoR9gxKH4RQWirk9fPQDGppNJC"
+      ]
+    },
+    {
+      "wallet": "GFWYUcKLTr5TyGFqKd14Eq55zfoBmfuQSSThHopqFe1j",
+      "totalAnsemUi": 10311.928648,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:41:44.000Z",
+      "latestSeen": "2026-07-18T14:41:44.000Z",
+      "latestSignature": "5ikLsFMY7QAV4teFciuSWw9JNqJLTT7Zm6syReH63ZaDC148EpGBjNu7WE3f9s617C1m4JUcz9iQLEsPBdXpywJg",
+      "signatures": [
+        "5ikLsFMY7QAV4teFciuSWw9JNqJLTT7Zm6syReH63ZaDC148EpGBjNu7WE3f9s617C1m4JUcz9iQLEsPBdXpywJg"
+      ]
+    },
+    {
+      "wallet": "H1z5Xzof58Zi5AixSa7Vtxe1pb9HdGNPSujuGit8HSnB",
+      "totalAnsemUi": 10311.928648,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:41:43.000Z",
+      "latestSeen": "2026-07-18T14:41:43.000Z",
+      "latestSignature": "VJqMNG5UmtRqp8KpfcuJ7at5GXrGJah6BMtVtXrEbVpThtX6h1nfMyVohJqBenTE7szQwxvemQCksXrEvrKRDAJ",
+      "signatures": [
+        "VJqMNG5UmtRqp8KpfcuJ7at5GXrGJah6BMtVtXrEbVpThtX6h1nfMyVohJqBenTE7szQwxvemQCksXrEvrKRDAJ"
+      ]
+    },
+    {
+      "wallet": "9MpATg4SmeZYQb2SHWh43Toimo16h2jqBes2VcTwZGav",
+      "totalAnsemUi": 10311.928648,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:41:40.000Z",
+      "latestSeen": "2026-07-18T14:41:40.000Z",
+      "latestSignature": "3CtZKsqraAKbdtQX4Lj2wd6o3f6VziJnrtcNQCcqZaBEFFUT3Jfv6QHTxTDgJG8mNi1eDvANxpoTXzzkZX1zoi5V",
+      "signatures": [
+        "3CtZKsqraAKbdtQX4Lj2wd6o3f6VziJnrtcNQCcqZaBEFFUT3Jfv6QHTxTDgJG8mNi1eDvANxpoTXzzkZX1zoi5V"
       ]
     },
     {
@@ -3702,6 +4027,17 @@
       ]
     },
     {
+      "wallet": "DTWih98ExSNcaKbXz4R18UrXoVYSm4RuRWwDvfqoeUe9",
+      "totalAnsemUi": 9413.333104,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:51:40.000Z",
+      "latestSeen": "2026-07-18T14:51:40.000Z",
+      "latestSignature": "2s76k1XYmZxxiciMEXC3r6j8sT4NwF1Rysje65fE2EkEG3yRoVTqCwfoLs6qC6moAd6weoxciNSLYn1yV9tt4DWy",
+      "signatures": [
+        "2s76k1XYmZxxiciMEXC3r6j8sT4NwF1Rysje65fE2EkEG3yRoVTqCwfoLs6qC6moAd6weoxciNSLYn1yV9tt4DWy"
+      ]
+    },
+    {
       "wallet": "8dueD1B2WUFXF3H8Gda3GeKN3TM6gmEjuLRVfgc4ufak",
       "totalAnsemUi": 9333.874082,
       "transferCount": 1,
@@ -3762,6 +4098,17 @@
       ]
     },
     {
+      "wallet": "7dCNE3HRrjzKe3JNnmc7BndQXjy7Zx4rWpQNgS71baLB",
+      "totalAnsemUi": 8883.06668,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:49:55.000Z",
+      "latestSeen": "2026-07-18T14:49:55.000Z",
+      "latestSignature": "4Sk8zbwuy8GGXvYP32nz1JeieAB4kSE83L8voqhAEQL94LKttMAjqa9f4FXXb3YBQYJTk4xsnMVRPyhqpAYELxwo",
+      "signatures": [
+        "4Sk8zbwuy8GGXvYP32nz1JeieAB4kSE83L8voqhAEQL94LKttMAjqa9f4FXXb3YBQYJTk4xsnMVRPyhqpAYELxwo"
+      ]
+    },
+    {
       "wallet": "GRUPwqpPRKagEs6P3appnQQ9Y8su5mrm5hx86t2mxZ8",
       "totalAnsemUi": 8849.081055,
       "transferCount": 1,
@@ -3769,6 +4116,127 @@
       "latestSeen": "2026-06-29T11:08:58.000Z",
       "signatures": [
         "4N1LRRhNFY79HRUEnKJxaDdKC1453QKjBrna3uzbYvaFKbYeDH87aH39yMBH9hZ75zGkCnHvChN5NNF3tBT5aHma"
+      ]
+    },
+    {
+      "wallet": "HGEERoMEhcSPNavPe4jiBS6GRK2ib2s4HDP2y7Xn7yz9",
+      "totalAnsemUi": 8818.278105,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:43:51.000Z",
+      "latestSeen": "2026-07-18T14:43:51.000Z",
+      "latestSignature": "4BV8Hs4pupFjb9FNP3VL5jTKzhiq82gtLavSa86cgk26sueBFRsJsbMZwBsq57gmd6ix79EdC8ZHRmj5Z5FQWvuD",
+      "signatures": [
+        "4BV8Hs4pupFjb9FNP3VL5jTKzhiq82gtLavSa86cgk26sueBFRsJsbMZwBsq57gmd6ix79EdC8ZHRmj5Z5FQWvuD"
+      ]
+    },
+    {
+      "wallet": "6QkSDhZq2PtMjGZVAWyoPHV4Bw2HXngbgW6gP8XmSwgX",
+      "totalAnsemUi": 8818.278105,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:43:48.000Z",
+      "latestSeen": "2026-07-18T14:43:48.000Z",
+      "latestSignature": "3aKUE5XxuowfabpdeVgGR6bMhx8fz5adz9dXiM279mjoMBJReu3u4nMZk8s63L9xHCkZcUMSjgrSgJJTiUeuJoUf",
+      "signatures": [
+        "3aKUE5XxuowfabpdeVgGR6bMhx8fz5adz9dXiM279mjoMBJReu3u4nMZk8s63L9xHCkZcUMSjgrSgJJTiUeuJoUf"
+      ]
+    },
+    {
+      "wallet": "GUZmbCYKgFyz3vVRTnaUPCZtcLfp7VRpaBNQfNVWUAsg",
+      "totalAnsemUi": 8818.278105,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:43:47.000Z",
+      "latestSeen": "2026-07-18T14:43:47.000Z",
+      "latestSignature": "35bSMZpG4tLgqSBu42Ch2MVAQFMRBhrwFNDEuL13H6tqeNFAV4KxesW7dhm9y71LyeZLRaegSuqawZTZ9ZqZnmkB",
+      "signatures": [
+        "35bSMZpG4tLgqSBu42Ch2MVAQFMRBhrwFNDEuL13H6tqeNFAV4KxesW7dhm9y71LyeZLRaegSuqawZTZ9ZqZnmkB"
+      ]
+    },
+    {
+      "wallet": "8HHdvrexbyEMNc3M1MWsKXiYZ4QvuitHafh93sVeJuTN",
+      "totalAnsemUi": 8818.278105,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:43:45.000Z",
+      "latestSeen": "2026-07-18T14:43:45.000Z",
+      "latestSignature": "45TeJET8i3mJ87UkRmGKBr9c59nvyPZ95dD9AQtsRB1w8TQUxoWg39DNXKQXcwUwChZ5vn8PyY9ZyMDVMKNNw2xK",
+      "signatures": [
+        "45TeJET8i3mJ87UkRmGKBr9c59nvyPZ95dD9AQtsRB1w8TQUxoWg39DNXKQXcwUwChZ5vn8PyY9ZyMDVMKNNw2xK"
+      ]
+    },
+    {
+      "wallet": "B9Qwjw9Q8yxj9UsaZYNEnrnZgicZEPAasgfLtDoWYfZF",
+      "totalAnsemUi": 8818.278105,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:43:44.000Z",
+      "latestSeen": "2026-07-18T14:43:44.000Z",
+      "latestSignature": "2GyoamxU4u5pGNMgzujfEpheiBLvpLU9T2PKCB4w3Wvx4cg1mUMjaHCzMaSKhvZKsohPAFRJmHtabysYcxYJAH48",
+      "signatures": [
+        "2GyoamxU4u5pGNMgzujfEpheiBLvpLU9T2PKCB4w3Wvx4cg1mUMjaHCzMaSKhvZKsohPAFRJmHtabysYcxYJAH48"
+      ]
+    },
+    {
+      "wallet": "RvWeo9WrZNrVrdtXqUMzQRBq9ajQASHoYxJj8dbRjcr",
+      "totalAnsemUi": 8818.278105,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:43:42.000Z",
+      "latestSeen": "2026-07-18T14:43:42.000Z",
+      "latestSignature": "zWKctWwNFUqoeP1ZaBm6UWxYDH3NZ5U7JvvMRN2qHK1mCJYnr7Sxt3sm3HQMhsKUp71oYvPZxuhHp2G3bBZoxVA",
+      "signatures": [
+        "zWKctWwNFUqoeP1ZaBm6UWxYDH3NZ5U7JvvMRN2qHK1mCJYnr7Sxt3sm3HQMhsKUp71oYvPZxuhHp2G3bBZoxVA"
+      ]
+    },
+    {
+      "wallet": "AYdtvjo5jcAQnHYKSA6sWgBbHLzSKAYZsnUc5n4h2bdQ",
+      "totalAnsemUi": 8818.278105,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:43:40.000Z",
+      "latestSeen": "2026-07-18T14:43:40.000Z",
+      "latestSignature": "4xrUBvQ6hnNeCJQsayka1Fb1hoLzS7SsW6icSt7URPrhmGavTA3vjkmpFSKgaNFGr2DgpqY23VnMf91XmyNxj4oB",
+      "signatures": [
+        "4xrUBvQ6hnNeCJQsayka1Fb1hoLzS7SsW6icSt7URPrhmGavTA3vjkmpFSKgaNFGr2DgpqY23VnMf91XmyNxj4oB"
+      ]
+    },
+    {
+      "wallet": "8JsUVmdmPJvu9M8ab2eRbG8foL8cX2WX8LH6UHiXLjPZ",
+      "totalAnsemUi": 8818.278105,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:43:39.000Z",
+      "latestSeen": "2026-07-18T14:43:39.000Z",
+      "latestSignature": "4kZWxPFXFs2Sn7JKhMw2m8ytuqRNWpgF6tgqaeZSHZbnbJ99itgmJLs7uKBerD29UZXRn21G8RhLUnRq6akRuQsx",
+      "signatures": [
+        "4kZWxPFXFs2Sn7JKhMw2m8ytuqRNWpgF6tgqaeZSHZbnbJ99itgmJLs7uKBerD29UZXRn21G8RhLUnRq6akRuQsx"
+      ]
+    },
+    {
+      "wallet": "FkWmdB7PgAffZYu4femXkZTdijHn6kLWNaRwkMJ3wV7T",
+      "totalAnsemUi": 8818.278105,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:43:38.000Z",
+      "latestSeen": "2026-07-18T14:43:38.000Z",
+      "latestSignature": "4dkbhDwUL5x8vkmFwVx9NLGgwfXMqgfvRvWcRnixTH19XYEQhib4DDdzR6rDVsKDkKEWbjoTpxU7yXcngc4ahKEW",
+      "signatures": [
+        "4dkbhDwUL5x8vkmFwVx9NLGgwfXMqgfvRvWcRnixTH19XYEQhib4DDdzR6rDVsKDkKEWbjoTpxU7yXcngc4ahKEW"
+      ]
+    },
+    {
+      "wallet": "J1F2Q96J2DkgWzsK1p6ZPk1pdngEbigpWRWqF56qekRA",
+      "totalAnsemUi": 8818.278105,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:43:37.000Z",
+      "latestSeen": "2026-07-18T14:43:37.000Z",
+      "latestSignature": "4DnwD43JWv5cGUr1qLeH7tmRRPPjAa4JnBiNhoa5RH156bVaZQS6HvSXKj6m1H6pwNg8ZmirNvxVTBU5pPCSNwpR",
+      "signatures": [
+        "4DnwD43JWv5cGUr1qLeH7tmRRPPjAa4JnBiNhoa5RH156bVaZQS6HvSXKj6m1H6pwNg8ZmirNvxVTBU5pPCSNwpR"
+      ]
+    },
+    {
+      "wallet": "Ednsd5MaA1kKSXqPLLLcpeM9eN5LsfYn5iMCeV36ZGmT",
+      "totalAnsemUi": 8818.278105,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:43:36.000Z",
+      "latestSeen": "2026-07-18T14:43:36.000Z",
+      "latestSignature": "5CLW3xzPXg2tnkVmNa968CxLLeLENjEf3aryByzFXEevDTxSgrSn6x4Hgx49knAhS1CuvU2N8n6tfmfGCS9fyDoA",
+      "signatures": [
+        "5CLW3xzPXg2tnkVmNa968CxLLeLENjEf3aryByzFXEevDTxSgrSn6x4Hgx49knAhS1CuvU2N8n6tfmfGCS9fyDoA"
       ]
     },
     {
@@ -3909,6 +4377,18 @@
       "latestSeen": "2026-06-29T11:11:41.000Z",
       "signatures": [
         "2UrASjVYFsFamPChHBcgSxPufLAXudoUWeSfWQ4VUxDBj2d9HwGxVs5SFKP1gm26DGsBLDVHUJTXkCJ2bzQZzQFK"
+      ]
+    },
+    {
+      "wallet": "38goQvqUpHCueYf9VHH8aNL2gtWeG56Cm5zsmvsfcWNJ",
+      "totalAnsemUi": 8103.946138,
+      "transferCount": 2,
+      "firstSeen": "2026-07-18T03:48:35.000Z",
+      "latestSeen": "2026-07-18T14:45:34.000Z",
+      "latestSignature": "2JpSfhjkdPoiyazuLKH1usndrtFbTmzcqYdMV6iPE1ZA97iyVGCNGst2SQasePLkS9T2HRBTmoF9HgczdQwy1dzN",
+      "signatures": [
+        "2JpSfhjkdPoiyazuLKH1usndrtFbTmzcqYdMV6iPE1ZA97iyVGCNGst2SQasePLkS9T2HRBTmoF9HgczdQwy1dzN",
+        "3FDTgzy9Pz9uai65vMVvuqew2KACnVmmKF5VfmB3xJsLLsq8XEdeG7WyWxxddTigyqiNpE7Ta5RH3E2PH2LLbxfN"
       ]
     },
     {
@@ -4089,6 +4569,259 @@
       "latestSeen": "2026-06-29T11:15:03.000Z",
       "signatures": [
         "5nqxKQo5KdvFoiLKxukR16cusrX7JjC3syyE9yuwJvg5tF34vPLvis5XXhdjUMRA1DfN4n4d8pUzD3k66HRmeLrv"
+      ]
+    },
+    {
+      "wallet": "EZBottxTmWscmA9EzeqCpGJ1qiUMwomXSeXg1pbHbVLV",
+      "totalAnsemUi": 7359.951347,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:45:50.000Z",
+      "latestSeen": "2026-07-18T14:45:50.000Z",
+      "latestSignature": "3DoCRPfuxJWiyf6FCbuBjVN29z7RN8mapaBTNQuFidhoDgxzdCsS22YpDtgLdJvPD1pjnCPSLnDFpMyJW2sQNy7N",
+      "signatures": [
+        "3DoCRPfuxJWiyf6FCbuBjVN29z7RN8mapaBTNQuFidhoDgxzdCsS22YpDtgLdJvPD1pjnCPSLnDFpMyJW2sQNy7N"
+      ]
+    },
+    {
+      "wallet": "WcQ51SLddvuCTAv2uihPMVafk8EGzHn73R8FB63Fgqh",
+      "totalAnsemUi": 7359.951347,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:45:49.000Z",
+      "latestSeen": "2026-07-18T14:45:49.000Z",
+      "latestSignature": "3Aj1C4Q125qCKzuqp9FG9r8LC9W6hJH3PNGxscmqMgyS4D98Js2hjJgatMY7DWBuR6GZvLJZiNkPpP6c6hJotD2Y",
+      "signatures": [
+        "3Aj1C4Q125qCKzuqp9FG9r8LC9W6hJH3PNGxscmqMgyS4D98Js2hjJgatMY7DWBuR6GZvLJZiNkPpP6c6hJotD2Y"
+      ]
+    },
+    {
+      "wallet": "FamfdzKdRAFz8VSVP5dSA6tkZhfVBnaKpFEmVnjZH1UF",
+      "totalAnsemUi": 7359.951347,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:45:48.000Z",
+      "latestSeen": "2026-07-18T14:45:48.000Z",
+      "latestSignature": "4RKpqTwBJC2hCnm5DiJthn1L2NPNVYRSDV2ioffGPjyNAnk8paRe3QCK4CZ9FCZxk38TvREkad7W7x1WZ1gg5gYK",
+      "signatures": [
+        "4RKpqTwBJC2hCnm5DiJthn1L2NPNVYRSDV2ioffGPjyNAnk8paRe3QCK4CZ9FCZxk38TvREkad7W7x1WZ1gg5gYK"
+      ]
+    },
+    {
+      "wallet": "3BkKHNki5t1y9pY2FwGFkAK2NHUeZBVgor68FmzTn2Fn",
+      "totalAnsemUi": 7359.951347,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:45:45.000Z",
+      "latestSeen": "2026-07-18T14:45:45.000Z",
+      "latestSignature": "4tGHdGwK8gMPt8d1UfQ7TTadX5jVgmQpte6X4XRG6PgAqGrmVRxuxDCQtZbdegHiRQePq12heG6XWRZzLE6gB25R",
+      "signatures": [
+        "4tGHdGwK8gMPt8d1UfQ7TTadX5jVgmQpte6X4XRG6PgAqGrmVRxuxDCQtZbdegHiRQePq12heG6XWRZzLE6gB25R"
+      ]
+    },
+    {
+      "wallet": "6ZxE1CcJTgMk6Hy1DWNTrLdKQNpCZgnG19aNctrTrdiQ",
+      "totalAnsemUi": 7359.951347,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:45:44.000Z",
+      "latestSeen": "2026-07-18T14:45:44.000Z",
+      "latestSignature": "mXrW6VUHeHAb4rL1ojLoTw9PFmnHTv2abr7GSgHZNbwqoLbHvwQi3KsjiG6W1YGP7Fj2cjxVxDdr8kz6VuCm8oK",
+      "signatures": [
+        "mXrW6VUHeHAb4rL1ojLoTw9PFmnHTv2abr7GSgHZNbwqoLbHvwQi3KsjiG6W1YGP7Fj2cjxVxDdr8kz6VuCm8oK"
+      ]
+    },
+    {
+      "wallet": "5tV74VRLBpQr4QF1nWBSRHRve143gMn416rmzDavDxLZ",
+      "totalAnsemUi": 7359.951347,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:45:43.000Z",
+      "latestSeen": "2026-07-18T14:45:43.000Z",
+      "latestSignature": "5mYrUWcQE5gsDAeqxH7LAa2UTBG59TnbEKmDbZdeTAeW2rmEFwkiDHeT1S1NS7UCuvBAZNtwUNL5p5hq2XmjeQyp",
+      "signatures": [
+        "5mYrUWcQE5gsDAeqxH7LAa2UTBG59TnbEKmDbZdeTAeW2rmEFwkiDHeT1S1NS7UCuvBAZNtwUNL5p5hq2XmjeQyp"
+      ]
+    },
+    {
+      "wallet": "GPRx6i6L13uFa5S4sNNutEnq6Axe8WUkZ6J7nHYFRceL",
+      "totalAnsemUi": 7359.951347,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:45:42.000Z",
+      "latestSeen": "2026-07-18T14:45:42.000Z",
+      "latestSignature": "uyyPDq7Eypwo9sWtpf1FUzuBacA52zEtT4WSnrH7Uq95StYqFYc1MRyZndQu7FSei4bHKSjaTH3efapHWHsAkhg",
+      "signatures": [
+        "uyyPDq7Eypwo9sWtpf1FUzuBacA52zEtT4WSnrH7Uq95StYqFYc1MRyZndQu7FSei4bHKSjaTH3efapHWHsAkhg"
+      ]
+    },
+    {
+      "wallet": "922KqpyfTRVVU1DZK9FHYEcPkqKP3nZLMHr8VQ4qJhPM",
+      "totalAnsemUi": 7359.951347,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:45:40.000Z",
+      "latestSeen": "2026-07-18T14:45:40.000Z",
+      "latestSignature": "3HwQ6fkX7E14H59Z2ezzij4bCuYaLa988XZPg3e3dC6AH9PQrqQrLcKPS4my1bp44dVUhjD9BpCoiNZ5NaMPb9JX",
+      "signatures": [
+        "3HwQ6fkX7E14H59Z2ezzij4bCuYaLa988XZPg3e3dC6AH9PQrqQrLcKPS4my1bp44dVUhjD9BpCoiNZ5NaMPb9JX"
+      ]
+    },
+    {
+      "wallet": "EVjGoUKHX6uxGbzBVakAPPpUJZEVVrvLDWPvTiNb3WdU",
+      "totalAnsemUi": 7359.951347,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:45:37.000Z",
+      "latestSeen": "2026-07-18T14:45:37.000Z",
+      "latestSignature": "3vQE2pFL16Ad4cgRL6Edb7utM6wdKDiGdPGhe4d58iwtnfzLJkUwuxAN9SWXUmNR5LdQp6KjfKJE7yEbNkPGR3za",
+      "signatures": [
+        "3vQE2pFL16Ad4cgRL6Edb7utM6wdKDiGdPGhe4d58iwtnfzLJkUwuxAN9SWXUmNR5LdQp6KjfKJE7yEbNkPGR3za"
+      ]
+    },
+    {
+      "wallet": "HYPnVL9cj7WdNAfbE3rc9QQqBh9ceAwZcuwJL4jHeGh7",
+      "totalAnsemUi": 7359.951347,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:45:36.000Z",
+      "latestSeen": "2026-07-18T14:45:36.000Z",
+      "latestSignature": "2Ym8x9NtVuzqzzhbg4NBdfPoDS4sVyZyeRJ7nwgLn42FcuSK2yYo5Vrs2Ao8r6KzShkj6eDtDFAqDhuZWGcMxyrQ",
+      "signatures": [
+        "2Ym8x9NtVuzqzzhbg4NBdfPoDS4sVyZyeRJ7nwgLn42FcuSK2yYo5Vrs2Ao8r6KzShkj6eDtDFAqDhuZWGcMxyrQ"
+      ]
+    },
+    {
+      "wallet": "AszBkcsFZRwRL2AMVpKQiygtGxWREgcvLTDQJDeR7ZEA",
+      "totalAnsemUi": 7359.951347,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:45:35.000Z",
+      "latestSeen": "2026-07-18T14:45:35.000Z",
+      "latestSignature": "V9yjXD1AXeNBcwZVrPa6LEuNuw3sbjxQpUhqMxZf6GzQw33jc89z6cFbJ8Fjc7WUokijFtCqxeft8NKxfEQcqdH",
+      "signatures": [
+        "V9yjXD1AXeNBcwZVrPa6LEuNuw3sbjxQpUhqMxZf6GzQw33jc89z6cFbJ8Fjc7WUokijFtCqxeft8NKxfEQcqdH"
+      ]
+    },
+    {
+      "wallet": "CbFwdifp1pwTba4h2WT2VyUN1D1i64JkWWC8qQ4QBQ9H",
+      "totalAnsemUi": 7359.951347,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:45:33.000Z",
+      "latestSeen": "2026-07-18T14:45:33.000Z",
+      "latestSignature": "5MAsWN9pHXRfHgJK1BxL7Ae4D5dDwznZjKQDSU9MZu4TzZiG7ADceJ5MRd332UQWkmYv85FvMD4WHVpyYHkmBfgj",
+      "signatures": [
+        "5MAsWN9pHXRfHgJK1BxL7Ae4D5dDwznZjKQDSU9MZu4TzZiG7ADceJ5MRd332UQWkmYv85FvMD4WHVpyYHkmBfgj"
+      ]
+    },
+    {
+      "wallet": "NCSXxnAb9R6t4KU1jdhvfW9EMVNcFh8mkVmda25tmeH",
+      "totalAnsemUi": 7359.951347,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:45:31.000Z",
+      "latestSeen": "2026-07-18T14:45:31.000Z",
+      "latestSignature": "2EZ1eUqZ9oxqYigxxkv1qadRXd5rSSGSnnmMfNnXc5q7Ty3mGFFdJsC2DH8euaddQFTFJpLKAYUF3mcsi4WNiGpo",
+      "signatures": [
+        "2EZ1eUqZ9oxqYigxxkv1qadRXd5rSSGSnnmMfNnXc5q7Ty3mGFFdJsC2DH8euaddQFTFJpLKAYUF3mcsi4WNiGpo"
+      ]
+    },
+    {
+      "wallet": "B8oJaGSg5hZQeU9JUkEZNDdn3Z3ZhwTFvnNC4ph85Unj",
+      "totalAnsemUi": 7359.951347,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:45:30.000Z",
+      "latestSeen": "2026-07-18T14:45:30.000Z",
+      "latestSignature": "5kHQ3o3FXvhiq5C3QT1h5ZzG61B5GNmaM2E5daF6JNPn3udU2hsLc3o7r723gkHBCbbKje5VqrZ4JuUdQmhBezcm",
+      "signatures": [
+        "5kHQ3o3FXvhiq5C3QT1h5ZzG61B5GNmaM2E5daF6JNPn3udU2hsLc3o7r723gkHBCbbKje5VqrZ4JuUdQmhBezcm"
+      ]
+    },
+    {
+      "wallet": "6bASaDonDEoMZ56ThUfWAVzDH1HATYcqvKoJQ3suNr8a",
+      "totalAnsemUi": 7359.951347,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:45:29.000Z",
+      "latestSeen": "2026-07-18T14:45:29.000Z",
+      "latestSignature": "2riU5BeXWFjjG3mKjHiqp1tV4McpBf8aGqY3wpSAKtprzDuqMnS2byw7bMyC3PaFoqnEwZQdnFbT369KncGQfMnD",
+      "signatures": [
+        "2riU5BeXWFjjG3mKjHiqp1tV4McpBf8aGqY3wpSAKtprzDuqMnS2byw7bMyC3PaFoqnEwZQdnFbT369KncGQfMnD"
+      ]
+    },
+    {
+      "wallet": "HJyDzrBNAeXN4tdXcrVVS117gddGMXzm2wG8XyB8miUz",
+      "totalAnsemUi": 7359.951347,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:45:27.000Z",
+      "latestSeen": "2026-07-18T14:45:27.000Z",
+      "latestSignature": "3LCAZ4pQdJMZAwewCKNR62wbgQPaMMCaWWvdADJRvxrGDQQiqH3VGKKykfUE3C26Vgzok5iTBaEKQAiUgSKDEYDk",
+      "signatures": [
+        "3LCAZ4pQdJMZAwewCKNR62wbgQPaMMCaWWvdADJRvxrGDQQiqH3VGKKykfUE3C26Vgzok5iTBaEKQAiUgSKDEYDk"
+      ]
+    },
+    {
+      "wallet": "AJgUbnnbPMTqzzrMFhkkxYfmrW5PtMmAnhTkzun74ELn",
+      "totalAnsemUi": 7359.951347,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:45:26.000Z",
+      "latestSeen": "2026-07-18T14:45:26.000Z",
+      "latestSignature": "5GWyEGoRdg9TjQtn8HyHApCDNCbFXU7rohNWaT9X39Em8EJ3QJCrvnwyTU6pATrDjeoRAkhBmQXp6XtJpViALQAP",
+      "signatures": [
+        "5GWyEGoRdg9TjQtn8HyHApCDNCbFXU7rohNWaT9X39Em8EJ3QJCrvnwyTU6pATrDjeoRAkhBmQXp6XtJpViALQAP"
+      ]
+    },
+    {
+      "wallet": "6qjWwRVN1bRPFat7BtmJXmtesa5do3dWEU7kKVqq7k9w",
+      "totalAnsemUi": 7359.951347,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:45:25.000Z",
+      "latestSeen": "2026-07-18T14:45:25.000Z",
+      "latestSignature": "2QTKKhHGnYYYmbTw8qNUhgoQaCXFHNT6WcoenXxdDVpSf8aKFWx81Nd2RgW5H4i8hqehjGNTkVe5aCKPk2X1p8vo",
+      "signatures": [
+        "2QTKKhHGnYYYmbTw8qNUhgoQaCXFHNT6WcoenXxdDVpSf8aKFWx81Nd2RgW5H4i8hqehjGNTkVe5aCKPk2X1p8vo"
+      ]
+    },
+    {
+      "wallet": "35aYuAexoER98aboMxCPfwxEqN8XFyejfCmLn1AhPA9b",
+      "totalAnsemUi": 7359.951347,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:45:24.000Z",
+      "latestSeen": "2026-07-18T14:45:24.000Z",
+      "latestSignature": "5Rt72ytEHutsUTTeKtXy5ti3zNWWev7ecE6n2qNZ5X7RFHHpp7NudtHHw8hAtKSSRcmzGZ22f4DwyT27Qju22QmP",
+      "signatures": [
+        "5Rt72ytEHutsUTTeKtXy5ti3zNWWev7ecE6n2qNZ5X7RFHHpp7NudtHHw8hAtKSSRcmzGZ22f4DwyT27Qju22QmP"
+      ]
+    },
+    {
+      "wallet": "mHPYvAwsQK3mipG88q1ZmhBbKVoQQJAuwB82yN9KcWf",
+      "totalAnsemUi": 7359.951347,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:45:23.000Z",
+      "latestSeen": "2026-07-18T14:45:23.000Z",
+      "latestSignature": "nWeJQ1UpLdeDQDFsWesfEJUXzFQRLZxuCtguNCEpMUxqRSPVAmoWNzjMrKFwfHzs4hTV3A56voaPtCDFgRBtsjj",
+      "signatures": [
+        "nWeJQ1UpLdeDQDFsWesfEJUXzFQRLZxuCtguNCEpMUxqRSPVAmoWNzjMrKFwfHzs4hTV3A56voaPtCDFgRBtsjj"
+      ]
+    },
+    {
+      "wallet": "2DtTP3LQp2EpspcXAfGjiAA6DJWmvxcQrXz6x9tfksYd",
+      "totalAnsemUi": 7359.951347,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:45:21.000Z",
+      "latestSeen": "2026-07-18T14:45:21.000Z",
+      "latestSignature": "5bxkqpP2gmv14jZTvwvfAprHViLWYrfiG7qgUEzyJdT819sSS5xM3hi7FK6nrdS7t1rctMSggezShCVNLbNCUFm9",
+      "signatures": [
+        "5bxkqpP2gmv14jZTvwvfAprHViLWYrfiG7qgUEzyJdT819sSS5xM3hi7FK6nrdS7t1rctMSggezShCVNLbNCUFm9"
+      ]
+    },
+    {
+      "wallet": "49N49JSiHKKVd8CJDFN3wok4c65PT7PZPHKW5sTQfmhM",
+      "totalAnsemUi": 7359.951347,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:45:19.000Z",
+      "latestSeen": "2026-07-18T14:45:19.000Z",
+      "latestSignature": "5ozJPdUEe1hH2aipWLx7HEj1KvnDPVDRphKUU2DDmtp59wBU2Ajy9JLjR9tSUqK9TpNAdYsWLJKSweNso1Qw1z2E",
+      "signatures": [
+        "5ozJPdUEe1hH2aipWLx7HEj1KvnDPVDRphKUU2DDmtp59wBU2Ajy9JLjR9tSUqK9TpNAdYsWLJKSweNso1Qw1z2E"
+      ]
+    },
+    {
+      "wallet": "G7RhKShXMVzSvSteMfcrXXdgYxeonZZw7YMgGbXZqMXU",
+      "totalAnsemUi": 7359.951347,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:45:16.000Z",
+      "latestSeen": "2026-07-18T14:45:16.000Z",
+      "latestSignature": "5A8t4TkgcDect8aSPEutejSorG6N6eLQsqQSKmo1zgionoZPN3CJ5RDY8B3dvMJ7GyRucCJ8HnR7Q6gqAa6rBbbL",
+      "signatures": [
+        "5A8t4TkgcDect8aSPEutejSorG6N6eLQsqQSKmo1zgionoZPN3CJ5RDY8B3dvMJ7GyRucCJ8HnR7Q6gqAa6rBbbL"
       ]
     },
     {
@@ -4353,6 +5086,61 @@
       ]
     },
     {
+      "wallet": "GFbn2TZMhQyatFtfG5WKvCJtcTJpnyKo35G1E45swtJA",
+      "totalAnsemUi": 6396.676254,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T15:05:27.000Z",
+      "latestSeen": "2026-07-18T15:05:27.000Z",
+      "latestSignature": "4mHMH3WL1L7qcYoxy2uuN4sXahQLgDav4V7SixiE8bCk4t7wQU7ajTeanFwpGEw4FrSo7U3dEF2knxcRVtU5HjU",
+      "signatures": [
+        "4mHMH3WL1L7qcYoxy2uuN4sXahQLgDav4V7SixiE8bCk4t7wQU7ajTeanFwpGEw4FrSo7U3dEF2knxcRVtU5HjU"
+      ]
+    },
+    {
+      "wallet": "BjR8ShswpYwx6t1yX4Wyk2rbgRQ2mGQXCURUihsRZ9hL",
+      "totalAnsemUi": 6396.676254,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T15:05:27.000Z",
+      "latestSeen": "2026-07-18T15:05:27.000Z",
+      "latestSignature": "4aXtqU93uHRqsJdxtNCNR6hF2QDuftqSvSX8NyVihztgWNgYKzyN83pZ6LHH34nymFnqiP7vk4cPaUXG3qq8bPvo",
+      "signatures": [
+        "4aXtqU93uHRqsJdxtNCNR6hF2QDuftqSvSX8NyVihztgWNgYKzyN83pZ6LHH34nymFnqiP7vk4cPaUXG3qq8bPvo"
+      ]
+    },
+    {
+      "wallet": "2XMmtWYkcsB5ZJYKdJLvwR7mPtAtmuZDEj2yfJyhUp31",
+      "totalAnsemUi": 6396.676254,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T15:05:24.000Z",
+      "latestSeen": "2026-07-18T15:05:24.000Z",
+      "latestSignature": "64NrCnyjPGfQtzDH6wcbsEQ7kkKJYDxfXVx5ZCguhVdN4x8WukJ8fa9bYEHbjm2WVhsXdSoSXAJ6YWunDvjvL9YQ",
+      "signatures": [
+        "64NrCnyjPGfQtzDH6wcbsEQ7kkKJYDxfXVx5ZCguhVdN4x8WukJ8fa9bYEHbjm2WVhsXdSoSXAJ6YWunDvjvL9YQ"
+      ]
+    },
+    {
+      "wallet": "Hf2GndFVqXBqUUUpRoxYo6Ez23hP9bw52xJAA3d957Qv",
+      "totalAnsemUi": 6396.676254,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T15:05:23.000Z",
+      "latestSeen": "2026-07-18T15:05:23.000Z",
+      "latestSignature": "4J6az6vgYg6imRsUUbDgBPcyX5gZFqyuj5615TUTbYsEJYCsiz6d1tL5PetrU8SiTg59RYbyjtMY82PWw1mAZ78",
+      "signatures": [
+        "4J6az6vgYg6imRsUUbDgBPcyX5gZFqyuj5615TUTbYsEJYCsiz6d1tL5PetrU8SiTg59RYbyjtMY82PWw1mAZ78"
+      ]
+    },
+    {
+      "wallet": "2gDs9nqqvgAJ5PZW6t1jh1akBdsbLp6EvtXvpYRb6VMh",
+      "totalAnsemUi": 6396.676254,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T15:05:22.000Z",
+      "latestSeen": "2026-07-18T15:05:22.000Z",
+      "latestSignature": "4CuDanPw5gqYRmFRVniMqzJ7SamCvi2U2y2o3qxtRtztAMcb6PRVUZRhqkpzf8u9FUSWa9WVDoMVtwbbsffvnbp4",
+      "signatures": [
+        "4CuDanPw5gqYRmFRVniMqzJ7SamCvi2U2y2o3qxtRtztAMcb6PRVUZRhqkpzf8u9FUSWa9WVDoMVtwbbsffvnbp4"
+      ]
+    },
+    {
       "wallet": "AtEkr6czpBYcdfjpRwg7by4ira954zCMiZgJ7yW37d25",
       "totalAnsemUi": 6395.401766,
       "transferCount": 1,
@@ -4553,6 +5341,292 @@
       ]
     },
     {
+      "wallet": "BrcVoc5gc92Ga4h5mq9zQBLGM6UdfRpCrVkDgQGpRqDm",
+      "totalAnsemUi": 5898.311165,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:48:45.000Z",
+      "latestSeen": "2026-07-18T14:48:45.000Z",
+      "latestSignature": "iBb9DPWqWJcUxbmXdU8jATxzN13VBYZoH2QXvg7HCgxgzi1emgEgfyGoLSEmFiDuMG7HH8F5DnMwTiFnmbip5bP",
+      "signatures": [
+        "iBb9DPWqWJcUxbmXdU8jATxzN13VBYZoH2QXvg7HCgxgzi1emgEgfyGoLSEmFiDuMG7HH8F5DnMwTiFnmbip5bP"
+      ]
+    },
+    {
+      "wallet": "8VtmYQYZGwe3HheDrRo4aYxKo7tKjAjQL8k3hyEvgZgA",
+      "totalAnsemUi": 5898.311165,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:48:44.000Z",
+      "latestSeen": "2026-07-18T14:48:44.000Z",
+      "latestSignature": "4vevTDC1vmrJgQiBPi4523Se1o7dELeunwuJ4zFqjpidJXchNUU9vTBL86sh28hzGFjFG2asBjqp6a6hFiZVnP9M",
+      "signatures": [
+        "4vevTDC1vmrJgQiBPi4523Se1o7dELeunwuJ4zFqjpidJXchNUU9vTBL86sh28hzGFjFG2asBjqp6a6hFiZVnP9M"
+      ]
+    },
+    {
+      "wallet": "gTxb8mScM3WJdFq6qRgjBmTTjeYCJPLPdTFqJ2Aij1w",
+      "totalAnsemUi": 5898.311165,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:48:42.000Z",
+      "latestSeen": "2026-07-18T14:48:42.000Z",
+      "latestSignature": "28o3WKnshfZFQrZ9M7yeykzyur8YbSgyLDdJR7oEocbAPpoV2qaqfnKjVv6YgWYbs892pAXtf3ky3HZ1zUv6LYTU",
+      "signatures": [
+        "28o3WKnshfZFQrZ9M7yeykzyur8YbSgyLDdJR7oEocbAPpoV2qaqfnKjVv6YgWYbs892pAXtf3ky3HZ1zUv6LYTU"
+      ]
+    },
+    {
+      "wallet": "DLSbkpDSEcZp1YC2CdzP8KB4gMkHUzXa9PqfSbcJQB44",
+      "totalAnsemUi": 5898.311165,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:48:36.000Z",
+      "latestSeen": "2026-07-18T14:48:36.000Z",
+      "latestSignature": "ioM5iEfvJcT5MFPH7XgR1P1EtzPNTv9s8nR4tk1SMtV2DFPtoWYLPDX2crTKf6Y9yC8ZkPcDKZ3mTBwSG6LG9Jn",
+      "signatures": [
+        "ioM5iEfvJcT5MFPH7XgR1P1EtzPNTv9s8nR4tk1SMtV2DFPtoWYLPDX2crTKf6Y9yC8ZkPcDKZ3mTBwSG6LG9Jn"
+      ]
+    },
+    {
+      "wallet": "ENxrsuSEUsUNzC7ySrEhQhAmAjbKiQWX7XDXqXKhn5VA",
+      "totalAnsemUi": 5898.311165,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:48:35.000Z",
+      "latestSeen": "2026-07-18T14:48:35.000Z",
+      "latestSignature": "42qbfxE4MCPruhRXxMmUmvyEVgHEmZRE7pdrHb5bxcBAHft3MkrrJUQUZsSfycD8LvmzLcuuu2FvcyBQJyiiADhm",
+      "signatures": [
+        "42qbfxE4MCPruhRXxMmUmvyEVgHEmZRE7pdrHb5bxcBAHft3MkrrJUQUZsSfycD8LvmzLcuuu2FvcyBQJyiiADhm"
+      ]
+    },
+    {
+      "wallet": "FdL7VEkm3FsC7tV6ZGVf9GGYKqjM4h5zRnU1vpbsKekR",
+      "totalAnsemUi": 5898.311165,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:48:34.000Z",
+      "latestSeen": "2026-07-18T14:48:34.000Z",
+      "latestSignature": "3oFpvUwFao4Tu3UjubfUP2KiyYcjw29SAGoTtU2EZ7w7d2E9Cic8rbnTVDzHMDN3dkaU33rXii3SHFtmvLQbLVVC",
+      "signatures": [
+        "3oFpvUwFao4Tu3UjubfUP2KiyYcjw29SAGoTtU2EZ7w7d2E9Cic8rbnTVDzHMDN3dkaU33rXii3SHFtmvLQbLVVC"
+      ]
+    },
+    {
+      "wallet": "6iLU3fPyu4g6YaQQ13z4jpBS2LeRCx5pQq7fyiF4qs5f",
+      "totalAnsemUi": 5898.311165,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:48:33.000Z",
+      "latestSeen": "2026-07-18T14:48:33.000Z",
+      "latestSignature": "XkRRjmxPuzaMGc8JcMA8aYrDac4d7MmfVpo64bvWuhMzWsoV2ErcMJ6mikNxRBhpQ6oR5RhBWEuhgFsbrcfxHar",
+      "signatures": [
+        "XkRRjmxPuzaMGc8JcMA8aYrDac4d7MmfVpo64bvWuhMzWsoV2ErcMJ6mikNxRBhpQ6oR5RhBWEuhgFsbrcfxHar"
+      ]
+    },
+    {
+      "wallet": "CAnv1BdxAuoniJYbGwKUyQoexS8Pej8KKYBZ5fubxQfJ",
+      "totalAnsemUi": 5898.311165,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:48:29.000Z",
+      "latestSeen": "2026-07-18T14:48:29.000Z",
+      "latestSignature": "xnwGWnAZQG9YK6goG6i47mrPfqyRNZXyCW9p2zJEiiyc1Bs4gDrZvKn5XW63PRpHThf2oKqsA4cLsGHkFiEQ1EG",
+      "signatures": [
+        "xnwGWnAZQG9YK6goG6i47mrPfqyRNZXyCW9p2zJEiiyc1Bs4gDrZvKn5XW63PRpHThf2oKqsA4cLsGHkFiEQ1EG"
+      ]
+    },
+    {
+      "wallet": "HVXWYQquQPz8FwJWv6cRFesy3XEypEAL8Kkha8ETLVjm",
+      "totalAnsemUi": 5898.311165,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:48:28.000Z",
+      "latestSeen": "2026-07-18T14:48:28.000Z",
+      "latestSignature": "28hD2TK37bfFvfKpiSgtKr66eH5eLf91tF1okE5Bf9sNS36mLQdVhP22opEDAvyfn8f3hxTxGyf3HSQdjU9xoQGB",
+      "signatures": [
+        "28hD2TK37bfFvfKpiSgtKr66eH5eLf91tF1okE5Bf9sNS36mLQdVhP22opEDAvyfn8f3hxTxGyf3HSQdjU9xoQGB"
+      ]
+    },
+    {
+      "wallet": "D219gm6Dp7dRGjv5Lv5YxKe5xKwsG5zpzaKRLjUKDoLC",
+      "totalAnsemUi": 5898.311165,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:48:26.000Z",
+      "latestSeen": "2026-07-18T14:48:26.000Z",
+      "latestSignature": "48QzU87SZT3gZNAuxzchgwiQNh2yPpStoifJgENQAjpBu6H1XDBTTDC7LhBNc1EwkWXYHwvx7geR5Hmv8xKEiuY2",
+      "signatures": [
+        "48QzU87SZT3gZNAuxzchgwiQNh2yPpStoifJgENQAjpBu6H1XDBTTDC7LhBNc1EwkWXYHwvx7geR5Hmv8xKEiuY2"
+      ]
+    },
+    {
+      "wallet": "5x3BFeQgmMTxWMci5fQjWbvHpPsB7Ykb1N3wPGs2PyZK",
+      "totalAnsemUi": 5898.311165,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:48:25.000Z",
+      "latestSeen": "2026-07-18T14:48:25.000Z",
+      "latestSignature": "5ra317mznqDnMdEKH6SbHW17V5o3e53esAHYqpVSwZDuodiZa98vqeTiVzqpkUKtZobHbfBfAHtByo6MMZNDw23a",
+      "signatures": [
+        "5ra317mznqDnMdEKH6SbHW17V5o3e53esAHYqpVSwZDuodiZa98vqeTiVzqpkUKtZobHbfBfAHtByo6MMZNDw23a"
+      ]
+    },
+    {
+      "wallet": "229NJGQWRMoMAKUZuX8kxST7hXYScQ1UZTGaq9RPPEck",
+      "totalAnsemUi": 5898.311165,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:48:24.000Z",
+      "latestSeen": "2026-07-18T14:48:24.000Z",
+      "latestSignature": "4nEbm8VR2oaSnW2tPXjmKSNTdoyJz6sf5tuPop7Fd3giKMkcXoDNwg7hZYdVjKzdLJB3n27YGdx6fzfsB5m2Bkyf",
+      "signatures": [
+        "4nEbm8VR2oaSnW2tPXjmKSNTdoyJz6sf5tuPop7Fd3giKMkcXoDNwg7hZYdVjKzdLJB3n27YGdx6fzfsB5m2Bkyf"
+      ]
+    },
+    {
+      "wallet": "4kJDePgrUpsyEXu7HjRrr65dvWTKtRSNdomWPaB7zAYT",
+      "totalAnsemUi": 5898.311165,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:48:23.000Z",
+      "latestSeen": "2026-07-18T14:48:23.000Z",
+      "latestSignature": "3BsdR4EcixSCR4hwoZe4jgHEbWFzvzoTVcDrceeTvMymqcv4zCQxhWKQjsEKge3Qzo3sqKKjgnSEd4zmhUhMEPuV",
+      "signatures": [
+        "3BsdR4EcixSCR4hwoZe4jgHEbWFzvzoTVcDrceeTvMymqcv4zCQxhWKQjsEKge3Qzo3sqKKjgnSEd4zmhUhMEPuV"
+      ]
+    },
+    {
+      "wallet": "Gb64e6cfNcFxnH8e51zhNHSQYd7Tsk3ypVPhVydeo1Q7",
+      "totalAnsemUi": 5898.311165,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:48:18.000Z",
+      "latestSeen": "2026-07-18T14:48:18.000Z",
+      "latestSignature": "4AXbqcNzh7t99aZC8BPtbvyFDawTLSAgR7yG3g98vF3wb1fiuTEGqLh76m2rVsfGqPxvFM2o22PqYQFqjwsunbYs",
+      "signatures": [
+        "4AXbqcNzh7t99aZC8BPtbvyFDawTLSAgR7yG3g98vF3wb1fiuTEGqLh76m2rVsfGqPxvFM2o22PqYQFqjwsunbYs"
+      ]
+    },
+    {
+      "wallet": "2uituiYDTcXouXocTQj6a5ijthhfdM9ehVRXS13JnFEp",
+      "totalAnsemUi": 5898.311165,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:48:16.000Z",
+      "latestSeen": "2026-07-18T14:48:16.000Z",
+      "latestSignature": "5G1o5Jrp6Gf2S6SDa5PYFWuFQNLUze7H8iAosepho2wSc2vRKfAUUKAYCqyk6Mq15rUzBwSdz2aNZWSaUSiX9UHT",
+      "signatures": [
+        "5G1o5Jrp6Gf2S6SDa5PYFWuFQNLUze7H8iAosepho2wSc2vRKfAUUKAYCqyk6Mq15rUzBwSdz2aNZWSaUSiX9UHT"
+      ]
+    },
+    {
+      "wallet": "F1CH1ostypzV8AAXZfEfa6fM6HpzPeKVjd1ToaPeXMDf",
+      "totalAnsemUi": 5898.311165,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:48:15.000Z",
+      "latestSeen": "2026-07-18T14:48:15.000Z",
+      "latestSignature": "5PAcTLigqyMDnCZALi5SwpzmRYXuAvHMb9wmVuWdYFPTRKYTFY5XGvcL9VzUZptWN63kCLZZFqYdxuUbK2B2hyL8",
+      "signatures": [
+        "5PAcTLigqyMDnCZALi5SwpzmRYXuAvHMb9wmVuWdYFPTRKYTFY5XGvcL9VzUZptWN63kCLZZFqYdxuUbK2B2hyL8"
+      ]
+    },
+    {
+      "wallet": "HK8n3xm1YXLRgfqRDrDXXkuTZGGY8LQuBvN543bA8S3s",
+      "totalAnsemUi": 5898.311165,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:48:14.000Z",
+      "latestSeen": "2026-07-18T14:48:14.000Z",
+      "latestSignature": "5hiVMAa7eabUSaexKswRmsT7RvrCAjCvme3vbNT5TUYSSXR65VsFT5w6qY8QQ1fuqQaWFKyrFwAJPJ3doFBbnVYd",
+      "signatures": [
+        "5hiVMAa7eabUSaexKswRmsT7RvrCAjCvme3vbNT5TUYSSXR65VsFT5w6qY8QQ1fuqQaWFKyrFwAJPJ3doFBbnVYd"
+      ]
+    },
+    {
+      "wallet": "CJhf7uawjdHmxb3nrpLBcUcDzgiy1TWWiBbXtEjyjtRQ",
+      "totalAnsemUi": 5898.311165,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:48:13.000Z",
+      "latestSeen": "2026-07-18T14:48:13.000Z",
+      "latestSignature": "4CRMNL6Jd4MqmEwSSbG86mX5jLAtGAA8m9WA1dKZdcyZgmvpT2T19rAM5Yzw4VFmF6vLsvGftg6qJTXg2ftFKnvh",
+      "signatures": [
+        "4CRMNL6Jd4MqmEwSSbG86mX5jLAtGAA8m9WA1dKZdcyZgmvpT2T19rAM5Yzw4VFmF6vLsvGftg6qJTXg2ftFKnvh"
+      ]
+    },
+    {
+      "wallet": "FXLGYwieLUrngpQrDeKggDeXruBPcxN8kWHDydmxGy4S",
+      "totalAnsemUi": 5898.311165,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:48:11.000Z",
+      "latestSeen": "2026-07-18T14:48:11.000Z",
+      "latestSignature": "5Ns5BsCQf9zptd1SFVWZyXrQuijYJEC3TFuZsNauGs5yfxRXesaK4Evi1Y2GPKHR5zhXQwSRNo4zKRnSiymkUvoz",
+      "signatures": [
+        "5Ns5BsCQf9zptd1SFVWZyXrQuijYJEC3TFuZsNauGs5yfxRXesaK4Evi1Y2GPKHR5zhXQwSRNo4zKRnSiymkUvoz"
+      ]
+    },
+    {
+      "wallet": "95uYbC2p28ZZCs8AnzzsjHB1ddNRwX2pww2yXCGQahCr",
+      "totalAnsemUi": 5898.311165,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:48:10.000Z",
+      "latestSeen": "2026-07-18T14:48:10.000Z",
+      "latestSignature": "3aRtofsVqWsLrEE5Q2fUne9a1zmPtGuZsZ7fjrjnVwn4RTwhHYwd4GJPivutKFQeorNmveEYSdwhEiwTabtm7HYk",
+      "signatures": [
+        "3aRtofsVqWsLrEE5Q2fUne9a1zmPtGuZsZ7fjrjnVwn4RTwhHYwd4GJPivutKFQeorNmveEYSdwhEiwTabtm7HYk"
+      ]
+    },
+    {
+      "wallet": "4ajcuPPLh25ha9wtiP7XuRdgp98UD19kVjGbL9uZ6CVg",
+      "totalAnsemUi": 5898.311165,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:48:07.000Z",
+      "latestSeen": "2026-07-18T14:48:07.000Z",
+      "latestSignature": "8FYA3yMk5CK5LGuNUtTK6cLtKh8tJpn4oArvgbztN7sGSVRHNZhcVyVgCsDZ2z2Kb9n3adQoGL9RYUpweaCpDo3",
+      "signatures": [
+        "8FYA3yMk5CK5LGuNUtTK6cLtKh8tJpn4oArvgbztN7sGSVRHNZhcVyVgCsDZ2z2Kb9n3adQoGL9RYUpweaCpDo3"
+      ]
+    },
+    {
+      "wallet": "4fcHoSAmp2Ls9L4VaTW48gAYyDCfmkStHQY1awdGTxKe",
+      "totalAnsemUi": 5898.311165,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:48:06.000Z",
+      "latestSeen": "2026-07-18T14:48:06.000Z",
+      "latestSignature": "3YcnXHyttH4qtDgXd5mVSmvU8pZEcjPhGwRPg72K5MfaRpxXnwh4s936qFn8Eo9mcYMXdmLJ8VwLfnYneEgyV2bm",
+      "signatures": [
+        "3YcnXHyttH4qtDgXd5mVSmvU8pZEcjPhGwRPg72K5MfaRpxXnwh4s936qFn8Eo9mcYMXdmLJ8VwLfnYneEgyV2bm"
+      ]
+    },
+    {
+      "wallet": "HJsqvhxJCPEvjKnUumQJw9i6fSMQnEtAgPbbemgHDp6b",
+      "totalAnsemUi": 5898.311165,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:48:02.000Z",
+      "latestSeen": "2026-07-18T14:48:02.000Z",
+      "latestSignature": "264aiupFPLabnyY3jc7SoWh4SjpFEWxnSdSoXYNcenHhAfBMicmfBcquWcp4RH6kFpvuDkLQjx97Ecf7vZAaiD4Q",
+      "signatures": [
+        "264aiupFPLabnyY3jc7SoWh4SjpFEWxnSdSoXYNcenHhAfBMicmfBcquWcp4RH6kFpvuDkLQjx97Ecf7vZAaiD4Q"
+      ]
+    },
+    {
+      "wallet": "GjhE1DcTYZyaoC2XFYpLsL6JJGw8Cr5DgYFY8NDpEbsJ",
+      "totalAnsemUi": 5898.311165,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:48:01.000Z",
+      "latestSeen": "2026-07-18T14:48:01.000Z",
+      "latestSignature": "cgw2aeHdxRSo9jy8Mq7gnCwSdR2KdiKzrBhutsMqsiH9WsL562UPTQ9ynaajWjo3m6GPZuPvn3AfvSgQM2wvV6r",
+      "signatures": [
+        "cgw2aeHdxRSo9jy8Mq7gnCwSdR2KdiKzrBhutsMqsiH9WsL562UPTQ9ynaajWjo3m6GPZuPvn3AfvSgQM2wvV6r"
+      ]
+    },
+    {
+      "wallet": "3vYN1uiUbkHdMkYqcJRSyaAw5igQTpEd7JpcU3CwU9x7",
+      "totalAnsemUi": 5898.311165,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:47:59.000Z",
+      "latestSeen": "2026-07-18T14:47:59.000Z",
+      "latestSignature": "55zoqmzXKuZRkVJA2RG1vwfsFmstKYGnCDNyXqE62QP3ajcurYFi9Pvo7xLhugFbDpU2UjuwQUD1fKBjg3Ydh4SJ",
+      "signatures": [
+        "55zoqmzXKuZRkVJA2RG1vwfsFmstKYGnCDNyXqE62QP3ajcurYFi9Pvo7xLhugFbDpU2UjuwQUD1fKBjg3Ydh4SJ"
+      ]
+    },
+    {
+      "wallet": "J8ZXNLgSRNQe1f7Wec5QjzTGjq7H2XkcXXXPwisoRarQ",
+      "totalAnsemUi": 5882.388368,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:54:47.000Z",
+      "latestSeen": "2026-07-18T14:54:47.000Z",
+      "latestSignature": "M8LQvDLhsGqyfZ2KsejB5GRvW2E7cGsq3k8ArD6kucaC3Ciwt8LoByz5RbDaNu9Nf24gu4yZbx1UWfKpYWmkXqY",
+      "signatures": [
+        "M8LQvDLhsGqyfZ2KsejB5GRvW2E7cGsq3k8ArD6kucaC3Ciwt8LoByz5RbDaNu9Nf24gu4yZbx1UWfKpYWmkXqY"
+      ]
+    },
+    {
       "wallet": "BBE7PVVYP7UCjmsVfSkvF8raHHaSCzXT8wP6jwL6M16P",
       "totalAnsemUi": 5867.829668,
       "transferCount": 1,
@@ -4563,6 +5637,50 @@
       ]
     },
     {
+      "wallet": "DDsJVbxs3QX7iNDjLvcWo2QJfTU1i5hy5ZKL5MFMbBUX",
+      "totalAnsemUi": 5847.199386,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:56:28.000Z",
+      "latestSeen": "2026-07-18T14:56:28.000Z",
+      "latestSignature": "8D9nYutgTmKUDdHxoHSrdtsumhm6FixeND5SddPehjjRz9qpaHXQY5ZHSwSM115wmZ1dfUoj9SPvbnzQkHAVTd5",
+      "signatures": [
+        "8D9nYutgTmKUDdHxoHSrdtsumhm6FixeND5SddPehjjRz9qpaHXQY5ZHSwSM115wmZ1dfUoj9SPvbnzQkHAVTd5"
+      ]
+    },
+    {
+      "wallet": "33vFB2rtG9FDpJReNaJrBF4RZgri5HTVo5gSxP1XfVCr",
+      "totalAnsemUi": 5847.199386,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:56:27.000Z",
+      "latestSeen": "2026-07-18T14:56:27.000Z",
+      "latestSignature": "2ondZRfttCpFZbdFZtxep6r7ZofW8AzL7PJ1pLPFxyTty2jZYgz1bi9QuE7epbbrU5FkrchnPU2qeJDWc6652gAx",
+      "signatures": [
+        "2ondZRfttCpFZbdFZtxep6r7ZofW8AzL7PJ1pLPFxyTty2jZYgz1bi9QuE7epbbrU5FkrchnPU2qeJDWc6652gAx"
+      ]
+    },
+    {
+      "wallet": "HQdFfmiDrZGbxqE5k5CqDxUkLUHhCUS39YHqsRGsfzeH",
+      "totalAnsemUi": 5847.199386,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:56:25.000Z",
+      "latestSeen": "2026-07-18T14:56:25.000Z",
+      "latestSignature": "2xXF2VtHmvR9e2SLsBcVcUJhFoCbhK56kFuDTu42DKyguL3Mo3Bv1K9K5tGARm78gqo34bhYRTxL3UeGbGnL9z8P",
+      "signatures": [
+        "2xXF2VtHmvR9e2SLsBcVcUJhFoCbhK56kFuDTu42DKyguL3Mo3Bv1K9K5tGARm78gqo34bhYRTxL3UeGbGnL9z8P"
+      ]
+    },
+    {
+      "wallet": "F7HoxX4hJ1nocGrukPMjbyaSqcy37nyWamrTq1nvpm4T",
+      "totalAnsemUi": 5847.199386,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:56:24.000Z",
+      "latestSeen": "2026-07-18T14:56:24.000Z",
+      "latestSignature": "BK6uWVtBvez5PBFzDsBTnWZfaf29275XE76cumeK48UtddXWaHXc13Pqi99pmtmQUonE1yVt5uQab1gvs28ynbm",
+      "signatures": [
+        "BK6uWVtBvez5PBFzDsBTnWZfaf29275XE76cumeK48UtddXWaHXc13Pqi99pmtmQUonE1yVt5uQab1gvs28ynbm"
+      ]
+    },
+    {
       "wallet": "9FVjpMm7Y6LXaRPobDuhag6QdUU6yhHrceLcNzXAFbjx",
       "totalAnsemUi": 5840.755619,
       "transferCount": 1,
@@ -4570,6 +5688,17 @@
       "latestSeen": "2026-06-29T11:27:47.000Z",
       "signatures": [
         "4veGBwNp24VhC5CxuexeacTCgFdcrnfzMgUBBJyvLbjgTiH8o1viWGHTKPhiZ71b1uHmSF8iUVC1M7hCjqRhgV39"
+      ]
+    },
+    {
+      "wallet": "FEa1VtDn1yQ4HMeF5sJ1R1PqhES4AVooSHS7vUePk8zU",
+      "totalAnsemUi": 5828.05579,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:58:10.000Z",
+      "latestSeen": "2026-07-18T14:58:10.000Z",
+      "latestSignature": "2kmFc9qT4u83UbT6nvqanZAWt6hWHSAnzpFADVqB34RqVHMH9bCER1Ei5FKiVKastj7ytaqkFcA5ZZgihH3fTrR6",
+      "signatures": [
+        "2kmFc9qT4u83UbT6nvqanZAWt6hWHSAnzpFADVqB34RqVHMH9bCER1Ei5FKiVKastj7ytaqkFcA5ZZgihH3fTrR6"
       ]
     },
     {
@@ -5143,6 +6272,18 @@
       ]
     },
     {
+      "wallet": "H6bLKA5t4vjVzDgZGUPXrx1oAV8abmmZVyXFiVB1QHtF",
+      "totalAnsemUi": 4295.059042,
+      "transferCount": 2,
+      "firstSeen": "2026-06-29T11:52:42.000Z",
+      "latestSeen": "2026-07-18T14:07:59.000Z",
+      "signatures": [
+        "4wYzdknTQKFxWRsCiV45WSBXYiH4YVFtJFPLoNdeevTo7NWrX6HE89tGJTSYssWMzgVytjRoGmPV1vHFu94h7rX5",
+        "2E6yfStadwWooGxA4XwmhLi15b5TcJrpFcDLDvce5sTFdhg137iDaFWCv2df49eXikC7XnM3mTpXbSrhZ3DSiRCt"
+      ],
+      "latestSignature": "4wYzdknTQKFxWRsCiV45WSBXYiH4YVFtJFPLoNdeevTo7NWrX6HE89tGJTSYssWMzgVytjRoGmPV1vHFu94h7rX5"
+    },
+    {
       "wallet": "GFZVbtru5uzWjtqF4Rs2x39UzLHChWLBF1pUYLE72PHZ",
       "totalAnsemUi": 4289.673175,
       "transferCount": 1,
@@ -5431,16 +6572,6 @@
       "latestSeen": "2026-06-29T11:52:31.000Z",
       "signatures": [
         "3n39LbnBqpjimG8ZhdcB42fWKRKmoJbDUiKkwaJQ2W1KvBkUNzXhgtnesm3RNRKhsxih4Eb13SHZ1R77ctjmype5"
-      ]
-    },
-    {
-      "wallet": "H6bLKA5t4vjVzDgZGUPXrx1oAV8abmmZVyXFiVB1QHtF",
-      "totalAnsemUi": 3711.673845,
-      "transferCount": 1,
-      "firstSeen": "2026-06-29T11:52:42.000Z",
-      "latestSeen": "2026-06-29T11:52:42.000Z",
-      "signatures": [
-        "2E6yfStadwWooGxA4XwmhLi15b5TcJrpFcDLDvce5sTFdhg137iDaFWCv2df49eXikC7XnM3mTpXbSrhZ3DSiRCt"
       ]
     },
     {
@@ -6693,17 +7824,6 @@
       "latestSeen": "2026-06-29T12:19:06.000Z",
       "signatures": [
         "2wFHTfKqypqx9oM8CBEtepz24m3nAwC3LTsMx2cxRGg2cAhYwBqCjmjyMb8UjF7uEid9K5y6fMRCkDZ6CG1fjA83"
-      ]
-    },
-    {
-      "wallet": "4LniH7FjExwjoBC6TqKxfWVMF9bCNqNnaBpBMZ51fmU8",
-      "totalAnsemUi": 2284.475954,
-      "transferCount": 1,
-      "firstSeen": "2026-07-18T03:46:05.000Z",
-      "latestSeen": "2026-07-18T03:46:05.000Z",
-      "latestSignature": "5NEYdbx74EqkHhTZxJyAVsbP4pUqUyorLASwzXNiMbANpH6zQWqKCucDzYbFD3c3gRUKQCHssJgkHcGEcLCyne6E",
-      "signatures": [
-        "5NEYdbx74EqkHhTZxJyAVsbP4pUqUyorLASwzXNiMbANpH6zQWqKCucDzYbFD3c3gRUKQCHssJgkHcGEcLCyne6E"
       ]
     },
     {
@@ -9096,17 +10216,6 @@
       ]
     },
     {
-      "wallet": "38goQvqUpHCueYf9VHH8aNL2gtWeG56Cm5zsmvsfcWNJ",
-      "totalAnsemUi": 743.994791,
-      "transferCount": 1,
-      "firstSeen": "2026-07-18T03:48:35.000Z",
-      "latestSeen": "2026-07-18T03:48:35.000Z",
-      "latestSignature": "3FDTgzy9Pz9uai65vMVvuqew2KACnVmmKF5VfmB3xJsLLsq8XEdeG7WyWxxddTigyqiNpE7Ta5RH3E2PH2LLbxfN",
-      "signatures": [
-        "3FDTgzy9Pz9uai65vMVvuqew2KACnVmmKF5VfmB3xJsLLsq8XEdeG7WyWxxddTigyqiNpE7Ta5RH3E2PH2LLbxfN"
-      ]
-    },
-    {
       "wallet": "Ac7DHmaubcuMXcJAjBo1Ht6N29FKV4HVHCe2NoofWBLK",
       "totalAnsemUi": 735,
       "transferCount": 1,
@@ -9643,17 +10752,6 @@
       "latestSignature": "jhVHummADhMtw5nLN4TPVv72sjJb59EYeufDNdGZ26aCpTKBWEV45R6kULrEK2cB8T2ZnNzwx7c5dPyzFsvey8v",
       "signatures": [
         "jhVHummADhMtw5nLN4TPVv72sjJb59EYeufDNdGZ26aCpTKBWEV45R6kULrEK2cB8T2ZnNzwx7c5dPyzFsvey8v"
-      ]
-    },
-    {
-      "wallet": "AjjeuYsDSLigbTQqsWmUZXPKas3dAJU4ikdJrbMGxe5A",
-      "totalAnsemUi": 587.177159,
-      "transferCount": 1,
-      "firstSeen": "2026-07-18T13:53:16.000Z",
-      "latestSeen": "2026-07-18T13:53:16.000Z",
-      "latestSignature": "5sKoTZ2VzvfGPSkQTdwHaa4oizPvj5DxL7vLePQED3yRZvTzUK7RoJzrFcB9EUWnAuvvovL5sMosJP4zAgPQxKVY",
-      "signatures": [
-        "5sKoTZ2VzvfGPSkQTdwHaa4oizPvj5DxL7vLePQED3yRZvTzUK7RoJzrFcB9EUWnAuvvovL5sMosJP4zAgPQxKVY"
       ]
     },
     {
@@ -10229,14 +11327,1092 @@
       ]
     },
     {
-      "wallet": "5hh7UE6i2BtyCvaMMadS71wFwK88JRmtRTfXkjZ3CHvF",
-      "totalAnsemUi": 577,
+      "wallet": "5VUBSJPodps5UKJobSXo8QtWnPcSwBHegV6dP4kVfWR2",
+      "totalAnsemUi": 583.385197,
       "transferCount": 1,
-      "firstSeen": "2026-07-01T11:19:54.000Z",
-      "latestSeen": "2026-07-01T11:19:54.000Z",
-      "latestSignature": "UXhiKBS7aFFNG6a22bdYBc1Vc1Hjc9tjDNwrxGgHYhMMwc2fEL1M3pPWHq8sZcdATmNGC7wKHRJcS9uVSDjxLBc",
+      "firstSeen": "2026-07-18T14:08:06.000Z",
+      "latestSeen": "2026-07-18T14:08:06.000Z",
+      "latestSignature": "n15vc5ticf3a9A8EmawGQtAYVMZXvHdafAtQnYU32bAHvSq2pswFd5wbHPch6oEfsKWi9SSbBTWUG2CQ31W8H9J",
       "signatures": [
-        "UXhiKBS7aFFNG6a22bdYBc1Vc1Hjc9tjDNwrxGgHYhMMwc2fEL1M3pPWHq8sZcdATmNGC7wKHRJcS9uVSDjxLBc"
+        "n15vc5ticf3a9A8EmawGQtAYVMZXvHdafAtQnYU32bAHvSq2pswFd5wbHPch6oEfsKWi9SSbBTWUG2CQ31W8H9J"
+      ]
+    },
+    {
+      "wallet": "7ppneGWndbdtRNtkiuamH6uuwanFRAKSs1UsHu4Eg1wi",
+      "totalAnsemUi": 583.385197,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:08:04.000Z",
+      "latestSeen": "2026-07-18T14:08:04.000Z",
+      "latestSignature": "nLbhoLFDmLzBQw9vPtR5a1YhBTE2X8CErJQpRw1Ghskd7GQmjBpiH9LXusbpoCq6734pNiRPzBkqBN1DdcRk1Dv",
+      "signatures": [
+        "nLbhoLFDmLzBQw9vPtR5a1YhBTE2X8CErJQpRw1Ghskd7GQmjBpiH9LXusbpoCq6734pNiRPzBkqBN1DdcRk1Dv"
+      ]
+    },
+    {
+      "wallet": "ucU3RZXu9UPCK1z3467KsamjwfprvmTDtq17D7ihUkc",
+      "totalAnsemUi": 583.385197,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:08:03.000Z",
+      "latestSeen": "2026-07-18T14:08:03.000Z",
+      "latestSignature": "54GJMaYrVJegz7gzXadtMXfyqam4vF2urGaKBDXNrMtTX5vVqEEtVoMoZpLBPkkmv4qWZFxBfkaysP58KYnwB7e4",
+      "signatures": [
+        "54GJMaYrVJegz7gzXadtMXfyqam4vF2urGaKBDXNrMtTX5vVqEEtVoMoZpLBPkkmv4qWZFxBfkaysP58KYnwB7e4"
+      ]
+    },
+    {
+      "wallet": "4qWZPE7fYRiwxH7SjsoTDThwCuU46AkD2L5W277PiMVv",
+      "totalAnsemUi": 583.385197,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:08:02.000Z",
+      "latestSeen": "2026-07-18T14:08:02.000Z",
+      "latestSignature": "5cs8ixh8MbwhegiaxXxtL9vG89CLQV9LWXbTZq8Mf2NwEgcb2TCFZ6MEdmqhpHJG1KjReU1mbn64h6ZQzX8KLGeN",
+      "signatures": [
+        "5cs8ixh8MbwhegiaxXxtL9vG89CLQV9LWXbTZq8Mf2NwEgcb2TCFZ6MEdmqhpHJG1KjReU1mbn64h6ZQzX8KLGeN"
+      ]
+    },
+    {
+      "wallet": "9EdetPpS4Z2JoSfNAxheuxEqU1dhResZy8uuU9JjeLWt",
+      "totalAnsemUi": 583.385197,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:08:01.000Z",
+      "latestSeen": "2026-07-18T14:08:01.000Z",
+      "latestSignature": "3RnxuNy5kdawHLJ1WDAayPfwXQFtTUcmxCgEq5oeanuj3VVmVSMTpLUMmAUinozsm1FXbAM9kU3Ek57HE7xqEiNX",
+      "signatures": [
+        "3RnxuNy5kdawHLJ1WDAayPfwXQFtTUcmxCgEq5oeanuj3VVmVSMTpLUMmAUinozsm1FXbAM9kU3Ek57HE7xqEiNX"
+      ]
+    },
+    {
+      "wallet": "3RiSScAB9fbPQdkGBjcG1cqkR43mZvDqQJQ7LvWyMnU2",
+      "totalAnsemUi": 583.385197,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:07:58.000Z",
+      "latestSeen": "2026-07-18T14:07:58.000Z",
+      "latestSignature": "4DEpSReGE6s4R71x4NjbtW6h9F9JwtdRhqWQjy2J3gV26Acnwpx2ahoSZvX7gw9LJzRomtsoYJ3uZ9zh4ffmbS8Z",
+      "signatures": [
+        "4DEpSReGE6s4R71x4NjbtW6h9F9JwtdRhqWQjy2J3gV26Acnwpx2ahoSZvX7gw9LJzRomtsoYJ3uZ9zh4ffmbS8Z"
+      ]
+    },
+    {
+      "wallet": "5MRHbuNLM9R5UDgG9nAWMeeRsBC78V2iCd61occ5prwm",
+      "totalAnsemUi": 583.385197,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:07:55.000Z",
+      "latestSeen": "2026-07-18T14:07:55.000Z",
+      "latestSignature": "4CYCN362r9zFKkm1cqxt6DiUMsaZBjBReoVjYNY3sowR2oj1MPVMcujnndyJgU3CT55SyTajiKfkXn6Djj3Gn8nh",
+      "signatures": [
+        "4CYCN362r9zFKkm1cqxt6DiUMsaZBjBReoVjYNY3sowR2oj1MPVMcujnndyJgU3CT55SyTajiKfkXn6Djj3Gn8nh"
+      ]
+    },
+    {
+      "wallet": "3ykWF2jSEdGHRMoSQ3yUEarDTuMH5B2qFUnRsaKxp2GY",
+      "totalAnsemUi": 583.385197,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:07:54.000Z",
+      "latestSeen": "2026-07-18T14:07:54.000Z",
+      "latestSignature": "2ZSSNY47oaon7QpS9LusDuog4XEFPxcTG8qJA99NzeTeeK72WWZHQB6MMK2rMdDXdPzwNxn4j7HxSDHREQy4MCJS",
+      "signatures": [
+        "2ZSSNY47oaon7QpS9LusDuog4XEFPxcTG8qJA99NzeTeeK72WWZHQB6MMK2rMdDXdPzwNxn4j7HxSDHREQy4MCJS"
+      ]
+    },
+    {
+      "wallet": "J5QTTFQTppNxYnQB3DZR958j2BnaPvCbRz9AnZVx56p3",
+      "totalAnsemUi": 583.385197,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:07:53.000Z",
+      "latestSeen": "2026-07-18T14:07:53.000Z",
+      "latestSignature": "5A5zpFsvNrLKKTDxnAaPN7kRVt43A6bTqzonGo933PvJ7WRwxNgADKNp982XMHrf6FKZQz8tjg47C9WXLtb5kH2S",
+      "signatures": [
+        "5A5zpFsvNrLKKTDxnAaPN7kRVt43A6bTqzonGo933PvJ7WRwxNgADKNp982XMHrf6FKZQz8tjg47C9WXLtb5kH2S"
+      ]
+    },
+    {
+      "wallet": "8EovPLXVDxTs3tSYquymugqmHNRKNQ614XkTDmTw73o3",
+      "totalAnsemUi": 583.385197,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:07:52.000Z",
+      "latestSeen": "2026-07-18T14:07:52.000Z",
+      "latestSignature": "3qRPgPv333XTA3xe5mS6GwXGzAYmZ7hXYhNq1ivVSebppweQqJ6hpNv3S8humkeSdPWFPmMt4QLMM5Q1pcw3r5ao",
+      "signatures": [
+        "3qRPgPv333XTA3xe5mS6GwXGzAYmZ7hXYhNq1ivVSebppweQqJ6hpNv3S8humkeSdPWFPmMt4QLMM5Q1pcw3r5ao"
+      ]
+    },
+    {
+      "wallet": "HrDaK4qprq8hy9FnMriLKh6FEeUYmKNdZLDuSYJancKs",
+      "totalAnsemUi": 583.385197,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:07:50.000Z",
+      "latestSeen": "2026-07-18T14:07:50.000Z",
+      "latestSignature": "2aqFbE6H1Db1rJX7VZXuFZqf9KLdiChQMtxwC6W6Khrvjz7AJKzpMYca36okQ35a8EtGyJrzKteXGXWjVeVcQLm",
+      "signatures": [
+        "2aqFbE6H1Db1rJX7VZXuFZqf9KLdiChQMtxwC6W6Khrvjz7AJKzpMYca36okQ35a8EtGyJrzKteXGXWjVeVcQLm"
+      ]
+    },
+    {
+      "wallet": "geJcBiM2S7vaBNi4CQzunJHb9sGBrkmDVWJVJppkJio",
+      "totalAnsemUi": 583.385197,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:07:47.000Z",
+      "latestSeen": "2026-07-18T14:07:47.000Z",
+      "latestSignature": "4QTeWt5DuVhMB49DZ2nWYWTPL3nfW2iPG2kQrXy129mi9tswy2s6thaAKctVzajUPoK1vZ5ATRnPLfCRz3MYaMjM",
+      "signatures": [
+        "4QTeWt5DuVhMB49DZ2nWYWTPL3nfW2iPG2kQrXy129mi9tswy2s6thaAKctVzajUPoK1vZ5ATRnPLfCRz3MYaMjM"
+      ]
+    },
+    {
+      "wallet": "C4zzGRn9XbzowmMMpzv74RUHTJ4Hx47Tb4TdpP3dMwdw",
+      "totalAnsemUi": 583.385197,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:07:45.000Z",
+      "latestSeen": "2026-07-18T14:07:45.000Z",
+      "latestSignature": "KrQSAXidaNH5f9kB6k2fGiUc1tSQhmaWn2UTypYWcCKSUgJaW1GkdoFVvqUYUyLGqqfpb1njYgbeDtAf7fhNFqe",
+      "signatures": [
+        "KrQSAXidaNH5f9kB6k2fGiUc1tSQhmaWn2UTypYWcCKSUgJaW1GkdoFVvqUYUyLGqqfpb1njYgbeDtAf7fhNFqe"
+      ]
+    },
+    {
+      "wallet": "8ZF4nLX4NrxPu4Td1uDLcLAWob8HpZ9gLpYXHFynrwQM",
+      "totalAnsemUi": 583.385197,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:07:42.000Z",
+      "latestSeen": "2026-07-18T14:07:42.000Z",
+      "latestSignature": "VUtqZCnczXoQ4Dq6KH21rNBUY7meHrTk37YQVrNm4xNYrqrtLSBPzmC9vmUigpBrKqPmh54CjBNmEuwmtSmDZaN",
+      "signatures": [
+        "VUtqZCnczXoQ4Dq6KH21rNBUY7meHrTk37YQVrNm4xNYrqrtLSBPzmC9vmUigpBrKqPmh54CjBNmEuwmtSmDZaN"
+      ]
+    },
+    {
+      "wallet": "3CYm2UHFi9J21PRWrWFJyGmH7oegjLEoW9iCTJavAUUR",
+      "totalAnsemUi": 583.385197,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:07:40.000Z",
+      "latestSeen": "2026-07-18T14:07:40.000Z",
+      "latestSignature": "3VwnYxoZcDgE5Haio5S2TvVAevtqenEsw5NUVYm3JmYVkBbaqbwZBVJZU8vsvcLbrFnFVqkccnKxJWVzKC3yFYXw",
+      "signatures": [
+        "3VwnYxoZcDgE5Haio5S2TvVAevtqenEsw5NUVYm3JmYVkBbaqbwZBVJZU8vsvcLbrFnFVqkccnKxJWVzKC3yFYXw"
+      ]
+    },
+    {
+      "wallet": "HEsoL9n3hv1d5qvisLhYXebkFUHLb87ojo8RDUbDAiYF",
+      "totalAnsemUi": 583.385197,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:07:40.000Z",
+      "latestSeen": "2026-07-18T14:07:40.000Z",
+      "latestSignature": "8nAr1ABzn7vZAovFRT1yre8JiUb2xkiGZixrTJSskLabuAQK9maa9kdzBymEcMW1q6s9ur225PS6NzrVsovDFfB",
+      "signatures": [
+        "8nAr1ABzn7vZAovFRT1yre8JiUb2xkiGZixrTJSskLabuAQK9maa9kdzBymEcMW1q6s9ur225PS6NzrVsovDFfB"
+      ]
+    },
+    {
+      "wallet": "4Ck6yZ3eSmmzf2W9fD8uLYBBunK85wiDGqdiPeoQyx8E",
+      "totalAnsemUi": 583.385197,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:07:38.000Z",
+      "latestSeen": "2026-07-18T14:07:38.000Z",
+      "latestSignature": "BiyqC5bHnAJCyqzH5jsxzBfWLoB3LXQ1HBviQDDrSXbkCrUk21AiGz846wYRhkiJZj4HYR5xMBq6gYmaKaAR8cq",
+      "signatures": [
+        "BiyqC5bHnAJCyqzH5jsxzBfWLoB3LXQ1HBviQDDrSXbkCrUk21AiGz846wYRhkiJZj4HYR5xMBq6gYmaKaAR8cq"
+      ]
+    },
+    {
+      "wallet": "EAG79HfwuAA93H2UGDCNGcqHZH6rzQeTb1E3dzhyLPv9",
+      "totalAnsemUi": 583.385197,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:07:36.000Z",
+      "latestSeen": "2026-07-18T14:07:36.000Z",
+      "latestSignature": "2TBoLyETqzAQLfboygFtATgyYAvzdwNMUKYQm9JerwyqquV14RRfTHri9JvtaKcibsqFXDszsDhofXhBEEkQLZ3K",
+      "signatures": [
+        "2TBoLyETqzAQLfboygFtATgyYAvzdwNMUKYQm9JerwyqquV14RRfTHri9JvtaKcibsqFXDszsDhofXhBEEkQLZ3K"
+      ]
+    },
+    {
+      "wallet": "GTmMg8mmxkf7M5VFnoYy4HhqjHHQ1VhGm2j59MUox2ZM",
+      "totalAnsemUi": 583.385197,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:07:35.000Z",
+      "latestSeen": "2026-07-18T14:07:35.000Z",
+      "latestSignature": "53rR5bfy9kg7nVWPmPnpQDHpoJXFQVhGaSP7Sz2MKoWU95AePD4gYfmhy5vuafy9aa3Xsj2ARrcMv2c4nxWKtmZe",
+      "signatures": [
+        "53rR5bfy9kg7nVWPmPnpQDHpoJXFQVhGaSP7Sz2MKoWU95AePD4gYfmhy5vuafy9aa3Xsj2ARrcMv2c4nxWKtmZe"
+      ]
+    },
+    {
+      "wallet": "3jAhqYKRhD4ntb3Tc8x5uDpmNqLByGZRUgUsUAp1sbnW",
+      "totalAnsemUi": 583.385197,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:07:33.000Z",
+      "latestSeen": "2026-07-18T14:07:33.000Z",
+      "latestSignature": "5zVVJreyMBTnvnnSRQZKkS7b97pwwRBzsZGxHcjQ993qPpdyU1jEmhYuNGDu2D1SyFtA3wJuFChTZUqyThngHskz",
+      "signatures": [
+        "5zVVJreyMBTnvnnSRQZKkS7b97pwwRBzsZGxHcjQ993qPpdyU1jEmhYuNGDu2D1SyFtA3wJuFChTZUqyThngHskz"
+      ]
+    },
+    {
+      "wallet": "CJWAUHPzsCxB84KDCE2veYf3TijpE5SFoSqsQmHDPHBX",
+      "totalAnsemUi": 583.385197,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:07:32.000Z",
+      "latestSeen": "2026-07-18T14:07:32.000Z",
+      "latestSignature": "5dP6vYdJdj9UBeu7KYjTaQ6S8F84Byrqm5zk9zVoMWQvwYzdSm2TRmC6j21Z9THeuVyXZ1KszEmFNAuTKocpdiL5",
+      "signatures": [
+        "5dP6vYdJdj9UBeu7KYjTaQ6S8F84Byrqm5zk9zVoMWQvwYzdSm2TRmC6j21Z9THeuVyXZ1KszEmFNAuTKocpdiL5"
+      ]
+    },
+    {
+      "wallet": "7PuU9QmkRZGAfUukHfKZAaod7JgPkcmjubSdextRFW5w",
+      "totalAnsemUi": 583.385197,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:07:31.000Z",
+      "latestSeen": "2026-07-18T14:07:31.000Z",
+      "latestSignature": "54eKRLeriVpTj4DjhRmHAPsmNdQ7RVrnbPcMGiuyAHJGWYvHTyrXDarpc6BumkRmTDr5nzPZYczf2z4DpdU9ChWz",
+      "signatures": [
+        "54eKRLeriVpTj4DjhRmHAPsmNdQ7RVrnbPcMGiuyAHJGWYvHTyrXDarpc6BumkRmTDr5nzPZYczf2z4DpdU9ChWz"
+      ]
+    },
+    {
+      "wallet": "6VfVeuRXm4ayCpeoLsLqAwLPgTt293nrWhXnCKS5xB8Q",
+      "totalAnsemUi": 583.385197,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:07:30.000Z",
+      "latestSeen": "2026-07-18T14:07:30.000Z",
+      "latestSignature": "coYC3DRDkCq2FcWjfN8DShyArdtxSAboiAegnPNjwQKSDhw9EkkPL4FVt5uhmYvrWHT3uv2nh9EiFDu8WUW5Bef",
+      "signatures": [
+        "coYC3DRDkCq2FcWjfN8DShyArdtxSAboiAegnPNjwQKSDhw9EkkPL4FVt5uhmYvrWHT3uv2nh9EiFDu8WUW5Bef"
+      ]
+    },
+    {
+      "wallet": "85nT6iGDbQpUvCarG7jv8XsQm6eoqGMB26vV7Yh3doNm",
+      "totalAnsemUi": 583.385197,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:07:29.000Z",
+      "latestSeen": "2026-07-18T14:07:29.000Z",
+      "latestSignature": "4YiTC9STWARFW5TwLrsA77vGjpVXqQeSbkZUpK3p8kcQUFx3LtxHjP7E4aH9cS1A4kPBLvKJgwqKqxaKw42Sr3Pi",
+      "signatures": [
+        "4YiTC9STWARFW5TwLrsA77vGjpVXqQeSbkZUpK3p8kcQUFx3LtxHjP7E4aH9cS1A4kPBLvKJgwqKqxaKw42Sr3Pi"
+      ]
+    },
+    {
+      "wallet": "DeMhgwamyeiPd2CoWEWPwLegRFntqui45NZxR3sYrppV",
+      "totalAnsemUi": 581.900734,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:18:31.000Z",
+      "latestSeen": "2026-07-18T14:18:31.000Z",
+      "latestSignature": "4tPhu6CPRZx37BAA1eYKk3fcP3vdm4MXu97FC8xraKoRK9jF1NpWNecfsjGw3wTUZ7bF7taq6eRqe8U2fhWwF7oT",
+      "signatures": [
+        "4tPhu6CPRZx37BAA1eYKk3fcP3vdm4MXu97FC8xraKoRK9jF1NpWNecfsjGw3wTUZ7bF7taq6eRqe8U2fhWwF7oT"
+      ]
+    },
+    {
+      "wallet": "EvwoczTbnPDcJ7ozvvBrMLZ4tvkCBPDBPhT9ADwyJ4jZ",
+      "totalAnsemUi": 581.900734,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:18:30.000Z",
+      "latestSeen": "2026-07-18T14:18:30.000Z",
+      "latestSignature": "2bA6enq98LFef6t98CMbM8uPJeoXCWMGRrTD2a9JZyddCBc3wcudsZfpGfdJbGekxpTEVzmyV8JfpjFzf1UP4jLZ",
+      "signatures": [
+        "2bA6enq98LFef6t98CMbM8uPJeoXCWMGRrTD2a9JZyddCBc3wcudsZfpGfdJbGekxpTEVzmyV8JfpjFzf1UP4jLZ"
+      ]
+    },
+    {
+      "wallet": "9LqT1TMYGVJ2NirPnpjxwyfHpfMxwXQiQZY7ZUZJ1kyz",
+      "totalAnsemUi": 581.900734,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:18:29.000Z",
+      "latestSeen": "2026-07-18T14:18:29.000Z",
+      "latestSignature": "3JtkJnDkHfo6Km3V1tUGkyKnmhh35gWrnKDiTtXzuP91pmZEx8VJRYx6SssSXc5VUZNyUxNEjyv6z62NkN5FSbYn",
+      "signatures": [
+        "3JtkJnDkHfo6Km3V1tUGkyKnmhh35gWrnKDiTtXzuP91pmZEx8VJRYx6SssSXc5VUZNyUxNEjyv6z62NkN5FSbYn"
+      ]
+    },
+    {
+      "wallet": "FHYWVkH1KKtbfZ2VXe6qeSezL3hYMvvamP6cFvgZNKLv",
+      "totalAnsemUi": 581.900734,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:18:28.000Z",
+      "latestSeen": "2026-07-18T14:18:28.000Z",
+      "latestSignature": "36uBkzbz1R83evsqpVSKTx893w3R1YbPRYct7aW22Xd8Wt7XpgMbfSgu52EwGFrSFUrc2HtSwXwK8ZB1EZNXjPkU",
+      "signatures": [
+        "36uBkzbz1R83evsqpVSKTx893w3R1YbPRYct7aW22Xd8Wt7XpgMbfSgu52EwGFrSFUrc2HtSwXwK8ZB1EZNXjPkU"
+      ]
+    },
+    {
+      "wallet": "GFUa2pbtDChjWpgau6SDjDMaq7tTzYyA23azryR8e6B4",
+      "totalAnsemUi": 581.900734,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:18:27.000Z",
+      "latestSeen": "2026-07-18T14:18:27.000Z",
+      "latestSignature": "2E5Q8gpTL5YEay4WPedAxq8WuAb2G6TnLVjgHuP5FdmxwpL8ZJxvSi5FsfmapcBK17QGpuNzTQvRY4WHvcsKEJ5P",
+      "signatures": [
+        "2E5Q8gpTL5YEay4WPedAxq8WuAb2G6TnLVjgHuP5FdmxwpL8ZJxvSi5FsfmapcBK17QGpuNzTQvRY4WHvcsKEJ5P"
+      ]
+    },
+    {
+      "wallet": "4ShYmbBY8p5x2coYPVu3gLow9PS9fDMhC5R5TqEVMUov",
+      "totalAnsemUi": 581.900734,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:18:26.000Z",
+      "latestSeen": "2026-07-18T14:18:26.000Z",
+      "latestSignature": "3dyej13FvBN8DcJ1FS44HY5E7RWZBsfJUdP1En6NciGfpKTSguu1qrsPjiu8Uxo6eZAoLAB88pCjHp9hrkpAaLEE",
+      "signatures": [
+        "3dyej13FvBN8DcJ1FS44HY5E7RWZBsfJUdP1En6NciGfpKTSguu1qrsPjiu8Uxo6eZAoLAB88pCjHp9hrkpAaLEE"
+      ]
+    },
+    {
+      "wallet": "5RGn8qZwSpk5sJ57SwoVovrvny8Yn1L2BurwzDaTYGSU",
+      "totalAnsemUi": 581.900734,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:18:24.000Z",
+      "latestSeen": "2026-07-18T14:18:24.000Z",
+      "latestSignature": "mFKfSXZNs2WbGXS94kVcgkZyhhHpczUME8MMm27fCahbriuSWviUWPh6L8AFHPmV5mp7SPdzAJLWikdxjrep4LE",
+      "signatures": [
+        "mFKfSXZNs2WbGXS94kVcgkZyhhHpczUME8MMm27fCahbriuSWviUWPh6L8AFHPmV5mp7SPdzAJLWikdxjrep4LE"
+      ]
+    },
+    {
+      "wallet": "D7xEod8VgiSBwqxMyd2i5yoqYrpEE9UZPQ7jveoJzUsb",
+      "totalAnsemUi": 581.900734,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:18:23.000Z",
+      "latestSeen": "2026-07-18T14:18:23.000Z",
+      "latestSignature": "3w8ugsQZcpn2Y3CWu65tVzDzejkXtyqQr76U2XiFCH5Bg7qsA4znMvddn6EtavkPAQVnZGXdUv1VD8py1atfZdVU",
+      "signatures": [
+        "3w8ugsQZcpn2Y3CWu65tVzDzejkXtyqQr76U2XiFCH5Bg7qsA4znMvddn6EtavkPAQVnZGXdUv1VD8py1atfZdVU"
+      ]
+    },
+    {
+      "wallet": "99cNG5KvpwS7h9UeDrQE3AGmGnnyKiSXBDdSG6EaycYi",
+      "totalAnsemUi": 581.900734,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:18:20.000Z",
+      "latestSeen": "2026-07-18T14:18:20.000Z",
+      "latestSignature": "42mz52kXopTE2WEdvw8Yo46PuvMnCJvNfEMZseng9JFhiM2fzSfxyaMw6ZxqYNw4Ero2dHwinPAzEh6oagXWaMKj",
+      "signatures": [
+        "42mz52kXopTE2WEdvw8Yo46PuvMnCJvNfEMZseng9JFhiM2fzSfxyaMw6ZxqYNw4Ero2dHwinPAzEh6oagXWaMKj"
+      ]
+    },
+    {
+      "wallet": "2ksqRAVsHE11TsQuL8pFAkgzwmoZNtKSwmhsKobjfkwZ",
+      "totalAnsemUi": 581.900734,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:18:19.000Z",
+      "latestSeen": "2026-07-18T14:18:19.000Z",
+      "latestSignature": "3nQwatqRpNJhZd3NmQNwkrgzS6L97L3Uiv9CVL99GeuzVrv3fqrmshHQmzbdyf6pf6fQoQbZRm1q5ZGe2vyD6owG",
+      "signatures": [
+        "3nQwatqRpNJhZd3NmQNwkrgzS6L97L3Uiv9CVL99GeuzVrv3fqrmshHQmzbdyf6pf6fQoQbZRm1q5ZGe2vyD6owG"
+      ]
+    },
+    {
+      "wallet": "5sdzoiGuxtGYmqizuqDGuCk5fWH566phRcWk5D4k2fVM",
+      "totalAnsemUi": 581.900734,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:18:18.000Z",
+      "latestSeen": "2026-07-18T14:18:18.000Z",
+      "latestSignature": "2xf8t5HiSb8F1TNXvXBRZm4rw8hM4KFpBgm3J5dBdie9uaXqMmpzDh2Yj2djfSWJp3TXQyHz7UekDY8NSLMFKh5G",
+      "signatures": [
+        "2xf8t5HiSb8F1TNXvXBRZm4rw8hM4KFpBgm3J5dBdie9uaXqMmpzDh2Yj2djfSWJp3TXQyHz7UekDY8NSLMFKh5G"
+      ]
+    },
+    {
+      "wallet": "CFijHu6BCbq9j339WtY1b8HqDosxetnwAu6vxXUjQX6n",
+      "totalAnsemUi": 581.900734,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:18:16.000Z",
+      "latestSeen": "2026-07-18T14:18:16.000Z",
+      "latestSignature": "3ThDvqwTnAB9KyVodsGzPuea7CZFmuam7nimXsupkQdP2hdjEdyzojWyvxPDixQUVxjvDX1KvWTF32Cs8JgXDyrm",
+      "signatures": [
+        "3ThDvqwTnAB9KyVodsGzPuea7CZFmuam7nimXsupkQdP2hdjEdyzojWyvxPDixQUVxjvDX1KvWTF32Cs8JgXDyrm"
+      ]
+    },
+    {
+      "wallet": "AkSm1EU82sfTVyrvFvRPE1Exff14ja62d1g3vqhZcDWv",
+      "totalAnsemUi": 581.900734,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:18:16.000Z",
+      "latestSeen": "2026-07-18T14:18:16.000Z",
+      "latestSignature": "3i8ZYcMKDJ74a8q6LzAGno6GJRPpwgSy9okQvxGx3oKuXgL4uCJLm5ar4rpmsatGUdW2DGuNfPb9qcQufKF9gXNu",
+      "signatures": [
+        "3i8ZYcMKDJ74a8q6LzAGno6GJRPpwgSy9okQvxGx3oKuXgL4uCJLm5ar4rpmsatGUdW2DGuNfPb9qcQufKF9gXNu"
+      ]
+    },
+    {
+      "wallet": "AiA7hyx21KoqQ7fBYEmmb17txqs2mG6gLh1C81iVbW1Y",
+      "totalAnsemUi": 581.900734,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:18:13.000Z",
+      "latestSeen": "2026-07-18T14:18:13.000Z",
+      "latestSignature": "3nSgQGQnxgxFcDGB7UPGrXDgj29dMC7mZXjJReA8w6WhxVfbFaM1qAUyGv7CZQz3mCUjL1jbm7VASYqPJ9HKK5P9",
+      "signatures": [
+        "3nSgQGQnxgxFcDGB7UPGrXDgj29dMC7mZXjJReA8w6WhxVfbFaM1qAUyGv7CZQz3mCUjL1jbm7VASYqPJ9HKK5P9"
+      ]
+    },
+    {
+      "wallet": "3nTpM69tQLrwDyW3snMWMDsLxfo27ieDu5AQ3TGtuYR1",
+      "totalAnsemUi": 581.900734,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:18:11.000Z",
+      "latestSeen": "2026-07-18T14:18:11.000Z",
+      "latestSignature": "4fWxyQMFehXs4sS8cfhwVKrEfhG1uXvjzfY7MtnmE4n7Qn4ho2anyd8AHTKt1e9TifNL3Rd7vPe6Q8eTUTmg71UB",
+      "signatures": [
+        "4fWxyQMFehXs4sS8cfhwVKrEfhG1uXvjzfY7MtnmE4n7Qn4ho2anyd8AHTKt1e9TifNL3Rd7vPe6Q8eTUTmg71UB"
+      ]
+    },
+    {
+      "wallet": "9xPpibXyBwtuEyy4S4Cvub5YWNpkkybSz8MDgrsWZsQg",
+      "totalAnsemUi": 581.900734,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:18:10.000Z",
+      "latestSeen": "2026-07-18T14:18:10.000Z",
+      "latestSignature": "32uzSZfacUG46iP8yYJERVzcx9noMoWaUQ3xN5GPr38wpWwVDAYMLaA5e7M2TdCbKH98HvBfE6FPMgvJMEMLVwTx",
+      "signatures": [
+        "32uzSZfacUG46iP8yYJERVzcx9noMoWaUQ3xN5GPr38wpWwVDAYMLaA5e7M2TdCbKH98HvBfE6FPMgvJMEMLVwTx"
+      ]
+    },
+    {
+      "wallet": "i224PcmXjvLPXEfi6nw1zVbiaFV7gQSFSh5uG7ByG2R",
+      "totalAnsemUi": 581.900734,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:18:10.000Z",
+      "latestSeen": "2026-07-18T14:18:10.000Z",
+      "latestSignature": "5DdweDrSCvoEuCX244WLc4wKYhfK7fcHwqhjVXQ3wwCAax6gu9WE5q5ATyeHX6r3MmLyWD3kZPGLvCNUBKYYntTg",
+      "signatures": [
+        "5DdweDrSCvoEuCX244WLc4wKYhfK7fcHwqhjVXQ3wwCAax6gu9WE5q5ATyeHX6r3MmLyWD3kZPGLvCNUBKYYntTg"
+      ]
+    },
+    {
+      "wallet": "4y8KYQPdcqXs5PeJoPbB8y863A3sQ9o5K6jq5SpNxksc",
+      "totalAnsemUi": 581.900734,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:18:08.000Z",
+      "latestSeen": "2026-07-18T14:18:08.000Z",
+      "latestSignature": "5RvPTPzw49AgjVfxKhUctyW7bEZBjbxo5pfHNNNMby7MQ4BvyeD94kAtQohhRTNU92bnwwNrNJd7TMkC1pX2zeBW",
+      "signatures": [
+        "5RvPTPzw49AgjVfxKhUctyW7bEZBjbxo5pfHNNNMby7MQ4BvyeD94kAtQohhRTNU92bnwwNrNJd7TMkC1pX2zeBW"
+      ]
+    },
+    {
+      "wallet": "FPkNc2CZ2vrjPMTw8NNmqK1GeqrmKhSETpiXynXKcrzr",
+      "totalAnsemUi": 581.900734,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:18:07.000Z",
+      "latestSeen": "2026-07-18T14:18:07.000Z",
+      "latestSignature": "Rux8nicQ9Y7uMxgY8cpGcnGkHXCpx3E56oKznfeNB3wkchsh7RFUnLQJVCQ6Jx3eJKW1NHojuZXm5kRuRLy7sCw",
+      "signatures": [
+        "Rux8nicQ9Y7uMxgY8cpGcnGkHXCpx3E56oKznfeNB3wkchsh7RFUnLQJVCQ6Jx3eJKW1NHojuZXm5kRuRLy7sCw"
+      ]
+    },
+    {
+      "wallet": "CgKsfBNLA6tzPnrdCJR3zacmZMuFgYDsA9UJ3bK6LwAN",
+      "totalAnsemUi": 581.900734,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:18:04.000Z",
+      "latestSeen": "2026-07-18T14:18:04.000Z",
+      "latestSignature": "348t9Pqs1gPiStDXX5HMJywGn7SCP1zxdchfFtXoPsmYLTR8V89uLm7f1mj6tfLgjEyi2SN3BofN3L2gAtcXfRCw",
+      "signatures": [
+        "348t9Pqs1gPiStDXX5HMJywGn7SCP1zxdchfFtXoPsmYLTR8V89uLm7f1mj6tfLgjEyi2SN3BofN3L2gAtcXfRCw"
+      ]
+    },
+    {
+      "wallet": "6wQkSsjSdAJMeSPHmKBse6Tda9ZDUTRfHBfkbDZ9YvQK",
+      "totalAnsemUi": 581.900734,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:18:03.000Z",
+      "latestSeen": "2026-07-18T14:18:03.000Z",
+      "latestSignature": "2wZ79aAYFraJWnNzV2JnyqKSN1ABayfwVTMf2i7Szj5pfxm988dM2xAPogtiUDhGM1o89UKBZVEjg3Lq6DFHPiGv",
+      "signatures": [
+        "2wZ79aAYFraJWnNzV2JnyqKSN1ABayfwVTMf2i7Szj5pfxm988dM2xAPogtiUDhGM1o89UKBZVEjg3Lq6DFHPiGv"
+      ]
+    },
+    {
+      "wallet": "G7Qe34GdMQLqAedTu51y4fQP2YnSFAnWWXtfQ9xdFZXd",
+      "totalAnsemUi": 581.900734,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:18:02.000Z",
+      "latestSeen": "2026-07-18T14:18:02.000Z",
+      "latestSignature": "2MCJMK42CKy4Z7vQWbQUv4oVjBEHRSj5SR2kXPRxKJV4srcgx9THwrF41xxw9vnTx9sCdmNTu6TUnPZKdNFXFe4U",
+      "signatures": [
+        "2MCJMK42CKy4Z7vQWbQUv4oVjBEHRSj5SR2kXPRxKJV4srcgx9THwrF41xxw9vnTx9sCdmNTu6TUnPZKdNFXFe4U"
+      ]
+    },
+    {
+      "wallet": "YDnqRoZRGk6wpwafYJGNNFtUhTgJUM2D2o5iu9wTWd2",
+      "totalAnsemUi": 581.900734,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:18:01.000Z",
+      "latestSeen": "2026-07-18T14:18:01.000Z",
+      "latestSignature": "5dbPYHeoWeb5ecmVx34tt4RXmfAENd2ryfxm6dcVCAJX8Y7WvmoF5UfEJMgcnENDTJLKRQmXYWb3aNAvMgTnarKL",
+      "signatures": [
+        "5dbPYHeoWeb5ecmVx34tt4RXmfAENd2ryfxm6dcVCAJX8Y7WvmoF5UfEJMgcnENDTJLKRQmXYWb3aNAvMgTnarKL"
+      ]
+    },
+    {
+      "wallet": "2efgtzBtYcZre2qtPrJcjrhDFVYbcAj4zQTxPT594fBH",
+      "totalAnsemUi": 581.900734,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:17:58.000Z",
+      "latestSeen": "2026-07-18T14:17:58.000Z",
+      "latestSignature": "5TfjAtYVyv2Ba7T7Un2DoxL1cFwJVyRbQXzmJaHgwfTUaMmPrnygj7XyMhDSbnqwRQHwTYSA4u7qx1Po9Shde4dj",
+      "signatures": [
+        "5TfjAtYVyv2Ba7T7Un2DoxL1cFwJVyRbQXzmJaHgwfTUaMmPrnygj7XyMhDSbnqwRQHwTYSA4u7qx1Po9Shde4dj"
+      ]
+    },
+    {
+      "wallet": "32gLTTdbsj1Hi719d6fn71RzzPqCgypD5vUCmoxJsVC2",
+      "totalAnsemUi": 581.900734,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:17:57.000Z",
+      "latestSeen": "2026-07-18T14:17:57.000Z",
+      "latestSignature": "3Ec9e8n3z8EUBKN3SXe5YBWyWndMcYWK9tD8j7qHux5XYz2ofy8LLDw4pPtf9DGKo1aRSgcDicEW7sjzxAvcwTXH",
+      "signatures": [
+        "3Ec9e8n3z8EUBKN3SXe5YBWyWndMcYWK9tD8j7qHux5XYz2ofy8LLDw4pPtf9DGKo1aRSgcDicEW7sjzxAvcwTXH"
+      ]
+    },
+    {
+      "wallet": "9HkQiZADyaq4d8UFgP5qrmmZBfjiFhJ4ZQm4J6FZm9aH",
+      "totalAnsemUi": 581.046677,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:11:30.000Z",
+      "latestSeen": "2026-07-18T14:11:30.000Z",
+      "latestSignature": "59vs1JHQSkPHHzmpcMWEoNBRS6UqqDeJEEyCya7BU9cicnBD6wdMtFgCSWBipEtTrtVr4awBoFrkC1Svk2nVTCbU",
+      "signatures": [
+        "59vs1JHQSkPHHzmpcMWEoNBRS6UqqDeJEEyCya7BU9cicnBD6wdMtFgCSWBipEtTrtVr4awBoFrkC1Svk2nVTCbU"
+      ]
+    },
+    {
+      "wallet": "FiN45QuvGnrU4Jq79awRn3LhKP4SztRyGeoBXb2MBanR",
+      "totalAnsemUi": 581.046677,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:11:29.000Z",
+      "latestSeen": "2026-07-18T14:11:29.000Z",
+      "latestSignature": "3Fy2ixRed1QErp8gGfoWzycPf1CVHXo2jbrwezRQrBYka1SDxCnCE6hBhg6kqzWYn8o9tZFkL7iFbGcpxTewycDW",
+      "signatures": [
+        "3Fy2ixRed1QErp8gGfoWzycPf1CVHXo2jbrwezRQrBYka1SDxCnCE6hBhg6kqzWYn8o9tZFkL7iFbGcpxTewycDW"
+      ]
+    },
+    {
+      "wallet": "JCT9xsUVfD7zaBhV24rgK8B6xE6WWwmZ9GfqX69M4RhK",
+      "totalAnsemUi": 581.046677,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:11:28.000Z",
+      "latestSeen": "2026-07-18T14:11:28.000Z",
+      "latestSignature": "2Qs8bqbhKmarHebmyPp6zeCmGCau8yxAgNFH2v6VyhDkuSgQeJtZQvvf8XQdj65UTin3angiY7nY7sYnHB5uRa8",
+      "signatures": [
+        "2Qs8bqbhKmarHebmyPp6zeCmGCau8yxAgNFH2v6VyhDkuSgQeJtZQvvf8XQdj65UTin3angiY7nY7sYnHB5uRa8"
+      ]
+    },
+    {
+      "wallet": "ZDVoujrqsrST8i7qoM6SfMhPjgjtzNvN2LR8b979qRL",
+      "totalAnsemUi": 581.046677,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:11:27.000Z",
+      "latestSeen": "2026-07-18T14:11:27.000Z",
+      "latestSignature": "4gmjfeke5z9s3QsF13oG8ctkXezyo4wm3r9eCcWPwJ1qTRv8HsH3Vx6MnKw9FXzLky9379HDu7TLy8CsKa9bwZD3",
+      "signatures": [
+        "4gmjfeke5z9s3QsF13oG8ctkXezyo4wm3r9eCcWPwJ1qTRv8HsH3Vx6MnKw9FXzLky9379HDu7TLy8CsKa9bwZD3"
+      ]
+    },
+    {
+      "wallet": "3tAitVsUAoa6EQYCWqtxmRbxiidDyNnegGqYjkpJ6VuA",
+      "totalAnsemUi": 581.046677,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:11:26.000Z",
+      "latestSeen": "2026-07-18T14:11:26.000Z",
+      "latestSignature": "2kKzoXkMUkDcwenT4j9otWEJpQwF93ZKPTPFmDwLq82ffCz73fx7qizyTLtBMEUHoFJz4TepoxgTYL4vRvkQsB26",
+      "signatures": [
+        "2kKzoXkMUkDcwenT4j9otWEJpQwF93ZKPTPFmDwLq82ffCz73fx7qizyTLtBMEUHoFJz4TepoxgTYL4vRvkQsB26"
+      ]
+    },
+    {
+      "wallet": "6ewiM7VRbYDFdgDGKYNauBuLRUPPryQRLZDjVtYfXVHH",
+      "totalAnsemUi": 581.046677,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:11:24.000Z",
+      "latestSeen": "2026-07-18T14:11:24.000Z",
+      "latestSignature": "5MXGJqQMLzLRCuUsS3g1pMjFVrJqqXX71zNW38mSZTFFs6zCorcg4TEQ7aEhgKcEgM8qr12gmfA8wMUCjNMfvDku",
+      "signatures": [
+        "5MXGJqQMLzLRCuUsS3g1pMjFVrJqqXX71zNW38mSZTFFs6zCorcg4TEQ7aEhgKcEgM8qr12gmfA8wMUCjNMfvDku"
+      ]
+    },
+    {
+      "wallet": "FP3FEVH9Eezha8jSNXKPDpnyHxE8PzwRYF92oP5EzmXW",
+      "totalAnsemUi": 581.046677,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:11:22.000Z",
+      "latestSeen": "2026-07-18T14:11:22.000Z",
+      "latestSignature": "3AwMmyMVvGVNaKFj9pQTL2hQBFTAx8v8jCPz6Eo3zCux14uNJ46TvJ2vSD4DTxiRN8qZ5X24FnDzdZqmjFpDMsKk",
+      "signatures": [
+        "3AwMmyMVvGVNaKFj9pQTL2hQBFTAx8v8jCPz6Eo3zCux14uNJ46TvJ2vSD4DTxiRN8qZ5X24FnDzdZqmjFpDMsKk"
+      ]
+    },
+    {
+      "wallet": "3ZDXCwW9d3p9EfcQN63B5p5UB6K99jAgnujFy97akVV9",
+      "totalAnsemUi": 581.046677,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:11:21.000Z",
+      "latestSeen": "2026-07-18T14:11:21.000Z",
+      "latestSignature": "5XYJzJkaoRLCkVGnTQ8BZGu6nyvTGeDuTpb89fVZDaNBEyj9iUCa22HjS2VGJteU2UGYoKkYWJyDcgyjE8KAvodB",
+      "signatures": [
+        "5XYJzJkaoRLCkVGnTQ8BZGu6nyvTGeDuTpb89fVZDaNBEyj9iUCa22HjS2VGJteU2UGYoKkYWJyDcgyjE8KAvodB"
+      ]
+    },
+    {
+      "wallet": "EYRR1W28cQQWDU1SKkShfK6qFYPaWPyJk6EFFCQZ8vaw",
+      "totalAnsemUi": 581.046677,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:11:18.000Z",
+      "latestSeen": "2026-07-18T14:11:18.000Z",
+      "latestSignature": "4aUE58dCHV3aXRabJZPD7gj2e5RS2Aw8GD99oSRMXqD72KYK44K31zxdxTCES7BcJQAbEQ51TiQHxYpXTR5xc6z3",
+      "signatures": [
+        "4aUE58dCHV3aXRabJZPD7gj2e5RS2Aw8GD99oSRMXqD72KYK44K31zxdxTCES7BcJQAbEQ51TiQHxYpXTR5xc6z3"
+      ]
+    },
+    {
+      "wallet": "cQTHHftgsgENUA8TGHAWchpArXawXSCPamMFiSE8WAD",
+      "totalAnsemUi": 581.046677,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:11:15.000Z",
+      "latestSeen": "2026-07-18T14:11:15.000Z",
+      "latestSignature": "YzxnRnwY4BxFftjM95Z2gUboLMQUVGvUQ7bQJjWhiRnovum2GbZJojLJuSWQz1Nx38QApAXE4yYicyu6oidynPP",
+      "signatures": [
+        "YzxnRnwY4BxFftjM95Z2gUboLMQUVGvUQ7bQJjWhiRnovum2GbZJojLJuSWQz1Nx38QApAXE4yYicyu6oidynPP"
+      ]
+    },
+    {
+      "wallet": "jExSgJU4uAMRN1vJvSbaYcj2kuYiQ2zmAJnRSMRVSow",
+      "totalAnsemUi": 581.046677,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:11:14.000Z",
+      "latestSeen": "2026-07-18T14:11:14.000Z",
+      "latestSignature": "2vm7rLqJ6eJSUTCXY4QUVstevMH778HdBtmoSQdhr4ZTxFNNxGv73mKc7UbckfTHbc4iAQXkHdTaFhm9yxJYuxuK",
+      "signatures": [
+        "2vm7rLqJ6eJSUTCXY4QUVstevMH778HdBtmoSQdhr4ZTxFNNxGv73mKc7UbckfTHbc4iAQXkHdTaFhm9yxJYuxuK"
+      ]
+    },
+    {
+      "wallet": "7ntSEsEJAFY6TGbqvuUhWaKwojbLHnV32rTiHreGuRoU",
+      "totalAnsemUi": 581.046677,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:11:12.000Z",
+      "latestSeen": "2026-07-18T14:11:12.000Z",
+      "latestSignature": "RPQsFov87t1CnQwf9A5ubfaW3aYUMGhGeK95mfUf2wfpWqYuhS6m5HP2hjHAnnaBgTLo8kDXGHQuL7NiqqXPUeH",
+      "signatures": [
+        "RPQsFov87t1CnQwf9A5ubfaW3aYUMGhGeK95mfUf2wfpWqYuhS6m5HP2hjHAnnaBgTLo8kDXGHQuL7NiqqXPUeH"
+      ]
+    },
+    {
+      "wallet": "J8zCXXr2rEwzuFPikyCGo1fkBpJUpTrTnSiNJPmtjyZk",
+      "totalAnsemUi": 581.046677,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:11:09.000Z",
+      "latestSeen": "2026-07-18T14:11:09.000Z",
+      "latestSignature": "RbSqeYn8KJhB84ssPKXq3iWH9udLYjANvF6AFhsQg4ahetkAwDSVR2XfTSKKySNg7YGVYj32PSf6Hw5gJotofyS",
+      "signatures": [
+        "RbSqeYn8KJhB84ssPKXq3iWH9udLYjANvF6AFhsQg4ahetkAwDSVR2XfTSKKySNg7YGVYj32PSf6Hw5gJotofyS"
+      ]
+    },
+    {
+      "wallet": "6UBmWGorPrRwHm7x6DfToSfZ68CHxxjq6CSUmT62RaAK",
+      "totalAnsemUi": 581.046677,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:11:06.000Z",
+      "latestSeen": "2026-07-18T14:11:06.000Z",
+      "latestSignature": "2kU44QvS99Tbz3jdcjwPYM4HYLRWRsaytQUjQDi13MJzNQHvLXnMaqmEDZWuNDgiSysyetoAEVcWqqTDTvydshK8",
+      "signatures": [
+        "2kU44QvS99Tbz3jdcjwPYM4HYLRWRsaytQUjQDi13MJzNQHvLXnMaqmEDZWuNDgiSysyetoAEVcWqqTDTvydshK8"
+      ]
+    },
+    {
+      "wallet": "3payqPhBrsN26q6JrXMqQgxAqXfc8eEXuQeFBF1kLmkv",
+      "totalAnsemUi": 581.046677,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:11:04.000Z",
+      "latestSeen": "2026-07-18T14:11:04.000Z",
+      "latestSignature": "3ST1AArtyVgR7ZmZjJJ944CD54RvzWvPAwQJFQCiSgJtu8bUURcwjJZQzVPW1FwX8YkHoMY4tkbHeLcJVTYsdnA8",
+      "signatures": [
+        "3ST1AArtyVgR7ZmZjJJ944CD54RvzWvPAwQJFQCiSgJtu8bUURcwjJZQzVPW1FwX8YkHoMY4tkbHeLcJVTYsdnA8"
+      ]
+    },
+    {
+      "wallet": "HLTigxQBE1MYSo5yny8uDHCNuQwXad8ssTmWAejyn6F4",
+      "totalAnsemUi": 581.046677,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:11:03.000Z",
+      "latestSeen": "2026-07-18T14:11:03.000Z",
+      "latestSignature": "5hQsCAUJ2kbv8J2fEjYe9YBzFRadiccVUbjnd7F6uKqiBBkkrQVSArkNJSD9FccgSjiV9aN5axh1z5kuMAFby39C",
+      "signatures": [
+        "5hQsCAUJ2kbv8J2fEjYe9YBzFRadiccVUbjnd7F6uKqiBBkkrQVSArkNJSD9FccgSjiV9aN5axh1z5kuMAFby39C"
+      ]
+    },
+    {
+      "wallet": "7VTyUqPiiyuQqVE8A4DYqZXiEv9Pz5yhJPYhCaMHD5fz",
+      "totalAnsemUi": 581.046677,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:11:00.000Z",
+      "latestSeen": "2026-07-18T14:11:00.000Z",
+      "latestSignature": "32Qqsk8SAmTCozHhkTfSogzFu8TKnu46SzV7KYs8aCYb6AsZRok27uCoBo8Z8UqkzYwtv1q9vX1x54Jau3qxTMUM",
+      "signatures": [
+        "32Qqsk8SAmTCozHhkTfSogzFu8TKnu46SzV7KYs8aCYb6AsZRok27uCoBo8Z8UqkzYwtv1q9vX1x54Jau3qxTMUM"
+      ]
+    },
+    {
+      "wallet": "13XfHNQTeQ4yMkk7SX5rWTdfW8PDkYCB7hgkGCxJrZ8N",
+      "totalAnsemUi": 581.046677,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:10:59.000Z",
+      "latestSeen": "2026-07-18T14:10:59.000Z",
+      "latestSignature": "oNeV59jPZ8KPq8Jw7nm98wpEfTVBDzG1PpNmdpgRzBQCoi9WN81hqB8WXtJ4uU1N2H1SmLvrLbr3AykR3wgoyKq",
+      "signatures": [
+        "oNeV59jPZ8KPq8Jw7nm98wpEfTVBDzG1PpNmdpgRzBQCoi9WN81hqB8WXtJ4uU1N2H1SmLvrLbr3AykR3wgoyKq"
+      ]
+    },
+    {
+      "wallet": "8pDbVHeydfaojWZZyK9omzDC7krWp2SjEUoEWu3YQjtr",
+      "totalAnsemUi": 581.046677,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:10:57.000Z",
+      "latestSeen": "2026-07-18T14:10:57.000Z",
+      "latestSignature": "UKzjR8PkUn4NbddVieMgfKXbYtv9zG2C8ChuwzqNwAhXkN57vPSB2gtuPvjDz5SUerTfQS5XQjxCcq7wwntECp2",
+      "signatures": [
+        "UKzjR8PkUn4NbddVieMgfKXbYtv9zG2C8ChuwzqNwAhXkN57vPSB2gtuPvjDz5SUerTfQS5XQjxCcq7wwntECp2"
+      ]
+    },
+    {
+      "wallet": "J8xrotdZhKrs4WUWLQQDs7CxKhcCRMFhsrP6MXcoK48V",
+      "totalAnsemUi": 581.046677,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:10:55.000Z",
+      "latestSeen": "2026-07-18T14:10:55.000Z",
+      "latestSignature": "22yDWs5D1oa2kDWTDHLEvXikfxHP8i1xvq2GabK6htNsebSwPZmHkZDdB5e5FegA2ush41QzULPohsaekxUFnApM",
+      "signatures": [
+        "22yDWs5D1oa2kDWTDHLEvXikfxHP8i1xvq2GabK6htNsebSwPZmHkZDdB5e5FegA2ush41QzULPohsaekxUFnApM"
+      ]
+    },
+    {
+      "wallet": "7HUp2R8AsMYHktHN7cyH2d65yUyhnQn2yz1uaK8D2mGb",
+      "totalAnsemUi": 581.046677,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:10:54.000Z",
+      "latestSeen": "2026-07-18T14:10:54.000Z",
+      "latestSignature": "3FxkDDGLFZoMqeFjQKDXNqa1FXfPHSN3BZGxhNw3smsQEMpUgUVEmnUgUddByxANxj56QSCpCDJRt7Ej3K3zx3bh",
+      "signatures": [
+        "3FxkDDGLFZoMqeFjQKDXNqa1FXfPHSN3BZGxhNw3smsQEMpUgUVEmnUgUddByxANxj56QSCpCDJRt7Ej3K3zx3bh"
+      ]
+    },
+    {
+      "wallet": "14G29DXzt7wvrVhbpWQArR96BgB6ZVPfN9diu4EDzc5r",
+      "totalAnsemUi": 581.046677,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:10:51.000Z",
+      "latestSeen": "2026-07-18T14:10:51.000Z",
+      "latestSignature": "4ozGMSnQ7Wpx5q5QinmSFq5SZUfmd64H76nXGMPAVE9SF7NP6KHoVAVYnL7UHsr997SswjeFvicVRAV4vwV4mwHz",
+      "signatures": [
+        "4ozGMSnQ7Wpx5q5QinmSFq5SZUfmd64H76nXGMPAVE9SF7NP6KHoVAVYnL7UHsr997SswjeFvicVRAV4vwV4mwHz"
+      ]
+    },
+    {
+      "wallet": "CGgTiuww9jRRSNgifZtWYahrKoMxWS17mm6W7mtu5Gst",
+      "totalAnsemUi": 581.046677,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:10:50.000Z",
+      "latestSeen": "2026-07-18T14:10:50.000Z",
+      "latestSignature": "548zw2coqQfcGufa97PeaE4hQVsWiJr3ZnVpW2Z1rMiYsGL14DUzn2D2GFgkUTygpZiFXZXrvsfDxSUC2z61KogG",
+      "signatures": [
+        "548zw2coqQfcGufa97PeaE4hQVsWiJr3ZnVpW2Z1rMiYsGL14DUzn2D2GFgkUTygpZiFXZXrvsfDxSUC2z61KogG"
+      ]
+    },
+    {
+      "wallet": "GCHEKfmEVcKwR3MXd2Yo39jJvkmEyt9DYrh6UDVuCXrt",
+      "totalAnsemUi": 581.046677,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:10:47.000Z",
+      "latestSeen": "2026-07-18T14:10:47.000Z",
+      "latestSignature": "5viHkJsNSwu88iysJzf97cvXx8LfzuwyqW55a6WFb2zHf81n6G4A1yVxe4gS1THPz3He6GR5o4zozqsrub7PjVT6",
+      "signatures": [
+        "5viHkJsNSwu88iysJzf97cvXx8LfzuwyqW55a6WFb2zHf81n6G4A1yVxe4gS1THPz3He6GR5o4zozqsrub7PjVT6"
+      ]
+    },
+    {
+      "wallet": "EvH6JmaPmNXt3dAXSrTMQGXhta2M722wwL6cqJoNxgSZ",
+      "totalAnsemUi": 581.046677,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:10:44.000Z",
+      "latestSeen": "2026-07-18T14:10:44.000Z",
+      "latestSignature": "nvFBLZKMcYrt4kvXA1yLamsBu7SwrCJt6y19NL2J2uTHx2prB3q3tV795tg3vAAVY7x14q7hoezsXCqCRLpqXcC",
+      "signatures": [
+        "nvFBLZKMcYrt4kvXA1yLamsBu7SwrCJt6y19NL2J2uTHx2prB3q3tV795tg3vAAVY7x14q7hoezsXCqCRLpqXcC"
+      ]
+    },
+    {
+      "wallet": "B2ch2AajNe2kJfKH9A28njLGbPLBuugdeVyKNcMqx3ZD",
+      "totalAnsemUi": 578.381528,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:14:42.000Z",
+      "latestSeen": "2026-07-18T14:14:42.000Z",
+      "latestSignature": "2aqa6SyH433yG7EMbin14uP2pBfCzERwoNfN7evTBgfM3QsJertWdSMpf4nr5ELzx88He3T6bdRjSN1xDfcQLtzb",
+      "signatures": [
+        "2aqa6SyH433yG7EMbin14uP2pBfCzERwoNfN7evTBgfM3QsJertWdSMpf4nr5ELzx88He3T6bdRjSN1xDfcQLtzb"
+      ]
+    },
+    {
+      "wallet": "D5Ka93tULVtAZqqP2v5eh3q3BYCwmvw32PVGXEehJwcX",
+      "totalAnsemUi": 578.381528,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:14:38.000Z",
+      "latestSeen": "2026-07-18T14:14:38.000Z",
+      "latestSignature": "2GosX1UwqebXrk45JMcaojfEPXjNxFYwKV1VrC1ChnZUBjRmZgt4RFF6KTJkWpWV24U2eXvEtRXnHgyGQ6AvsHdR",
+      "signatures": [
+        "2GosX1UwqebXrk45JMcaojfEPXjNxFYwKV1VrC1ChnZUBjRmZgt4RFF6KTJkWpWV24U2eXvEtRXnHgyGQ6AvsHdR"
+      ]
+    },
+    {
+      "wallet": "EAVgNm5i2nK3DCyWy7WBspANrhc1mDvxhLJiqU7Hx3At",
+      "totalAnsemUi": 578.381528,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:14:37.000Z",
+      "latestSeen": "2026-07-18T14:14:37.000Z",
+      "latestSignature": "4YZ4kZRqCL8jLfGTAuMmBUMxDtjaPQCVcMfXMhPnb6eb3ox44BvveaPpkeKvxkaA6Qo8K7Z2PAtc2GB4dKMf94mC",
+      "signatures": [
+        "4YZ4kZRqCL8jLfGTAuMmBUMxDtjaPQCVcMfXMhPnb6eb3ox44BvveaPpkeKvxkaA6Qo8K7Z2PAtc2GB4dKMf94mC"
+      ]
+    },
+    {
+      "wallet": "9CpPCShqB49W4ERiD2MDW1q2E1MqGzhszCmgZhhG6aNU",
+      "totalAnsemUi": 578.381528,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:14:35.000Z",
+      "latestSeen": "2026-07-18T14:14:35.000Z",
+      "latestSignature": "BfhcaDbGwPcqaGrDoa4E6KyPpojZzaZNG4eUtmZCxmP29NvrpQZh6m2J6jk16e8ZtCubL4Ec7CJx3y2Q3vo6JNW",
+      "signatures": [
+        "BfhcaDbGwPcqaGrDoa4E6KyPpojZzaZNG4eUtmZCxmP29NvrpQZh6m2J6jk16e8ZtCubL4Ec7CJx3y2Q3vo6JNW"
+      ]
+    },
+    {
+      "wallet": "83nAunF7w488x6y1ksf8kdAWXjJjCWKDKbjcSLURihD7",
+      "totalAnsemUi": 578.381528,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:14:34.000Z",
+      "latestSeen": "2026-07-18T14:14:34.000Z",
+      "latestSignature": "2mLNiUZrf1sT2AM2cPssUsyyQRzWPkkxmtM8UeCLDFTPiguyV5sUwdNG1iFkrA1PkEVYoy41JBaDJyGaKbDLuySr",
+      "signatures": [
+        "2mLNiUZrf1sT2AM2cPssUsyyQRzWPkkxmtM8UeCLDFTPiguyV5sUwdNG1iFkrA1PkEVYoy41JBaDJyGaKbDLuySr"
+      ]
+    },
+    {
+      "wallet": "86wKiJ2KVnbWkundoN1U1yqWYApxcHM2XkQwbjkThxrC",
+      "totalAnsemUi": 578.381528,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:14:32.000Z",
+      "latestSeen": "2026-07-18T14:14:32.000Z",
+      "latestSignature": "4HizvW5pWcjUA4TLvK14EB4wmNradArxkvN5gt6GD1Accp343TXGzMtcct8526Fv1p8eja2fgi98RFsk44vXAhfX",
+      "signatures": [
+        "4HizvW5pWcjUA4TLvK14EB4wmNradArxkvN5gt6GD1Accp343TXGzMtcct8526Fv1p8eja2fgi98RFsk44vXAhfX"
+      ]
+    },
+    {
+      "wallet": "DpPh2iXPYnHrzuN7E1U3XGeZRBuAU2YbQgSCWVit6g3Z",
+      "totalAnsemUi": 578.381528,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:14:31.000Z",
+      "latestSeen": "2026-07-18T14:14:31.000Z",
+      "latestSignature": "54JWBQYdSavW3vhv8JCboGhS6HdhK4SqEWEN8WD9MS1XmASUMcgJAYLoaQAmQnPwZSKPt96YZiRBQiuqbncxPBRp",
+      "signatures": [
+        "54JWBQYdSavW3vhv8JCboGhS6HdhK4SqEWEN8WD9MS1XmASUMcgJAYLoaQAmQnPwZSKPt96YZiRBQiuqbncxPBRp"
+      ]
+    },
+    {
+      "wallet": "5V2qY4u5yTpMJvGYpyMJixfsDjbaqEUFyt7UBewgbohX",
+      "totalAnsemUi": 578.381528,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:14:30.000Z",
+      "latestSeen": "2026-07-18T14:14:30.000Z",
+      "latestSignature": "5i3Qn6GS5Gcw2JBeS5WXsvG19XKNBQL5YQEBRdnsdpZucx1S2AUWZzh3Jp4FbCeQoyCzejTyyVzYmh6Ua6L8fB8D",
+      "signatures": [
+        "5i3Qn6GS5Gcw2JBeS5WXsvG19XKNBQL5YQEBRdnsdpZucx1S2AUWZzh3Jp4FbCeQoyCzejTyyVzYmh6Ua6L8fB8D"
+      ]
+    },
+    {
+      "wallet": "YVgpnNFfAK3arUnTZersBMcKkFayCRQ9srogQ4nqrSa",
+      "totalAnsemUi": 578.381528,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:14:29.000Z",
+      "latestSeen": "2026-07-18T14:14:29.000Z",
+      "latestSignature": "39ioMUn1DjLNRqd5XWQaCGJZoiXE7havWqopnh4VK1sxqAaLAKftA8F8FoQovEizLn7yNUfeRBZ6nuV85Sg6PDNu",
+      "signatures": [
+        "39ioMUn1DjLNRqd5XWQaCGJZoiXE7havWqopnh4VK1sxqAaLAKftA8F8FoQovEizLn7yNUfeRBZ6nuV85Sg6PDNu"
+      ]
+    },
+    {
+      "wallet": "3FeDcxzbx1mVw5g2Ce9pRDwNAKDXAra9ucZieeuPtQ3z",
+      "totalAnsemUi": 578.381528,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:14:28.000Z",
+      "latestSeen": "2026-07-18T14:14:28.000Z",
+      "latestSignature": "4JwxANveCiyJWHjXtTfGFQy83vV6zkc934DFjiruFjstUXCM6N3Vx2VLVFvovhY9LvgkS3EjxxkYZVo6EU7doGZz",
+      "signatures": [
+        "4JwxANveCiyJWHjXtTfGFQy83vV6zkc934DFjiruFjstUXCM6N3Vx2VLVFvovhY9LvgkS3EjxxkYZVo6EU7doGZz"
+      ]
+    },
+    {
+      "wallet": "GQJZCUr77SjECwzhBcEtupYUNNVAF7eEK5VuMHvvLgV6",
+      "totalAnsemUi": 578.381528,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:14:27.000Z",
+      "latestSeen": "2026-07-18T14:14:27.000Z",
+      "latestSignature": "5gTqP59WNo5s5hHSoetwyfncNkCx3JL3nZ4Cxunm14SsKrd6MDJjQ2yaxxdvFxtXcdwBu8k15avbaZ7UHwQnb6wR",
+      "signatures": [
+        "5gTqP59WNo5s5hHSoetwyfncNkCx3JL3nZ4Cxunm14SsKrd6MDJjQ2yaxxdvFxtXcdwBu8k15avbaZ7UHwQnb6wR"
+      ]
+    },
+    {
+      "wallet": "E1bcXZLXJfJgGMGYcDVPr1BFgzTWni7pA6HGKFvws2z6",
+      "totalAnsemUi": 578.381528,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:14:25.000Z",
+      "latestSeen": "2026-07-18T14:14:25.000Z",
+      "latestSignature": "MGynEfmQeTArDMzdirhsFjJ52dJuD1hgctVx2qZbr698RbY6KK4thGe2kLUMeqfi9QnVAHyZ42GLEnXrn7uR7fR",
+      "signatures": [
+        "MGynEfmQeTArDMzdirhsFjJ52dJuD1hgctVx2qZbr698RbY6KK4thGe2kLUMeqfi9QnVAHyZ42GLEnXrn7uR7fR"
+      ]
+    },
+    {
+      "wallet": "GQZ9TNVpgCqHvGRiKTFHXp9txvjeyJhG35Dk8germwV5",
+      "totalAnsemUi": 578.381528,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:14:24.000Z",
+      "latestSeen": "2026-07-18T14:14:24.000Z",
+      "latestSignature": "4FANrH2qbYYWpAFD46TTx6FnsiNxAcizFNW2K2Fvb3DrMurYii6EqXV7LamW9tUznraHrxjjYSr5HSzpze4Sbt2f",
+      "signatures": [
+        "4FANrH2qbYYWpAFD46TTx6FnsiNxAcizFNW2K2Fvb3DrMurYii6EqXV7LamW9tUznraHrxjjYSr5HSzpze4Sbt2f"
+      ]
+    },
+    {
+      "wallet": "6NC5VNN3EckNMJNb5FxQtbxoeNRfWmxymCof5rsdzSCH",
+      "totalAnsemUi": 578.381528,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:14:22.000Z",
+      "latestSeen": "2026-07-18T14:14:22.000Z",
+      "latestSignature": "1ZbAZYZJy1qFREGyu3XU55wrdy52zsjDRXZK5oAuNnmUm87oAU3HpFydapXFoWFSsYFDqhj3dQ4ca1PfvLE5gP1",
+      "signatures": [
+        "1ZbAZYZJy1qFREGyu3XU55wrdy52zsjDRXZK5oAuNnmUm87oAU3HpFydapXFoWFSsYFDqhj3dQ4ca1PfvLE5gP1"
+      ]
+    },
+    {
+      "wallet": "283vic22mcMcvFQUBP2X23WKvNSqBG4p3Za9yJtzD5Lt",
+      "totalAnsemUi": 578.381528,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:14:19.000Z",
+      "latestSeen": "2026-07-18T14:14:19.000Z",
+      "latestSignature": "3Dd7YUgF54q7EEgcmi4tYvCZecSY16joxV97o9LJKKbb2CtGxanyE4WZ1pMqPMBQE36g6s4HKqM76ZvMUfUpxwTi",
+      "signatures": [
+        "3Dd7YUgF54q7EEgcmi4tYvCZecSY16joxV97o9LJKKbb2CtGxanyE4WZ1pMqPMBQE36g6s4HKqM76ZvMUfUpxwTi"
+      ]
+    },
+    {
+      "wallet": "nqmGKLnQqnxrzTmrfHir6jvyThUNjQZH3C6pCi4Xjk4",
+      "totalAnsemUi": 578.381528,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:14:15.000Z",
+      "latestSeen": "2026-07-18T14:14:15.000Z",
+      "latestSignature": "3yefF1Hv3cJbcRt6ZqHVTjCEr3xAym4SsiuCkb92rb878HjJYad3f11AK2sdmaVh4EUKYnzGyWqGN2vSCbhBPwFm",
+      "signatures": [
+        "3yefF1Hv3cJbcRt6ZqHVTjCEr3xAym4SsiuCkb92rb878HjJYad3f11AK2sdmaVh4EUKYnzGyWqGN2vSCbhBPwFm"
+      ]
+    },
+    {
+      "wallet": "8eMPSYSbMng8UB8SZ1WjFvQSrj95ZmBkQ22A3mYqrLHj",
+      "totalAnsemUi": 578.381528,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:14:14.000Z",
+      "latestSeen": "2026-07-18T14:14:14.000Z",
+      "latestSignature": "4WkHqVeVvaqJuvw5VHbgkxMZ4TM7yEobUvff8vwdrU8MTH9rDK7G5Sh3eG1zTNbnwqAYLuDbHz2UzaghFGT6nkH7",
+      "signatures": [
+        "4WkHqVeVvaqJuvw5VHbgkxMZ4TM7yEobUvff8vwdrU8MTH9rDK7G5Sh3eG1zTNbnwqAYLuDbHz2UzaghFGT6nkH7"
+      ]
+    },
+    {
+      "wallet": "FmwsGGoapEeSZfA5kHA96Tb6rZK38s6ErHH4uBguEckp",
+      "totalAnsemUi": 578.381528,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:14:13.000Z",
+      "latestSeen": "2026-07-18T14:14:13.000Z",
+      "latestSignature": "3DABgs4TLQroRdKaCrRxvZ3tGUgcoMeH9nAEiS3ym6fruWhgW5aEeq65zthJUmzTf4cHBdp7VAtLVyvFuZy9Surp",
+      "signatures": [
+        "3DABgs4TLQroRdKaCrRxvZ3tGUgcoMeH9nAEiS3ym6fruWhgW5aEeq65zthJUmzTf4cHBdp7VAtLVyvFuZy9Surp"
+      ]
+    },
+    {
+      "wallet": "CYFqQYtu7oUstPSpyu5X4myNN827czKd5JpFxxo5ukfi",
+      "totalAnsemUi": 578.381528,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:14:12.000Z",
+      "latestSeen": "2026-07-18T14:14:12.000Z",
+      "latestSignature": "4H6MkXt5sP2bTrQ11rj6TS18RY58jWgpkPvedVifkBT8xeHQiiZTN3SyXzowds6P7tdbznXBNCLwi4YWtN2LRsfF",
+      "signatures": [
+        "4H6MkXt5sP2bTrQ11rj6TS18RY58jWgpkPvedVifkBT8xeHQiiZTN3SyXzowds6P7tdbznXBNCLwi4YWtN2LRsfF"
+      ]
+    },
+    {
+      "wallet": "5oPkK21bmSNGiMsYY92krLUGyJzUmdrXWFkRirxPeNoU",
+      "totalAnsemUi": 578.381528,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:14:09.000Z",
+      "latestSeen": "2026-07-18T14:14:09.000Z",
+      "latestSignature": "3KiioSz6VDEFYcFELYx2iu26TkBRU69gpg4W9usMZx5FtaDYszR1T2e29DQiz4T2w4RMsfuhpsqF5v7PacFecBX8",
+      "signatures": [
+        "3KiioSz6VDEFYcFELYx2iu26TkBRU69gpg4W9usMZx5FtaDYszR1T2e29DQiz4T2w4RMsfuhpsqF5v7PacFecBX8"
+      ]
+    },
+    {
+      "wallet": "2PmSAzvPe4FbgEJnq1DDFL9fVncCJpFy5gX9CsiaNJqR",
+      "totalAnsemUi": 578.381528,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:14:08.000Z",
+      "latestSeen": "2026-07-18T14:14:08.000Z",
+      "latestSignature": "37G88zn2RhiXFj6uV8k86m1JihqYrbGSqREScNLSkUkHc5VKSxYttVGAYQVsBhedHCyp971w2sGMhM4DYF5o89id",
+      "signatures": [
+        "37G88zn2RhiXFj6uV8k86m1JihqYrbGSqREScNLSkUkHc5VKSxYttVGAYQVsBhedHCyp971w2sGMhM4DYF5o89id"
+      ]
+    },
+    {
+      "wallet": "DMF3BjeCcrMnhSa5KL7h1wS4RvP2oyapvzQ8PcFrmxga",
+      "totalAnsemUi": 578.381528,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:14:07.000Z",
+      "latestSeen": "2026-07-18T14:14:07.000Z",
+      "latestSignature": "4L8D1fjx9xGqD68dQJcTr8v2S4P3PBmniJMxtSXfp4LsktXpkUdXF83z1X9kZJX3cmcbzqZEfh85TaPCeWJnZ56Z",
+      "signatures": [
+        "4L8D1fjx9xGqD68dQJcTr8v2S4P3PBmniJMxtSXfp4LsktXpkUdXF83z1X9kZJX3cmcbzqZEfh85TaPCeWJnZ56Z"
+      ]
+    },
+    {
+      "wallet": "9xCZ3MVCXAW9trE5aSaNBk3KwHsSpAbTkX6U7Q4HbeXo",
+      "totalAnsemUi": 578.381528,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:14:06.000Z",
+      "latestSeen": "2026-07-18T14:14:06.000Z",
+      "latestSignature": "5nqCFFmSgJGkT6amT5Up5TVaRZ1GVR42FdPtWnfwkZU9RU25i32WVoh99nqQwpPPzTBNVbK9VGVHot6CJMHExAuR",
+      "signatures": [
+        "5nqCFFmSgJGkT6amT5Up5TVaRZ1GVR42FdPtWnfwkZU9RU25i32WVoh99nqQwpPPzTBNVbK9VGVHot6CJMHExAuR"
+      ]
+    },
+    {
+      "wallet": "Ay5VzSAkHrhX4SvJktq1EUCAPMU9xnYeK9H2VGn43DzC",
+      "totalAnsemUi": 578.381528,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:14:03.000Z",
+      "latestSeen": "2026-07-18T14:14:03.000Z",
+      "latestSignature": "3Hr1NsfpUsdax3Pvu2PXM51wDrYawSmVcKC5C5F9hYU39KLCkRMyVjxfuDy33z87U4eXBqC1SUdTJ4YsDuVSctUz",
+      "signatures": [
+        "3Hr1NsfpUsdax3Pvu2PXM51wDrYawSmVcKC5C5F9hYU39KLCkRMyVjxfuDy33z87U4eXBqC1SUdTJ4YsDuVSctUz"
+      ]
+    },
+    {
+      "wallet": "FPTgV6LaLYdEg4vw4FYe61ZQashCEDbgc1SN5PJRWahd",
+      "totalAnsemUi": 578.381528,
+      "transferCount": 1,
+      "firstSeen": "2026-07-18T14:13:59.000Z",
+      "latestSeen": "2026-07-18T14:13:59.000Z",
+      "latestSignature": "EHKrPCrQGpt3nUddnjSEp64PvjGTLtuo2rSWqWYSvZQz8yj6vDNeiUcRkoo4hBNvWDmfaz1865LeGm6u8V1vE3x",
+      "signatures": [
+        "EHKrPCrQGpt3nUddnjSEp64PvjGTLtuo2rSWqWYSvZQz8yj6vDNeiUcRkoo4hBNvWDmfaz1865LeGm6u8V1vE3x"
       ]
     },
     {
@@ -11101,704 +13277,704 @@
   ],
   "feed": [
     {
-      "wallet": "5j5GPnHtYpzaKfvmDw3GYQrGaQxh6VPexKNyMXwgx1Rk",
-      "amountUi": 590.029777,
-      "blockTime": "2026-07-18T14:02:44.000Z",
-      "signature": "2Ry44ioyWFreQMbYnSUYspVSN43AZNsafvdmJuidvvkdwuy8a9ctGiJFQS7HPBkXD5drNRcJYFHKdSZ8CDyd3wiT",
-      "txUrl": "https://solscan.io/tx/2Ry44ioyWFreQMbYnSUYspVSN43AZNsafvdmJuidvvkdwuy8a9ctGiJFQS7HPBkXD5drNRcJYFHKdSZ8CDyd3wiT"
+      "wallet": "BjR8ShswpYwx6t1yX4Wyk2rbgRQ2mGQXCURUihsRZ9hL",
+      "amountUi": 6396.676254,
+      "blockTime": "2026-07-18T15:05:27.000Z",
+      "signature": "4aXtqU93uHRqsJdxtNCNR6hF2QDuftqSvSX8NyVihztgWNgYKzyN83pZ6LHH34nymFnqiP7vk4cPaUXG3qq8bPvo",
+      "txUrl": "https://solscan.io/tx/4aXtqU93uHRqsJdxtNCNR6hF2QDuftqSvSX8NyVihztgWNgYKzyN83pZ6LHH34nymFnqiP7vk4cPaUXG3qq8bPvo"
     },
     {
-      "wallet": "BasYWKJbjxMv3tzjkciSAQihr3iLjBRMiCGoGG9SLim",
-      "amountUi": 590.029777,
-      "blockTime": "2026-07-18T14:02:43.000Z",
-      "signature": "HuuahqkV2pREyE5QM75AmtF18iWh33dwzaibfVAwT1ZoJ7MRBUcgPECazmwfA6WHG86t4hUpQzZPgZSsqKUaTKr",
-      "txUrl": "https://solscan.io/tx/HuuahqkV2pREyE5QM75AmtF18iWh33dwzaibfVAwT1ZoJ7MRBUcgPECazmwfA6WHG86t4hUpQzZPgZSsqKUaTKr"
+      "wallet": "GFbn2TZMhQyatFtfG5WKvCJtcTJpnyKo35G1E45swtJA",
+      "amountUi": 6396.676254,
+      "blockTime": "2026-07-18T15:05:27.000Z",
+      "signature": "4mHMH3WL1L7qcYoxy2uuN4sXahQLgDav4V7SixiE8bCk4t7wQU7ajTeanFwpGEw4FrSo7U3dEF2knxcRVtU5HjU",
+      "txUrl": "https://solscan.io/tx/4mHMH3WL1L7qcYoxy2uuN4sXahQLgDav4V7SixiE8bCk4t7wQU7ajTeanFwpGEw4FrSo7U3dEF2knxcRVtU5HjU"
     },
     {
-      "wallet": "Boue1mQ2Ek3c89mZVtXWBksy21KdK9afKwPJU7cKmAxv",
-      "amountUi": 590.029777,
-      "blockTime": "2026-07-18T14:02:42.000Z",
-      "signature": "mZ2BYEZnoPpcRJhAAsgcLbxzFxPP3xYw3PeFVkkWNeERFaCsLuMX8VLP8iWzVqTfgZkNjwwyFz87v4V6aEfE7bw",
-      "txUrl": "https://solscan.io/tx/mZ2BYEZnoPpcRJhAAsgcLbxzFxPP3xYw3PeFVkkWNeERFaCsLuMX8VLP8iWzVqTfgZkNjwwyFz87v4V6aEfE7bw"
+      "wallet": "2XMmtWYkcsB5ZJYKdJLvwR7mPtAtmuZDEj2yfJyhUp31",
+      "amountUi": 6396.676254,
+      "blockTime": "2026-07-18T15:05:24.000Z",
+      "signature": "64NrCnyjPGfQtzDH6wcbsEQ7kkKJYDxfXVx5ZCguhVdN4x8WukJ8fa9bYEHbjm2WVhsXdSoSXAJ6YWunDvjvL9YQ",
+      "txUrl": "https://solscan.io/tx/64NrCnyjPGfQtzDH6wcbsEQ7kkKJYDxfXVx5ZCguhVdN4x8WukJ8fa9bYEHbjm2WVhsXdSoSXAJ6YWunDvjvL9YQ"
     },
     {
-      "wallet": "7XMdTL7E6NFGcC8G8EwRkugKREuicNHDGFBWt5tFSLjC",
-      "amountUi": 590.029777,
-      "blockTime": "2026-07-18T14:02:40.000Z",
-      "signature": "VF8iYZMATTvJt91LHio9fcGZJ22dqzyQBSqWizgTLAutM658h1SkDWJXLRowemnNtXLfhkw25m3PoToyd5L6A2R",
-      "txUrl": "https://solscan.io/tx/VF8iYZMATTvJt91LHio9fcGZJ22dqzyQBSqWizgTLAutM658h1SkDWJXLRowemnNtXLfhkw25m3PoToyd5L6A2R"
+      "wallet": "Hf2GndFVqXBqUUUpRoxYo6Ez23hP9bw52xJAA3d957Qv",
+      "amountUi": 6396.676254,
+      "blockTime": "2026-07-18T15:05:23.000Z",
+      "signature": "4J6az6vgYg6imRsUUbDgBPcyX5gZFqyuj5615TUTbYsEJYCsiz6d1tL5PetrU8SiTg59RYbyjtMY82PWw1mAZ78",
+      "txUrl": "https://solscan.io/tx/4J6az6vgYg6imRsUUbDgBPcyX5gZFqyuj5615TUTbYsEJYCsiz6d1tL5PetrU8SiTg59RYbyjtMY82PWw1mAZ78"
     },
     {
-      "wallet": "DwxZSwLijcXXTw53sBF7o4N5PSFXz885x2bohQSaAmXt",
-      "amountUi": 590.029777,
-      "blockTime": "2026-07-18T14:02:37.000Z",
-      "signature": "4gvDemhApjC7CS8oF88CKKgXnikgqWoSPqCBjWJuXxstJF5NBy7C2DHat7D6jXX4o9Ue6QyprrrPxg3hpQfN1HLe",
-      "txUrl": "https://solscan.io/tx/4gvDemhApjC7CS8oF88CKKgXnikgqWoSPqCBjWJuXxstJF5NBy7C2DHat7D6jXX4o9Ue6QyprrrPxg3hpQfN1HLe"
+      "wallet": "2gDs9nqqvgAJ5PZW6t1jh1akBdsbLp6EvtXvpYRb6VMh",
+      "amountUi": 6396.676254,
+      "blockTime": "2026-07-18T15:05:22.000Z",
+      "signature": "4CuDanPw5gqYRmFRVniMqzJ7SamCvi2U2y2o3qxtRtztAMcb6PRVUZRhqkpzf8u9FUSWa9WVDoMVtwbbsffvnbp4",
+      "txUrl": "https://solscan.io/tx/4CuDanPw5gqYRmFRVniMqzJ7SamCvi2U2y2o3qxtRtztAMcb6PRVUZRhqkpzf8u9FUSWa9WVDoMVtwbbsffvnbp4"
     },
     {
-      "wallet": "D5sfGBTx2u46aBSMAcaL7ovsHd7uaN8JRdcC77cuT17E",
-      "amountUi": 590.029777,
-      "blockTime": "2026-07-18T14:02:36.000Z",
-      "signature": "56AhjBdDy3RZLYKzJkVQzjF2dRjKqiAABiuaRSk68pqC6ZrQ7YHcWvk1kvbC6DPUfcMzKinFkJSb424TK21E4RKE",
-      "txUrl": "https://solscan.io/tx/56AhjBdDy3RZLYKzJkVQzjF2dRjKqiAABiuaRSk68pqC6ZrQ7YHcWvk1kvbC6DPUfcMzKinFkJSb424TK21E4RKE"
-    },
-    {
-      "wallet": "GbqWGHij4Uoz8zsmXK9tKc2LwPeDVbBpbLEWVS4LFuoG",
-      "amountUi": 590.029777,
-      "blockTime": "2026-07-18T14:02:35.000Z",
-      "signature": "3kNBAxrmFuzHyLzipGjG6hkmQJfQTxQyNxyJW53okRBHqLEc98gAu6ii3x58zY9vcDekSX4WoRRF4J2hqNZpL2fd",
-      "txUrl": "https://solscan.io/tx/3kNBAxrmFuzHyLzipGjG6hkmQJfQTxQyNxyJW53okRBHqLEc98gAu6ii3x58zY9vcDekSX4WoRRF4J2hqNZpL2fd"
-    },
-    {
-      "wallet": "6pGoHhAzT8bXEj3M8xg3hkuZnqjXWkdb8PQEE9UToAyU",
-      "amountUi": 590.029777,
-      "blockTime": "2026-07-18T14:02:34.000Z",
-      "signature": "2QakjSpvzXwsGiSfw5H7QYh9qZraaXRaZwKhdxshi8JyYLPJFMTsXaarLJeKRRisRacgtr5kWXY7xJ5aXZMvN3S3",
-      "txUrl": "https://solscan.io/tx/2QakjSpvzXwsGiSfw5H7QYh9qZraaXRaZwKhdxshi8JyYLPJFMTsXaarLJeKRRisRacgtr5kWXY7xJ5aXZMvN3S3"
-    },
-    {
-      "wallet": "Ao54Tj4XQpUZo1SoaJRHm1rz5nq3abAVzXCMubGRoKRZ",
-      "amountUi": 590.029777,
-      "blockTime": "2026-07-18T14:02:33.000Z",
-      "signature": "4y1pnFYZEPLtxd3bVmN6rxuczCoenkP86KFeWzyeB7DyLgNedNKFt2PGwBS3hmQDGgw2P4YjPF4XSM2z1CzVHjLs",
-      "txUrl": "https://solscan.io/tx/4y1pnFYZEPLtxd3bVmN6rxuczCoenkP86KFeWzyeB7DyLgNedNKFt2PGwBS3hmQDGgw2P4YjPF4XSM2z1CzVHjLs"
-    },
-    {
-      "wallet": "GyTM5gcvwxh1LdrfcoBUgyCDRi1NNNbwMRfWGHMXRfqS",
-      "amountUi": 590.029777,
-      "blockTime": "2026-07-18T14:02:30.000Z",
-      "signature": "2aqXKA46jEDt4LquB9BS3ACzWpbiFTnRzzpb87rDwjq8S3h7T8oyKnc4trWhZsQg7higcZmJNuqAptECwg21pSSY",
-      "txUrl": "https://solscan.io/tx/2aqXKA46jEDt4LquB9BS3ACzWpbiFTnRzzpb87rDwjq8S3h7T8oyKnc4trWhZsQg7higcZmJNuqAptECwg21pSSY"
-    },
-    {
-      "wallet": "5LUyyX6nHQUmm8nS8tHMi39gD1BNNbmQfk4e6jCLafQ",
-      "amountUi": 590.029777,
-      "blockTime": "2026-07-18T14:02:29.000Z",
-      "signature": "2bk8NRvVHofm2xQQnUyjWEJtCtTo5rRPYX9jbVPmzC6DScdiFvhbmzbkfXCnWnrHNjhhp8dHPFBfDCBJzckWb3Vf",
-      "txUrl": "https://solscan.io/tx/2bk8NRvVHofm2xQQnUyjWEJtCtTo5rRPYX9jbVPmzC6DScdiFvhbmzbkfXCnWnrHNjhhp8dHPFBfDCBJzckWb3Vf"
-    },
-    {
-      "wallet": "GvYs1noDm41xBJTMzxVaH8fxuvMdtpTVh9awr1yDu19S",
-      "amountUi": 590.029777,
-      "blockTime": "2026-07-18T14:02:28.000Z",
-      "signature": "4YBxoS8LntZRfovPiw3w1Ai5eq4ZvQ3tMLiT8g4P4NboqECyHL1teGsJA2q4CnhgSdFEfHpFM4H9SiECv4QpCABr",
-      "txUrl": "https://solscan.io/tx/4YBxoS8LntZRfovPiw3w1Ai5eq4ZvQ3tMLiT8g4P4NboqECyHL1teGsJA2q4CnhgSdFEfHpFM4H9SiECv4QpCABr"
-    },
-    {
-      "wallet": "ApVjui5DV8hr5beYtews5cWECvMne48Y6B8WPjDKQvhU",
-      "amountUi": 590.029777,
-      "blockTime": "2026-07-18T14:02:27.000Z",
-      "signature": "4tASd73Yz1Af5fjQbshLVVWBrBPMNtJ2aDwLNdvXM33LUcswXz9dk9Qr1D4VcTbfeCp6wVUFDXkHHsWKZghegAtG",
-      "txUrl": "https://solscan.io/tx/4tASd73Yz1Af5fjQbshLVVWBrBPMNtJ2aDwLNdvXM33LUcswXz9dk9Qr1D4VcTbfeCp6wVUFDXkHHsWKZghegAtG"
-    },
-    {
-      "wallet": "4rwjAseqDbA6FRy41Aw3xzK5naeYQ7zHQ3tz3e2gk6LR",
-      "amountUi": 590.029777,
-      "blockTime": "2026-07-18T14:02:25.000Z",
-      "signature": "3yGL6co9kmCVg4VGyYU4vnY1ctbcjC2qW6gjGR9uH8z4fPuct7AV3HE82hf1FmwcHRXEK6apnuxxRTJSDQ7dYRTk",
-      "txUrl": "https://solscan.io/tx/3yGL6co9kmCVg4VGyYU4vnY1ctbcjC2qW6gjGR9uH8z4fPuct7AV3HE82hf1FmwcHRXEK6apnuxxRTJSDQ7dYRTk"
-    },
-    {
-      "wallet": "2drQEwPr2ZQiz3UMvPQsYg3iW4q3tb61pbpPJqqAMbjr",
-      "amountUi": 590.029777,
-      "blockTime": "2026-07-18T14:02:24.000Z",
-      "signature": "5HFtXkbnkkAsUYpJFnnRj22N8oBg2V8rkVe5qv6NG1eHbDDKzuVcn9MaJywMLPJGHEMQUjNtZkSb7RtUe5ZFyr9w",
-      "txUrl": "https://solscan.io/tx/5HFtXkbnkkAsUYpJFnnRj22N8oBg2V8rkVe5qv6NG1eHbDDKzuVcn9MaJywMLPJGHEMQUjNtZkSb7RtUe5ZFyr9w"
-    },
-    {
-      "wallet": "ArsyeCGPuwkxGTgxnHc3B6p7dDWrqe8xYkdJMGbGuCVo",
-      "amountUi": 590.029777,
-      "blockTime": "2026-07-18T14:02:21.000Z",
-      "signature": "3beHeKKNPDJw2nyt8bhvrFDKfvATWG1n6mRtk8hZE3wqqh794oC8EmKPLWAbuVuXs4t2FPnPQ9XwMeZKiTgmCG1Q",
-      "txUrl": "https://solscan.io/tx/3beHeKKNPDJw2nyt8bhvrFDKfvATWG1n6mRtk8hZE3wqqh794oC8EmKPLWAbuVuXs4t2FPnPQ9XwMeZKiTgmCG1Q"
-    },
-    {
-      "wallet": "2rGYk4Lh8VJyXRyBcSfE48HsV5T9snMnCs925zDjLZoJ",
-      "amountUi": 590.029777,
-      "blockTime": "2026-07-18T14:02:19.000Z",
-      "signature": "5ikogqCnGPYL86fkFHsntTQLNzCbydKrtUYxFwgDdr6buBV3BHkeK6YqRtLh9k2cLYntfRtNzEHXNRiGjaQKyYhc",
-      "txUrl": "https://solscan.io/tx/5ikogqCnGPYL86fkFHsntTQLNzCbydKrtUYxFwgDdr6buBV3BHkeK6YqRtLh9k2cLYntfRtNzEHXNRiGjaQKyYhc"
-    },
-    {
-      "wallet": "DvHu9XgPG2fnFHycMWBZJRH76og4a2c1fSKJD2oQGjYn",
-      "amountUi": 590.029777,
-      "blockTime": "2026-07-18T14:02:17.000Z",
-      "signature": "33HQ1TgVi7SXyzkeSNkCH1BZffcwfoJo92PCs249kQDrypdwHeFxKroGLzbXiv5KBuYbVYQHetsfBoi916YsNTwb",
-      "txUrl": "https://solscan.io/tx/33HQ1TgVi7SXyzkeSNkCH1BZffcwfoJo92PCs249kQDrypdwHeFxKroGLzbXiv5KBuYbVYQHetsfBoi916YsNTwb"
-    },
-    {
-      "wallet": "HMjTXE96phFudoqwayr12WqcHcUrF2GorxrzgRUERbeH",
-      "amountUi": 590.029777,
-      "blockTime": "2026-07-18T14:02:15.000Z",
-      "signature": "39jaV84XbEPQapCxJv6hcG3ZHTxxNAct2YUwThtCks91Bu7rTTJQWkGuvwa3mJuEtCgjCa7FiwojEdXonmFZDPNM",
-      "txUrl": "https://solscan.io/tx/39jaV84XbEPQapCxJv6hcG3ZHTxxNAct2YUwThtCks91Bu7rTTJQWkGuvwa3mJuEtCgjCa7FiwojEdXonmFZDPNM"
-    },
-    {
-      "wallet": "HZp2BJxRxq9551b58KF9Qp9RPXRZUr4phkgpRMQGC9fJ",
-      "amountUi": 590.029777,
-      "blockTime": "2026-07-18T14:02:14.000Z",
-      "signature": "3X7eDzcqWrEBnnWnLEQWf7HpAPu9ByYeAHVZCtCF6LAjPTZ5DSUYjhVpzciqqmabJmV6gQDGHQ8Mok26mzUKLrbv",
-      "txUrl": "https://solscan.io/tx/3X7eDzcqWrEBnnWnLEQWf7HpAPu9ByYeAHVZCtCF6LAjPTZ5DSUYjhVpzciqqmabJmV6gQDGHQ8Mok26mzUKLrbv"
-    },
-    {
-      "wallet": "9mLRQ8aXhJuMwsz8NdEPKSKL4cQuEdKGXWTwwbFhPFVa",
-      "amountUi": 590.029777,
-      "blockTime": "2026-07-18T14:02:13.000Z",
-      "signature": "5pSfvAn9HUygo8tA2q9wTKsw1FP78aT5eGd3ThTJkJoSeDU4Y2t2q3emkaGfkTELjWqdY3R6fAWqkpdUS43tBL5s",
-      "txUrl": "https://solscan.io/tx/5pSfvAn9HUygo8tA2q9wTKsw1FP78aT5eGd3ThTJkJoSeDU4Y2t2q3emkaGfkTELjWqdY3R6fAWqkpdUS43tBL5s"
-    },
-    {
-      "wallet": "AUcn3JBMNZYM4EKnvhi2BemSZXU29Seud86fXhv2H9dX",
-      "amountUi": 590.029777,
-      "blockTime": "2026-07-18T14:02:12.000Z",
-      "signature": "49tpcr6fHPeoFd2cRvvTRY2gUVkoz8Xqp2z8YuH8dAkXLd4KVnQp9DPBHbT6rtKMidFuAmRE5h6YJ75eeqy2EURt",
-      "txUrl": "https://solscan.io/tx/49tpcr6fHPeoFd2cRvvTRY2gUVkoz8Xqp2z8YuH8dAkXLd4KVnQp9DPBHbT6rtKMidFuAmRE5h6YJ75eeqy2EURt"
-    },
-    {
-      "wallet": "GeTNN2WmEyJjhyBrtZzuTWkpjYvsfyDv7BvBbVEJMd27",
-      "amountUi": 590.029777,
-      "blockTime": "2026-07-18T14:02:11.000Z",
-      "signature": "5BpeD2viKN6jdwfJuJPae6QhGpUomzpUzQF4A629SWjk73L9neM44w5dDmvk2QddG64V7bsSPw9BWxFCZL9DWiw4",
-      "txUrl": "https://solscan.io/tx/5BpeD2viKN6jdwfJuJPae6QhGpUomzpUzQF4A629SWjk73L9neM44w5dDmvk2QddG64V7bsSPw9BWxFCZL9DWiw4"
-    },
-    {
-      "wallet": "HjLjCJBq5pqH4oN8GdG4vkusVbSZGignFdENGCLkGctw",
-      "amountUi": 590.029777,
-      "blockTime": "2026-07-18T14:02:10.000Z",
-      "signature": "Bg2NtUkY9jcRqZF5UsPCpDAL64NEJnA1iAGugJktmatA3qNGU44LX3kMFDCD2pUu9kMKeZh3t94DLics4GFzUni",
-      "txUrl": "https://solscan.io/tx/Bg2NtUkY9jcRqZF5UsPCpDAL64NEJnA1iAGugJktmatA3qNGU44LX3kMFDCD2pUu9kMKeZh3t94DLics4GFzUni"
-    },
-    {
-      "wallet": "CsqTHbqXXB6Y5fDx1bQ2Gb9h6GjALS1Yp2zDbAEc5DLB",
-      "amountUi": 590.029777,
-      "blockTime": "2026-07-18T14:02:08.000Z",
-      "signature": "327eYgsAvjMDwibQAjVYSxDoxMfrRhQyJKrfaAjns6vnBLTuquKow7MhNFigoEB71QmQgRDAVporjnm2nxFVCxHq",
-      "txUrl": "https://solscan.io/tx/327eYgsAvjMDwibQAjVYSxDoxMfrRhQyJKrfaAjns6vnBLTuquKow7MhNFigoEB71QmQgRDAVporjnm2nxFVCxHq"
-    },
-    {
-      "wallet": "Hn2T2F4cY7efBoNjVKCptDdHfgC8YRyf9bcGqZ69hzT9",
-      "amountUi": 585.532091,
-      "blockTime": "2026-07-18T14:00:46.000Z",
-      "signature": "4ehAwLrxk7w2p8fzLR1pjNj3trUoBt6FuieSQC8LM9shq2BGdvXzhQ7xmo7nMHoQLtBWoCPTzYRfRH7H67cHjhJZ",
-      "txUrl": "https://solscan.io/tx/4ehAwLrxk7w2p8fzLR1pjNj3trUoBt6FuieSQC8LM9shq2BGdvXzhQ7xmo7nMHoQLtBWoCPTzYRfRH7H67cHjhJZ"
-    },
-    {
-      "wallet": "7qPd7eF62rjjSN4HaWj2SK1uyH7GNJTSJBNTsXBPRjgc",
-      "amountUi": 585.532091,
-      "blockTime": "2026-07-18T14:00:45.000Z",
-      "signature": "UnYQfhQnzr6gUojWoGszxrGpoaVmjViq8jKU8BuKpKfrH5xLM3rn4TLEvCecQZoKLCbYVpjxxL6agbXwHVQvGD3",
-      "txUrl": "https://solscan.io/tx/UnYQfhQnzr6gUojWoGszxrGpoaVmjViq8jKU8BuKpKfrH5xLM3rn4TLEvCecQZoKLCbYVpjxxL6agbXwHVQvGD3"
-    },
-    {
-      "wallet": "5wsxd7QC15x6Cnr24UeAqpH5A1oCxGZ8PY7nxBcpfSAU",
-      "amountUi": 585.532091,
-      "blockTime": "2026-07-18T14:00:44.000Z",
-      "signature": "2uzjvM82DDKRsRhTePreXdQx23PdwkwAasEKMHFcGQnJKF55iXScucPtrRSVCgY3PFP7jFop94LWEUJCkE54Fqav",
-      "txUrl": "https://solscan.io/tx/2uzjvM82DDKRsRhTePreXdQx23PdwkwAasEKMHFcGQnJKF55iXScucPtrRSVCgY3PFP7jFop94LWEUJCkE54Fqav"
-    },
-    {
-      "wallet": "5o5kRVjW5KGgBfyATQttaXhHVZ8ba6QEnnnd66eHkFz3",
-      "amountUi": 585.532091,
-      "blockTime": "2026-07-18T14:00:42.000Z",
-      "signature": "ipVNLM9EtN9bVUmRLtT9jAUAvxXJfdWzNuCjfoVkuL1wpgrz7UiDzwgTGm5JPkLpEPzT5asgmqmwce23AavZHGw",
-      "txUrl": "https://solscan.io/tx/ipVNLM9EtN9bVUmRLtT9jAUAvxXJfdWzNuCjfoVkuL1wpgrz7UiDzwgTGm5JPkLpEPzT5asgmqmwce23AavZHGw"
-    },
-    {
-      "wallet": "6tZUfg9QkjceeKoFVxWycuWhu4bNdPUf3kVFVJZqmM4A",
-      "amountUi": 585.532091,
-      "blockTime": "2026-07-18T14:00:41.000Z",
-      "signature": "35B81q5xnQ3uoj9LqLTRvwfAPuruYY5SYrBfsiFDz5jzBwLtEE3m4ubURPX8uoZsW6hUQNxczJpD5e1Bjobh97S4",
-      "txUrl": "https://solscan.io/tx/35B81q5xnQ3uoj9LqLTRvwfAPuruYY5SYrBfsiFDz5jzBwLtEE3m4ubURPX8uoZsW6hUQNxczJpD5e1Bjobh97S4"
-    },
-    {
-      "wallet": "7VkJPCGSNPgR2iinThkAU7GXXKcPiPGpJyWApDFWLnSF",
-      "amountUi": 585.532091,
-      "blockTime": "2026-07-18T14:00:40.000Z",
-      "signature": "2RY4RFWSWDzDTtc4jMPs1YVAJUnXgtPVaV83zfL7cKFKiAkX8LN3tYmyG7xUtfbEDnvRJ359GQUMqdVagZ1eQjb9",
-      "txUrl": "https://solscan.io/tx/2RY4RFWSWDzDTtc4jMPs1YVAJUnXgtPVaV83zfL7cKFKiAkX8LN3tYmyG7xUtfbEDnvRJ359GQUMqdVagZ1eQjb9"
-    },
-    {
-      "wallet": "2ndqVbBauopbWthYCaBFofi7k4Ebj9cgHENobBzxhWUa",
-      "amountUi": 585.532091,
-      "blockTime": "2026-07-18T14:00:39.000Z",
-      "signature": "5pKXY55ve7DPGwFCNCY63tN8HsxhTVySDk9NgunRkJkWBVGUcHPdpUb4GhQcpU3SMyYR217hgxjXmvo3xQmfdLRj",
-      "txUrl": "https://solscan.io/tx/5pKXY55ve7DPGwFCNCY63tN8HsxhTVySDk9NgunRkJkWBVGUcHPdpUb4GhQcpU3SMyYR217hgxjXmvo3xQmfdLRj"
-    },
-    {
-      "wallet": "7ou8C8xP8ZUjFL2qQuT1RrJZ1iUdSsmRiiUPvLdJudjA",
-      "amountUi": 585.532091,
-      "blockTime": "2026-07-18T14:00:38.000Z",
-      "signature": "5Kw5qtyVpBgtLhDWaQRkkAjHef2wsZGPb3d7v74bgC6sRxp5pyFUP68fc1S6B7cHJMoLL5v8EyapJ5LVFLqkaU8A",
-      "txUrl": "https://solscan.io/tx/5Kw5qtyVpBgtLhDWaQRkkAjHef2wsZGPb3d7v74bgC6sRxp5pyFUP68fc1S6B7cHJMoLL5v8EyapJ5LVFLqkaU8A"
-    },
-    {
-      "wallet": "cw3USse4yzZ42ykUurbgpR6j9rsb6xnmZa18VFeQWdf",
-      "amountUi": 585.532091,
-      "blockTime": "2026-07-18T14:00:36.000Z",
-      "signature": "mWQPG4WVnZgmxNJkQ6ufdJp92omC9LZ6BXDYDUirKwtU8ijPBXV5boin58i7dGNXe63ZrEUPCLLUvCRFLuGGqSR",
-      "txUrl": "https://solscan.io/tx/mWQPG4WVnZgmxNJkQ6ufdJp92omC9LZ6BXDYDUirKwtU8ijPBXV5boin58i7dGNXe63ZrEUPCLLUvCRFLuGGqSR"
-    },
-    {
-      "wallet": "EtzTwejmHzGsyv6Ui62g6H1sx73AqcqxqHXqvBP3W2Tn",
-      "amountUi": 585.532091,
-      "blockTime": "2026-07-18T14:00:36.000Z",
-      "signature": "Vz8oBtyEvtBwK91hwFtAZeSFWa4zxBX8uyBnhiPDis2eQRA87Ta71utpArLfnbLT8t1fm15cdUzrTWmJT7DxEAL",
-      "txUrl": "https://solscan.io/tx/Vz8oBtyEvtBwK91hwFtAZeSFWa4zxBX8uyBnhiPDis2eQRA87Ta71utpArLfnbLT8t1fm15cdUzrTWmJT7DxEAL"
-    },
-    {
-      "wallet": "9St6ETbe3CFitw6UNSd8kg7kZ6STXy71wEGiERqQj89U",
-      "amountUi": 585.532091,
-      "blockTime": "2026-07-18T14:00:35.000Z",
-      "signature": "5qrrLqpfspt4vDrD6SESjbvwnfiX86FWMGCVSqUsmk33AvaiaXnPwHN5qxLwGneSHGkih8NDpLXyaF7r86F9DNrN",
-      "txUrl": "https://solscan.io/tx/5qrrLqpfspt4vDrD6SESjbvwnfiX86FWMGCVSqUsmk33AvaiaXnPwHN5qxLwGneSHGkih8NDpLXyaF7r86F9DNrN"
-    },
-    {
-      "wallet": "6f2bAAsueVqiFjDZWyYZtaZxi8KT8bCfw3CX26NuPtxx",
-      "amountUi": 585.532091,
-      "blockTime": "2026-07-18T14:00:34.000Z",
-      "signature": "pfLWWB8rNWV4uB4MyQxA9CQf7r7BbYaSMEaWuh5uMoSATpG1YGbwna7Km6fxcuRNzY62crMAZfuPHQN1ovVY6r2",
-      "txUrl": "https://solscan.io/tx/pfLWWB8rNWV4uB4MyQxA9CQf7r7BbYaSMEaWuh5uMoSATpG1YGbwna7Km6fxcuRNzY62crMAZfuPHQN1ovVY6r2"
-    },
-    {
-      "wallet": "AaviCxRymaA7HFtAvzYR1dVR4mecwWSDPefkG7iFKAVM",
-      "amountUi": 585.532091,
-      "blockTime": "2026-07-18T14:00:30.000Z",
-      "signature": "UV6TXiqBcRkEh4FYDbbXfJEZRwSrk2hhwv29Jxs6oSEYrdNZMTcgpyJMf2yAMstTGBQJSYVcKfuofWFUQnAmfNd",
-      "txUrl": "https://solscan.io/tx/UV6TXiqBcRkEh4FYDbbXfJEZRwSrk2hhwv29Jxs6oSEYrdNZMTcgpyJMf2yAMstTGBQJSYVcKfuofWFUQnAmfNd"
-    },
-    {
-      "wallet": "GnmYPUzoba71NiYwfWN3G74u3aFmpsChSNQHSHVrgZus",
-      "amountUi": 585.532091,
-      "blockTime": "2026-07-18T14:00:26.000Z",
-      "signature": "uNQyRZn514MJJzdV6iLFBmKmjWSVsKujBV9J6QwsSkkpN7A996AFsSnBuN92u1wBH9QX2YitzpeT9JvMnVyCqs4",
-      "txUrl": "https://solscan.io/tx/uNQyRZn514MJJzdV6iLFBmKmjWSVsKujBV9J6QwsSkkpN7A996AFsSnBuN92u1wBH9QX2YitzpeT9JvMnVyCqs4"
-    },
-    {
-      "wallet": "5ZKrYRK32zHBi2T7s6ELHWDGxW8MdSx4Bg6SwYrJj3L4",
-      "amountUi": 585.532091,
-      "blockTime": "2026-07-18T14:00:24.000Z",
-      "signature": "4dQqKKyRoRnfoErcsVtxEEhc1qjNCA8yK9F2eiVfUsRZg5MS1GVnge1Z7vwKsjEoxi9RLbkEp66YemRrXirDkTEU",
-      "txUrl": "https://solscan.io/tx/4dQqKKyRoRnfoErcsVtxEEhc1qjNCA8yK9F2eiVfUsRZg5MS1GVnge1Z7vwKsjEoxi9RLbkEp66YemRrXirDkTEU"
-    },
-    {
-      "wallet": "3cVDVPFycJ8hXVTdPWYxeuLjvMvspBVACQp7BE9zGgLu",
-      "amountUi": 585.532091,
-      "blockTime": "2026-07-18T14:00:23.000Z",
-      "signature": "3xHvrgJ64UnxVUjvBGjSALmCGNNN715S6GVka1jYZoicckNh7zSbQJ1AyStvYtcUkRnicUczppaH3qEQDdcUL3FG",
-      "txUrl": "https://solscan.io/tx/3xHvrgJ64UnxVUjvBGjSALmCGNNN715S6GVka1jYZoicckNh7zSbQJ1AyStvYtcUkRnicUczppaH3qEQDdcUL3FG"
-    },
-    {
-      "wallet": "6329829bZP8ZsTcXrUwhiXynXQcZpNYcCDqJ2Ssk6Kae",
-      "amountUi": 585.532091,
-      "blockTime": "2026-07-18T14:00:22.000Z",
-      "signature": "2iYhdE7HDkogc7bgMeUFrY4tVNwk19XLxKkZEi9B3GjETBQKbEk9HXCFicmfg1NzAbXUgbee2Q5foQK4skqTwwWN",
-      "txUrl": "https://solscan.io/tx/2iYhdE7HDkogc7bgMeUFrY4tVNwk19XLxKkZEi9B3GjETBQKbEk9HXCFicmfg1NzAbXUgbee2Q5foQK4skqTwwWN"
-    },
-    {
-      "wallet": "6Zn3Ue32JXhNdYxeyxQhX7ChdA7bzW2qkB7CjbJZxhMQ",
-      "amountUi": 585.532091,
-      "blockTime": "2026-07-18T14:00:21.000Z",
-      "signature": "HZWHENsFyS9rNehD9sbNry3xE9wpYYPUtbbfkkwynSJsR4nP9SfncNTvT4XaXmFPEpn6391B1DXsTbjFE3TbaDz",
-      "txUrl": "https://solscan.io/tx/HZWHENsFyS9rNehD9sbNry3xE9wpYYPUtbbfkkwynSJsR4nP9SfncNTvT4XaXmFPEpn6391B1DXsTbjFE3TbaDz"
-    },
-    {
-      "wallet": "5siihysFL4GshFKKHekhudJqo1KKntEWPJ2Jp7iDNiQk",
-      "amountUi": 585.532091,
-      "blockTime": "2026-07-18T14:00:20.000Z",
-      "signature": "4zzqXcH8X1iyXJ31XLkgpPeMySSGd7PPzyMki2GqaSy6h2xyce6EcrrW7f9AakguLFywffizjV4QurvCzeZ9sQ4A",
-      "txUrl": "https://solscan.io/tx/4zzqXcH8X1iyXJ31XLkgpPeMySSGd7PPzyMki2GqaSy6h2xyce6EcrrW7f9AakguLFywffizjV4QurvCzeZ9sQ4A"
-    },
-    {
-      "wallet": "BozjtX2msaMkJRdU6HuJEMaGFBuweHpYcM51iNsviSxK",
-      "amountUi": 585.532091,
-      "blockTime": "2026-07-18T14:00:19.000Z",
-      "signature": "3jHBDRWUnwAuhXkcvJKGBfbuMkGTGJ3q1h2MgZ4pZrY18pjsLp2y7fJUWaym4EPmQnpai79gJmP1MbYCpbQ4YAs3",
-      "txUrl": "https://solscan.io/tx/3jHBDRWUnwAuhXkcvJKGBfbuMkGTGJ3q1h2MgZ4pZrY18pjsLp2y7fJUWaym4EPmQnpai79gJmP1MbYCpbQ4YAs3"
-    },
-    {
-      "wallet": "BCL5vMiMPCMSMQwZJdEzVFKv7N7AbzTQwNjSXHVhhp3o",
-      "amountUi": 585.532091,
-      "blockTime": "2026-07-18T14:00:18.000Z",
-      "signature": "2S15RWAMZXMGRpzJ9r32ycjK7WKrsFVrBVJAdbKMXYxeioqHua8xPQYQrUHT1umajzcdCsjS3gB19oF8fecBeV3T",
-      "txUrl": "https://solscan.io/tx/2S15RWAMZXMGRpzJ9r32ycjK7WKrsFVrBVJAdbKMXYxeioqHua8xPQYQrUHT1umajzcdCsjS3gB19oF8fecBeV3T"
-    },
-    {
-      "wallet": "2idFTP4ZYYVfwETgaRdb4pvR5A4aVViwYSikC5UzRyEw",
-      "amountUi": 585.532091,
-      "blockTime": "2026-07-18T14:00:16.000Z",
-      "signature": "EHyYRKzYCRktbtvFdU5cxSNHMwDRMS6zeH3SvDWPhQqMU1TEUzb6cCkbvBueKWXvJpvpxDaNYKvf8NgYbceE14V",
-      "txUrl": "https://solscan.io/tx/EHyYRKzYCRktbtvFdU5cxSNHMwDRMS6zeH3SvDWPhQqMU1TEUzb6cCkbvBueKWXvJpvpxDaNYKvf8NgYbceE14V"
-    },
-    {
-      "wallet": "EGb9R7nUYqakdki2h5zUdF7XifkMK5oxExwMAeLGbuNm",
-      "amountUi": 585.532091,
-      "blockTime": "2026-07-18T14:00:15.000Z",
-      "signature": "56Mbg6muxF7DP7BKqhTcT7vcAufvWRDsu9jVNqsckTCpojioVzDfkBbTimwidP5g2pEdK4z8auUgpmBYTGVixpJi",
-      "txUrl": "https://solscan.io/tx/56Mbg6muxF7DP7BKqhTcT7vcAufvWRDsu9jVNqsckTCpojioVzDfkBbTimwidP5g2pEdK4z8auUgpmBYTGVixpJi"
-    },
-    {
-      "wallet": "AGYeW8irRyYn7SqQ9EjepHjZrWFWYK2ZLh86cHq7cQju",
-      "amountUi": 585.532091,
-      "blockTime": "2026-07-18T14:00:13.000Z",
-      "signature": "5QrHSbCFUEB5wEjHR8Lhgcpd8Usy5rmtQZhNge3Vn4Njj1bwYTszYFeTDvT9jPMNc2owYLfPotfRHKRJeREXTwNd",
-      "txUrl": "https://solscan.io/tx/5QrHSbCFUEB5wEjHR8Lhgcpd8Usy5rmtQZhNge3Vn4Njj1bwYTszYFeTDvT9jPMNc2owYLfPotfRHKRJeREXTwNd"
-    },
-    {
-      "wallet": "HqBGQtKC7fp8czg1suGXXFMqkkd1VNkewgNUL68DzDGh",
-      "amountUi": 585.532091,
-      "blockTime": "2026-07-18T14:00:11.000Z",
-      "signature": "5xfh5GUypuoaAGLim5BGPMsMnvEv9eKkCsRPnbtE4tXFczY23CYuu49fshdks4g3RNRo8sKVrJ4bJunKLvnybreK",
-      "txUrl": "https://solscan.io/tx/5xfh5GUypuoaAGLim5BGPMsMnvEv9eKkCsRPnbtE4tXFczY23CYuu49fshdks4g3RNRo8sKVrJ4bJunKLvnybreK"
-    },
-    {
-      "wallet": "nQA6vBqLyuUu3N4fQwmawDQnpHcLyqQRB26HWApDyFx",
-      "amountUi": 585.772998,
-      "blockTime": "2026-07-18T13:58:51.000Z",
-      "signature": "3A5dBQvBKx6vhf4bHC9Q96eDMmUv4KeqbzNssrrQVLnmT1dvrBZrbqAyY38JVMwbuoRcUe1NDG9hPbADpGTBMcpx",
-      "txUrl": "https://solscan.io/tx/3A5dBQvBKx6vhf4bHC9Q96eDMmUv4KeqbzNssrrQVLnmT1dvrBZrbqAyY38JVMwbuoRcUe1NDG9hPbADpGTBMcpx"
-    },
-    {
-      "wallet": "8MD7y5YaxHmRnVSnhuZTgxXD5MDMCPnfnCZvcGeL1hSu",
-      "amountUi": 585.772998,
-      "blockTime": "2026-07-18T13:58:47.000Z",
-      "signature": "CY7tEFQzsoyB17k71bRDXS8wNtUYQVnztD6qrnSfY9pmzrMqRfH1D3gKD4PmNrfG8fMEUeYF6p5GEJrYNAQNjv1",
-      "txUrl": "https://solscan.io/tx/CY7tEFQzsoyB17k71bRDXS8wNtUYQVnztD6qrnSfY9pmzrMqRfH1D3gKD4PmNrfG8fMEUeYF6p5GEJrYNAQNjv1"
-    },
-    {
-      "wallet": "Aa2C5jMxXtW1e3WnmrqaCCy8ALqHtwZHBtPJGfQyVpPf",
-      "amountUi": 585.772998,
-      "blockTime": "2026-07-18T13:58:47.000Z",
-      "signature": "4wfk4xB72NFyGV35PvEEJzZqKWMPf13g7Co1JdY7avSVDqB88XegzErQLKgPDPF3m22VzGQjhRBmJiSAyRFpFT3L",
-      "txUrl": "https://solscan.io/tx/4wfk4xB72NFyGV35PvEEJzZqKWMPf13g7Co1JdY7avSVDqB88XegzErQLKgPDPF3m22VzGQjhRBmJiSAyRFpFT3L"
-    },
-    {
-      "wallet": "E44QceWNYNmE8S5GPML2TsSgFSYV6b2C9KmxJHywL8tF",
-      "amountUi": 585.772998,
-      "blockTime": "2026-07-18T13:58:45.000Z",
-      "signature": "2puAHYRmUB9vZ1CoZYRSgdRqX52255xSG8yAEwjNJn5edWMfiTyWVMko65XZCQBtkguvZ3ZHS2ffu96ZULJmtLpR",
-      "txUrl": "https://solscan.io/tx/2puAHYRmUB9vZ1CoZYRSgdRqX52255xSG8yAEwjNJn5edWMfiTyWVMko65XZCQBtkguvZ3ZHS2ffu96ZULJmtLpR"
-    },
-    {
-      "wallet": "HKawhStr3L9797UkPkEG1ngPi5Q1FjSa69jrJ8aphnHu",
-      "amountUi": 585.772998,
-      "blockTime": "2026-07-18T13:58:44.000Z",
-      "signature": "dz5Gt5NcD9yVwdQQgqVuRnqmB9aG45EdePGXEH1fB2xGNZLWXQxFZ3youVFL6YdKZbvpxVSp4Wmbfhz34EvXe9V",
-      "txUrl": "https://solscan.io/tx/dz5Gt5NcD9yVwdQQgqVuRnqmB9aG45EdePGXEH1fB2xGNZLWXQxFZ3youVFL6YdKZbvpxVSp4Wmbfhz34EvXe9V"
-    },
-    {
-      "wallet": "6Bkwa7k8PyPJ5rz4wmyM3ZvbtzJyaARTh3C1GRe6XCMo",
-      "amountUi": 585.772998,
-      "blockTime": "2026-07-18T13:58:41.000Z",
-      "signature": "3ShFWLGyWb6T1tEruwSdgJvg9Kkuu8o7qTi34XZgGAr9aqrVLvBP46iTuxWgXXWX4kVmzR5CKrirZ5YiMjA4qp89",
-      "txUrl": "https://solscan.io/tx/3ShFWLGyWb6T1tEruwSdgJvg9Kkuu8o7qTi34XZgGAr9aqrVLvBP46iTuxWgXXWX4kVmzR5CKrirZ5YiMjA4qp89"
-    },
-    {
-      "wallet": "FxAq9DrFMfa76LmexiUsDcgG2Lpy4SSauu25C6mTuZA3",
-      "amountUi": 585.772998,
-      "blockTime": "2026-07-18T13:58:40.000Z",
-      "signature": "37sJUTeK54HZr5H8DdkfwN7CyVFd7KArk6DCtG2J95o2AUom5nf1VVVkMFL8jZiRFmApTGJ3dyg3gWE5YVkMAMhb",
-      "txUrl": "https://solscan.io/tx/37sJUTeK54HZr5H8DdkfwN7CyVFd7KArk6DCtG2J95o2AUom5nf1VVVkMFL8jZiRFmApTGJ3dyg3gWE5YVkMAMhb"
-    },
-    {
-      "wallet": "4RaTBg9Ta3Ekxb5UEzJ3gRxJGDpXeFt69QqfaeUgy6sK",
-      "amountUi": 585.772998,
-      "blockTime": "2026-07-18T13:58:39.000Z",
-      "signature": "53AafxeYHzcQEzyNJMxTDWza1Zv4UpbrMQiUXVWhfuGutyv4k67vfr4mwEc2txUu9JVRSYyfmSAZgW24CeVub7sF",
-      "txUrl": "https://solscan.io/tx/53AafxeYHzcQEzyNJMxTDWza1Zv4UpbrMQiUXVWhfuGutyv4k67vfr4mwEc2txUu9JVRSYyfmSAZgW24CeVub7sF"
-    },
-    {
-      "wallet": "9MEvoYN5hinuy6rnQ8pHJ57JjJUhPnAVnsX2PyrLPsgC",
-      "amountUi": 585.772998,
-      "blockTime": "2026-07-18T13:58:35.000Z",
-      "signature": "3hipibVTsSVit4XaKbWXuUE1Tmw5AXjt7qUxZNpL5bJuxAhUxADREcruoVNEXTd1hixqZnJmx1EUrufQFpr2t78k",
-      "txUrl": "https://solscan.io/tx/3hipibVTsSVit4XaKbWXuUE1Tmw5AXjt7qUxZNpL5bJuxAhUxADREcruoVNEXTd1hixqZnJmx1EUrufQFpr2t78k"
-    },
-    {
-      "wallet": "DEiEMAyBgr8eD89hhnGKPVDQRM5dABf1orG5kobaAgmo",
-      "amountUi": 585.772998,
-      "blockTime": "2026-07-18T13:58:34.000Z",
-      "signature": "TCrFXkB6Gg7TvG7BdLB1fL29Dm2ZG16HBebyZZ315YVZDkgwsAsfD4jYM3v6CuKJJv67J9QDirFTCaPEfgxeDb8",
-      "txUrl": "https://solscan.io/tx/TCrFXkB6Gg7TvG7BdLB1fL29Dm2ZG16HBebyZZ315YVZDkgwsAsfD4jYM3v6CuKJJv67J9QDirFTCaPEfgxeDb8"
-    },
-    {
-      "wallet": "F6AoNRKkgrqdNLgjWuRHUGy9Kxa1W38XfXdL3zXhnsja",
-      "amountUi": 585.772998,
-      "blockTime": "2026-07-18T13:58:33.000Z",
-      "signature": "4c5xsCYCGzrqbcrbQGEdPjuCsjwzpmQNG6TW3cxqpjJ46qGHMHCTrpwTCapqG7ACbCoJEJr42cLmsAt4tV8E8wfA",
-      "txUrl": "https://solscan.io/tx/4c5xsCYCGzrqbcrbQGEdPjuCsjwzpmQNG6TW3cxqpjJ46qGHMHCTrpwTCapqG7ACbCoJEJr42cLmsAt4tV8E8wfA"
-    },
-    {
-      "wallet": "FWvJCHVJqnNoSSenjF4uJzg86BkJdZn5WmFDgJgS1cFL",
-      "amountUi": 585.772998,
-      "blockTime": "2026-07-18T13:58:31.000Z",
-      "signature": "61pT89P6SByoaPPDdCD44tQKCTy63fUpd9Bc2tLyb9Qn7AjYq4inVznVHC4p3Z8zwfibB6SC3urr1G8VFe4Ud5A3",
-      "txUrl": "https://solscan.io/tx/61pT89P6SByoaPPDdCD44tQKCTy63fUpd9Bc2tLyb9Qn7AjYq4inVznVHC4p3Z8zwfibB6SC3urr1G8VFe4Ud5A3"
-    },
-    {
-      "wallet": "AjojkpM7PTdRVu3wVmsWhhMNFMhQwX3Xbmba3wuRF2RP",
-      "amountUi": 585.772998,
-      "blockTime": "2026-07-18T13:58:30.000Z",
-      "signature": "4iHRQqFVeWPo2kxGAhgrZL9nEexoABdggqxTzMAufsRsw6vepVHkP71hKJ4WNdPHa1j5b54H89p8kjZBbW6NhYN1",
-      "txUrl": "https://solscan.io/tx/4iHRQqFVeWPo2kxGAhgrZL9nEexoABdggqxTzMAufsRsw6vepVHkP71hKJ4WNdPHa1j5b54H89p8kjZBbW6NhYN1"
-    },
-    {
-      "wallet": "B734gn9KLqDqz3u6LyLYmvPYqk9TPyzkXie2XTd2ksZ4",
-      "amountUi": 585.772998,
-      "blockTime": "2026-07-18T13:58:29.000Z",
-      "signature": "2J8JTKoNLAt7AovjhVVF8FHz8e13Y6jTSyveXN83mq6CHV19RuaE8nAHqjaQYi3p78qxzcdWFVoG7WHfAgNufMMg",
-      "txUrl": "https://solscan.io/tx/2J8JTKoNLAt7AovjhVVF8FHz8e13Y6jTSyveXN83mq6CHV19RuaE8nAHqjaQYi3p78qxzcdWFVoG7WHfAgNufMMg"
-    },
-    {
-      "wallet": "BA4W4Jge63d4LEn4yAn3rWqvp237ooFVEgGwmzs8onUh",
-      "amountUi": 585.772998,
-      "blockTime": "2026-07-18T13:58:27.000Z",
-      "signature": "5fy4qSnnAFPscAcQbTPMCQZag9qogk9EC6LuDiwt7YYLn1fSFzCKCqPi5qaqj3yc82cb726Hb2D8TdPbTkyoBzu7",
-      "txUrl": "https://solscan.io/tx/5fy4qSnnAFPscAcQbTPMCQZag9qogk9EC6LuDiwt7YYLn1fSFzCKCqPi5qaqj3yc82cb726Hb2D8TdPbTkyoBzu7"
-    },
-    {
-      "wallet": "2AEGDiqKA1jNCtHLmRSaDmGrbL31ZLGKVQqB8j1xvu2g",
-      "amountUi": 585.772998,
-      "blockTime": "2026-07-18T13:58:26.000Z",
-      "signature": "5gsqHsHQz6ns86sSdgNaSfV8aYMdfk14tPCUx5vSAaQG2CKAynxEePup6WBfNuW8vLzXqxGHnkaEbr48fyiQVZEg",
-      "txUrl": "https://solscan.io/tx/5gsqHsHQz6ns86sSdgNaSfV8aYMdfk14tPCUx5vSAaQG2CKAynxEePup6WBfNuW8vLzXqxGHnkaEbr48fyiQVZEg"
-    },
-    {
-      "wallet": "GJYDFMwuDPqsGBtJe4XTUkVKeqamH2jnB9DybB7sxXdc",
-      "amountUi": 585.772998,
-      "blockTime": "2026-07-18T13:58:24.000Z",
-      "signature": "3nCEKHYMWGe9oJThRDx79xHdaeQedZczxZUBMnHHpN7xPrU9tJqqW3cpBDZFFLQbE7PT57P2PRqhGUNfPjgFeNxT",
-      "txUrl": "https://solscan.io/tx/3nCEKHYMWGe9oJThRDx79xHdaeQedZczxZUBMnHHpN7xPrU9tJqqW3cpBDZFFLQbE7PT57P2PRqhGUNfPjgFeNxT"
-    },
-    {
-      "wallet": "2ZpLNzLAMSXeyn1iR6dpQYiivsRDJpQYNkkYf9NWffJc",
-      "amountUi": 585.772998,
-      "blockTime": "2026-07-18T13:58:23.000Z",
-      "signature": "2mbxcpnrKnxt24tvey5tdPPBXQCWRpxXNp2EAzoCDiHVyhsDCkgx9rqhv18vczZVvJuuyiMNPjsWQVsVUhkBM6H",
-      "txUrl": "https://solscan.io/tx/2mbxcpnrKnxt24tvey5tdPPBXQCWRpxXNp2EAzoCDiHVyhsDCkgx9rqhv18vczZVvJuuyiMNPjsWQVsVUhkBM6H"
-    },
-    {
-      "wallet": "AXrtpWa8SfiNztsyNiFoBBo55zMag78tnYysoRNKpEWS",
-      "amountUi": 585.772998,
-      "blockTime": "2026-07-18T13:58:22.000Z",
-      "signature": "2yrfp8vLQGsgJLQmT4nWGDcfvm7WFMDHS3rwd4tuxeErQmNTX4chJCtr6tgNdCeggStNfNn4X2aQfGENboHByFPu",
-      "txUrl": "https://solscan.io/tx/2yrfp8vLQGsgJLQmT4nWGDcfvm7WFMDHS3rwd4tuxeErQmNTX4chJCtr6tgNdCeggStNfNn4X2aQfGENboHByFPu"
-    },
-    {
-      "wallet": "FwqNSjvxCSjGJvgkcWggE4TN49iMPeovSs9YTfR6NXmj",
-      "amountUi": 585.772998,
-      "blockTime": "2026-07-18T13:58:21.000Z",
-      "signature": "2uFxSkBY6AsqmKj5piu4c9Dwk2jUaiiXjocC5XZa6qnHgSBxr6ESQcfCfeS5m7ue6h8YuypJWLXuGScV9tJdXQxD",
-      "txUrl": "https://solscan.io/tx/2uFxSkBY6AsqmKj5piu4c9Dwk2jUaiiXjocC5XZa6qnHgSBxr6ESQcfCfeS5m7ue6h8YuypJWLXuGScV9tJdXQxD"
-    },
-    {
-      "wallet": "8uxAQGjaajEn92VJNk95u7iz3thnxT4uaEfL4nTm1x8X",
-      "amountUi": 585.772998,
-      "blockTime": "2026-07-18T13:58:19.000Z",
-      "signature": "Lf2Z6NeDqfbN4ArWDceD2NoLg7UT1JwzPB1bnvBMDb5VLu9keaTEkkbwhDjm1XXFLvYVS3EAuzFRcMimVMZe6ce",
-      "txUrl": "https://solscan.io/tx/Lf2Z6NeDqfbN4ArWDceD2NoLg7UT1JwzPB1bnvBMDb5VLu9keaTEkkbwhDjm1XXFLvYVS3EAuzFRcMimVMZe6ce"
-    },
-    {
-      "wallet": "3pY3axzFsgiQud5XgHDdVpdzJt6xf5mCEGhNr3Gh3Ntt",
-      "amountUi": 585.772998,
-      "blockTime": "2026-07-18T13:58:16.000Z",
-      "signature": "5UJQpy58ZpEpTN4T4spfhUFn32TTCiFR4BQQnXRtjhuQ5sFKad6wsrN5Pepnq5vz7FJF3st18ZNik4rYAsdP9uWD",
-      "txUrl": "https://solscan.io/tx/5UJQpy58ZpEpTN4T4spfhUFn32TTCiFR4BQQnXRtjhuQ5sFKad6wsrN5Pepnq5vz7FJF3st18ZNik4rYAsdP9uWD"
-    },
-    {
-      "wallet": "9K2MUUQuj2yEdF2eDdYeajYKAFvDZvFAxXo4uowg7nSk",
-      "amountUi": 585.772998,
-      "blockTime": "2026-07-18T13:58:14.000Z",
-      "signature": "2rBdCjgwBWWKQr4AXvVt4KQKDY8kG6m7sJKJnajrmdUw4rFAAuRpyYJy7ct14iYGVu7mFHSDopSHHELFp4KX7NyT",
-      "txUrl": "https://solscan.io/tx/2rBdCjgwBWWKQr4AXvVt4KQKDY8kG6m7sJKJnajrmdUw4rFAAuRpyYJy7ct14iYGVu7mFHSDopSHHELFp4KX7NyT"
-    },
-    {
-      "wallet": "GPEXf6cPZMm6ScfXfBZeSWvTjiBkK1gs38hRndNrgSac",
-      "amountUi": 585.772998,
-      "blockTime": "2026-07-18T13:58:11.000Z",
-      "signature": "2KwjNAtGRDosMvk2mPmNwfapLbpFYnqxQzPhQAW1pT7MTZsB8ToDcT9huTm6yQ8GprY13MYQnLDL7d4pdnerFZ9H",
-      "txUrl": "https://solscan.io/tx/2KwjNAtGRDosMvk2mPmNwfapLbpFYnqxQzPhQAW1pT7MTZsB8ToDcT9huTm6yQ8GprY13MYQnLDL7d4pdnerFZ9H"
-    },
-    {
-      "wallet": "9dfZ4jPNj3HHrrHQeXb1gzXXL1YHaFw4tu567UdhcR9s",
-      "amountUi": 585.772998,
-      "blockTime": "2026-07-18T13:58:07.000Z",
-      "signature": "4X9QEVFsaiq7FqdaPtUr8qtUEpvPGNFJyYDoWa7Cpz91fj7rBy6HpBDQgTAxSk3R8AHTNYcmn14iMrDfQoCCYdxZ",
-      "txUrl": "https://solscan.io/tx/4X9QEVFsaiq7FqdaPtUr8qtUEpvPGNFJyYDoWa7Cpz91fj7rBy6HpBDQgTAxSk3R8AHTNYcmn14iMrDfQoCCYdxZ"
+      "wallet": "HajZzGQ1h43EQM9bZP9X1b2KLNYGUqE6nixFvbAoXZLH",
+      "amountUi": 15119.63182,
+      "blockTime": "2026-07-18T15:04:23.000Z",
+      "signature": "37NBnQdSATgGnQD7v1jaqxtPf6cyEVu4eecGh8chz6iT4jSH5m25UtUFUwq9KneJ9LbLAtLyEGbLTh5qcKTNzQds",
+      "txUrl": "https://solscan.io/tx/37NBnQdSATgGnQD7v1jaqxtPf6cyEVu4eecGh8chz6iT4jSH5m25UtUFUwq9KneJ9LbLAtLyEGbLTh5qcKTNzQds"
     },
     {
       "wallet": "AjjeuYsDSLigbTQqsWmUZXPKas3dAJU4ikdJrbMGxe5A",
-      "amountUi": 587.177159,
-      "blockTime": "2026-07-18T13:53:16.000Z",
-      "signature": "5sKoTZ2VzvfGPSkQTdwHaa4oizPvj5DxL7vLePQED3yRZvTzUK7RoJzrFcB9EUWnAuvvovL5sMosJP4zAgPQxKVY",
-      "txUrl": "https://solscan.io/tx/5sKoTZ2VzvfGPSkQTdwHaa4oizPvj5DxL7vLePQED3yRZvTzUK7RoJzrFcB9EUWnAuvvovL5sMosJP4zAgPQxKVY"
+      "amountUi": 29136.797334,
+      "blockTime": "2026-07-18T14:59:21.000Z",
+      "signature": "HPw3kFZmjmUidM9AvnbYdH5nVGFhPw5VFVe7KMPMCVyGYT22Svbym6ajcYES1Ac2GuFCM6wJWMTZKDPfnn4565v",
+      "txUrl": "https://solscan.io/tx/HPw3kFZmjmUidM9AvnbYdH5nVGFhPw5VFVe7KMPMCVyGYT22Svbym6ajcYES1Ac2GuFCM6wJWMTZKDPfnn4565v"
     },
     {
-      "wallet": "9V4muPgVPGtbjCHzLtYykzZbL5ZuGhM2PxVdnuFvvqVv",
-      "amountUi": 397.920062,
-      "blockTime": "2026-07-18T04:11:03.000Z",
-      "signature": "2VwS6K98kt2NLVndLQs2XHJe2XadGKF54u5C2vZ5uFhUVLQ6N2BmPB7TNwA7oU6PPQpF6LfdoykghYfsTLcfZXkL",
-      "txUrl": "https://solscan.io/tx/2VwS6K98kt2NLVndLQs2XHJe2XadGKF54u5C2vZ5uFhUVLQ6N2BmPB7TNwA7oU6PPQpF6LfdoykghYfsTLcfZXkL"
+      "wallet": "FEa1VtDn1yQ4HMeF5sJ1R1PqhES4AVooSHS7vUePk8zU",
+      "amountUi": 5828.05579,
+      "blockTime": "2026-07-18T14:58:10.000Z",
+      "signature": "2kmFc9qT4u83UbT6nvqanZAWt6hWHSAnzpFADVqB34RqVHMH9bCER1Ei5FKiVKastj7ytaqkFcA5ZZgihH3fTrR6",
+      "txUrl": "https://solscan.io/tx/2kmFc9qT4u83UbT6nvqanZAWt6hWHSAnzpFADVqB34RqVHMH9bCER1Ei5FKiVKastj7ytaqkFcA5ZZgihH3fTrR6"
     },
     {
-      "wallet": "5VxA12T2eV6TJGF2tu1QBzNX3sm4cLHRy2mFHyaxJ9GZ",
-      "amountUi": 399.810115,
-      "blockTime": "2026-07-18T03:52:24.000Z",
-      "signature": "3C2w7hdxCeyj5NwyYfZ35Q3XNj8HwTM6TVKkznZkRSgZ5uP9p7hHynaYxh1g3aCZgx6qQcLxNbRBrV1pz63QgTyg",
-      "txUrl": "https://solscan.io/tx/3C2w7hdxCeyj5NwyYfZ35Q3XNj8HwTM6TVKkznZkRSgZ5uP9p7hHynaYxh1g3aCZgx6qQcLxNbRBrV1pz63QgTyg"
+      "wallet": "DDsJVbxs3QX7iNDjLvcWo2QJfTU1i5hy5ZKL5MFMbBUX",
+      "amountUi": 5847.199386,
+      "blockTime": "2026-07-18T14:56:28.000Z",
+      "signature": "8D9nYutgTmKUDdHxoHSrdtsumhm6FixeND5SddPehjjRz9qpaHXQY5ZHSwSM115wmZ1dfUoj9SPvbnzQkHAVTd5",
+      "txUrl": "https://solscan.io/tx/8D9nYutgTmKUDdHxoHSrdtsumhm6FixeND5SddPehjjRz9qpaHXQY5ZHSwSM115wmZ1dfUoj9SPvbnzQkHAVTd5"
     },
     {
-      "wallet": "F27yz5PurUsh2ADmd95W9Tmg9N61PXcLtnQEjXSPzqnK",
-      "amountUi": 57.1166,
-      "blockTime": "2026-07-18T03:51:49.000Z",
-      "signature": "48tSijpsHFLsDNntYgoVVHeKV2Jdx4CCED2odgo2f2y3jzu7HKQHWELduWk7qiogPMkmnEHtrwzYa3j16Y8KBaqo",
-      "txUrl": "https://solscan.io/tx/48tSijpsHFLsDNntYgoVVHeKV2Jdx4CCED2odgo2f2y3jzu7HKQHWELduWk7qiogPMkmnEHtrwzYa3j16Y8KBaqo"
+      "wallet": "33vFB2rtG9FDpJReNaJrBF4RZgri5HTVo5gSxP1XfVCr",
+      "amountUi": 5847.199386,
+      "blockTime": "2026-07-18T14:56:27.000Z",
+      "signature": "2ondZRfttCpFZbdFZtxep6r7ZofW8AzL7PJ1pLPFxyTty2jZYgz1bi9QuE7epbbrU5FkrchnPU2qeJDWc6652gAx",
+      "txUrl": "https://solscan.io/tx/2ondZRfttCpFZbdFZtxep6r7ZofW8AzL7PJ1pLPFxyTty2jZYgz1bi9QuE7epbbrU5FkrchnPU2qeJDWc6652gAx"
+    },
+    {
+      "wallet": "HQdFfmiDrZGbxqE5k5CqDxUkLUHhCUS39YHqsRGsfzeH",
+      "amountUi": 5847.199386,
+      "blockTime": "2026-07-18T14:56:25.000Z",
+      "signature": "2xXF2VtHmvR9e2SLsBcVcUJhFoCbhK56kFuDTu42DKyguL3Mo3Bv1K9K5tGARm78gqo34bhYRTxL3UeGbGnL9z8P",
+      "txUrl": "https://solscan.io/tx/2xXF2VtHmvR9e2SLsBcVcUJhFoCbhK56kFuDTu42DKyguL3Mo3Bv1K9K5tGARm78gqo34bhYRTxL3UeGbGnL9z8P"
+    },
+    {
+      "wallet": "F7HoxX4hJ1nocGrukPMjbyaSqcy37nyWamrTq1nvpm4T",
+      "amountUi": 5847.199386,
+      "blockTime": "2026-07-18T14:56:24.000Z",
+      "signature": "BK6uWVtBvez5PBFzDsBTnWZfaf29275XE76cumeK48UtddXWaHXc13Pqi99pmtmQUonE1yVt5uQab1gvs28ynbm",
+      "txUrl": "https://solscan.io/tx/BK6uWVtBvez5PBFzDsBTnWZfaf29275XE76cumeK48UtddXWaHXc13Pqi99pmtmQUonE1yVt5uQab1gvs28ynbm"
+    },
+    {
+      "wallet": "J8ZXNLgSRNQe1f7Wec5QjzTGjq7H2XkcXXXPwisoRarQ",
+      "amountUi": 5882.388368,
+      "blockTime": "2026-07-18T14:54:47.000Z",
+      "signature": "M8LQvDLhsGqyfZ2KsejB5GRvW2E7cGsq3k8ArD6kucaC3Ciwt8LoByz5RbDaNu9Nf24gu4yZbx1UWfKpYWmkXqY",
+      "txUrl": "https://solscan.io/tx/M8LQvDLhsGqyfZ2KsejB5GRvW2E7cGsq3k8ArD6kucaC3Ciwt8LoByz5RbDaNu9Nf24gu4yZbx1UWfKpYWmkXqY"
+    },
+    {
+      "wallet": "DTWih98ExSNcaKbXz4R18UrXoVYSm4RuRWwDvfqoeUe9",
+      "amountUi": 9413.333104,
+      "blockTime": "2026-07-18T14:51:40.000Z",
+      "signature": "2s76k1XYmZxxiciMEXC3r6j8sT4NwF1Rysje65fE2EkEG3yRoVTqCwfoLs6qC6moAd6weoxciNSLYn1yV9tt4DWy",
+      "txUrl": "https://solscan.io/tx/2s76k1XYmZxxiciMEXC3r6j8sT4NwF1Rysje65fE2EkEG3yRoVTqCwfoLs6qC6moAd6weoxciNSLYn1yV9tt4DWy"
+    },
+    {
+      "wallet": "7dCNE3HRrjzKe3JNnmc7BndQXjy7Zx4rWpQNgS71baLB",
+      "amountUi": 8883.06668,
+      "blockTime": "2026-07-18T14:49:55.000Z",
+      "signature": "4Sk8zbwuy8GGXvYP32nz1JeieAB4kSE83L8voqhAEQL94LKttMAjqa9f4FXXb3YBQYJTk4xsnMVRPyhqpAYELxwo",
+      "txUrl": "https://solscan.io/tx/4Sk8zbwuy8GGXvYP32nz1JeieAB4kSE83L8voqhAEQL94LKttMAjqa9f4FXXb3YBQYJTk4xsnMVRPyhqpAYELxwo"
+    },
+    {
+      "wallet": "BrcVoc5gc92Ga4h5mq9zQBLGM6UdfRpCrVkDgQGpRqDm",
+      "amountUi": 5898.311165,
+      "blockTime": "2026-07-18T14:48:45.000Z",
+      "signature": "iBb9DPWqWJcUxbmXdU8jATxzN13VBYZoH2QXvg7HCgxgzi1emgEgfyGoLSEmFiDuMG7HH8F5DnMwTiFnmbip5bP",
+      "txUrl": "https://solscan.io/tx/iBb9DPWqWJcUxbmXdU8jATxzN13VBYZoH2QXvg7HCgxgzi1emgEgfyGoLSEmFiDuMG7HH8F5DnMwTiFnmbip5bP"
+    },
+    {
+      "wallet": "8VtmYQYZGwe3HheDrRo4aYxKo7tKjAjQL8k3hyEvgZgA",
+      "amountUi": 5898.311165,
+      "blockTime": "2026-07-18T14:48:44.000Z",
+      "signature": "4vevTDC1vmrJgQiBPi4523Se1o7dELeunwuJ4zFqjpidJXchNUU9vTBL86sh28hzGFjFG2asBjqp6a6hFiZVnP9M",
+      "txUrl": "https://solscan.io/tx/4vevTDC1vmrJgQiBPi4523Se1o7dELeunwuJ4zFqjpidJXchNUU9vTBL86sh28hzGFjFG2asBjqp6a6hFiZVnP9M"
+    },
+    {
+      "wallet": "gTxb8mScM3WJdFq6qRgjBmTTjeYCJPLPdTFqJ2Aij1w",
+      "amountUi": 5898.311165,
+      "blockTime": "2026-07-18T14:48:42.000Z",
+      "signature": "28o3WKnshfZFQrZ9M7yeykzyur8YbSgyLDdJR7oEocbAPpoV2qaqfnKjVv6YgWYbs892pAXtf3ky3HZ1zUv6LYTU",
+      "txUrl": "https://solscan.io/tx/28o3WKnshfZFQrZ9M7yeykzyur8YbSgyLDdJR7oEocbAPpoV2qaqfnKjVv6YgWYbs892pAXtf3ky3HZ1zUv6LYTU"
+    },
+    {
+      "wallet": "DLSbkpDSEcZp1YC2CdzP8KB4gMkHUzXa9PqfSbcJQB44",
+      "amountUi": 5898.311165,
+      "blockTime": "2026-07-18T14:48:36.000Z",
+      "signature": "ioM5iEfvJcT5MFPH7XgR1P1EtzPNTv9s8nR4tk1SMtV2DFPtoWYLPDX2crTKf6Y9yC8ZkPcDKZ3mTBwSG6LG9Jn",
+      "txUrl": "https://solscan.io/tx/ioM5iEfvJcT5MFPH7XgR1P1EtzPNTv9s8nR4tk1SMtV2DFPtoWYLPDX2crTKf6Y9yC8ZkPcDKZ3mTBwSG6LG9Jn"
+    },
+    {
+      "wallet": "ENxrsuSEUsUNzC7ySrEhQhAmAjbKiQWX7XDXqXKhn5VA",
+      "amountUi": 5898.311165,
+      "blockTime": "2026-07-18T14:48:35.000Z",
+      "signature": "42qbfxE4MCPruhRXxMmUmvyEVgHEmZRE7pdrHb5bxcBAHft3MkrrJUQUZsSfycD8LvmzLcuuu2FvcyBQJyiiADhm",
+      "txUrl": "https://solscan.io/tx/42qbfxE4MCPruhRXxMmUmvyEVgHEmZRE7pdrHb5bxcBAHft3MkrrJUQUZsSfycD8LvmzLcuuu2FvcyBQJyiiADhm"
+    },
+    {
+      "wallet": "FdL7VEkm3FsC7tV6ZGVf9GGYKqjM4h5zRnU1vpbsKekR",
+      "amountUi": 5898.311165,
+      "blockTime": "2026-07-18T14:48:34.000Z",
+      "signature": "3oFpvUwFao4Tu3UjubfUP2KiyYcjw29SAGoTtU2EZ7w7d2E9Cic8rbnTVDzHMDN3dkaU33rXii3SHFtmvLQbLVVC",
+      "txUrl": "https://solscan.io/tx/3oFpvUwFao4Tu3UjubfUP2KiyYcjw29SAGoTtU2EZ7w7d2E9Cic8rbnTVDzHMDN3dkaU33rXii3SHFtmvLQbLVVC"
+    },
+    {
+      "wallet": "6iLU3fPyu4g6YaQQ13z4jpBS2LeRCx5pQq7fyiF4qs5f",
+      "amountUi": 5898.311165,
+      "blockTime": "2026-07-18T14:48:33.000Z",
+      "signature": "XkRRjmxPuzaMGc8JcMA8aYrDac4d7MmfVpo64bvWuhMzWsoV2ErcMJ6mikNxRBhpQ6oR5RhBWEuhgFsbrcfxHar",
+      "txUrl": "https://solscan.io/tx/XkRRjmxPuzaMGc8JcMA8aYrDac4d7MmfVpo64bvWuhMzWsoV2ErcMJ6mikNxRBhpQ6oR5RhBWEuhgFsbrcfxHar"
+    },
+    {
+      "wallet": "CAnv1BdxAuoniJYbGwKUyQoexS8Pej8KKYBZ5fubxQfJ",
+      "amountUi": 5898.311165,
+      "blockTime": "2026-07-18T14:48:29.000Z",
+      "signature": "xnwGWnAZQG9YK6goG6i47mrPfqyRNZXyCW9p2zJEiiyc1Bs4gDrZvKn5XW63PRpHThf2oKqsA4cLsGHkFiEQ1EG",
+      "txUrl": "https://solscan.io/tx/xnwGWnAZQG9YK6goG6i47mrPfqyRNZXyCW9p2zJEiiyc1Bs4gDrZvKn5XW63PRpHThf2oKqsA4cLsGHkFiEQ1EG"
+    },
+    {
+      "wallet": "HVXWYQquQPz8FwJWv6cRFesy3XEypEAL8Kkha8ETLVjm",
+      "amountUi": 5898.311165,
+      "blockTime": "2026-07-18T14:48:28.000Z",
+      "signature": "28hD2TK37bfFvfKpiSgtKr66eH5eLf91tF1okE5Bf9sNS36mLQdVhP22opEDAvyfn8f3hxTxGyf3HSQdjU9xoQGB",
+      "txUrl": "https://solscan.io/tx/28hD2TK37bfFvfKpiSgtKr66eH5eLf91tF1okE5Bf9sNS36mLQdVhP22opEDAvyfn8f3hxTxGyf3HSQdjU9xoQGB"
+    },
+    {
+      "wallet": "D219gm6Dp7dRGjv5Lv5YxKe5xKwsG5zpzaKRLjUKDoLC",
+      "amountUi": 5898.311165,
+      "blockTime": "2026-07-18T14:48:26.000Z",
+      "signature": "48QzU87SZT3gZNAuxzchgwiQNh2yPpStoifJgENQAjpBu6H1XDBTTDC7LhBNc1EwkWXYHwvx7geR5Hmv8xKEiuY2",
+      "txUrl": "https://solscan.io/tx/48QzU87SZT3gZNAuxzchgwiQNh2yPpStoifJgENQAjpBu6H1XDBTTDC7LhBNc1EwkWXYHwvx7geR5Hmv8xKEiuY2"
+    },
+    {
+      "wallet": "5x3BFeQgmMTxWMci5fQjWbvHpPsB7Ykb1N3wPGs2PyZK",
+      "amountUi": 5898.311165,
+      "blockTime": "2026-07-18T14:48:25.000Z",
+      "signature": "5ra317mznqDnMdEKH6SbHW17V5o3e53esAHYqpVSwZDuodiZa98vqeTiVzqpkUKtZobHbfBfAHtByo6MMZNDw23a",
+      "txUrl": "https://solscan.io/tx/5ra317mznqDnMdEKH6SbHW17V5o3e53esAHYqpVSwZDuodiZa98vqeTiVzqpkUKtZobHbfBfAHtByo6MMZNDw23a"
+    },
+    {
+      "wallet": "229NJGQWRMoMAKUZuX8kxST7hXYScQ1UZTGaq9RPPEck",
+      "amountUi": 5898.311165,
+      "blockTime": "2026-07-18T14:48:24.000Z",
+      "signature": "4nEbm8VR2oaSnW2tPXjmKSNTdoyJz6sf5tuPop7Fd3giKMkcXoDNwg7hZYdVjKzdLJB3n27YGdx6fzfsB5m2Bkyf",
+      "txUrl": "https://solscan.io/tx/4nEbm8VR2oaSnW2tPXjmKSNTdoyJz6sf5tuPop7Fd3giKMkcXoDNwg7hZYdVjKzdLJB3n27YGdx6fzfsB5m2Bkyf"
+    },
+    {
+      "wallet": "4kJDePgrUpsyEXu7HjRrr65dvWTKtRSNdomWPaB7zAYT",
+      "amountUi": 5898.311165,
+      "blockTime": "2026-07-18T14:48:23.000Z",
+      "signature": "3BsdR4EcixSCR4hwoZe4jgHEbWFzvzoTVcDrceeTvMymqcv4zCQxhWKQjsEKge3Qzo3sqKKjgnSEd4zmhUhMEPuV",
+      "txUrl": "https://solscan.io/tx/3BsdR4EcixSCR4hwoZe4jgHEbWFzvzoTVcDrceeTvMymqcv4zCQxhWKQjsEKge3Qzo3sqKKjgnSEd4zmhUhMEPuV"
+    },
+    {
+      "wallet": "Gb64e6cfNcFxnH8e51zhNHSQYd7Tsk3ypVPhVydeo1Q7",
+      "amountUi": 5898.311165,
+      "blockTime": "2026-07-18T14:48:18.000Z",
+      "signature": "4AXbqcNzh7t99aZC8BPtbvyFDawTLSAgR7yG3g98vF3wb1fiuTEGqLh76m2rVsfGqPxvFM2o22PqYQFqjwsunbYs",
+      "txUrl": "https://solscan.io/tx/4AXbqcNzh7t99aZC8BPtbvyFDawTLSAgR7yG3g98vF3wb1fiuTEGqLh76m2rVsfGqPxvFM2o22PqYQFqjwsunbYs"
+    },
+    {
+      "wallet": "2uituiYDTcXouXocTQj6a5ijthhfdM9ehVRXS13JnFEp",
+      "amountUi": 5898.311165,
+      "blockTime": "2026-07-18T14:48:16.000Z",
+      "signature": "5G1o5Jrp6Gf2S6SDa5PYFWuFQNLUze7H8iAosepho2wSc2vRKfAUUKAYCqyk6Mq15rUzBwSdz2aNZWSaUSiX9UHT",
+      "txUrl": "https://solscan.io/tx/5G1o5Jrp6Gf2S6SDa5PYFWuFQNLUze7H8iAosepho2wSc2vRKfAUUKAYCqyk6Mq15rUzBwSdz2aNZWSaUSiX9UHT"
+    },
+    {
+      "wallet": "F1CH1ostypzV8AAXZfEfa6fM6HpzPeKVjd1ToaPeXMDf",
+      "amountUi": 5898.311165,
+      "blockTime": "2026-07-18T14:48:15.000Z",
+      "signature": "5PAcTLigqyMDnCZALi5SwpzmRYXuAvHMb9wmVuWdYFPTRKYTFY5XGvcL9VzUZptWN63kCLZZFqYdxuUbK2B2hyL8",
+      "txUrl": "https://solscan.io/tx/5PAcTLigqyMDnCZALi5SwpzmRYXuAvHMb9wmVuWdYFPTRKYTFY5XGvcL9VzUZptWN63kCLZZFqYdxuUbK2B2hyL8"
+    },
+    {
+      "wallet": "HK8n3xm1YXLRgfqRDrDXXkuTZGGY8LQuBvN543bA8S3s",
+      "amountUi": 5898.311165,
+      "blockTime": "2026-07-18T14:48:14.000Z",
+      "signature": "5hiVMAa7eabUSaexKswRmsT7RvrCAjCvme3vbNT5TUYSSXR65VsFT5w6qY8QQ1fuqQaWFKyrFwAJPJ3doFBbnVYd",
+      "txUrl": "https://solscan.io/tx/5hiVMAa7eabUSaexKswRmsT7RvrCAjCvme3vbNT5TUYSSXR65VsFT5w6qY8QQ1fuqQaWFKyrFwAJPJ3doFBbnVYd"
+    },
+    {
+      "wallet": "CJhf7uawjdHmxb3nrpLBcUcDzgiy1TWWiBbXtEjyjtRQ",
+      "amountUi": 5898.311165,
+      "blockTime": "2026-07-18T14:48:13.000Z",
+      "signature": "4CRMNL6Jd4MqmEwSSbG86mX5jLAtGAA8m9WA1dKZdcyZgmvpT2T19rAM5Yzw4VFmF6vLsvGftg6qJTXg2ftFKnvh",
+      "txUrl": "https://solscan.io/tx/4CRMNL6Jd4MqmEwSSbG86mX5jLAtGAA8m9WA1dKZdcyZgmvpT2T19rAM5Yzw4VFmF6vLsvGftg6qJTXg2ftFKnvh"
+    },
+    {
+      "wallet": "FXLGYwieLUrngpQrDeKggDeXruBPcxN8kWHDydmxGy4S",
+      "amountUi": 5898.311165,
+      "blockTime": "2026-07-18T14:48:11.000Z",
+      "signature": "5Ns5BsCQf9zptd1SFVWZyXrQuijYJEC3TFuZsNauGs5yfxRXesaK4Evi1Y2GPKHR5zhXQwSRNo4zKRnSiymkUvoz",
+      "txUrl": "https://solscan.io/tx/5Ns5BsCQf9zptd1SFVWZyXrQuijYJEC3TFuZsNauGs5yfxRXesaK4Evi1Y2GPKHR5zhXQwSRNo4zKRnSiymkUvoz"
+    },
+    {
+      "wallet": "95uYbC2p28ZZCs8AnzzsjHB1ddNRwX2pww2yXCGQahCr",
+      "amountUi": 5898.311165,
+      "blockTime": "2026-07-18T14:48:10.000Z",
+      "signature": "3aRtofsVqWsLrEE5Q2fUne9a1zmPtGuZsZ7fjrjnVwn4RTwhHYwd4GJPivutKFQeorNmveEYSdwhEiwTabtm7HYk",
+      "txUrl": "https://solscan.io/tx/3aRtofsVqWsLrEE5Q2fUne9a1zmPtGuZsZ7fjrjnVwn4RTwhHYwd4GJPivutKFQeorNmveEYSdwhEiwTabtm7HYk"
+    },
+    {
+      "wallet": "4ajcuPPLh25ha9wtiP7XuRdgp98UD19kVjGbL9uZ6CVg",
+      "amountUi": 5898.311165,
+      "blockTime": "2026-07-18T14:48:07.000Z",
+      "signature": "8FYA3yMk5CK5LGuNUtTK6cLtKh8tJpn4oArvgbztN7sGSVRHNZhcVyVgCsDZ2z2Kb9n3adQoGL9RYUpweaCpDo3",
+      "txUrl": "https://solscan.io/tx/8FYA3yMk5CK5LGuNUtTK6cLtKh8tJpn4oArvgbztN7sGSVRHNZhcVyVgCsDZ2z2Kb9n3adQoGL9RYUpweaCpDo3"
+    },
+    {
+      "wallet": "4fcHoSAmp2Ls9L4VaTW48gAYyDCfmkStHQY1awdGTxKe",
+      "amountUi": 5898.311165,
+      "blockTime": "2026-07-18T14:48:06.000Z",
+      "signature": "3YcnXHyttH4qtDgXd5mVSmvU8pZEcjPhGwRPg72K5MfaRpxXnwh4s936qFn8Eo9mcYMXdmLJ8VwLfnYneEgyV2bm",
+      "txUrl": "https://solscan.io/tx/3YcnXHyttH4qtDgXd5mVSmvU8pZEcjPhGwRPg72K5MfaRpxXnwh4s936qFn8Eo9mcYMXdmLJ8VwLfnYneEgyV2bm"
+    },
+    {
+      "wallet": "HJsqvhxJCPEvjKnUumQJw9i6fSMQnEtAgPbbemgHDp6b",
+      "amountUi": 5898.311165,
+      "blockTime": "2026-07-18T14:48:02.000Z",
+      "signature": "264aiupFPLabnyY3jc7SoWh4SjpFEWxnSdSoXYNcenHhAfBMicmfBcquWcp4RH6kFpvuDkLQjx97Ecf7vZAaiD4Q",
+      "txUrl": "https://solscan.io/tx/264aiupFPLabnyY3jc7SoWh4SjpFEWxnSdSoXYNcenHhAfBMicmfBcquWcp4RH6kFpvuDkLQjx97Ecf7vZAaiD4Q"
+    },
+    {
+      "wallet": "GjhE1DcTYZyaoC2XFYpLsL6JJGw8Cr5DgYFY8NDpEbsJ",
+      "amountUi": 5898.311165,
+      "blockTime": "2026-07-18T14:48:01.000Z",
+      "signature": "cgw2aeHdxRSo9jy8Mq7gnCwSdR2KdiKzrBhutsMqsiH9WsL562UPTQ9ynaajWjo3m6GPZuPvn3AfvSgQM2wvV6r",
+      "txUrl": "https://solscan.io/tx/cgw2aeHdxRSo9jy8Mq7gnCwSdR2KdiKzrBhutsMqsiH9WsL562UPTQ9ynaajWjo3m6GPZuPvn3AfvSgQM2wvV6r"
+    },
+    {
+      "wallet": "3vYN1uiUbkHdMkYqcJRSyaAw5igQTpEd7JpcU3CwU9x7",
+      "amountUi": 5898.311165,
+      "blockTime": "2026-07-18T14:47:59.000Z",
+      "signature": "55zoqmzXKuZRkVJA2RG1vwfsFmstKYGnCDNyXqE62QP3ajcurYFi9Pvo7xLhugFbDpU2UjuwQUD1fKBjg3Ydh4SJ",
+      "txUrl": "https://solscan.io/tx/55zoqmzXKuZRkVJA2RG1vwfsFmstKYGnCDNyXqE62QP3ajcurYFi9Pvo7xLhugFbDpU2UjuwQUD1fKBjg3Ydh4SJ"
+    },
+    {
+      "wallet": "EZBottxTmWscmA9EzeqCpGJ1qiUMwomXSeXg1pbHbVLV",
+      "amountUi": 7359.951347,
+      "blockTime": "2026-07-18T14:45:50.000Z",
+      "signature": "3DoCRPfuxJWiyf6FCbuBjVN29z7RN8mapaBTNQuFidhoDgxzdCsS22YpDtgLdJvPD1pjnCPSLnDFpMyJW2sQNy7N",
+      "txUrl": "https://solscan.io/tx/3DoCRPfuxJWiyf6FCbuBjVN29z7RN8mapaBTNQuFidhoDgxzdCsS22YpDtgLdJvPD1pjnCPSLnDFpMyJW2sQNy7N"
+    },
+    {
+      "wallet": "WcQ51SLddvuCTAv2uihPMVafk8EGzHn73R8FB63Fgqh",
+      "amountUi": 7359.951347,
+      "blockTime": "2026-07-18T14:45:49.000Z",
+      "signature": "3Aj1C4Q125qCKzuqp9FG9r8LC9W6hJH3PNGxscmqMgyS4D98Js2hjJgatMY7DWBuR6GZvLJZiNkPpP6c6hJotD2Y",
+      "txUrl": "https://solscan.io/tx/3Aj1C4Q125qCKzuqp9FG9r8LC9W6hJH3PNGxscmqMgyS4D98Js2hjJgatMY7DWBuR6GZvLJZiNkPpP6c6hJotD2Y"
+    },
+    {
+      "wallet": "FamfdzKdRAFz8VSVP5dSA6tkZhfVBnaKpFEmVnjZH1UF",
+      "amountUi": 7359.951347,
+      "blockTime": "2026-07-18T14:45:48.000Z",
+      "signature": "4RKpqTwBJC2hCnm5DiJthn1L2NPNVYRSDV2ioffGPjyNAnk8paRe3QCK4CZ9FCZxk38TvREkad7W7x1WZ1gg5gYK",
+      "txUrl": "https://solscan.io/tx/4RKpqTwBJC2hCnm5DiJthn1L2NPNVYRSDV2ioffGPjyNAnk8paRe3QCK4CZ9FCZxk38TvREkad7W7x1WZ1gg5gYK"
+    },
+    {
+      "wallet": "3BkKHNki5t1y9pY2FwGFkAK2NHUeZBVgor68FmzTn2Fn",
+      "amountUi": 7359.951347,
+      "blockTime": "2026-07-18T14:45:45.000Z",
+      "signature": "4tGHdGwK8gMPt8d1UfQ7TTadX5jVgmQpte6X4XRG6PgAqGrmVRxuxDCQtZbdegHiRQePq12heG6XWRZzLE6gB25R",
+      "txUrl": "https://solscan.io/tx/4tGHdGwK8gMPt8d1UfQ7TTadX5jVgmQpte6X4XRG6PgAqGrmVRxuxDCQtZbdegHiRQePq12heG6XWRZzLE6gB25R"
+    },
+    {
+      "wallet": "6ZxE1CcJTgMk6Hy1DWNTrLdKQNpCZgnG19aNctrTrdiQ",
+      "amountUi": 7359.951347,
+      "blockTime": "2026-07-18T14:45:44.000Z",
+      "signature": "mXrW6VUHeHAb4rL1ojLoTw9PFmnHTv2abr7GSgHZNbwqoLbHvwQi3KsjiG6W1YGP7Fj2cjxVxDdr8kz6VuCm8oK",
+      "txUrl": "https://solscan.io/tx/mXrW6VUHeHAb4rL1ojLoTw9PFmnHTv2abr7GSgHZNbwqoLbHvwQi3KsjiG6W1YGP7Fj2cjxVxDdr8kz6VuCm8oK"
+    },
+    {
+      "wallet": "5tV74VRLBpQr4QF1nWBSRHRve143gMn416rmzDavDxLZ",
+      "amountUi": 7359.951347,
+      "blockTime": "2026-07-18T14:45:43.000Z",
+      "signature": "5mYrUWcQE5gsDAeqxH7LAa2UTBG59TnbEKmDbZdeTAeW2rmEFwkiDHeT1S1NS7UCuvBAZNtwUNL5p5hq2XmjeQyp",
+      "txUrl": "https://solscan.io/tx/5mYrUWcQE5gsDAeqxH7LAa2UTBG59TnbEKmDbZdeTAeW2rmEFwkiDHeT1S1NS7UCuvBAZNtwUNL5p5hq2XmjeQyp"
+    },
+    {
+      "wallet": "GPRx6i6L13uFa5S4sNNutEnq6Axe8WUkZ6J7nHYFRceL",
+      "amountUi": 7359.951347,
+      "blockTime": "2026-07-18T14:45:42.000Z",
+      "signature": "uyyPDq7Eypwo9sWtpf1FUzuBacA52zEtT4WSnrH7Uq95StYqFYc1MRyZndQu7FSei4bHKSjaTH3efapHWHsAkhg",
+      "txUrl": "https://solscan.io/tx/uyyPDq7Eypwo9sWtpf1FUzuBacA52zEtT4WSnrH7Uq95StYqFYc1MRyZndQu7FSei4bHKSjaTH3efapHWHsAkhg"
+    },
+    {
+      "wallet": "922KqpyfTRVVU1DZK9FHYEcPkqKP3nZLMHr8VQ4qJhPM",
+      "amountUi": 7359.951347,
+      "blockTime": "2026-07-18T14:45:40.000Z",
+      "signature": "3HwQ6fkX7E14H59Z2ezzij4bCuYaLa988XZPg3e3dC6AH9PQrqQrLcKPS4my1bp44dVUhjD9BpCoiNZ5NaMPb9JX",
+      "txUrl": "https://solscan.io/tx/3HwQ6fkX7E14H59Z2ezzij4bCuYaLa988XZPg3e3dC6AH9PQrqQrLcKPS4my1bp44dVUhjD9BpCoiNZ5NaMPb9JX"
+    },
+    {
+      "wallet": "EVjGoUKHX6uxGbzBVakAPPpUJZEVVrvLDWPvTiNb3WdU",
+      "amountUi": 7359.951347,
+      "blockTime": "2026-07-18T14:45:37.000Z",
+      "signature": "3vQE2pFL16Ad4cgRL6Edb7utM6wdKDiGdPGhe4d58iwtnfzLJkUwuxAN9SWXUmNR5LdQp6KjfKJE7yEbNkPGR3za",
+      "txUrl": "https://solscan.io/tx/3vQE2pFL16Ad4cgRL6Edb7utM6wdKDiGdPGhe4d58iwtnfzLJkUwuxAN9SWXUmNR5LdQp6KjfKJE7yEbNkPGR3za"
+    },
+    {
+      "wallet": "HYPnVL9cj7WdNAfbE3rc9QQqBh9ceAwZcuwJL4jHeGh7",
+      "amountUi": 7359.951347,
+      "blockTime": "2026-07-18T14:45:36.000Z",
+      "signature": "2Ym8x9NtVuzqzzhbg4NBdfPoDS4sVyZyeRJ7nwgLn42FcuSK2yYo5Vrs2Ao8r6KzShkj6eDtDFAqDhuZWGcMxyrQ",
+      "txUrl": "https://solscan.io/tx/2Ym8x9NtVuzqzzhbg4NBdfPoDS4sVyZyeRJ7nwgLn42FcuSK2yYo5Vrs2Ao8r6KzShkj6eDtDFAqDhuZWGcMxyrQ"
+    },
+    {
+      "wallet": "AszBkcsFZRwRL2AMVpKQiygtGxWREgcvLTDQJDeR7ZEA",
+      "amountUi": 7359.951347,
+      "blockTime": "2026-07-18T14:45:35.000Z",
+      "signature": "V9yjXD1AXeNBcwZVrPa6LEuNuw3sbjxQpUhqMxZf6GzQw33jc89z6cFbJ8Fjc7WUokijFtCqxeft8NKxfEQcqdH",
+      "txUrl": "https://solscan.io/tx/V9yjXD1AXeNBcwZVrPa6LEuNuw3sbjxQpUhqMxZf6GzQw33jc89z6cFbJ8Fjc7WUokijFtCqxeft8NKxfEQcqdH"
     },
     {
       "wallet": "38goQvqUpHCueYf9VHH8aNL2gtWeG56Cm5zsmvsfcWNJ",
-      "amountUi": 743.994791,
-      "blockTime": "2026-07-18T03:48:35.000Z",
-      "signature": "3FDTgzy9Pz9uai65vMVvuqew2KACnVmmKF5VfmB3xJsLLsq8XEdeG7WyWxxddTigyqiNpE7Ta5RH3E2PH2LLbxfN",
-      "txUrl": "https://solscan.io/tx/3FDTgzy9Pz9uai65vMVvuqew2KACnVmmKF5VfmB3xJsLLsq8XEdeG7WyWxxddTigyqiNpE7Ta5RH3E2PH2LLbxfN"
+      "amountUi": 7359.951347,
+      "blockTime": "2026-07-18T14:45:34.000Z",
+      "signature": "2JpSfhjkdPoiyazuLKH1usndrtFbTmzcqYdMV6iPE1ZA97iyVGCNGst2SQasePLkS9T2HRBTmoF9HgczdQwy1dzN",
+      "txUrl": "https://solscan.io/tx/2JpSfhjkdPoiyazuLKH1usndrtFbTmzcqYdMV6iPE1ZA97iyVGCNGst2SQasePLkS9T2HRBTmoF9HgczdQwy1dzN"
+    },
+    {
+      "wallet": "CbFwdifp1pwTba4h2WT2VyUN1D1i64JkWWC8qQ4QBQ9H",
+      "amountUi": 7359.951347,
+      "blockTime": "2026-07-18T14:45:33.000Z",
+      "signature": "5MAsWN9pHXRfHgJK1BxL7Ae4D5dDwznZjKQDSU9MZu4TzZiG7ADceJ5MRd332UQWkmYv85FvMD4WHVpyYHkmBfgj",
+      "txUrl": "https://solscan.io/tx/5MAsWN9pHXRfHgJK1BxL7Ae4D5dDwznZjKQDSU9MZu4TzZiG7ADceJ5MRd332UQWkmYv85FvMD4WHVpyYHkmBfgj"
+    },
+    {
+      "wallet": "NCSXxnAb9R6t4KU1jdhvfW9EMVNcFh8mkVmda25tmeH",
+      "amountUi": 7359.951347,
+      "blockTime": "2026-07-18T14:45:31.000Z",
+      "signature": "2EZ1eUqZ9oxqYigxxkv1qadRXd5rSSGSnnmMfNnXc5q7Ty3mGFFdJsC2DH8euaddQFTFJpLKAYUF3mcsi4WNiGpo",
+      "txUrl": "https://solscan.io/tx/2EZ1eUqZ9oxqYigxxkv1qadRXd5rSSGSnnmMfNnXc5q7Ty3mGFFdJsC2DH8euaddQFTFJpLKAYUF3mcsi4WNiGpo"
+    },
+    {
+      "wallet": "B8oJaGSg5hZQeU9JUkEZNDdn3Z3ZhwTFvnNC4ph85Unj",
+      "amountUi": 7359.951347,
+      "blockTime": "2026-07-18T14:45:30.000Z",
+      "signature": "5kHQ3o3FXvhiq5C3QT1h5ZzG61B5GNmaM2E5daF6JNPn3udU2hsLc3o7r723gkHBCbbKje5VqrZ4JuUdQmhBezcm",
+      "txUrl": "https://solscan.io/tx/5kHQ3o3FXvhiq5C3QT1h5ZzG61B5GNmaM2E5daF6JNPn3udU2hsLc3o7r723gkHBCbbKje5VqrZ4JuUdQmhBezcm"
+    },
+    {
+      "wallet": "6bASaDonDEoMZ56ThUfWAVzDH1HATYcqvKoJQ3suNr8a",
+      "amountUi": 7359.951347,
+      "blockTime": "2026-07-18T14:45:29.000Z",
+      "signature": "2riU5BeXWFjjG3mKjHiqp1tV4McpBf8aGqY3wpSAKtprzDuqMnS2byw7bMyC3PaFoqnEwZQdnFbT369KncGQfMnD",
+      "txUrl": "https://solscan.io/tx/2riU5BeXWFjjG3mKjHiqp1tV4McpBf8aGqY3wpSAKtprzDuqMnS2byw7bMyC3PaFoqnEwZQdnFbT369KncGQfMnD"
+    },
+    {
+      "wallet": "HJyDzrBNAeXN4tdXcrVVS117gddGMXzm2wG8XyB8miUz",
+      "amountUi": 7359.951347,
+      "blockTime": "2026-07-18T14:45:27.000Z",
+      "signature": "3LCAZ4pQdJMZAwewCKNR62wbgQPaMMCaWWvdADJRvxrGDQQiqH3VGKKykfUE3C26Vgzok5iTBaEKQAiUgSKDEYDk",
+      "txUrl": "https://solscan.io/tx/3LCAZ4pQdJMZAwewCKNR62wbgQPaMMCaWWvdADJRvxrGDQQiqH3VGKKykfUE3C26Vgzok5iTBaEKQAiUgSKDEYDk"
+    },
+    {
+      "wallet": "AJgUbnnbPMTqzzrMFhkkxYfmrW5PtMmAnhTkzun74ELn",
+      "amountUi": 7359.951347,
+      "blockTime": "2026-07-18T14:45:26.000Z",
+      "signature": "5GWyEGoRdg9TjQtn8HyHApCDNCbFXU7rohNWaT9X39Em8EJ3QJCrvnwyTU6pATrDjeoRAkhBmQXp6XtJpViALQAP",
+      "txUrl": "https://solscan.io/tx/5GWyEGoRdg9TjQtn8HyHApCDNCbFXU7rohNWaT9X39Em8EJ3QJCrvnwyTU6pATrDjeoRAkhBmQXp6XtJpViALQAP"
+    },
+    {
+      "wallet": "6qjWwRVN1bRPFat7BtmJXmtesa5do3dWEU7kKVqq7k9w",
+      "amountUi": 7359.951347,
+      "blockTime": "2026-07-18T14:45:25.000Z",
+      "signature": "2QTKKhHGnYYYmbTw8qNUhgoQaCXFHNT6WcoenXxdDVpSf8aKFWx81Nd2RgW5H4i8hqehjGNTkVe5aCKPk2X1p8vo",
+      "txUrl": "https://solscan.io/tx/2QTKKhHGnYYYmbTw8qNUhgoQaCXFHNT6WcoenXxdDVpSf8aKFWx81Nd2RgW5H4i8hqehjGNTkVe5aCKPk2X1p8vo"
+    },
+    {
+      "wallet": "35aYuAexoER98aboMxCPfwxEqN8XFyejfCmLn1AhPA9b",
+      "amountUi": 7359.951347,
+      "blockTime": "2026-07-18T14:45:24.000Z",
+      "signature": "5Rt72ytEHutsUTTeKtXy5ti3zNWWev7ecE6n2qNZ5X7RFHHpp7NudtHHw8hAtKSSRcmzGZ22f4DwyT27Qju22QmP",
+      "txUrl": "https://solscan.io/tx/5Rt72ytEHutsUTTeKtXy5ti3zNWWev7ecE6n2qNZ5X7RFHHpp7NudtHHw8hAtKSSRcmzGZ22f4DwyT27Qju22QmP"
+    },
+    {
+      "wallet": "mHPYvAwsQK3mipG88q1ZmhBbKVoQQJAuwB82yN9KcWf",
+      "amountUi": 7359.951347,
+      "blockTime": "2026-07-18T14:45:23.000Z",
+      "signature": "nWeJQ1UpLdeDQDFsWesfEJUXzFQRLZxuCtguNCEpMUxqRSPVAmoWNzjMrKFwfHzs4hTV3A56voaPtCDFgRBtsjj",
+      "txUrl": "https://solscan.io/tx/nWeJQ1UpLdeDQDFsWesfEJUXzFQRLZxuCtguNCEpMUxqRSPVAmoWNzjMrKFwfHzs4hTV3A56voaPtCDFgRBtsjj"
+    },
+    {
+      "wallet": "2DtTP3LQp2EpspcXAfGjiAA6DJWmvxcQrXz6x9tfksYd",
+      "amountUi": 7359.951347,
+      "blockTime": "2026-07-18T14:45:21.000Z",
+      "signature": "5bxkqpP2gmv14jZTvwvfAprHViLWYrfiG7qgUEzyJdT819sSS5xM3hi7FK6nrdS7t1rctMSggezShCVNLbNCUFm9",
+      "txUrl": "https://solscan.io/tx/5bxkqpP2gmv14jZTvwvfAprHViLWYrfiG7qgUEzyJdT819sSS5xM3hi7FK6nrdS7t1rctMSggezShCVNLbNCUFm9"
+    },
+    {
+      "wallet": "49N49JSiHKKVd8CJDFN3wok4c65PT7PZPHKW5sTQfmhM",
+      "amountUi": 7359.951347,
+      "blockTime": "2026-07-18T14:45:19.000Z",
+      "signature": "5ozJPdUEe1hH2aipWLx7HEj1KvnDPVDRphKUU2DDmtp59wBU2Ajy9JLjR9tSUqK9TpNAdYsWLJKSweNso1Qw1z2E",
+      "txUrl": "https://solscan.io/tx/5ozJPdUEe1hH2aipWLx7HEj1KvnDPVDRphKUU2DDmtp59wBU2Ajy9JLjR9tSUqK9TpNAdYsWLJKSweNso1Qw1z2E"
+    },
+    {
+      "wallet": "G7RhKShXMVzSvSteMfcrXXdgYxeonZZw7YMgGbXZqMXU",
+      "amountUi": 7359.951347,
+      "blockTime": "2026-07-18T14:45:16.000Z",
+      "signature": "5A8t4TkgcDect8aSPEutejSorG6N6eLQsqQSKmo1zgionoZPN3CJ5RDY8B3dvMJ7GyRucCJ8HnR7Q6gqAa6rBbbL",
+      "txUrl": "https://solscan.io/tx/5A8t4TkgcDect8aSPEutejSorG6N6eLQsqQSKmo1zgionoZPN3CJ5RDY8B3dvMJ7GyRucCJ8HnR7Q6gqAa6rBbbL"
+    },
+    {
+      "wallet": "HGEERoMEhcSPNavPe4jiBS6GRK2ib2s4HDP2y7Xn7yz9",
+      "amountUi": 8818.278105,
+      "blockTime": "2026-07-18T14:43:51.000Z",
+      "signature": "4BV8Hs4pupFjb9FNP3VL5jTKzhiq82gtLavSa86cgk26sueBFRsJsbMZwBsq57gmd6ix79EdC8ZHRmj5Z5FQWvuD",
+      "txUrl": "https://solscan.io/tx/4BV8Hs4pupFjb9FNP3VL5jTKzhiq82gtLavSa86cgk26sueBFRsJsbMZwBsq57gmd6ix79EdC8ZHRmj5Z5FQWvuD"
+    },
+    {
+      "wallet": "6QkSDhZq2PtMjGZVAWyoPHV4Bw2HXngbgW6gP8XmSwgX",
+      "amountUi": 8818.278105,
+      "blockTime": "2026-07-18T14:43:48.000Z",
+      "signature": "3aKUE5XxuowfabpdeVgGR6bMhx8fz5adz9dXiM279mjoMBJReu3u4nMZk8s63L9xHCkZcUMSjgrSgJJTiUeuJoUf",
+      "txUrl": "https://solscan.io/tx/3aKUE5XxuowfabpdeVgGR6bMhx8fz5adz9dXiM279mjoMBJReu3u4nMZk8s63L9xHCkZcUMSjgrSgJJTiUeuJoUf"
+    },
+    {
+      "wallet": "GUZmbCYKgFyz3vVRTnaUPCZtcLfp7VRpaBNQfNVWUAsg",
+      "amountUi": 8818.278105,
+      "blockTime": "2026-07-18T14:43:47.000Z",
+      "signature": "35bSMZpG4tLgqSBu42Ch2MVAQFMRBhrwFNDEuL13H6tqeNFAV4KxesW7dhm9y71LyeZLRaegSuqawZTZ9ZqZnmkB",
+      "txUrl": "https://solscan.io/tx/35bSMZpG4tLgqSBu42Ch2MVAQFMRBhrwFNDEuL13H6tqeNFAV4KxesW7dhm9y71LyeZLRaegSuqawZTZ9ZqZnmkB"
+    },
+    {
+      "wallet": "8HHdvrexbyEMNc3M1MWsKXiYZ4QvuitHafh93sVeJuTN",
+      "amountUi": 8818.278105,
+      "blockTime": "2026-07-18T14:43:45.000Z",
+      "signature": "45TeJET8i3mJ87UkRmGKBr9c59nvyPZ95dD9AQtsRB1w8TQUxoWg39DNXKQXcwUwChZ5vn8PyY9ZyMDVMKNNw2xK",
+      "txUrl": "https://solscan.io/tx/45TeJET8i3mJ87UkRmGKBr9c59nvyPZ95dD9AQtsRB1w8TQUxoWg39DNXKQXcwUwChZ5vn8PyY9ZyMDVMKNNw2xK"
+    },
+    {
+      "wallet": "B9Qwjw9Q8yxj9UsaZYNEnrnZgicZEPAasgfLtDoWYfZF",
+      "amountUi": 8818.278105,
+      "blockTime": "2026-07-18T14:43:44.000Z",
+      "signature": "2GyoamxU4u5pGNMgzujfEpheiBLvpLU9T2PKCB4w3Wvx4cg1mUMjaHCzMaSKhvZKsohPAFRJmHtabysYcxYJAH48",
+      "txUrl": "https://solscan.io/tx/2GyoamxU4u5pGNMgzujfEpheiBLvpLU9T2PKCB4w3Wvx4cg1mUMjaHCzMaSKhvZKsohPAFRJmHtabysYcxYJAH48"
+    },
+    {
+      "wallet": "RvWeo9WrZNrVrdtXqUMzQRBq9ajQASHoYxJj8dbRjcr",
+      "amountUi": 8818.278105,
+      "blockTime": "2026-07-18T14:43:42.000Z",
+      "signature": "zWKctWwNFUqoeP1ZaBm6UWxYDH3NZ5U7JvvMRN2qHK1mCJYnr7Sxt3sm3HQMhsKUp71oYvPZxuhHp2G3bBZoxVA",
+      "txUrl": "https://solscan.io/tx/zWKctWwNFUqoeP1ZaBm6UWxYDH3NZ5U7JvvMRN2qHK1mCJYnr7Sxt3sm3HQMhsKUp71oYvPZxuhHp2G3bBZoxVA"
+    },
+    {
+      "wallet": "AYdtvjo5jcAQnHYKSA6sWgBbHLzSKAYZsnUc5n4h2bdQ",
+      "amountUi": 8818.278105,
+      "blockTime": "2026-07-18T14:43:40.000Z",
+      "signature": "4xrUBvQ6hnNeCJQsayka1Fb1hoLzS7SsW6icSt7URPrhmGavTA3vjkmpFSKgaNFGr2DgpqY23VnMf91XmyNxj4oB",
+      "txUrl": "https://solscan.io/tx/4xrUBvQ6hnNeCJQsayka1Fb1hoLzS7SsW6icSt7URPrhmGavTA3vjkmpFSKgaNFGr2DgpqY23VnMf91XmyNxj4oB"
+    },
+    {
+      "wallet": "8JsUVmdmPJvu9M8ab2eRbG8foL8cX2WX8LH6UHiXLjPZ",
+      "amountUi": 8818.278105,
+      "blockTime": "2026-07-18T14:43:39.000Z",
+      "signature": "4kZWxPFXFs2Sn7JKhMw2m8ytuqRNWpgF6tgqaeZSHZbnbJ99itgmJLs7uKBerD29UZXRn21G8RhLUnRq6akRuQsx",
+      "txUrl": "https://solscan.io/tx/4kZWxPFXFs2Sn7JKhMw2m8ytuqRNWpgF6tgqaeZSHZbnbJ99itgmJLs7uKBerD29UZXRn21G8RhLUnRq6akRuQsx"
+    },
+    {
+      "wallet": "FkWmdB7PgAffZYu4femXkZTdijHn6kLWNaRwkMJ3wV7T",
+      "amountUi": 8818.278105,
+      "blockTime": "2026-07-18T14:43:38.000Z",
+      "signature": "4dkbhDwUL5x8vkmFwVx9NLGgwfXMqgfvRvWcRnixTH19XYEQhib4DDdzR6rDVsKDkKEWbjoTpxU7yXcngc4ahKEW",
+      "txUrl": "https://solscan.io/tx/4dkbhDwUL5x8vkmFwVx9NLGgwfXMqgfvRvWcRnixTH19XYEQhib4DDdzR6rDVsKDkKEWbjoTpxU7yXcngc4ahKEW"
+    },
+    {
+      "wallet": "J1F2Q96J2DkgWzsK1p6ZPk1pdngEbigpWRWqF56qekRA",
+      "amountUi": 8818.278105,
+      "blockTime": "2026-07-18T14:43:37.000Z",
+      "signature": "4DnwD43JWv5cGUr1qLeH7tmRRPPjAa4JnBiNhoa5RH156bVaZQS6HvSXKj6m1H6pwNg8ZmirNvxVTBU5pPCSNwpR",
+      "txUrl": "https://solscan.io/tx/4DnwD43JWv5cGUr1qLeH7tmRRPPjAa4JnBiNhoa5RH156bVaZQS6HvSXKj6m1H6pwNg8ZmirNvxVTBU5pPCSNwpR"
+    },
+    {
+      "wallet": "Ednsd5MaA1kKSXqPLLLcpeM9eN5LsfYn5iMCeV36ZGmT",
+      "amountUi": 8818.278105,
+      "blockTime": "2026-07-18T14:43:36.000Z",
+      "signature": "5CLW3xzPXg2tnkVmNa968CxLLeLENjEf3aryByzFXEevDTxSgrSn6x4Hgx49knAhS1CuvU2N8n6tfmfGCS9fyDoA",
+      "txUrl": "https://solscan.io/tx/5CLW3xzPXg2tnkVmNa968CxLLeLENjEf3aryByzFXEevDTxSgrSn6x4Hgx49knAhS1CuvU2N8n6tfmfGCS9fyDoA"
+    },
+    {
+      "wallet": "5hh7UE6i2BtyCvaMMadS71wFwK88JRmtRTfXkjZ3CHvF",
+      "amountUi": 15579.436516,
+      "blockTime": "2026-07-18T14:42:45.000Z",
+      "signature": "2SmZcZSb82KhPvRoKYkr6FtVTLgVSSWg8wiWfNe2XLv7Wduh7z7xmzJbHzxJcYaBFbkkSsX1MebpsvvHGUnUxQ1g",
+      "txUrl": "https://solscan.io/tx/2SmZcZSb82KhPvRoKYkr6FtVTLgVSSWg8wiWfNe2XLv7Wduh7z7xmzJbHzxJcYaBFbkkSsX1MebpsvvHGUnUxQ1g"
+    },
+    {
+      "wallet": "3cqjvVCssTfBBvNnosAvHuyA1RBG67TBdsG5WEU8oKyx",
+      "amountUi": 10311.928648,
+      "blockTime": "2026-07-18T14:41:49.000Z",
+      "signature": "Sfvean8fuCi51C2RqHCpYuAsYjDrBGskdE3hRzFRT1voJUg4LYmv4NLUXsXJ1HjAYc3J6mDHeYEoRoqumPMoRLr",
+      "txUrl": "https://solscan.io/tx/Sfvean8fuCi51C2RqHCpYuAsYjDrBGskdE3hRzFRT1voJUg4LYmv4NLUXsXJ1HjAYc3J6mDHeYEoRoqumPMoRLr"
+    },
+    {
+      "wallet": "8Dd4LABjYkZusf5Xen2LbPR9ENRWBSS6igdmfJcaVZmR",
+      "amountUi": 10311.928648,
+      "blockTime": "2026-07-18T14:41:47.000Z",
+      "signature": "4mWWqHBDZy5FpytFQbr991tbmYf7aa3rdJKZDy1XM2C26pjKsJ7Wim2ycMB7ciaoR9gxKH4RQWirk9fPQDGppNJC",
+      "txUrl": "https://solscan.io/tx/4mWWqHBDZy5FpytFQbr991tbmYf7aa3rdJKZDy1XM2C26pjKsJ7Wim2ycMB7ciaoR9gxKH4RQWirk9fPQDGppNJC"
+    },
+    {
+      "wallet": "GFWYUcKLTr5TyGFqKd14Eq55zfoBmfuQSSThHopqFe1j",
+      "amountUi": 10311.928648,
+      "blockTime": "2026-07-18T14:41:44.000Z",
+      "signature": "5ikLsFMY7QAV4teFciuSWw9JNqJLTT7Zm6syReH63ZaDC148EpGBjNu7WE3f9s617C1m4JUcz9iQLEsPBdXpywJg",
+      "txUrl": "https://solscan.io/tx/5ikLsFMY7QAV4teFciuSWw9JNqJLTT7Zm6syReH63ZaDC148EpGBjNu7WE3f9s617C1m4JUcz9iQLEsPBdXpywJg"
+    },
+    {
+      "wallet": "H1z5Xzof58Zi5AixSa7Vtxe1pb9HdGNPSujuGit8HSnB",
+      "amountUi": 10311.928648,
+      "blockTime": "2026-07-18T14:41:43.000Z",
+      "signature": "VJqMNG5UmtRqp8KpfcuJ7at5GXrGJah6BMtVtXrEbVpThtX6h1nfMyVohJqBenTE7szQwxvemQCksXrEvrKRDAJ",
+      "txUrl": "https://solscan.io/tx/VJqMNG5UmtRqp8KpfcuJ7at5GXrGJah6BMtVtXrEbVpThtX6h1nfMyVohJqBenTE7szQwxvemQCksXrEvrKRDAJ"
+    },
+    {
+      "wallet": "9MpATg4SmeZYQb2SHWh43Toimo16h2jqBes2VcTwZGav",
+      "amountUi": 10311.928648,
+      "blockTime": "2026-07-18T14:41:40.000Z",
+      "signature": "3CtZKsqraAKbdtQX4Lj2wd6o3f6VziJnrtcNQCcqZaBEFFUT3Jfv6QHTxTDgJG8mNi1eDvANxpoTXzzkZX1zoi5V",
+      "txUrl": "https://solscan.io/tx/3CtZKsqraAKbdtQX4Lj2wd6o3f6VziJnrtcNQCcqZaBEFFUT3Jfv6QHTxTDgJG8mNi1eDvANxpoTXzzkZX1zoi5V"
+    },
+    {
+      "wallet": "EfsBFNZC7qbktXmAxiPwZ8de6o6tpvMXfvPphin5MUTS",
+      "amountUi": 18256.392549,
+      "blockTime": "2026-07-18T14:34:57.000Z",
+      "signature": "5N1SGuuwSADyDgDoeL2SQdge8DT1majYXtTfvam9FM3vASB3QvKrGYNPXZYsy8jbymazwrBk3mpBizMZM3eREve7",
+      "txUrl": "https://solscan.io/tx/5N1SGuuwSADyDgDoeL2SQdge8DT1majYXtTfvam9FM3vASB3QvKrGYNPXZYsy8jbymazwrBk3mpBizMZM3eREve7"
+    },
+    {
+      "wallet": "4aArEDkqkPBwFiSCShd6GJ8dTFHzZboGf3GD7qwxxTu3",
+      "amountUi": 29440.006937,
+      "blockTime": "2026-07-18T14:33:20.000Z",
+      "signature": "5yCxswq78aJs7Bk9a1yoLYSmZE8SPbpD5ZkELpZr2xW8sracTZCeJzeXFBPAHBdyQZMh5VC1mJqmEqHfKznDSG9D",
+      "txUrl": "https://solscan.io/tx/5yCxswq78aJs7Bk9a1yoLYSmZE8SPbpD5ZkELpZr2xW8sracTZCeJzeXFBPAHBdyQZMh5VC1mJqmEqHfKznDSG9D"
+    },
+    {
+      "wallet": "4j9GKKHTwXmat6YbpfPth27aegyRKubT43Mdqeoq7ZSV",
+      "amountUi": 39384.176168,
+      "blockTime": "2026-07-18T14:32:11.000Z",
+      "signature": "3mY8FE14P2r3VLkybALKQG9Uu2SSiZDNce17xQPcG2rDKrdXeweaQspUYV4E3XwmqmSge2fnWrw6GqSRnBF9D5ng",
+      "txUrl": "https://solscan.io/tx/3mY8FE14P2r3VLkybALKQG9Uu2SSiZDNce17xQPcG2rDKrdXeweaQspUYV4E3XwmqmSge2fnWrw6GqSRnBF9D5ng"
+    },
+    {
+      "wallet": "2oFwuuRoLNUvNm24xJ1yFhiwzjxkFLvvGW4S35PG76vA",
+      "amountUi": 14724.640146,
+      "blockTime": "2026-07-18T14:31:27.000Z",
+      "signature": "57DcRVw2ykvgEe3qruFtRZanFAQdRXSvFXf8qVSSGaaCxRuJuvf3zrKbXxVXujiKTNMyV4esJVBTfvfADnGyhmR1",
+      "txUrl": "https://solscan.io/tx/57DcRVw2ykvgEe3qruFtRZanFAQdRXSvFXf8qVSSGaaCxRuJuvf3zrKbXxVXujiKTNMyV4esJVBTfvfADnGyhmR1"
+    },
+    {
+      "wallet": "aWKmpJ3LarK92TXyELeaWgrR2tHcZQzvSBxFhs8crvN",
+      "amountUi": 14724.640146,
+      "blockTime": "2026-07-18T14:31:26.000Z",
+      "signature": "5dtfVuUhSbNzX7EtiZ1L4Tafcc5PpJK1KawXy5r6ZALitzsZqr17xUwFYbWnQozRUkagt6pu7AL1SmQDY7KqYhwH",
+      "txUrl": "https://solscan.io/tx/5dtfVuUhSbNzX7EtiZ1L4Tafcc5PpJK1KawXy5r6ZALitzsZqr17xUwFYbWnQozRUkagt6pu7AL1SmQDY7KqYhwH"
+    },
+    {
+      "wallet": "FNe44b9ksv1SeixFcnumjfSCmz2wqGVNH9MnoPvbXti6",
+      "amountUi": 14724.640146,
+      "blockTime": "2026-07-18T14:31:24.000Z",
+      "signature": "375246VWSEU3NFEpYUARPTfx5RFmdfLo7yBfNsmyCKKnzht8NJqKiRF2FBFaoLMt7VoT1wWFmXWTkiRbamdqMcm9",
+      "txUrl": "https://solscan.io/tx/375246VWSEU3NFEpYUARPTfx5RFmdfLo7yBfNsmyCKKnzht8NJqKiRF2FBFaoLMt7VoT1wWFmXWTkiRbamdqMcm9"
+    },
+    {
+      "wallet": "2GY1U42CVxihaQvmr6N7DoCQ3SWpoVDWxDsXa4a4E6kz",
+      "amountUi": 11711.798482,
+      "blockTime": "2026-07-18T14:30:32.000Z",
+      "signature": "4M72iD83cSgJTDP3A8JRg1gPByDmHSYKTywQqShd78USLJYMVbxttAhHkvXmxo9wYUZYcPw7sKsTWFe7V4meHbAf",
+      "txUrl": "https://solscan.io/tx/4M72iD83cSgJTDP3A8JRg1gPByDmHSYKTywQqShd78USLJYMVbxttAhHkvXmxo9wYUZYcPw7sKsTWFe7V4meHbAf"
+    },
+    {
+      "wallet": "8bFHAgpjfpxomu8ujpJ9vXboA7oTKGA4jURFKiXh654i",
+      "amountUi": 11711.798482,
+      "blockTime": "2026-07-18T14:30:24.000Z",
+      "signature": "4S6jnTBPsPnaxCUV97pi5xssks9PpuimtfbEe8xRw7Ku46vQytbMZbDCJVmYFY4g1GEsJYUKqugCpitXcKH267wc",
+      "txUrl": "https://solscan.io/tx/4S6jnTBPsPnaxCUV97pi5xssks9PpuimtfbEe8xRw7Ku46vQytbMZbDCJVmYFY4g1GEsJYUKqugCpitXcKH267wc"
+    },
+    {
+      "wallet": "GtavVoDqvmKd3Z3ky2KZ3tdEmApL3kwsxEVhZVogavFo",
+      "amountUi": 11711.798482,
+      "blockTime": "2026-07-18T14:30:19.000Z",
+      "signature": "4yW8uJsJ4LTswU7VCqDe6JG7wpeTarBXV8W659tcAhPesT6zbb8Rx8kCqJUzMe2S41eMRBayV29N2gx3TGGnDwf7",
+      "txUrl": "https://solscan.io/tx/4yW8uJsJ4LTswU7VCqDe6JG7wpeTarBXV8W659tcAhPesT6zbb8Rx8kCqJUzMe2S41eMRBayV29N2gx3TGGnDwf7"
+    },
+    {
+      "wallet": "7ctsjC1wRJKquBhBiniMuSESz6N83XjvcDnXP8K2skRr",
+      "amountUi": 11711.798482,
+      "blockTime": "2026-07-18T14:30:15.000Z",
+      "signature": "5idayg7hhaQRZQEYiMntS2zskC47oESrsMPLghJGMfetgHPCqtVyQV4vqwVTJ4Vo4fCaTHkRmLK4YsM4kLeb2nPF",
+      "txUrl": "https://solscan.io/tx/5idayg7hhaQRZQEYiMntS2zskC47oESrsMPLghJGMfetgHPCqtVyQV4vqwVTJ4Vo4fCaTHkRmLK4YsM4kLeb2nPF"
+    },
+    {
+      "wallet": "4aArEDkqkPBwFiSCShd6GJ8dTFHzZboGf3GD7qwxxTu3",
+      "amountUi": 11711.798482,
+      "blockTime": "2026-07-18T14:30:10.000Z",
+      "signature": "mYna96M4VGpoTS2u3tFp9qkZJbrE6fxTGumfxTEKc6BauF1w1ybPQJuJGawzKUowWGz2CyPqYvKiBVtCPfvFjNW",
+      "txUrl": "https://solscan.io/tx/mYna96M4VGpoTS2u3tFp9qkZJbrE6fxTGumfxTEKc6BauF1w1ybPQJuJGawzKUowWGz2CyPqYvKiBVtCPfvFjNW"
+    },
+    {
+      "wallet": "7yg6dP15j832oCXkJNTUR6exCjL256JeHH4hFuHZxVQP",
+      "amountUi": 11711.798482,
+      "blockTime": "2026-07-18T14:30:07.000Z",
+      "signature": "5zRehEhAMqSCyCep8bGbzESpFsxQNrVp2JPv3RSmjNVPF7XDbHGxBmrsgYm23TdxpmvbqcNJX2cPiNFFiMfckhUX",
+      "txUrl": "https://solscan.io/tx/5zRehEhAMqSCyCep8bGbzESpFsxQNrVp2JPv3RSmjNVPF7XDbHGxBmrsgYm23TdxpmvbqcNJX2cPiNFFiMfckhUX"
+    },
+    {
+      "wallet": "FTao9bTDRdZ1eyuZ9nSrhHuD1tQhMWD2Jcixe8DKaudZ",
+      "amountUi": 11711.798482,
+      "blockTime": "2026-07-18T14:30:01.000Z",
+      "signature": "rzNy1wy7JA5AwQF5J8UArhYmAB1AWa7vdxuyPXt4cCaqMR7uqvEZ4oNbMxrSf9u1eQ4FZosM849GNrfxveVEgbi",
+      "txUrl": "https://solscan.io/tx/rzNy1wy7JA5AwQF5J8UArhYmAB1AWa7vdxuyPXt4cCaqMR7uqvEZ4oNbMxrSf9u1eQ4FZosM849GNrfxveVEgbi"
+    },
+    {
+      "wallet": "8sUF1HAtdxF9uYAqRPhExHfmhKFyq2D6rDBHrvp6AVSW",
+      "amountUi": 11711.798482,
+      "blockTime": "2026-07-18T14:29:57.000Z",
+      "signature": "3Ta7rRYTukk1oWqyeyMs6D9k5PTgAoqxSHQ8qC866Kkbtc6kbHiSVMYR1SitUdrBa1Qu9qtFRXSbmB14MLgvv4J4",
+      "txUrl": "https://solscan.io/tx/3Ta7rRYTukk1oWqyeyMs6D9k5PTgAoqxSHQ8qC866Kkbtc6kbHiSVMYR1SitUdrBa1Qu9qtFRXSbmB14MLgvv4J4"
     },
     {
       "wallet": "4LniH7FjExwjoBC6TqKxfWVMF9bCNqNnaBpBMZ51fmU8",
-      "amountUi": 2284.475954,
-      "blockTime": "2026-07-18T03:46:05.000Z",
-      "signature": "5NEYdbx74EqkHhTZxJyAVsbP4pUqUyorLASwzXNiMbANpH6zQWqKCucDzYbFD3c3gRUKQCHssJgkHcGEcLCyne6E",
-      "txUrl": "https://solscan.io/tx/5NEYdbx74EqkHhTZxJyAVsbP4pUqUyorLASwzXNiMbANpH6zQWqKCucDzYbFD3c3gRUKQCHssJgkHcGEcLCyne6E"
+      "amountUi": 11711.798482,
+      "blockTime": "2026-07-18T14:29:56.000Z",
+      "signature": "5Lp78QwGbuLJU3QEENAYpNuqv8GrCG836eFhDbosHmKMeVZUQbmnDCdEEn268xMe13xmfYuiumY91zMkUr1VuvcA",
+      "txUrl": "https://solscan.io/tx/5Lp78QwGbuLJU3QEENAYpNuqv8GrCG836eFhDbosHmKMeVZUQbmnDCdEEn268xMe13xmfYuiumY91zMkUr1VuvcA"
     },
     {
-      "wallet": "HTi27T5wYXL4rSWZa5dcrReK1rUVstxMjsSguGfo1F5Z",
-      "amountUi": 21173.686677,
-      "blockTime": "2026-07-18T03:44:51.000Z",
-      "signature": "2my1GnEZmYeg9V67qh4Mp4eBfzH7NHhDSknAevQwavDHjfqcDDU35qc8X1QD7oSpGNpGC5S78SRvuZR1nrBQyWSL",
-      "txUrl": "https://solscan.io/tx/2my1GnEZmYeg9V67qh4Mp4eBfzH7NHhDSknAevQwavDHjfqcDDU35qc8X1QD7oSpGNpGC5S78SRvuZR1nrBQyWSL"
+      "wallet": "ERENAWrEQjVMXfv6WBit5p1XdDEnjUezn8KfM5BsJrBX",
+      "amountUi": 11711.798482,
+      "blockTime": "2026-07-18T14:29:51.000Z",
+      "signature": "2yZdJKzP2uYMCxnMsCvLim1sGM8RccErvKUAYy5vUnHhJDH3UjJSHLEXgQay9CHtNXc26aE92xFAvYMvxMVewkUb",
+      "txUrl": "https://solscan.io/tx/2yZdJKzP2uYMCxnMsCvLim1sGM8RccErvKUAYy5vUnHhJDH3UjJSHLEXgQay9CHtNXc26aE92xFAvYMvxMVewkUb"
     },
     {
-      "wallet": "FUkEW4hCdUTYHDq8viSexgrvhfjsXTExS5pQmSxaj1iF",
-      "amountUi": 21743.66316,
-      "blockTime": "2026-07-18T03:43:29.000Z",
-      "signature": "3oRPhrpnBJtqWUT4nwvJ7QZtREAexBRXxAZP5HMuAkDMS6kYVothdd9ALzMMRfkUC88kjoCAbyNYScz74ThpYPmp",
-      "txUrl": "https://solscan.io/tx/3oRPhrpnBJtqWUT4nwvJ7QZtREAexBRXxAZP5HMuAkDMS6kYVothdd9ALzMMRfkUC88kjoCAbyNYScz74ThpYPmp"
+      "wallet": "HUoym3vpykXF5n1KQNCd7H2nSYjAUTZuvGSicHAgg3oy",
+      "amountUi": 11711.798482,
+      "blockTime": "2026-07-18T14:29:50.000Z",
+      "signature": "3s4zXzA9B3BFL7uS4NPMXd9VW2NV73fzhRYVaJyFW8aE1aiCGd9dR4VUPCvNjHTErq5qEX1SnB8soGo5HrGy6Jk3",
+      "txUrl": "https://solscan.io/tx/3s4zXzA9B3BFL7uS4NPMXd9VW2NV73fzhRYVaJyFW8aE1aiCGd9dR4VUPCvNjHTErq5qEX1SnB8soGo5HrGy6Jk3"
     },
     {
-      "wallet": "6Joi513qJd6dpWdX8qbEW9DaNMEX3K36Fr2QA3PqUdH7",
-      "amountUi": 23988.233471,
-      "blockTime": "2026-07-18T03:42:13.000Z",
-      "signature": "38eBVWEbMprqPwrKcZ3n3dqXheP6KhP9fhChtQZo9xm3zCFKLTxx1PNHtKcSM2koJBrbFESzoCcsnFfh2CUG5vDq",
-      "txUrl": "https://solscan.io/tx/38eBVWEbMprqPwrKcZ3n3dqXheP6KhP9fhChtQZo9xm3zCFKLTxx1PNHtKcSM2koJBrbFESzoCcsnFfh2CUG5vDq"
+      "wallet": "HeDNuNwVTTbQF7f1MYGgoM5QD6a1qUvof5CDS2BwkCsM",
+      "amountUi": 11711.798482,
+      "blockTime": "2026-07-18T14:29:47.000Z",
+      "signature": "SoWC2wQcCrtYvjxqvkufP27tELM8WiWt6qnoeH7iHK12LgY5mV8XdP6AeirnwZYS8fxn4DsfFt3xSoB9tezbAXt",
+      "txUrl": "https://solscan.io/tx/SoWC2wQcCrtYvjxqvkufP27tELM8WiWt6qnoeH7iHK12LgY5mV8XdP6AeirnwZYS8fxn4DsfFt3xSoB9tezbAXt"
     },
     {
-      "wallet": "3f4iNmDAhqdiVLSZmWwn9zfopt61eseDP65txYwRC4ZR",
-      "amountUi": 25722.200952,
-      "blockTime": "2026-07-18T03:41:07.000Z",
-      "signature": "5ibU4syjV94eSgeiCSrqLegqbDZWApVA4Bwbx274FNvgDENAyqtdaymAb8PZ5JfoXnWBfc7s7QAVK8ZBc16QFK6d",
-      "txUrl": "https://solscan.io/tx/5ibU4syjV94eSgeiCSrqLegqbDZWApVA4Bwbx274FNvgDENAyqtdaymAb8PZ5JfoXnWBfc7s7QAVK8ZBc16QFK6d"
-    },
-    {
-      "wallet": "8CvKWKLTZpB4oC91Ni8CYjcW81wtsudqkRavSSmoeyVm",
-      "amountUi": 27958.914078,
-      "blockTime": "2026-07-18T03:40:38.000Z",
-      "signature": "4gi2ogXxBXbJ3Ac8hsEFQQq4yrY8ZrDja9xqwHxrf9zZURSPWuSUxUbeafAnjFEZDbsPhS6dmjGJcJJZcytm4Z59",
-      "txUrl": "https://solscan.io/tx/4gi2ogXxBXbJ3Ac8hsEFQQq4yrY8ZrDja9xqwHxrf9zZURSPWuSUxUbeafAnjFEZDbsPhS6dmjGJcJJZcytm4Z59"
-    },
-    {
-      "wallet": "CzUyW6NogmB6oQUV8JmZ2fy2dykqrjbcHDoNoAXuLEi7",
-      "amountUi": 50000,
-      "blockTime": "2026-07-16T19:36:57.000Z",
-      "signature": "4vtGZjBnLCfyghdjBoQyGkgsgyKPJF1KxiPW8eDBMeHGgS9RQVgXMV58dZAekxCHzDvfKje8b6r296ePz3xSPm7R",
-      "txUrl": "https://solscan.io/tx/4vtGZjBnLCfyghdjBoQyGkgsgyKPJF1KxiPW8eDBMeHGgS9RQVgXMV58dZAekxCHzDvfKje8b6r296ePz3xSPm7R"
-    },
-    {
-      "wallet": "2WPbDT8zKyhhyHMh2kk7fgKaQwHq78w8UmnNPEbXPPmQ",
-      "amountUi": 3780.586159,
-      "blockTime": "2026-07-11T17:54:06.000Z",
-      "signature": "j184NQtxzdhvS93APd3Qp7viJQQ8CvPEsYXnyzFqiSLwZZzBzgmi1ZMcDP833Bn4oJhhd1ePRDfPZDSSNHYUqwV",
-      "txUrl": "https://solscan.io/tx/j184NQtxzdhvS93APd3Qp7viJQQ8CvPEsYXnyzFqiSLwZZzBzgmi1ZMcDP833Bn4oJhhd1ePRDfPZDSSNHYUqwV"
-    },
-    {
-      "wallet": "GKVmeMTNr1MteNR6RL8YT4WNx5rZuTJaK7UrEis5NQ3Z",
-      "amountUi": 1621,
-      "blockTime": "2026-07-06T03:23:23.000Z",
-      "signature": "5fAi4G8Kq3vCb4SxSx6fZgzXXTCGMaSdzjhwxNHi7HtiGFz2MWJUNGWB2YcGx918P5J2qq6LwckKBzY5Aj7yLXxZ",
-      "txUrl": "https://solscan.io/tx/5fAi4G8Kq3vCb4SxSx6fZgzXXTCGMaSdzjhwxNHi7HtiGFz2MWJUNGWB2YcGx918P5J2qq6LwckKBzY5Aj7yLXxZ"
-    },
-    {
-      "wallet": "6cBETaForYR1NTTJGyR1Q2krx3gUEnLEeDW5iPYC8A8F",
-      "amountUi": 250000,
-      "blockTime": "2026-07-02T00:09:12.000Z",
-      "signature": "5U7kCa3tdoLzNApaeEitmXzwoA8ZP936Qvdb2iVi7NGoRyqJKdWbUCF4NGuGtHTfDK32xXdFox2XuTUFGKbSwzpR",
-      "txUrl": "https://solscan.io/tx/5U7kCa3tdoLzNApaeEitmXzwoA8ZP936Qvdb2iVi7NGoRyqJKdWbUCF4NGuGtHTfDK32xXdFox2XuTUFGKbSwzpR"
-    },
-    {
-      "wallet": "HDXqd4gWBEauouDcVZvns62BuVfo36iLFH3QoucYLv3r",
-      "amountUi": 100000,
-      "blockTime": "2026-07-02T00:08:14.000Z",
-      "signature": "3tdoTDE4j5vhrAXMh5HGnLvkmC4Rju76E9R1ZP9zCRPVGpmRzZZz4mTmefAqq1yeAbXwxAJ4e55AyrsAPbNFgNx7",
-      "txUrl": "https://solscan.io/tx/3tdoTDE4j5vhrAXMh5HGnLvkmC4Rju76E9R1ZP9zCRPVGpmRzZZz4mTmefAqq1yeAbXwxAJ4e55AyrsAPbNFgNx7"
-    },
-    {
-      "wallet": "UavZ3tMfNhBWpGPPiRvfHFw64wzqyJAiiaqtrfU4eCV",
-      "amountUi": 200000,
-      "blockTime": "2026-07-02T00:07:56.000Z",
-      "signature": "hvicG5JB7xL8iuMfbwpPtExcqzALNy3crXfHusV2R5AbUD84JN5LTAyQ7ihZzWQYBySmXBYnqEZTQ4EvU1D9Ffn",
-      "txUrl": "https://solscan.io/tx/hvicG5JB7xL8iuMfbwpPtExcqzALNy3crXfHusV2R5AbUD84JN5LTAyQ7ihZzWQYBySmXBYnqEZTQ4EvU1D9Ffn"
-    },
-    {
-      "wallet": "4hZBfqADUnwHBT8VrBseDMBRCHFPznXCz2Uupd5TEHRg",
-      "amountUi": 250000,
-      "blockTime": "2026-07-02T00:07:37.000Z",
-      "signature": "5nS5JJs2uR3tHsjeUZ47LmkdW7ikJzntxbh6E69BSLkqcZiKDWhtYNeo8LpMwHkcwMc53JMWdH55VkrvPgCKswNd",
-      "txUrl": "https://solscan.io/tx/5nS5JJs2uR3tHsjeUZ47LmkdW7ikJzntxbh6E69BSLkqcZiKDWhtYNeo8LpMwHkcwMc53JMWdH55VkrvPgCKswNd"
-    },
-    {
-      "wallet": "75fKcDkNUNzpBigDd3znWYiwFVhAgFGMxUMh3pCs9EPu",
-      "amountUi": 513489.6877,
-      "blockTime": "2026-07-02T00:06:24.000Z",
-      "signature": "ubdNkYq4rQUHKVFf7WLsfzDRVJTeWyVB6tZapowpcAr7g7zhVhFhKxe4M2jKo6EvWSQShFDa7whhHvTUZs9juyw",
-      "txUrl": "https://solscan.io/tx/ubdNkYq4rQUHKVFf7WLsfzDRVJTeWyVB6tZapowpcAr7g7zhVhFhKxe4M2jKo6EvWSQShFDa7whhHvTUZs9juyw"
-    },
-    {
-      "wallet": "125A8P2wBRB9YrJCPTZwc3yJxcizwzJwiVuUb5QyVYWi",
-      "amountUi": 558541.0287,
-      "blockTime": "2026-07-02T00:05:54.000Z",
-      "signature": "2fn5j1bTzHZr5u24MWEvbuNzepQwi6tjSvD7wZ47LrhASipKA2W4BTHWaUPCbD4SXhhAe75jMPrfickyqDEGk5HC",
-      "txUrl": "https://solscan.io/tx/2fn5j1bTzHZr5u24MWEvbuNzepQwi6tjSvD7wZ47LrhASipKA2W4BTHWaUPCbD4SXhhAe75jMPrfickyqDEGk5HC"
-    },
-    {
-      "wallet": "BhYkn3vN23wuNG8sdi8TyxqvW9r51RaHMGF36bawn9GG",
-      "amountUi": 127396.6681,
-      "blockTime": "2026-07-02T00:05:13.000Z",
-      "signature": "62Roga31BvmcuTFq8TzLS6pcVVHZvycTwZ9GqtDnvr5EaHHcvMnr7wKKsETj8GAcweQkWgEtEaqGEC69dzNUxjiu",
-      "txUrl": "https://solscan.io/tx/62Roga31BvmcuTFq8TzLS6pcVVHZvycTwZ9GqtDnvr5EaHHcvMnr7wKKsETj8GAcweQkWgEtEaqGEC69dzNUxjiu"
-    },
-    {
-      "wallet": "GSgcSp4u5DdGCykRXgJdyrJPTwZAPzmjjyWDCaMniVWa",
-      "amountUi": 80000,
-      "blockTime": "2026-07-01T13:53:39.000Z",
-      "signature": "5PRVg8iSyhcPqeQ7BMaGj24qz4BSKuexXAZqFehwcjsLNDe3TqndB6p92C4NVqtMFNFk84y1iYN2rAfxBrgaSfch",
-      "txUrl": "https://solscan.io/tx/5PRVg8iSyhcPqeQ7BMaGj24qz4BSKuexXAZqFehwcjsLNDe3TqndB6p92C4NVqtMFNFk84y1iYN2rAfxBrgaSfch"
-    },
-    {
-      "wallet": "4r5Z9tDRN23SFooy4bDmiaULzm8eMSK1XyvMBgVoFuP4",
-      "amountUi": 15000,
-      "blockTime": "2026-07-01T13:48:03.000Z",
-      "signature": "478UumN9YQjZwY5dVnj8S8L25RAaLYMavjuAg8sWDREUoUFagZVKVLkT7YeoZJdsDVrNubMAUPTmiQ8LbVpctTHt",
-      "txUrl": "https://solscan.io/tx/478UumN9YQjZwY5dVnj8S8L25RAaLYMavjuAg8sWDREUoUFagZVKVLkT7YeoZJdsDVrNubMAUPTmiQ8LbVpctTHt"
-    },
-    {
-      "wallet": "ARa7P3kjGiH1Y46tmHbyQkoTVn3DWhd1rg5zQW2ZmAad",
-      "amountUi": 15000,
-      "blockTime": "2026-07-01T13:47:47.000Z",
-      "signature": "3avaKjADGsktxXt6rhUf3bBrEKqcDfY76BA5hgz6PMbdFMnfSbHCGrhgNqqTUwiWvDDgDi2592H8C9YoYJ99tet7",
-      "txUrl": "https://solscan.io/tx/3avaKjADGsktxXt6rhUf3bBrEKqcDfY76BA5hgz6PMbdFMnfSbHCGrhgNqqTUwiWvDDgDi2592H8C9YoYJ99tet7"
-    },
-    {
-      "wallet": "27vovHYZZkLkWKnSSyKZPSJy91W6QCHap3MN46yiqQpd",
-      "amountUi": 15000,
-      "blockTime": "2026-07-01T13:47:31.000Z",
-      "signature": "4ymCu36FZHQuFDzZvodo46FJdoJNLfzvNZcLc9qJsP2syBKfphj73goZYKFRia7KchKhQqtJDABD3N8weTmei2Cv",
-      "txUrl": "https://solscan.io/tx/4ymCu36FZHQuFDzZvodo46FJdoJNLfzvNZcLc9qJsP2syBKfphj73goZYKFRia7KchKhQqtJDABD3N8weTmei2Cv"
+      "wallet": "9eW21o7T5EXrZYBCcnnZTHoFWW4Z1ChhWMAD5Rbzf894",
+      "amountUi": 11711.798482,
+      "blockTime": "2026-07-18T14:29:45.000Z",
+      "signature": "5Hjqbx3UQZMiutxxm3mABFkgdR5ZUpAJD9wDRNnkeGGw53BAaxJLBFzjfmw253Phs6GJw5dqQtQp8UqquHUmS6Se",
+      "txUrl": "https://solscan.io/tx/5Hjqbx3UQZMiutxxm3mABFkgdR5ZUpAJD9wDRNnkeGGw53BAaxJLBFzjfmw253Phs6GJw5dqQtQp8UqquHUmS6Se"
     }
   ],
   "otherMintsSent": [
@@ -11808,6 +13984,6 @@
       "totalUi": 251.897711
     }
   ],
-  "tokenHolders": 130178,
-  "tokenHoldersAsOf": "2026-07-18T14:07:11.833Z"
+  "tokenHolders": 130106,
+  "tokenHoldersAsOf": "2026-07-18T15:12:35.164Z"
 }
