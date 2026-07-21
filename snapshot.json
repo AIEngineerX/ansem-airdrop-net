@@ -1,10 +1,10 @@
 {
-  "collectedAt": "2026-07-21T04:15:01.388Z",
+  "collectedAt": "2026-07-21T06:41:38.391Z",
   "source": "GV6UUmNxz2RpKxmNAPadYKb7uQpszwqQAu3qLJxVdC52",
   "mint": "9cRCn9rGT8V2imeM2BaKs13yhMEais3ruM3rPvTGpump",
   "backfillComplete": true,
   "cursors": {
-    "newest": "4Pv4NgirECyQTemunPvCgLB59q1bxCK6vYsFgKY6kvj8ffsNoRmaiE7vUaxkofTfrwwUsERmVm1gpGWLbFrTAjJc",
+    "newest": "2yQBaRzcJ1PVRCeBqiPRcsmyG8DZKu7fyoHQyV8Y1sj3N5PyDG9BqUJac64Bq2HrCuXhLTzcfyc8CK7Qxj5UcedB",
     "oldestScanned": "evVqcN5GFnkvc4t2FdUaQUtqGcgkKUResfoSRouv7ohvfqNXREc7RsdU7hm14ZwNMvXvV6WsH7NoCX8GUfh3dhL"
   },
   "totals": {
@@ -501,7 +501,7 @@
       "signatures": [
         "HU1bFjiQzTYQF5sMufdm5GdvQ5Z5hTG4oHg27Rcbj6ajSm5uCfzSVq8vA6TATWmSiFh3cdbTuGMoMf6rA92VFNT"
       ],
-      "heldAnsemUi": 94036.054505
+      "heldAnsemUi": 93360.407155
     },
     {
       "wallet": "9UNbP4DDwXiXB8p1TtEh5qxdRAqYboAnRZc8W6XGo3xp",
@@ -13349,18 +13349,18 @@
       "txUrl": "https://solscan.io/tx/YUiBSLY8jgTp5YDV4WkM6f7vdMBBt4TL4aY9o9P9mv79KyCQTotb8Q39vFEbTaEWE31imi6EA9CWNQfwi2Xa679"
     },
     {
-      "wallet": "BjR8ShswpYwx6t1yX4Wyk2rbgRQ2mGQXCURUihsRZ9hL",
-      "amountUi": 6396.676254,
-      "blockTime": "2026-07-18T15:05:27.000Z",
-      "signature": "4aXtqU93uHRqsJdxtNCNR6hF2QDuftqSvSX8NyVihztgWNgYKzyN83pZ6LHH34nymFnqiP7vk4cPaUXG3qq8bPvo",
-      "txUrl": "https://solscan.io/tx/4aXtqU93uHRqsJdxtNCNR6hF2QDuftqSvSX8NyVihztgWNgYKzyN83pZ6LHH34nymFnqiP7vk4cPaUXG3qq8bPvo"
-    },
-    {
       "wallet": "GFbn2TZMhQyatFtfG5WKvCJtcTJpnyKo35G1E45swtJA",
       "amountUi": 6396.676254,
       "blockTime": "2026-07-18T15:05:27.000Z",
       "signature": "4mHMH3WL1L7qcYoxy2uuN4sXahQLgDav4V7SixiE8bCk4t7wQU7ajTeanFwpGEw4FrSo7U3dEF2knxcRVtU5HjU",
       "txUrl": "https://solscan.io/tx/4mHMH3WL1L7qcYoxy2uuN4sXahQLgDav4V7SixiE8bCk4t7wQU7ajTeanFwpGEw4FrSo7U3dEF2knxcRVtU5HjU"
+    },
+    {
+      "wallet": "BjR8ShswpYwx6t1yX4Wyk2rbgRQ2mGQXCURUihsRZ9hL",
+      "amountUi": 6396.676254,
+      "blockTime": "2026-07-18T15:05:27.000Z",
+      "signature": "4aXtqU93uHRqsJdxtNCNR6hF2QDuftqSvSX8NyVihztgWNgYKzyN83pZ6LHH34nymFnqiP7vk4cPaUXG3qq8bPvo",
+      "txUrl": "https://solscan.io/tx/4aXtqU93uHRqsJdxtNCNR6hF2QDuftqSvSX8NyVihztgWNgYKzyN83pZ6LHH34nymFnqiP7vk4cPaUXG3qq8bPvo"
     },
     {
       "wallet": "2XMmtWYkcsB5ZJYKdJLvwR7mPtAtmuZDEj2yfJyhUp31",
@@ -14028,6 +14028,6 @@
       "totalUi": 15450.035758999999
     }
   ],
-  "tokenHolders": 130964,
-  "tokenHoldersAsOf": "2026-07-21T04:16:09.590Z"
+  "tokenHolders": 130993,
+  "tokenHoldersAsOf": "2026-07-21T06:42:12.537Z"
 }
